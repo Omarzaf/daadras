@@ -38,7 +38,12 @@ function Header() {
                 <DrawerOverlay />
                 <DrawerContent>
                   <DrawerCloseButton />
-                  <DrawerBody pt="12">
+                  <DrawerHeader>
+                    <Link href="/">
+                      <HeaderLogo />
+                    </Link>
+                  </DrawerHeader>
+                  <DrawerBody pl="9" pt="4">
                     <NavLinks />
                   </DrawerBody>
                 </DrawerContent>
@@ -81,6 +86,7 @@ function NavLinks() {
       color="charcoal"
       spacing="8"
       flexDir={{ base: "column", lg: "row" }}
+      alignItems={{ base: "flex-start", lg: "center" }}
     >
       <Link href="/" _hover={{ textDecor: "none" }}>
         Home

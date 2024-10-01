@@ -20,13 +20,26 @@ function Footer() {
     <footer>
       <Box bg="steel-blue">
         <Container p="0" w={{ base: "full", lg: "1140px" }} maxW="1140px">
-          <HStack w="full" spacing="0" py="20">
-            <HStack w="20%" justifyContent="flex-end">
+          <HStack
+            flexDir={{ base: "column", lg: "row" }}
+            w="full"
+            spacing="0"
+            py={{ base: "12", lg: "20" }}
+            px="6"
+          >
+            <HStack
+              w={{ base: "full", lg: "20%" }}
+              justifyContent={{ base: "center", lg: "flex-end" }}
+            >
               <FooterLogo />
             </HStack>
-            <VStack w="38%" color="white">
+            <VStack w={{ base: "full", lg: "38%" }} color="white">
               <SimpleGrid columns={3} gap="6">
-                <VStack w="full" alignItems="flex-start" spacing="4">
+                <VStack
+                  w="full"
+                  alignItems="flex-start"
+                  spacing={{ base: "2", lg: "4" }}
+                >
                   <Text fontSize="lg" fontWeight="medium">
                     Home
                   </Text>
@@ -43,7 +56,11 @@ function Footer() {
                     Contact
                   </Link>
                 </VStack>
-                <VStack w="full" alignItems="flex-start" spacing="4">
+                <VStack
+                  w="full"
+                  alignItems="flex-start"
+                  spacing={{ base: "2", lg: "4" }}
+                >
                   <Text fontSize="lg" fontWeight="medium">
                     More
                   </Text>
@@ -60,7 +77,11 @@ function Footer() {
                     Blog
                   </Link>
                 </VStack>
-                <VStack w="full" alignItems="flex-start" spacing="4">
+                <VStack
+                  w="full"
+                  alignItems="flex-start"
+                  spacing={{ base: "2", lg: "4" }}
+                >
                   <Text fontSize="lg" fontWeight="medium">
                     Connect
                   </Text>
@@ -79,7 +100,7 @@ function Footer() {
                 </VStack>
               </SimpleGrid>
             </VStack>
-            <HStack w="42%">
+            <HStack w={{ base: "full", lg: "42%" }} mt={{ base: "6", lg: "0" }}>
               <VStack w="full" alignItems="flex-start" spacing="4">
                 <Heading color="white" pr="12">
                   Subscribe to get latest updates
@@ -120,7 +141,6 @@ function Footer() {
           </HStack>
         </Container>
       </Box>
-      <FooterLogo />
     </footer>
   );
 }

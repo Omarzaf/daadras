@@ -39,5 +39,11 @@ export const Button = defineStyleConfig({
       fontWeight: "medium",
       fontSize: "sm",
     },
+    "primary-sky-blue": {
+      backgroundColor: "#7FC7D9",
+      color: "#000",
+      fontWeight: "medium",
+      fontSize: "sm",
+    },
   },
 });
