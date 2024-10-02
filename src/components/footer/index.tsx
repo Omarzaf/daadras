@@ -100,9 +100,21 @@ function Footer() {
                 </VStack>
               </SimpleGrid>
             </VStack>
-            <HStack w={{ base: "full", lg: "42%" }} mt={{ base: "6", lg: "0" }}>
-              <VStack w="full" alignItems="flex-start" spacing="4">
-                <Heading color="white" pr="12">
+            <HStack
+              w={{ base: "full", lg: "42%" }}
+              mt={{ base: "12", lg: "0" }}
+            >
+              <VStack
+                w="full"
+                alignItems={{ base: "center", lg: "flex-start" }}
+                spacing="4"
+              >
+                <Heading
+                  color="white"
+                  pr={{ base: "0", lg: "12" }}
+                  fontSize={{ base: "2xl", lg: "4xl" }}
+                  textAlign={{ base: "center", lg: "left" }}
+                >
                   Subscribe to get latest updates
                 </Heading>
                 <InputGroup size="md">

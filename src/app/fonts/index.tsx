@@ -1,4 +1,4 @@
-import { Rubik, Hind } from "next/font/google";
+import { Hind } from "next/font/google";
 
 const hind = Hind({
   subsets: ["latin"],

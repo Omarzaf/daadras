@@ -1,13 +1,6 @@
 import React from "react";
-import {
-  Box,
-  Button,
-  Container,
-  Heading,
-  SimpleGrid,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Container, Heading, Text, VStack } from "@chakra-ui/react";
+import Image from "next/image";
 
 function Top() {
   return (
@@ -21,8 +14,8 @@ function Top() {
         <VStack alignItems="flex-start" spacing="8">
           <Heading
             color="black"
-            fontSize="6xl"
-            w="75%"
+            fontSize={{ base: "3xl", lg: "6xl" }}
+            w={{ base: "full", lg: "75%" }}
             textTransform="capitalize"
           >
             to serve the underserved and empower the vulnerable
@@ -30,11 +23,20 @@ function Top() {
           <Text
             color="black"
             fontWeight="bold"
-            fontSize="xl"
+            fontSize={{ base: "lg", lg: "xl" }}
             textDecor="underline"
           >
             Have a look here for our Stories of Hope:
           </Text>
+
+          <Box pos="relative" w="full" aspectRatio={16 / 9}>
+            <Image
+              objectFit="cover"
+              src="/assets/placeholder.jpg"
+              fill
+              alt="Picture of the author"
+            />
+          </Box>
         </VStack>
       </Container>
     </Box>

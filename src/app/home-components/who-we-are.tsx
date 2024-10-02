@@ -19,7 +19,11 @@ function WhoWeAre() {
         maxW="1140px"
       >
         <SimpleGrid w="full" columns={{ base: 1, lg: 2 }} spacing="6">
-          <VStack alignItems="flex-start" w="70%" spacing="8">
+          <VStack
+            alignItems="flex-start"
+            w={{ base: "full", lg: "70%" }}
+            spacing="8"
+          >
             <Heading color="sky-blue" textDecor="underline">
               Who We Are
             </Heading>
