@@ -11,7 +11,7 @@ export default function Home() {
       <Top />
       <WhoWeAre />
       <Collaborators />
-      <Donate />
+      {/* <Donate /> */}
       <DonationsSpend />
       <FoundationFacts />
     </>

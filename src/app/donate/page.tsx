@@ -7,7 +7,7 @@ function Donate() {
   return (
     <>
       <Logo />
-      <Donation />
+      {/* <Donation /> */}
       <DonationsSpend />
     </>
   );
