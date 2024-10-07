@@ -11,7 +11,12 @@ import React from "react";
 
 function WeDo() {
   return (
-    <VStack w="full" alignItems="flex-start" spacing="12" mb="64">
+    <VStack
+      w="full"
+      alignItems="flex-start"
+      spacing="12"
+      mb={{ base: "12", lg: "64" }}
+    >
       <Container
         px={{ base: "4", lg: "0" }}
         pt={{ base: "20", lg: "28" }}
