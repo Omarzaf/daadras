@@ -1,5 +1,5 @@
 import Collaborators from "./home-components/collaborators";
-import Donate from "./home-components/donate";
+// import Donate from "./home-components/donate";
 import WhoWeAre from "./home-components/who-we-are";
 import Top from "./home-components/top";
 import FoundationFacts from "@/components/foundation-facts";
