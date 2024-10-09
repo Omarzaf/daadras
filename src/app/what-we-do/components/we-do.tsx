@@ -42,8 +42,8 @@ function WeDo() {
           >
             <Box
               pos="relative"
-              w={{ base: "full", lg: "30%" }}
-              h="440px"
+              w={{ base: "full", lg: "33%" }}
+              h="450px"
               overflow="hidden"
               rounded="1.5rem"
             >
@@ -55,7 +55,7 @@ function WeDo() {
               />
             </Box>
             <VStack
-              w={{ base: "full", lg: "70%" }}
+              w={{ base: "full", lg: "67%" }}
               alignItems="flex-start"
               spacing="6"
             >
@@ -65,16 +65,48 @@ function WeDo() {
                 fontWeight="semibold"
                 textDecor="underline"
               >
-                Clothes Donation
+                Humanitarian Aid
               </Heading>
 
               <Text
                 color="black"
-                textTransform="capitalize"
                 fontSize={{ base: "xl", lg: "2xl" }}
-                fontWeight="semibold"
+                textAlign="justify"
               >
-                Sustainable approach to resource allocation:
+                Daadras Humanitarian Aid Is A Response To{" "}
+                <Text
+                  color="steel-blue"
+                  fontSize={{ base: "xl", lg: "2xl" }}
+                  textAlign="justify"
+                  fontWeight="semibold"
+                  as="span"
+                >
+                  Natural And Manmade Disasters
+                </Text>{" "}
+                Across The Country And Provides Comprehensive Services. To Date,
+                Daadras Has Collected Donation Funds Of Around{" "}
+                <Text
+                  color="steel-blue"
+                  fontSize={{ base: "xl", lg: "2xl" }}
+                  textAlign="justify"
+                  fontWeight="semibold"
+                  as="span"
+                >
+                  2 Million
+                </Text>{" "}
+                To Assist Underprivileged Humans Who Need Rations For Households
+                Amid The Crisis. The Fund Was Disbursed In The Form Of Ration
+                Packages We Have Provided To
+                <Text
+                  color="steel-blue"
+                  fontSize={{ base: "xl", lg: "2xl" }}
+                  textAlign="justify"
+                  fontWeight="semibold"
+                  as="span"
+                >
+                  {" "}
+                  700+ Families.
+                </Text>
               </Text>
 
               <Text
@@ -104,8 +136,8 @@ function WeDo() {
           >
             <Box
               pos="relative"
-              w={{ base: "full", lg: "30%" }}
-              h="440px"
+              w={{ base: "full", lg: "33%" }}
+              h="450px"
               overflow="hidden"
               rounded="1.5rem"
             >
@@ -117,7 +149,7 @@ function WeDo() {
               />
             </Box>
             <VStack
-              w={{ base: "full", lg: "70%" }}
+              w={{ base: "full", lg: "67%" }}
               alignItems="flex-start"
               spacing="6"
             >
@@ -132,11 +164,34 @@ function WeDo() {
 
               <Text
                 color="black"
+                textAlign="justify"
                 textTransform="capitalize"
                 fontSize={{ base: "xl", lg: "2xl" }}
                 fontWeight="semibold"
               >
-                Sustainable approach to resource allocation:
+                Sustainable Approach To Resource Allocation:
+              </Text>
+
+              <Text
+                color="black"
+                fontSize={{ base: "xl", lg: "2xl" }}
+                textAlign="justify"
+              >
+                On 31 August 2022, The Donation Drive For Clothes Was Held, And
+                Collected The Clothes For The Affected People. On September 1,
+                2022,{" "}
+                <Text
+                  color="steel-blue"
+                  fontSize={{ base: "xl", lg: "2xl" }}
+                  textAlign="justify"
+                  fontWeight="semibold"
+                  as="span"
+                >
+                  Daadras Collected The Amount Of 150,000 PKR That Was Utilized
+                  To Disburse Among The Affected People.
+                </Text>{" "}
+                Looking Back, We Are Incredibly Grateful For The Compassion And
+                Dedication Of Our Supporters..
               </Text>
 
               <Text
@@ -152,6 +207,7 @@ function WeDo() {
           </HStack>
         </Container>
       </Box>
+
       <Box bg="pale-aqua" w="full">
         <Container
           px={{ base: "4", lg: "0" }}
@@ -165,8 +221,8 @@ function WeDo() {
           >
             <Box
               pos="relative"
-              w={{ base: "full", lg: "30%" }}
-              h="440px"
+              w={{ base: "full", lg: "33%" }}
+              h="450px"
               overflow="hidden"
               rounded="1.5rem"
             >
@@ -178,7 +234,7 @@ function WeDo() {
               />
             </Box>
             <VStack
-              w={{ base: "full", lg: "70%" }}
+              w={{ base: "full", lg: "67%" }}
               alignItems="flex-start"
               spacing="6"
             >
@@ -188,16 +244,39 @@ function WeDo() {
                 fontWeight="semibold"
                 textDecor="underline"
               >
-                Clothes Donation
+                Educational Initiatives
               </Heading>
 
               <Text
                 color="black"
-                textTransform="capitalize"
                 fontSize={{ base: "xl", lg: "2xl" }}
-                fontWeight="semibold"
+                textAlign="justify"
               >
-                Sustainable approach to resource allocation:
+                We Believe In
+                <Text
+                  color="steel-blue"
+                  fontSize={{ base: "xl", lg: "2xl" }}
+                  textAlign="justify"
+                  fontWeight="semibold"
+                  as="span"
+                >
+                  {" "}
+                  Poverty Alleviation Through Education.
+                </Text>{" "}
+                Daadras Has Been Raising Funds For People Facing Financial
+                Problems In Paying Their Educational Dues. So Far, We Have
+                <Text
+                  color="steel-blue"
+                  fontSize={{ base: "xl", lg: "2xl" }}
+                  textAlign="justify"
+                  fontWeight="semibold"
+                  as="span"
+                >
+                  {" "}
+                  Financially Assisted 20+ Students
+                </Text>{" "}
+                In Their Semesters And Young Children To Pursue Their
+                Educational Dreams.
               </Text>
 
               <Text
