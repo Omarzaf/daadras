@@ -6,7 +6,6 @@ import {
   Link,
   List,
   ListItem,
-  OrderedList,
   Text,
   UnorderedList,
   VStack,
