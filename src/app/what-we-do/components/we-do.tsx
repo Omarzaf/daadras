@@ -108,16 +108,6 @@ function WeDo() {
                   700+ Families.
                 </Text>
               </Text>
-
-              <Text
-                color="black"
-                textTransform="capitalize"
-                fontSize={{ base: "lg", lg: "2xl" }}
-                textDecor="underline"
-                fontWeight="medium"
-              >
-                Read More
-              </Text>
             </VStack>
           </HStack>
         </Container>
@@ -193,16 +183,6 @@ function WeDo() {
                 Looking Back, We Are Incredibly Grateful For The Compassion And
                 Dedication Of Our Supporters..
               </Text>
-
-              <Text
-                color="black"
-                textTransform="capitalize"
-                fontSize={{ base: "lg", lg: "2xl" }}
-                textDecor="underline"
-                fontWeight="medium"
-              >
-                Read More
-              </Text>
             </VStack>
           </HStack>
         </Container>
@@ -277,16 +257,6 @@ function WeDo() {
                 </Text>{" "}
                 In Their Semesters And Young Children To Pursue Their
                 Educational Dreams.
-              </Text>
-
-              <Text
-                color="black"
-                textTransform="capitalize"
-                fontSize={{ base: "lg", lg: "2xl" }}
-                textDecor="underline"
-                fontWeight="medium"
-              >
-                Read More
               </Text>
             </VStack>
           </HStack>
