@@ -14,27 +14,22 @@ const DONATION_DISTRIBUTION = [
   {
     color: "#c05050",
     percentage: 40,
-    title: "child care",
+    title: "Project Salam",
   },
   {
     color: "#59c051",
     percentage: 35,
-    title: "teaching",
+    title: "Khudi",
   },
   {
     color: "#4f92c0",
     percentage: 10,
-    title: "help",
+    title: "Ration and Food Drives",
   },
   {
     color: "#904fc0",
     percentage: 10,
-    title: "exursions",
-  },
-  {
-    color: "#bec050",
-    percentage: 5,
-    title: "feeding",
+    title: "Need Based",
   },
 ];
 
@@ -51,24 +46,39 @@ function DonationsSpend() {
           w="full"
           justifyContent="space-between"
           flexDir={{ base: "column", lg: "row" }}
-          spacing={{ base: "12", lg: "0" }}
+          spacing={{ base: "12", lg: "16" }}
         >
-          <VStack
-            w={{ base: "full", lg: "50%" }}
-            alignItems="flex-start"
-            spacing="6"
-          >
-            <Heading color="black">
+          <VStack alignItems="flex-start" spacing="6">
+            <Heading color="black" mr="44">
               How we spend you donations and where it goes
             </Heading>
-            <Text color="black" fontWeight="semibold">
-              1500s, when an unknown printer took a galley of type and scrambled
-              it to make a type specimen book. It has survived not only five
-            </Text>
+            <Box>
+              <Text color="black" fontWeight="thick">
+                At Daadras Foundation, we are dedicated to ensuring that every
+                donation we receive makes a significant impact on the lives of
+                those we serve. Currently, 40% of our funding is invested in
+                Project Salam, a transformative initiative that provides
+                social-emotional learning, IT training, and critical thinking
+                skills to underserved children, empowering them to build a
+                brighter future.
+              </Text>
+
+              <Text color="black" fontWeight="thick" mt="1">
+                The remaining 60% is allocated to need-based funds aimed at
+                addressing essential needs within our communities. This portion
+                supports individuals and families facing urgent financial
+                challenges, covering basic necessities such as food and
+                healthcare. Additionally, we are committed to creating economic
+                opportunities for white-collar workers, helping them regain
+                stability and self-sufficiency through sustainable means. By
+                maintaining this balanced approach, we strive to uplift those in
+                immediate need while fostering long-term empowerment and growth.
+              </Text>
+            </Box>
 
             <SimpleGrid
-              columns={{ base: 2, lg: 3 }}
-              gap={{ base: "4", lg: "8" }}
+              columns={{ base: 1, lg: 3 }}
+              gap={{ base: "4", lg: "2" }}
               mt="6"
             >
               {DONATION_DISTRIBUTION.map((donation, i) => (
