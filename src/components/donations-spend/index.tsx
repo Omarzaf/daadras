@@ -8,7 +8,8 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import DaugnutChart from "../DaugnutChart";
+import Image from "next/image";
+// import DaugnutChart from "../DaugnutChart";
 
 const DONATION_DISTRIBUTION = [
   {
@@ -18,17 +19,17 @@ const DONATION_DISTRIBUTION = [
   },
   {
     color: "#59c051",
-    percentage: 35,
+    percentage: 20,
     title: "Khudi",
   },
   {
     color: "#4f92c0",
-    percentage: 10,
+    percentage: 20,
     title: "Ration and Food Drives",
   },
   {
     color: "#904fc0",
-    percentage: 10,
+    percentage: 20,
     title: "Need Based",
   },
 ];
@@ -48,7 +49,11 @@ function DonationsSpend() {
           flexDir={{ base: "column", lg: "row" }}
           spacing={{ base: "12", lg: "16" }}
         >
-          <VStack alignItems="flex-start" spacing="6">
+          <VStack
+            alignItems="flex-start"
+            spacing="6"
+            w={{ base: "full", lg: "60%" }}
+          >
             <Heading color="black" mr="44">
               How we spend you donations and where it goes
             </Heading>
@@ -77,8 +82,8 @@ function DonationsSpend() {
             </Box>
 
             <SimpleGrid
-              columns={{ base: 1, lg: 3 }}
-              gap={{ base: "4", lg: "2" }}
+              columns={{ base: 1, lg: 2 }}
+              gap={{ base: "4", lg: "8" }}
               mt="6"
             >
               {DONATION_DISTRIBUTION.map((donation, i) => (
@@ -91,7 +96,19 @@ function DonationsSpend() {
               ))}
             </SimpleGrid>
           </VStack>
-          <DaugnutChart />
+          {/* <DaugnutChart /> */}
+          <Box
+            pos="relative"
+            aspectRatio={16 / 9}
+            w={{ base: "full", lg: "40%" }}
+          >
+            <Image
+              objectFit="cover"
+              src="/assets/fund-utilization.png"
+              fill
+              alt="Picture of the author"
+            />
+          </Box>
         </HStack>
       </Container>
     </Box>

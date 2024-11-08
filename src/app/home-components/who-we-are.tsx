@@ -3,8 +3,8 @@ import {
   Box,
   Button,
   Container,
+  Flex,
   Heading,
-  SimpleGrid,
   Text,
   VStack,
 } from "@chakra-ui/react";
@@ -19,13 +19,16 @@ function WhoWeAre() {
         w={{ base: "full", lg: "1140px" }}
         maxW="1140px"
       >
-        <SimpleGrid
+        <Flex
           w="full"
-          columns={{ base: 1, lg: 2 }}
-          spacing="6"
           gap={{ base: "12", lg: "44" }}
+          flexDir={{ base: "column", lg: "row" }}
         >
-          <VStack alignItems="flex-start" w="full" spacing="8">
+          <VStack
+            alignItems="flex-start"
+            w={{ base: "full", lg: "60%" }}
+            spacing="8"
+          >
             <Heading color="sky-blue" textDecor="underline">
               Who We Are
             </Heading>
@@ -50,15 +53,19 @@ function WhoWeAre() {
               Read More
             </Button>
           </VStack>
-          <Box pos="relative" w="full" h={{ base: "96", lg: "full" }}>
+          <Box
+            pos="relative"
+            w={{ base: "full", lg: "40%" }}
+            h={{ base: "96", lg: "530px" }}
+          >
             <Image
               objectFit="cover"
-              src="/assets/placeholder.jpg"
+              src="/assets/who-we-are.png"
               fill
               alt="Picture of the author"
             />
           </Box>
-        </SimpleGrid>
+        </Flex>
       </Container>
     </Box>
   );

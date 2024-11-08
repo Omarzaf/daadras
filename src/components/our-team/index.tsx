@@ -39,7 +39,7 @@ function OurTeam() {
             >
               <Image
                 objectFit="cover"
-                src="/assets/placeholder.jpg"
+                src="/assets/ceo.png"
                 fill
                 alt="Picture of the author"
               />
@@ -71,7 +71,7 @@ function OurTeam() {
             >
               <Image
                 objectFit="cover"
-                src="/assets/placeholder.jpg"
+                src="/assets/coo.png"
                 fill
                 alt="Picture of the author"
               />
@@ -103,7 +103,7 @@ function OurTeam() {
             >
               <Image
                 objectFit="cover"
-                src="/assets/placeholder.jpg"
+                src="/assets/project-director.png"
                 fill
                 alt="Picture of the author"
               />
@@ -135,7 +135,11 @@ function OurTeam() {
             >
               <Image
                 objectFit="cover"
-                src="/assets/placeholder.jpg"
+                objectPosition="top"
+                style={{
+                  transform: "scale(1.3) translateY(-24px)",
+                }}
+                src="/assets/sel.png"
                 fill
                 alt="Picture of the author"
               />

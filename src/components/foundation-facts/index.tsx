@@ -2,8 +2,8 @@ import {
   Box,
   Button,
   Container,
+  Flex,
   Heading,
-  SimpleGrid,
   Text,
   VStack,
 } from "@chakra-ui/react";
@@ -29,128 +29,94 @@ function FoundationFacts() {
               it to make a type specimen book. It has survived not only five
             </Text>
           </VStack>
-          <SimpleGrid columns={{ base: 1, lg: 3 }} gap="6" w="full">
-            <VStack
-              w="full"
-              alignItems="flex-start"
-              bg="steel-blue"
-              spacing="0"
+          <VStack w="full">
+            <Flex
+              gap="6"
+              w={{ base: "full", lg: "70%" }}
+              flexDir={{ base: "column", lg: "row" }}
             >
-              <Box pos="relative" w="full" h="240px">
-                <Image
-                  objectFit="cover"
-                  src="/assets/placeholder.jpg"
-                  fill
-                  alt="Picture of the author"
-                />
-              </Box>
-              <VStack w="full" alignItems="flex-start" p="6">
-                <Box>
-                  <Text
-                    fontSize="lg"
-                    fontWeight="semibold"
-                    textTransform="uppercase"
-                    color="white"
-                    textDecor="underline"
-                  >
-                    heading
-                  </Text>
-                  <Text color="white" fontWeight="semibold">
-                    unknown printer took a galley of type and scrambled it to
-                    make a type specimen book
-                  </Text>
+              <VStack
+                w={{ base: "full", lg: "50%" }}
+                alignItems="flex-start"
+                bg="steel-blue"
+                spacing="0"
+              >
+                <Box pos="relative" w="full" h="340px">
+                  <Image
+                    objectFit="cover"
+                    src="/assets/fact1.png"
+                    fill
+                    alt="Picture of the author"
+                  />
                 </Box>
-                <Button
-                  px="4"
-                  size="sm"
-                  variant="primary-sky-blue"
-                  fontWeight="semibold"
-                >
-                  Read More
-                </Button>
-              </VStack>
-            </VStack>
-            <VStack
-              w="full"
-              alignItems="flex-start"
-              bg="steel-blue"
-              spacing="0"
-            >
-              <Box pos="relative" w="full" h="240px">
-                <Image
-                  objectFit="cover"
-                  src="/assets/placeholder.jpg"
-                  fill
-                  alt="Picture of the author"
-                />
-              </Box>
-              <VStack w="full" alignItems="flex-start" p="6">
-                <Box>
-                  <Text
-                    fontSize="lg"
+                <VStack w="full" alignItems="flex-start" p="6">
+                  <Box>
+                    <Text
+                      fontSize="lg"
+                      fontWeight="semibold"
+                      textTransform="uppercase"
+                      color="white"
+                      textDecor="underline"
+                    >
+                      heading
+                    </Text>
+                    <Text color="white" fontWeight="semibold">
+                      unknown printer took a galley of type and scrambled it to
+                      make a type specimen book
+                    </Text>
+                  </Box>
+                  <Button
+                    px="4"
+                    size="sm"
+                    variant="primary-sky-blue"
                     fontWeight="semibold"
-                    textTransform="uppercase"
-                    color="white"
-                    textDecor="underline"
                   >
-                    heading
-                  </Text>
-                  <Text color="white" fontWeight="semibold">
-                    unknown printer took a galley of type and scrambled it to
-                    make a type specimen book
-                  </Text>
-                </Box>
-                <Button
-                  px="4"
-                  size="sm"
-                  variant="primary-sky-blue"
-                  fontWeight="semibold"
-                >
-                  Read More
-                </Button>
+                    Read More
+                  </Button>
+                </VStack>
               </VStack>
-            </VStack>
-            <VStack
-              w="full"
-              alignItems="flex-start"
-              bg="steel-blue"
-              spacing="0"
-            >
-              <Box pos="relative" w="full" h="240px">
-                <Image
-                  objectFit="cover"
-                  src="/assets/placeholder.jpg"
-                  fill
-                  alt="Picture of the author"
-                />
-              </Box>
-              <VStack w="full" alignItems="flex-start" p="6">
-                <Box>
-                  <Text
-                    fontSize="lg"
+              <VStack
+                w={{ base: "full", lg: "50%" }}
+                alignItems="flex-start"
+                bg="steel-blue"
+                spacing="0"
+              >
+                <Box pos="relative" w="full" h="340px">
+                  <Image
+                    objectFit="cover"
+                    src="/assets/fact2.png"
+                    fill
+                    alt="Picture of the author"
+                  />
+                </Box>
+                <VStack w="full" alignItems="flex-start" p="6">
+                  <Box>
+                    <Text
+                      fontSize="lg"
+                      fontWeight="semibold"
+                      textTransform="uppercase"
+                      color="white"
+                      textDecor="underline"
+                    >
+                      heading
+                    </Text>
+                    <Text color="white" fontWeight="semibold">
+                      unknown printer took a galley of type and scrambled it to
+                      make a type specimen book
+                    </Text>
+                  </Box>
+                  <Button
+                    px="4"
+                    size="sm"
+                    variant="primary-sky-blue"
                     fontWeight="semibold"
-                    textTransform="uppercase"
-                    color="white"
-                    textDecor="underline"
                   >
-                    heading
-                  </Text>
-                  <Text color="white" fontWeight="semibold">
-                    unknown printer took a galley of type and scrambled it to
-                    make a type specimen book
-                  </Text>
-                </Box>
-                <Button
-                  px="4"
-                  size="sm"
-                  variant="primary-sky-blue"
-                  fontWeight="semibold"
-                >
-                  Read More
-                </Button>
+                    Read More
+                  </Button>
+                </VStack>
               </VStack>
-            </VStack>
-          </SimpleGrid>
+            </Flex>
+          </VStack>
         </VStack>
       </Container>
     </Box>

@@ -13,13 +13,18 @@ import {
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 function DaugnutChart() {
-  const labels = ["Child Care", "Teaching", "Help", "Exursions", "Feeding"];
-  const colors = ["#BEF3C0", "#AC94F1", "#FFF0CA", "#F9CF64", "#F38FBF"];
+  const labels = [
+    "Khudi",
+    "Project Salam",
+    "Need-Based",
+    "Ration and Food Drives",
+  ];
+  const colors = ["#3f6ab8", "#32589a", "#7992cd", "#b3bee0"];
   const chartData = {
     labels,
     datasets: [
       {
-        data: [40, 35, 10, 10, 5],
+        data: [20, 40, 20, 20],
         backgroundColor: colors,
         borderWidth: 0,
       },

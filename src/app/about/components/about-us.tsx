@@ -44,7 +44,7 @@ function AboutUs() {
             <Box pos="relative" w="full" aspectRatio={16 / 9}>
               <Image
                 objectFit="cover"
-                src="/assets/placeholder.jpg"
+                src="/assets/hero.png"
                 fill
                 alt="Picture of the author"
               />

@@ -49,7 +49,8 @@ function WeDo() {
             >
               <Image
                 objectFit="cover"
-                src="/assets/placeholder.jpg"
+                objectPosition="right"
+                src="/assets/humanitarian-aid.png"
                 fill
                 alt="Picture of the author"
               />
@@ -133,7 +134,7 @@ function WeDo() {
             >
               <Image
                 objectFit="cover"
-                src="/assets/placeholder.jpg"
+                src="/assets/clothes-donation.png"
                 fill
                 alt="Picture of the author"
               />
@@ -208,7 +209,7 @@ function WeDo() {
             >
               <Image
                 objectFit="cover"
-                src="/assets/placeholder.jpg"
+                src="/assets/ed-initiative.png"
                 fill
                 alt="Picture of the author"
               />
