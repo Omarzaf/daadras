@@ -121,7 +121,7 @@ function OurTeam() {
                     <Text color="white" lineHeight="3" mt="1.5">
                       Arooj Khan
                     </Text>
-                    <Text color="white">(Project Director)</Text>
+                    <Text color="white">(Head Project Salam)</Text>
                   </Box>
                 </HStack>
               </Box>

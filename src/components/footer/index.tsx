@@ -43,16 +43,13 @@ function Footer() {
                   <Text fontSize="lg" fontWeight="medium">
                     Home
                   </Text>
-                  <Link href="/" fontSize="sm" opacity="0.78">
+                  <Link href="/about" fontSize="sm" opacity="0.78">
                     About Us
                   </Link>
-                  <Link href="/" fontSize="sm" opacity="0.78">
-                    Team
-                  </Link>
-                  <Link href="/" fontSize="sm" opacity="0.78">
+                  <Link href="/what-we-do" fontSize="sm" opacity="0.78">
                     What We Do
                   </Link>
-                  <Link href="/" fontSize="sm" opacity="0.78">
+                  <Link href="/contact" fontSize="sm" opacity="0.78">
                     Contact
                   </Link>
                 </VStack>

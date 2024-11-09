@@ -43,15 +43,6 @@ function WhoWeAre() {
               Addressing Key Issues Such As Education, Humanitarian Crisis, And
               Economic Empowerment.
             </Text>
-
-            <Button
-              py="6"
-              px="7"
-              variant="primary-sky-blue"
-              fontWeight="semibold"
-            >
-              Read More
-            </Button>
           </VStack>
           <Box
             pos="relative"

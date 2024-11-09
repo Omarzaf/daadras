@@ -30,11 +30,7 @@ function FoundationFacts() {
             </Text>
           </VStack>
           <VStack w="full">
-            <Flex
-              gap="6"
-              w={{ base: "full", lg: "70%" }}
-              flexDir={{ base: "column", lg: "row" }}
-            >
+            <Flex gap="6" w="100%" flexDir={{ base: "column", lg: "row" }}>
               <VStack
                 w={{ base: "full", lg: "50%" }}
                 alignItems="flex-start"
@@ -58,21 +54,26 @@ function FoundationFacts() {
                       color="white"
                       textDecor="underline"
                     >
-                      heading
+                      Curriculum Triangulation:
                     </Text>
                     <Text color="white" fontWeight="semibold">
-                      unknown printer took a galley of type and scrambled it to
-                      make a type specimen book
+                      Daadras Foundation, through Project Salam, is proud to be
+                      a pioneering force in Pakistan by offering a unique,
+                      triangulated curriculum tailored specifically for
+                      underserved children. Our curriculum combines IT training,
+                      Social Emotional Learning (SEL), and critical thinking—a
+                      powerful trio designed to bridge educational gaps and
+                      empower young minds with essential 21st-century skills.
+                      This holistic approach not only equips children with
+                      technical skills in IT but also nurtures their emotional
+                      resilience and problem-solving abilities, creating a
+                      well-rounded foundation for future success. We are
+                      committed to breaking barriers to quality education and
+                      providing these children with opportunities often reserved
+                      for the more privileged, making Daadras Foundation a
+                      trailblazer in Pakistan's educational landscape.
                     </Text>
                   </Box>
-                  <Button
-                    px="4"
-                    size="sm"
-                    variant="primary-sky-blue"
-                    fontWeight="semibold"
-                  >
-                    Read More
-                  </Button>
                 </VStack>
               </VStack>
               <VStack
@@ -98,21 +99,24 @@ function FoundationFacts() {
                       color="white"
                       textDecor="underline"
                     >
-                      heading
+                      Self-Reliance as our Approach:
                     </Text>
                     <Text color="white" fontWeight="semibold">
-                      unknown printer took a galley of type and scrambled it to
-                      make a type specimen book
+                      At Daadras Foundation, our approach to ration distribution
+                      goes beyond simply providing monthly supplies. We believe
+                      in fostering self-reliance and independence within the
+                      communities we support. Instead of offering aid
+                      indiscriminately, we assess each recipient's situation,
+                      and for those capable of working, we encourage and assist
+                      them in finding employment opportunities. This approach is
+                      rooted in our philosophy that sustainable support means
+                      helping people stand on their own feet, rather than
+                      fostering dependency. By promoting self-sufficiency, we
+                      aim to empower individuals and families to secure their
+                      own future, ensuring that our support creates lasting,
+                      positive change.
                     </Text>
                   </Box>
-                  <Button
-                    px="4"
-                    size="sm"
-                    variant="primary-sky-blue"
-                    fontWeight="semibold"
-                  >
-                    Read More
-                  </Button>
                 </VStack>
               </VStack>
             </Flex>
