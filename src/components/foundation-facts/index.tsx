@@ -62,7 +62,7 @@ function FoundationFacts() {
                       committed to breaking barriers to quality education and
                       providing these children with opportunities often reserved
                       for the more privileged, making Daadras Foundation a
-                      trailblazer in Pakistan's educational landscape.
+                      trailblazer in Pakistan&apos;s educational landscape.
                     </Text>
                   </Box>
                 </VStack>
@@ -97,15 +97,15 @@ function FoundationFacts() {
                       goes beyond simply providing monthly supplies. We believe
                       in fostering self-reliance and independence within the
                       communities we support. Instead of offering aid
-                      indiscriminately, we assess each recipient's situation,
-                      and for those capable of working, we encourage and assist
-                      them in finding employment opportunities. This approach is
-                      rooted in our philosophy that sustainable support means
-                      helping people stand on their own feet, rather than
-                      fostering dependency. By promoting self-sufficiency, we
-                      aim to empower individuals and families to secure their
-                      own future, ensuring that our support creates lasting,
-                      positive change.
+                      indiscriminately, we assess each recipient&apos;s
+                      situation, and for those capable of working, we encourage
+                      and assist them in finding employment opportunities. This
+                      approach is rooted in our philosophy that sustainable
+                      support means helping people stand on their own feet,
+                      rather than fostering dependency. By promoting
+                      self-sufficiency, we aim to empower individuals and
+                      families to secure their own future, ensuring that our
+                      support creates lasting, positive change.
                     </Text>
                   </Box>
                 </VStack>
