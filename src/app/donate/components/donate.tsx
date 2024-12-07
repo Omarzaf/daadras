@@ -36,22 +36,17 @@ function Donation() {
           >
             Direct Transfer Here
           </Heading>
-          <SimpleGrid
-            mt="24"
-            w="full"
-            columns={{ base: 1, lg: 2 }}
-            spacing={{ base: "6", lg: "14" }}
-          >
+          <SimpleGrid mt="16" w="full" columns={{ base: 1, lg: 3 }} spacing="6">
             <Flex
-              fontSize={{ base: "lg", lg: "2xl" }}
+              fontSize={{ base: "lg", lg: "xl" }}
               fontWeight="semibold"
               justify="center"
               align="center"
               bg="sky-blue"
               rounded="3xl"
-              pt="12"
-              pb="16"
-              px="6"
+              pt="10"
+              pb="12"
+              px="4"
               flexDir="column"
             >
               <Text textDecor="underline">Silk Bank limited</Text>
@@ -60,19 +55,37 @@ function Donation() {
               <Text>TITLE: Muhammad Asad Zaheer</Text>
             </Flex>
             <Flex
-              fontSize={{ base: "lg", lg: "2xl" }}
+              fontSize={{ base: "lg", lg: "xl" }}
               fontWeight="semibold"
               justify="center"
               align="center"
               bg="sky-blue"
               rounded="3xl"
-              pt="12"
-              pb="16"
+              pt="10"
+              pb="12"
+              px="4"
               flexDir="column"
             >
-              <Text textDecor="underline">JAZZCASH / EASYPAISA</Text>
+              <Text textDecor="underline">JAZZCASH</Text>
               <Text>Account number: 03320044001</Text>
               <Text>IBAN: PK31JCMA0603923320044001</Text>
+              <Text>TITLE: FATEH MUHAMMAD GHAURI</Text>
+            </Flex>
+            <Flex
+              fontSize={{ base: "lg", lg: "xl" }}
+              fontWeight="semibold"
+              justify="center"
+              align="center"
+              bg="sky-blue"
+              rounded="3xl"
+              pt="10"
+              pb="12"
+              px="4"
+              flexDir="column"
+            >
+              <Text textDecor="underline">EASYPAISA</Text>
+              <Text>Account number: 03320044001</Text>
+              <Text>IBAN: PK37TMFB0000000033636749</Text>
               <Text>TITLE: FATEH MUHAMMAD GHAURI</Text>
             </Flex>
           </SimpleGrid>
