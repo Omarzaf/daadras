@@ -6,6 +6,7 @@ import {
   Box,
   Button,
   Container,
+  Flex,
   Heading,
   Input,
   InputGroup,
@@ -26,79 +27,55 @@ function Donation() {
         maxW="1140px"
       >
         <VStack w="full">
-          <SimpleGrid w="full" columns={{ base: 1, lg: 2 }} spacing="6">
-            <VStack
-              alignItems="flex-start"
-              w={{ base: "full", lg: "50%" }}
-              spacing="8"
-            >
-              <Heading color="sky-blue" textTransform="capitalize">
-                donate today to help us build tomorrow
-              </Heading>
-              <Text color="white" fontWeight="bold" fontSize="lg">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the
-              </Text>
-            </VStack>
-            <VStack spacing="4" w="full">
-              <RadioOptions
-                options={["ONE TIME", "MONTHLY"]}
-                name="donateType"
-                defaultValue="ONE TIME"
-                onChange={() => console.log()}
-              />
-              <RadioOptions
-                options={["25", "500", "100", "200"]}
-                name="donateAmount"
-                onChange={() => console.log()}
-              />
-              <InputGroup mt="4">
-                <InputLeftElement ml="-3.5" pointerEvents="none">
-                  <Text color="white" fontSize="3xl" fontWeight="semibold">
-                    $
-                  </Text>
-                </InputLeftElement>
-                <Input
-                  fontWeight="bold"
-                  fontSize="lg"
-                  color="white"
-                  type="number"
-                  size="lg"
-                  variant="flushed"
-                  borderBottom="4px"
-                  borderColor="white"
-                  _focus={{
-                    borderColor: "white",
-                  }}
-                />
-                <InputRightElement pointerEvents="none" mr="2">
-                  <Text color="white" fontSize="3xl" fontWeight="semibold">
-                    USD
-                  </Text>
-                </InputRightElement>
-              </InputGroup>
-              <Button
-                w="full"
-                variant="primary-white"
-                fontWeight="bold"
-                size="lg"
-                color="steel-blue"
-              >
-                DONATE
-              </Button>
-            </VStack>
-          </SimpleGrid>
-
           <Heading
-            mt="20"
-            fontSize="3xl"
+            fontSize={{ base: "lg", lg: "xl" }}
             color="sky-blue"
             fontWeight="semibold"
             textDecor="underline"
             textTransform="capitalize"
           >
-            pay with other methods
+            Direct Transfer Here
           </Heading>
+          <SimpleGrid
+            mt="24"
+            w="full"
+            columns={{ base: 1, lg: 2 }}
+            spacing={{ base: "6", lg: "14" }}
+          >
+            <Flex
+              fontSize={{ base: "lg", lg: "2xl" }}
+              fontWeight="semibold"
+              justify="center"
+              align="center"
+              bg="sky-blue"
+              rounded="3xl"
+              pt="12"
+              pb="16"
+              px="6"
+              flexDir="column"
+            >
+              <Text textDecor="underline">Silk Bank limited</Text>
+              <Text>Account number: 00732009302525</Text>
+              <Text>IBAN: PK26SAUD0000732009302525</Text>
+              <Text>TITLE: Muhammad Asad Zaheer</Text>
+            </Flex>
+            <Flex
+              fontSize={{ base: "lg", lg: "2xl" }}
+              fontWeight="semibold"
+              justify="center"
+              align="center"
+              bg="sky-blue"
+              rounded="3xl"
+              pt="12"
+              pb="16"
+              flexDir="column"
+            >
+              <Text textDecor="underline">JAZZCASH / EASYPAISA</Text>
+              <Text>Account number: 03320044001</Text>
+              <Text>IBAN: PK31JCMA0603923320044001</Text>
+              <Text>TITLE: FATEH MUHAMMAD GHAURI</Text>
+            </Flex>
+          </SimpleGrid>
         </VStack>
       </Container>
     </Box>
