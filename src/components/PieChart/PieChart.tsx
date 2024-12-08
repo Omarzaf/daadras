@@ -1,8 +1,5 @@
-// @ts-nocheck
 "use client";
-import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
-import { LineChart, Line } from "recharts";
-import { Box } from "@chakra-ui/react";
+import { Cell, Pie, PieChart } from "recharts";
 
 const data = [
   { name: "Project Salam", value: 40 },
@@ -13,20 +10,6 @@ const data = [
 
 const COLORS = ["#c05050", "#59c051", "#4f92c0", "#904fc0"];
 
-const DATA_COUNT = 5;
-const NUMBER_CFG = { count: DATA_COUNT, min: 0, max: 100 };
-
-// const data = {
-//   labels: ["Red", "Orange", "Yellow", "Green", "Blue"],
-//   datasets: [
-//     {
-//       label: "Dataset 1",
-//       data: 20,
-//       backgroundColor: "red",
-//     },
-//   ],
-// };
-
 const RADIAN = Math.PI / 180;
 
 const renderCustomizedLabel = ({
@@ -36,7 +19,6 @@ const renderCustomizedLabel = ({
   innerRadius,
   outerRadius,
   percent,
-  index,
 }) => {
   const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
   const x = cx + radius * Math.cos(-midAngle * RADIAN);

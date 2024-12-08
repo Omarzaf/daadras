@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Box,
   Container,
@@ -8,7 +7,6 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import Image from "next/image";
 import DistributionPieChart from "../PieChart/PieChart";
 // import DaugnutChart from "../DaugnutChart";
 
