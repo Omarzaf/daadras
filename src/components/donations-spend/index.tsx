@@ -54,7 +54,11 @@ function DonationsSpend() {
             spacing="6"
             w={{ base: "full", lg: "60%" }}
           >
-            <Heading color="black" mr="44">
+            <Heading
+              color="black"
+              mr={{ base: "0", lg: "52" }}
+              fontSize={{ base: "2xl", lg: "3xl" }}
+            >
               How we spend you donations and where it goes
             </Heading>
             <Box>

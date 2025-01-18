@@ -16,6 +16,7 @@ function WeDo() {
       alignItems="flex-start"
       spacing="12"
       mb={{ base: "12", lg: "64" }}
+      pt="24"
     >
       <Container
         px={{ base: "4", lg: "0" }}
@@ -24,7 +25,7 @@ function WeDo() {
         w={{ base: "full", lg: "1140px" }}
         maxW="1140px"
       >
-        <Heading color="black" fontSize={{ base: "4xl", lg: "6xl" }}>
+        <Heading color="black" fontSize={{ base: "3xl", lg: "4xl" }}>
           What We Do
         </Heading>
       </Container>
@@ -125,20 +126,6 @@ function WeDo() {
             spacing={{ base: "6", lg: "32" }}
             flexDir={{ base: "column", lg: "row" }}
           >
-            <Box
-              pos="relative"
-              w={{ base: "full", lg: "33%" }}
-              h="450px"
-              overflow="hidden"
-              rounded="1.5rem"
-            >
-              <Image
-                objectFit="cover"
-                src="/assets/clothes-donation.png"
-                fill
-                alt="Picture of the author"
-              />
-            </Box>
             <VStack
               w={{ base: "full", lg: "67%" }}
               alignItems="flex-start"
@@ -185,6 +172,20 @@ function WeDo() {
                 Dedication Of Our Supporters..
               </Text>
             </VStack>
+            <Box
+              pos="relative"
+              w={{ base: "full", lg: "33%" }}
+              h="450px"
+              overflow="hidden"
+              rounded="1.5rem"
+            >
+              <Image
+                objectFit="cover"
+                src="/assets/clothes-donation.png"
+                fill
+                alt="Picture of the author"
+              />
+            </Box>
           </HStack>
         </Container>
       </Box>

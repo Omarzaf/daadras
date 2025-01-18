@@ -12,7 +12,11 @@ function FoundationFacts() {
       >
         <VStack w="full" alignItems="flex-start" spacing="16">
           <VStack w="full" alignItems="flex-start" spacing="5">
-            <Heading color="sky-blue" textDecor="underline">
+            <Heading
+              color="sky-blue"
+              textDecor="underline"
+              fontSize={{ base: "2xl", lg: "3xl" }}
+            >
               Foundation Facts
             </Heading>
             <Text color="white" fontWeight="semibold">

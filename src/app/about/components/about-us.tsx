@@ -15,7 +15,7 @@ import Image from "next/image";
 function AboutUs() {
   return (
     <>
-      <Box bg="white">
+      <Box bg="white" pt="24">
         <Container
           px={{ base: "4", lg: "0" }}
           py={{ base: "12", lg: "24" }}
@@ -25,14 +25,14 @@ function AboutUs() {
           <VStack alignItems="flex-start" spacing="8">
             <Heading
               color="black"
-              fontSize="6xl"
+              fontSize={{ base: "3xl", lg: "4xl" }}
               w="75%"
               textTransform="capitalize"
             >
               About us
             </Heading>
             <Text
-              mt={{ base: "2", lg: "8" }}
+              mt={{ base: "2", lg: "4" }}
               color="black"
               fontWeight="bold"
               fontSize="xl"

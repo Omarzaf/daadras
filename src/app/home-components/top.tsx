@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function Top() {
   return (
-    <Box bg="white">
+    <Box bg="white" pt="24">
       <Container
         px={{ base: "4", lg: "0" }}
         py={{ base: "12", lg: "24" }}
@@ -14,8 +14,8 @@ function Top() {
         <VStack alignItems="flex-start" spacing="8">
           <Heading
             color="black"
-            fontSize={{ base: "3xl", lg: "6xl" }}
-            w={{ base: "full", lg: "75%" }}
+            fontSize={{ base: "3xl", lg: "4xl" }}
+            w={{ base: "full", lg: "50%" }}
             textTransform="capitalize"
           >
             to serve the underserved and empower the vulnerable
@@ -23,7 +23,7 @@ function Top() {
           <Text
             color="black"
             fontWeight="bold"
-            fontSize={{ base: "lg", lg: "xl" }}
+            fontSize={{ base: "md", lg: "lg" }}
             textDecor="underline"
           >
             Have a look here for our Stories of Hope:

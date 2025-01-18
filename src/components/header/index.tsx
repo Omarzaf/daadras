@@ -24,55 +24,63 @@ function Header() {
   return (
     <>
       <header>
-        <HStack w="full" bg="white" justifyContent="center">
-          <Container p="0" w={{ base: "full", lg: "1140px" }} maxW="1140px">
-            <HStack
-              as="nav"
-              w="full"
-              justifyContent="space-between"
-              py={{ base: "2", lg: "4" }}
-              px={{ base: "4", lg: "0" }}
-            >
-              <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
-                <DrawerOverlay />
-                <DrawerContent>
-                  <DrawerCloseButton />
-                  <DrawerHeader>
-                    <Link href="/">
-                      <HeaderLogo />
-                    </Link>
-                  </DrawerHeader>
-                  <DrawerBody pl="9" pt="4">
-                    <NavLinks />
-                  </DrawerBody>
-                </DrawerContent>
-              </Drawer>
-              <HStack>
-                <IconButton
-                  aria-label="menu"
-                  icon={<IoMdMenu size={28} />}
-                  onClick={onOpen}
-                  variant="primary-flat"
-                  display={{ base: "flex", lg: "none" }}
-                />
-                <Link href="/">
-                  <HeaderLogo />
-                </Link>
-              </HStack>
-              <Box display={{ base: "none", lg: "block" }}>
-                <NavLinks />
-              </Box>
-              <Button
-                variant="primary-blue"
-                px="8"
-                as={Link}
-                href="/donate"
-                _hover={{ textDecor: "none" }}
+        <HStack
+          w="full"
+          bg="white"
+          justifyContent="center"
+          pos="fixed"
+          zIndex={1}
+        >
+          <Box w="full" boxShadow="md">
+            <Container p="0" w={{ base: "full", lg: "1140px" }} maxW="1140px">
+              <HStack
+                as="nav"
+                w="full"
+                justifyContent="space-between"
+                py={{ base: "2", lg: "4" }}
+                px={{ base: "4", lg: "0" }}
               >
-                Donate
-              </Button>
-            </HStack>
-          </Container>
+                <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
+                  <DrawerOverlay />
+                  <DrawerContent>
+                    <DrawerCloseButton />
+                    <DrawerHeader>
+                      <Link href="/">
+                        <HeaderLogo />
+                      </Link>
+                    </DrawerHeader>
+                    <DrawerBody pl="9" pt="4">
+                      <NavLinks />
+                    </DrawerBody>
+                  </DrawerContent>
+                </Drawer>
+                <HStack>
+                  <IconButton
+                    aria-label="menu"
+                    icon={<IoMdMenu size={28} />}
+                    onClick={onOpen}
+                    variant="primary-flat"
+                    display={{ base: "flex", lg: "none" }}
+                  />
+                  <Link href="/">
+                    <HeaderLogo />
+                  </Link>
+                </HStack>
+                <Box display={{ base: "none", lg: "block" }}>
+                  <NavLinks />
+                </Box>
+                <Button
+                  variant="primary-blue"
+                  px="8"
+                  as={Link}
+                  href="/donate"
+                  _hover={{ textDecor: "none" }}
+                >
+                  Donate
+                </Button>
+              </HStack>
+            </Container>
+          </Box>
         </HStack>
       </header>
     </>

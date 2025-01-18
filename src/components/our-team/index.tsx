@@ -22,7 +22,7 @@ function OurTeam() {
         <VStack spacing="6" w="full">
           <Heading
             color="black"
-            fontSize="5xl"
+            fontSize={{ base: "3xl", lg: "4xl" }}
             fontWeight="semibold"
             textTransform="capitalize"
           >

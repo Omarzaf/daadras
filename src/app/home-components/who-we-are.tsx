@@ -20,10 +20,14 @@ function WhoWeAre() {
             w={{ base: "full", lg: "60%" }}
             spacing="8"
           >
-            <Heading color="sky-blue" textDecor="underline">
+            <Heading
+              color="sky-blue"
+              textDecor="underline"
+              fontSize={{ base: "2xl", lg: "3xl" }}
+            >
               Who We Are
             </Heading>
-            <Text color="white" fontWeight="bold" fontSize="lg">
+            <Text color="white" fontWeight="medium" fontSize="lg">
               Daadras Is A Non-Profit Organization Started In Pakistan In 2020.
               We Partner With 95 Million People Facing Poverty And Inequality To
               Help Them Reach Their Due Rights And Full Potential. Composed Of

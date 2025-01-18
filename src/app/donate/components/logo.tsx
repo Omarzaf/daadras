@@ -3,15 +3,15 @@ import React from "react";
 
 function Logo() {
   return (
-    <Box bg="white">
+    <Box bg="white" pt="24">
       <Container
         px={{ base: "4", lg: "0" }}
         w={{ base: "full", lg: "1140px" }}
         maxW="1140px"
       >
-        <VStack h={{ base: "400px", lg: "700px" }} w="full">
+        <VStack h={{ base: "400px", lg: "560px" }} w="full">
           <svg
-            width="100%"
+            width="44%"
             height="100%"
             viewBox="0 0 1518 1517"
             fill="none"

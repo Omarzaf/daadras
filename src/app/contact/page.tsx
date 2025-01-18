@@ -12,7 +12,7 @@ import { FaSquarePhone } from "react-icons/fa6";
 
 function Contact() {
   return (
-    <Box bg="white">
+    <Box bg="white" pt="24">
       <Container
         px={{ base: "4", lg: "0" }}
         w={{ base: "full", lg: "1140px" }}
@@ -25,7 +25,7 @@ function Contact() {
           gap={{ base: "12", lg: "32" }}
         >
           <VStack alignItems="flex-start" w="full" spacing="9">
-            <Heading color="steel-blue" fontSize={{ base: "4xl", lg: "6xl" }}>
+            <Heading color="steel-blue" fontSize={{ base: "3xl", lg: "4xl" }}>
               Contact Us
             </Heading>
 
@@ -37,7 +37,7 @@ function Contact() {
               <Box color="sky-blue">
                 <FaSquarePhone size={44} />
               </Box>
-              <Text fontSize={{ base: "lg", lg: "2xl" }} fontWeight="semibold">
+              <Text fontSize={{ base: "lg", lg: "xl" }} fontWeight="semibold">
                 +92-332-0044001
               </Text>
             </HStack>
@@ -45,7 +45,7 @@ function Contact() {
               <Box color="sky-blue">
                 <FaSquarePhone size={44} />
               </Box>
-              <Text fontSize={{ base: "lg", lg: "2xl" }} fontWeight="semibold">
+              <Text fontSize={{ base: "lg", lg: "xl" }} fontWeight="semibold">
                 daadrasfoundation@gmail.com
               </Text>
             </HStack>
@@ -53,13 +53,13 @@ function Contact() {
               <Box color="sky-blue">
                 <FaSquarePhone size={44} />
               </Box>
-              <Text fontSize={{ base: "lg", lg: "2xl" }} fontWeight="semibold">
+              <Text fontSize={{ base: "lg", lg: "xl" }} fontWeight="semibold">
                 Flat 16, Block 2, B-Type Apartments, Shabbir Town, Lahore
               </Text>
             </HStack>
           </VStack>
           <svg
-            width="100%"
+            width="86%"
             height="100%"
             viewBox="0 0 1518 1517"
             fill="none"
