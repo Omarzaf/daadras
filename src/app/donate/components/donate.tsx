@@ -1,20 +1,13 @@
 "use client";
 
-import React from "react";
-import RadioOptions from "@/components/radio-options";
 import {
   Box,
-  Button,
   Container,
   Flex,
   Heading,
-  Input,
-  InputGroup,
-  InputLeftElement,
-  InputRightElement,
   SimpleGrid,
   Text,
-  VStack,
+  VStack
 } from "@chakra-ui/react";
 
 function Donation() {

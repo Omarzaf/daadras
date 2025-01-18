@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Box,
   Container,
@@ -8,7 +7,7 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import Image from "next/image";
+import DistributionPieChart from "../PieChart/PieChart";
 // import DaugnutChart from "../DaugnutChart";
 
 const DONATION_DISTRIBUTION = [
@@ -84,7 +83,10 @@ function DonationsSpend() {
                 immediate need while fostering long-term empowerment and growth.
               </Text>
             </Box>
-
+          </VStack>
+          {/* <DaugnutChart /> */}
+          <Box w={{ base: "full", lg: "40%" }}>
+            <DistributionPieChart />
             <SimpleGrid
               columns={{ base: 1, lg: 2 }}
               gap={{ base: "4", lg: "8" }}
@@ -99,19 +101,6 @@ function DonationsSpend() {
                 </HStack>
               ))}
             </SimpleGrid>
-          </VStack>
-          {/* <DaugnutChart /> */}
-          <Box
-            pos="relative"
-            aspectRatio={16 / 9}
-            w={{ base: "full", lg: "40%" }}
-          >
-            <Image
-              objectFit="cover"
-              src="/assets/fund-utilization.png"
-              fill
-              alt="Picture of the author"
-            />
           </Box>
         </HStack>
       </Container>
