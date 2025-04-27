@@ -12,7 +12,7 @@ function Top() {
         maxW="1140px"
       >
         <VStack alignItems="flex-start" spacing="8">
-          <Heading
+          {/* <Heading
             color="black"
             fontSize={{ base: "3xl", lg: "4xl" }}
             w={{ base: "full", lg: "50%" }}
@@ -27,7 +27,7 @@ function Top() {
             textDecor="underline"
           >
             Have a look here for our Stories of Hope:
-          </Text>
+          </Text> */}
 
           <Box pos="relative" w="full" aspectRatio={16 / 9}>
             <Image

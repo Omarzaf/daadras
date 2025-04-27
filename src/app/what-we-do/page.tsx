@@ -7,7 +7,6 @@ function WhatWeDo() {
   return (
     <>
       <WeDo />
-      <OurTeam />
       <FoundationFacts />
     </>
   );

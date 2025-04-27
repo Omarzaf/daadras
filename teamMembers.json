@@ -1,0 +1,98 @@
+[
+  {
+      "id": "omer-zafar",
+      "name": "Omer Zafar",
+      "role": "CEO",
+      "bio": "Omer is the CEO with a vision to lead the company to new heights.",
+      "image": "/assets/ceo.png",
+      "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/omerzafar",
+          "github": "https://github.com/omerzafar",
+          "twitter": "https://twitter.com/omerzafar"
+      }
+  },
+  {
+      "id": "fateh-muhammad",
+      "name": "Fateh Muhammad",
+      "role": "COO",
+      "bio": "Fateh oversees the company's operations and ensures everything runs smoothly.",
+      "image": "/assets/coo.png",
+      "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/fatehmuhammad",
+          "github": "https://github.com/fatehmuhammad",
+          "twitter": "https://twitter.com/fatehmuhammad"
+      }
+  },
+  {
+      "id": "shanzay-khan",
+      "name": "Shanzay Khan",
+      "role": "Head of SEL",
+      "bio": "Shanzay leads the Social Emotional Learning initiatives.",
+      "image": "/assets/sel.png",
+      "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/shanzaykhan",
+          "github": "https://github.com/shanzaykhan",
+          "twitter": "https://twitter.com/shanzaykhan"
+      }
+  },
+  {
+      "id": "arooj-hameed-khan",
+      "name": "Arooj Hameed Khan",
+      "role": "Head of Project Salam",
+      "bio": "Arooj is responsible for the success of Project Salam.",
+      "image": "/assets/project-director.png",
+      "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/aroojhameedkhan",
+          "github": "https://github.com/aroojhameedkhan",
+          "twitter": "https://twitter.com/aroojhameedkhan"
+      }
+  },
+  {
+      "id": "sawaiz-naseem",
+      "name": "Sawaiz Naseem",
+      "role": "Head of IT",
+      "bio": "Sawaiz leads the IT department with a focus on innovation.",
+      "image": "/assets/ceo.png",
+      "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/sawaiznaseem",
+          "github": "https://github.com/sawaiznaseem",
+          "twitter": "https://twitter.com/sawaiznaseem"
+      }
+  },
+  {
+      "id": "sarmad-sabir",
+      "name": "Sarmad Sabir",
+      "role": "Head of Strategic Gaming",
+      "bio": "Sarmad is at the forefront of our strategic gaming initiatives.",
+      "image": "/assets/ceo.png",
+      "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/sarmadsabir",
+          "github": "https://github.com/sarmadsabir",
+          "twitter": "https://twitter.com/sarmadsabir"
+      }
+  },
+  {
+      "id": "muqaddim-sabir",
+      "name": "Muqaddim Sabir",
+      "role": "Head of Marketing",
+      "bio": "Muqaddim drives the marketing strategies to enhance our brand presence.",
+      "image": "/assets/ceo.png",
+      "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/muqaddimsabir",
+          "github": "https://github.com/muqaddimsabir",
+          "twitter": "https://twitter.com/muqaddimsabir"
+      }
+  },
+  {
+      "id": "anwar-ahmed",
+      "name": "Anwar Ahmed",
+      "role": "HR Manager",
+      "bio": "Anwar drives the marketing strategies to enhance our brand presence.",
+      "image": "/assets/ceo.png",
+      "socialLinks": {
+          "linkedin": "https://www.linkedin.com/in/anwarahmed",
+          "github": "https://github.com/anwarahmed",
+          "twitter": "https://twitter.com/anwarahmed"
+      }
+  }
+]

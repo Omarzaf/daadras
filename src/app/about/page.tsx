@@ -6,7 +6,6 @@ import FoundationFacts from "@/components/foundation-facts";
 function About() {
   return (
     <>
-      <AboutUs />
       <OurTeam />
       <FoundationFacts />
     </>
