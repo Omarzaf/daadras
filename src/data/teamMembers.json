@@ -2,85 +2,179 @@
   {
       "id": "omer-zafar",
       "name": "Omer Zafar",
-      "role": "CEO",
-      "bio": "Omer is the CEO with a vision to lead the company to new heights.",
-      "image": "/assets/ceo.png",
+      "role": "CEO / Founder",
+      "background": [
+        "Sawaiz Naseem is a Machine Learning Engineer and AI Researcher with a deep commitment to applying technology for real-world impact. His work spans across fields like Computer Vision, Natural Language Processing, Reinforcement Learning, and Data Analytics, with hands-on experience in both academic research and industry projects.",
+        "He is also passionate about education. Over the last 7 years, he has taught Computer Science to students at all levels — from primary school children to university graduates — helping them build strong foundations in technology, critical thinking, and problem-solving."
+    ],
+    "joining_story": [
+        "Coming from a less privileged background myself, I have always understood firsthand the challenges faced by children growing up in underserved communities. For a long time, financial and health struggles kept me from giving back in the way I had always hoped.",
+        "After graduation, when Omer, the CEO of Daadras, approached me with an invitation to teach a few children over the weekends, I immediately saw it as the opportunity I had been waiting for. What started as a small weekend commitment quickly grew into something much bigger.",
+        "As I spent more time teaching, I witnessed the real, tangible impact we were making — not just in the students' academic growth, but in their confidence, dreams, and futures. Before long, I found myself fully immersed in the work, becoming a full-time member of Project Salam.",
+        "I believe there is a significant education gap in our society — a gap that even many private schools in developing countries struggle to address. Through Project Salam, I am proud to be part of an effort that brings high-quality education to children in orphanages and underprivileged schools, helping to create the opportunities they deserve."
+    ],
+    "role_description": [
+        "At Project Salam, Sawaiz Naseem leads the IT education and development initiatives. He manages the IT teaching program, training a team of volunteers to deliver the curriculum and adopt Project Salam's unique approach to education.",
+        "In addition to overseeing teaching operations, Sawaiz spearheads key technology projects to support the organization's growth and impact. He has led the development of several in-house systems, including the Daadras Application Tracking System for streamlining volunteer recruitment, the Daadras Student Database for tracking and evaluating the progress of the children enrolled in the program, and the Daadras Website to strengthen the organization's online presence.",
+        "His work ensures that Project Salam can operate efficiently, scale sustainably, and better serve the community."
+    ],  
+      "image": "/assets/team_photos/ceo_omer.png",
       "socialLinks": {
-          "linkedin": "https://www.linkedin.com/in/omerzafar",
-          "github": "https://github.com/omerzafar",
-          "twitter": "https://twitter.com/omerzafar"
+          "linkedin": "https://www.linkedin.com/in/umarzafar1/"
       }
   },
   {
       "id": "fateh-muhammad",
       "name": "Fateh Muhammad",
       "role": "COO",
-      "bio": "Fateh oversees the company's operations and ensures everything runs smoothly.",
-      "image": "/assets/coo.png",
+      "background": [
+        "With a background in Statistics, Fateh Muhammad currently works as a Data Analyst at Teach The World Foundation, which uses gamification to combat illiteracy among out-of-school children. He is also pursuing an MPhil in Education Leadership and Management from LUMS, and serves as the Chief Operating Officer of Daadras Foundation."
+    ],
+    "joining_story": [
+        "I joined Daadras Foundation after a conversation with my close friend and founder Omar Zafar, about the kind of education that could create lasting impact in underserved communities. Together, we envisioned a holistic learning model that integrates Information Technology (IT), Social Emotional Learning (SEL), Strategic Thinking through chess, and Public Speaking—giving children the tools to think critically, build emotional resilience, and express themselves confidently."
+    ],
+    "role_description": [
+        "As COO, Fateh leads program execution, especially Project Salam, ensuring its relevance and impact. He oversees operations, monitors outcomes, and works to expand the foundation’s reach, while keeping its mission grounded in empathy and long-term sustainability"
+    ],    
+      "image": "/assets/team_photos/coo_fateh.png",
       "socialLinks": {
-          "linkedin": "https://www.linkedin.com/in/fatehmuhammad",
-          "github": "https://github.com/fatehmuhammad",
-          "twitter": "https://twitter.com/fatehmuhammad"
-      }
-  },
-  {
-      "id": "shanzay-khan",
-      "name": "Shanzay Khan",
-      "role": "Head of SEL",
-      "bio": "Shanzay leads the Social Emotional Learning initiatives.",
-      "image": "/assets/sel.png",
-      "socialLinks": {
-          "linkedin": "https://www.linkedin.com/in/shanzaykhan",
-          "github": "https://github.com/shanzaykhan",
-          "twitter": "https://twitter.com/shanzaykhan"
+          "linkedin": "https://www.linkedin.com/in/fateh-ghauri-035870150/"
       }
   },
   {
       "id": "arooj-hameed-khan",
       "name": "Arooj Hameed Khan",
-      "role": "Head of Project Salam",
-      "bio": "Arooj is responsible for the success of Project Salam.",
-      "image": "/assets/project-director.png",
+      "role": "Director Project Salam",
+      "background": [
+        "Sawaiz Naseem is a Machine Learning Engineer and AI Researcher with a deep commitment to applying technology for real-world impact. His work spans across fields like Computer Vision, Natural Language Processing, Reinforcement Learning, and Data Analytics, with hands-on experience in both academic research and industry projects.",
+        "Beyond his technical achievements, Sawaiz is passionate about education. Over the years, he has taught Computer Science to students at all levels — from primary school children to university graduates — helping them build strong foundations in technology, critical thinking, and problem-solving.",
+        "His journey reflects a blend of technical excellence, leadership, and a deep belief in empowering the next generation through knowledge and innovation."
+    ],
+    "joining_story": [
+        "Coming from a less privileged background myself, I have always understood firsthand the challenges faced by children growing up in underserved communities. For a long time, financial and health struggles kept me from giving back in the way I had always hoped.",
+        "After graduation, when Omer, the CEO of Daadras, approached me with an invitation to teach a few children over the weekends, I immediately saw it as the opportunity I had been waiting for. What started as a small weekend commitment quickly grew into something much bigger.",
+        "As I spent more time teaching, I witnessed the real, tangible impact we were making — not just in the students' academic growth, but in their confidence, dreams, and futures. Before long, I found myself fully immersed in the work, becoming a full-time member of Project Salam.",
+        "I believe there is a significant education gap in our society — a gap that even many private schools in developing countries struggle to address. Through Project Salam, I am proud to be part of an effort that brings high-quality education to children in orphanages and underprivileged schools, helping to create the opportunities they deserve."
+    ],
+    "role_description": [
+        "At Project Salam, Sawaiz Naseem leads the IT education and development initiatives. He manages the IT teaching program, training a team of volunteers to deliver the curriculum and adopt Project Salam's unique approach to education.",
+        "In addition to overseeing teaching operations, Sawaiz spearheads key technology projects to support the organization's growth and impact. He has led the development of several in-house systems, including the Daadras Application Tracking System for streamlining volunteer recruitment, the Daadras Student Database for tracking and evaluating the progress of the children enrolled in the program, and the Daadras Website to strengthen the organization's online presence.",
+        "His work ensures that Project Salam can operate efficiently, scale sustainably, and better serve the community."
+    ],
+      "image": "/assets/team_photos/project_director_salam_arooj.png",
       "socialLinks": {
-          "linkedin": "https://www.linkedin.com/in/aroojhameedkhan",
-          "github": "https://github.com/aroojhameedkhan",
-          "twitter": "https://twitter.com/aroojhameedkhan"
+          "linkedin": "https://www.linkedin.com/in/aroojhkhan/"
       }
   },
   {
-      "id": "sawaiz-naseem",
-      "name": "Sawaiz Naseem",
-      "role": "Head of IT",
-      "bio": "Sawaiz leads the IT department with a focus on innovation.",
-      "image": "/assets/ceo.png",
-      "socialLinks": {
-          "linkedin": "https://www.linkedin.com/in/sawaiznaseem",
-          "github": "https://github.com/sawaiznaseem",
-          "twitter": "https://twitter.com/sawaiznaseem"
-      }
-  },
+    "id": "abdul-muqadim",
+    "name": "Abdul Muqadim",
+    "role": "Director Marketing",
+    "background": [
+      "Abdul Muqadim is a marketing strategist and communications specialist, deeply passionate about creating meaningful connections through impactful storytelling and outreach. With professional experience spanning paid media, strategic communication, and digital amplification, Abdul has worked with leading agencies such as Pentasia, Adsells, and Publicis Groupe. His work has contributed to elevating brands across industries like esports, fintech, and consumer goods.",
+      "Beyond his technical expertise, Abdul believes in the power of communication to drive social change. His journey combines strategic excellence, a flair for creativity, and a commitment to using marketing as a tool for empowerment and community development."
+    ],
+    "joining_story": [
+        "Coming from a background where I have seen both sides — the struggles and the opportunities — I feel a deep responsibility to give back to the community. I know firsthand how it feels to be on the other side, waiting for a chance.",
+        "Joining Daadras was not just a professional choice; it was a personal mission. I believe that if even one person’s life changes because of something I contributed, that alone would be a win. For me, Daadras is not just an organization — it’s a part of who I am."
+    ],
+    "role_description": [
+        "At Daadras, Abdul Muqadim leads the marketing and communications initiatives, heading efforts to amplify the organization's voice and expand its reach. He oversees all marketing strategies, public relations campaigns, and digital outreach activities to ensure that Daadras’ mission resonates widely and authentically.",
+        "From crafting compelling narratives to executing strategic outreach plans, Abdul’s work ensures that Daadras remains visible, impactful, and connected with the communities it serves. His leadership in marketing strengthens the organization’s ability to grow sustainably while inspiring greater participation and support for its educational initiatives."
+    ],
+        "image": "/assets/team_photos/head_of_marketing_muqadim.jpg",
+        "socialLinks": {
+            "linkedin": "https://www.linkedin.com/in/abdul-muqadim-b16bb8224/"
+        }
+    },
+  {
+    "id": "shanzay-khan",
+    "name": "Shanzay Khan",
+    "role": "Director SEL",
+    "background": [
+      "Sawaiz Naseem is a Machine Learning Engineer and AI Researcher with a deep commitment to applying technology for real-world impact. His work spans across fields like Computer Vision, Natural Language Processing, Reinforcement Learning, and Data Analytics, with hands-on experience in both academic research and industry projects.",
+      "Beyond his technical achievements, Sawaiz is passionate about education. Over the years, he has taught Computer Science to students at all levels — from primary school children to university graduates — helping them build strong foundations in technology, critical thinking, and problem-solving.",
+      "His journey reflects a blend of technical excellence, leadership, and a deep belief in empowering the next generation through knowledge and innovation."
+    ],
+    "joining_story": [
+        "Coming from a less privileged background, I’ve experienced firsthand the challenges faced by children in underserved communities. For a long time, financial and health struggles kept me from contributing the way I had always hoped.",
+        "After graduation, wheSEL n Omer, the CEO of Daadras, invited me to teach a few children over the weekends, I jumped at the opportunity. What began as a small weekend effort quickly grew as I saw the real impact we were making — not just in academics, but in building the children's confidence and dreams. Inspired by their growth, I soon became a full-time part of Project Salam.",
+        "I believe there is a significant education gap in our society — a gap that even many private schools in developing countries struggle to address. Through Project Salam, I am proud to be part of an effort that brings high-quality education to children in orphanages and underprivileged schools, helping to create the opportunities they deserve."
+    ],
+    "role_description": [
+        "At Project Salam, Sawaiz Naseem leads the IT education and development initiatives. He manages the IT teaching program, training a team of volunteers to deliver the curriculum and adopt Project Salam's unique approach to education.",
+        "In addition to overseeing teaching operations, Sawaiz spearheads key technology projects to support the organization's growth and impact. He has led the development of several in-house systems, including the Daadras Application Tracking System for streamlining volunteer recruitment, the Daadras Student Database for tracking and evaluating the progress of the children enrolled in the program, and the Daadras Website to strengthen the organization's online presence.",
+        "I believe the education gap we face today is one that even private schools struggle to bridge. Through Project Salam, I’m proud to help create opportunities where they’re needed most — giving every child a real chance to imagine and build a better future."
+    ],  
+        "image": "/assets/team_photos/head_of_sel_shanzay.jpg",
+        "socialLinks": {
+            "linkedin": "https://www.linkedin.com/in/shanzey-khan-78462229b/"
+        }
+    },
   {
       "id": "sarmad-sabir",
       "name": "Sarmad Sabir",
-      "role": "Head of Strategic Gaming",
-      "bio": "Sarmad is at the forefront of our strategic gaming initiatives.",
-      "image": "/assets/ceo.png",
+      "role": "Director Strategic Gaming",
+      "background": [
+        "Sarmad holds a degree in Computer Science, having completed his final year project on Wireless Human Heart Rate Monitoring. Since graduating, he has gained almost two years of professional experience in the tech industry, working on software development and technology solutions. In parallel, he has been an online Computer Science instructor for international students for the past year, helping young learners build strong technical and analytical skills."
+    ],
+    "joining_story": [
+        "I was drawn to Daadras because of its powerful mission to empower underprivileged youth, particularly orphans, through the Salam Project, which focuses on developing skills in Information Technology, Chess, and Social-Emotional Learning (SEL). During a personally challenging time in my life, discovering Daadras provided me with an opportunity to channel my energy into a cause rooted in hope, growth, and long-term empowerment. The organization’s commitment to making a real difference resonated with me, inspiring me to contribute his skills to the initiative."
+    ],
+    "role_description": [
+        "At Daadras, I serves as the Head of Strategic Gaming. In this role, I designs and leads programs that use chess and other strategic games to strengthen critical thinking, decision-making, emotional regulation, and resilience among orphans enrolled in the Salam Project. My work is focused on ensuring that strategic play becomes a tool for real-world empowerment, providing children with essential life skills that extend far beyond the game itself."
+    ],    
+      "image": "/assets/team_photos/head_of_strategic_gaming_sarmad_sabir.png",
       "socialLinks": {
-          "linkedin": "https://www.linkedin.com/in/sarmadsabir",
-          "github": "https://github.com/sarmadsabir",
-          "twitter": "https://twitter.com/sarmadsabir"
+          "linkedin": "https://www.linkedin.com/in/sarmadsabir7/"
       }
   },
   {
-      "id": "muqaddim-sabir",
-      "name": "Muqaddim Sabir",
-      "role": "Head of Marketing",
-      "bio": "Muqaddim drives the marketing strategies to enhance our brand presence.",
-      "image": "/assets/ceo.png",
-      "socialLinks": {
-          "linkedin": "https://www.linkedin.com/in/muqaddimsabir",
-          "github": "https://github.com/muqaddimsabir",
-          "twitter": "https://twitter.com/muqaddimsabir"
-      }
+    "id": "sawaiz-naseem",
+    "name": "Sawaiz Naseem", 
+    "role": "Director IT",
+    "background": [
+        "Sawaiz Naseem is a Machine Learning Engineer and AI Researcher with a deep commitment to applying technology for real-world impact. His work spans across fields like Computer Vision, Natural Language Processing, Reinforcement Learning, and Data Analytics, with hands-on experience in both academic research and industry projects.",
+        "Beyond his technical achievements, Sawaiz is passionate about education. Over the years, he has taught Computer Science to students at all levels — from primary school children to university graduates — helping them build strong foundations in technology, critical thinking, and problem-solving."
+    ],
+    "joining_story": [
+      "Coming from a less privileged background, I’ve experienced firsthand the challenges faced by children in underserved communities. For a long time, financial and health struggles kept me from contributing the way I had always hoped.",
+      "After graduation, when Omer, the CEO of Daadras, invited me to teach a few children over the weekends, I jumped at the opportunity. What began as a small weekend effort quickly grew as I saw the real impact we were making — not just in academics, but in building the children's confidence and dreams. Inspired by their growth, I soon became a full-time part of Project Salam.",
+      "I believe there is a significant education gap in our society — a gap that even many private schools in developing countries struggle to address. Through Project Salam, I am proud to be part of an effort that brings high-quality education to children in orphanages and underprivileged schools, helping to create the opportunities they deserve."
+    ],
+    "role_description": [
+      "At Project Salam, Sawaiz Naseem leads the IT education and development initiatives. He manages the IT teaching program, training a team of volunteers to deliver the curriculum and adopt Project Salam's unique approach to education.",
+      "In addition to overseeing teaching operations, Sawaiz spearheads key technology projects to support the organization's growth and impact. He has led the development of several in-house systems, including the Daadras Application Tracking System for streamlining volunteer recruitment, the Daadras Student Database for tracking and evaluating the progress of the children enrolled in the program, and the Daadras Website to strengthen the organization's online presence.",
+      "I believe the education gap we face today is one that even private schools struggle to bridge. Through Project Salam, I’m proud to help create opportunities where they’re needed most — giving every child a real chance to imagine and build a better future."
+    ],  
+        "image": "/assets/team_photos/head_of_it_sawaiz.jpg",
+        "socialLinks": {
+            "linkedin": "https://www.linkedin.com/in/sawaiz-naseem-2053491a1/"
+        }
+    },
+  {
+    "id": "abdullah-farrukh",
+    "name": "Abdullah Farrukh",
+    "role": "Director Public Speaking",
+    "background": [
+      "Sawaiz Naseem is a Machine Learning Engineer and AI Researcher with a deep commitment to applying technology for real-world impact. His work spans across fields like Computer Vision, Natural Language Processing, Reinforcement Learning, and Data Analytics, with hands-on experience in both academic research and industry projects.",
+      "Beyond his technical achievements, Sawaiz is passionate about education. Over the years, he has taught Computer Science to students at all levels — from primary school children to university graduates — helping them build strong foundations in technology, critical thinking, and problem-solving.",
+      "His journey reflects a blend of technical excellence, leadership, and a deep belief in empowering the next generation through knowledge and innovation."
+    ],
+    "joining_story": [
+        "Coming from a less privileged background myself, I have always understood firsthand the challenges faced by children growing up in underserved communities. For a long time, financial and health struggles kept me from giving back in the way I had always hoped.",
+        "After graduation, when Omer, the CEO of Daadras, approached me with an invitation to teach a few children over the weekends, I immediately saw it as the opportunity I had been waiting for. What started as a small weekend commitment quickly grew into something much bigger.",
+        "As I spent more time teaching, I witnessed the real, tangible impact we were making — not just in the students' academic growth, but in their confidence, dreams, and futures. Before long, I found myself fully immersed in the work, becoming a full-time member of Project Salam.",
+        "I believe there is a significant education gap in our society — a gap that even many private schools in developing countries struggle to address. Through Project Salam, I am proud to be part of an effort that brings high-quality education to children in orphanages and underprivileged schools, helping to create the opportunities they deserve."
+    ],
+    "role_description": [
+        "At Project Salam, Sawaiz Naseem leads the IT education and development initiatives. He manages the IT teaching program, training a team of volunteers to deliver the curriculum and adopt Project Salam's unique approach to education.",
+        "In addition to overseeing teaching operations, Sawaiz spearheads key technology projects to support the organization's growth and impact. He has led the development of several in-house systems, including the Daadras Application Tracking System for streamlining volunteer recruitment, the Daadras Student Database for tracking and evaluating the progress of the children enrolled in the program, and the Daadras Website to strengthen the organization's online presence.",
+        "His work ensures that Project Salam can operate efficiently, scale sustainably, and better serve the community."
+    ],
+    "image": "/assets/team_photos/head_of_public_speaking_abdullah_farrukh.png",
+    "socialLinks": {
+        "linkedin": "https://www.linkedin.com/in/abdullah-farrukh-6a8394225/"
+    }
   }
 ]

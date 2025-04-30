@@ -7,12 +7,10 @@ import {
   SimpleGrid,
   Text,
   VStack,
-  Button,
-  Link as ChakraLink,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from 'next/link';
-import teamMembers from './../../data/teamMembers.json';
+import teamMembers from "../../data/teamMembers.json";
 
 function OurTeam() {
   return (
@@ -24,14 +22,6 @@ function OurTeam() {
         maxW="1140px"
       >
         <VStack spacing="6" w="full">
-          <Heading
-            color="black"
-            fontSize={{ base: "3xl", lg: "4xl" }}
-            fontWeight="semibold"
-            textTransform="capitalize"
-          >
-            Our Team
-          </Heading>
 
           <SimpleGrid columns={{ base: 1, lg: 4 }} w="full" gap="6">
             {teamMembers.map((member) => (
@@ -42,15 +32,21 @@ function OurTeam() {
                   h="360px"
                   rounded="1.5rem"
                   overflow="hidden"
-                  transition="transform 0.3s ease"
-                  _hover={{ transform: 'scale(1.02)' }}
+                  boxShadow="md"
+                  cursor="pointer"
+                  transition="all 0.3s ease"
+                  _hover={{ boxShadow: "xl", transform: 'scale(1.02)' }}
                 >
+                  {/* Member Image */}
                   <Image
                     objectFit="cover"
+                    objectPosition="top"
                     src={member.image}
                     alt={`Picture of ${member.name}`}
                     layout="fill"
                   />
+
+                  {/* Black Info Bar */}
                   <Box
                     pos="absolute"
                     insetX="0"
@@ -66,8 +62,36 @@ function OurTeam() {
                           {member.name}
                         </Text>
                         <Text color="white">({member.role})</Text>
-                        </Box>
+                      </Box>
                     </HStack>
+                  </Box>
+
+                  {/* Hover Overlay */}
+                  <Box
+                    pos="absolute"
+                    top="0"
+                    left="0"
+                    right="0"
+                    bottom="0"
+                    bg="blackAlpha.400"
+                    opacity="0"
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="center"
+                    transition="all 0.3s ease"
+                    _hover={{ opacity: 1 }}
+                  >
+                    <Text
+                      color="white"
+                      fontWeight="bold"
+                      fontSize="lg"
+                      bg="blackAlpha.700"
+                      px="4"
+                      py="2"
+                      rounded="md"
+                    >
+                      View Profile
+                    </Text>
                   </Box>
                 </Box>
               </Link>

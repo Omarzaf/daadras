@@ -11,19 +11,6 @@ function FoundationFacts() {
         maxW="1140px"
       >
         <VStack w="full" alignItems="flex-start" spacing="16">
-          <VStack w="full" alignItems="flex-start" spacing="5">
-            <Heading
-              color="sky-blue"
-              textDecor="underline"
-              fontSize={{ base: "2xl", lg: "3xl" }}
-            >
-              Foundation Facts
-            </Heading>
-            <Text color="white" fontWeight="semibold">
-              1500s, when an unknown printer took a galley of type and scrambled
-              it to make a type specimen book. It has survived not only five
-            </Text>
-          </VStack>
           <VStack w="full">
             <Flex gap="6" w="100%" flexDir={{ base: "column", lg: "row" }}>
               <VStack

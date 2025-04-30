@@ -4,12 +4,15 @@ import fs from 'fs'
 import Image from 'next/image'
 import { Box, Container, Heading, Text, VStack, HStack, Link, Button, Divider } from '@chakra-ui/react'
 import { FaLinkedin } from 'react-icons/fa'
+import React from "react";
 
 type TeamMember = {
   id: string
   name: string
   role: string
-  bio: string
+  background: string
+  joining_story: string
+  role_description: string
   image: string
   socialLinks: { linkedin?: string }
 }
@@ -37,25 +40,24 @@ export default async function TeamMemberPage({ params }: { params: { id: string 
         {/* Image and LinkedIn Section */}
         <VStack spacing={4}>
           <Box
-            w={200}
-            h={200}
+            w={300}
+            h={300}
             position="relative"
             borderRadius="lg"
             overflow="hidden"
             border="4px solid"
             borderColor="sky-blue"
-            _hover={{ transform: 'scale(1.05)', transition: 'transform 0.3s ease' }}
           >
             <Image
               src={member.image}
               alt={member.name}
               fill
-              style={{ objectFit: 'cover' }}
+              style={{ objectFit: 'cover', objectPosition: 'top' }}
             />
           </Box>
           {member.socialLinks.linkedin && (
-            <Link href={member.socialLinks.linkedin} isExternal>
-              <Button colorScheme="linkedin" variant="outline" leftIcon={<FaLinkedin />}>
+            <Link href={member.socialLinks.linkedin} isExternal w="300px">
+              <Button colorScheme="linkedin" variant="outline" leftIcon={<FaLinkedin />} w="100%">
                 Connect on LinkedIn
               </Button>
             </Link>
@@ -63,21 +65,58 @@ export default async function TeamMemberPage({ params }: { params: { id: string 
         </VStack>
 
         {/* Content Section */}
-        <VStack align="start" spacing={4} maxW="2xl">
+        <VStack align="start" spacing={6} maxW="2xl">
           {/* Name & Role */}
-          <Heading as="h1" size="2xl" fontWeight="bold">
-            {member.name}
-          </Heading>
-          <Text fontSize="lg" fontWeight="medium" color="gray.600">
-            {member.role}
-          </Text>
+          <VStack align="start" spacing={1}>
+            <Heading as="h1" size="2xl" fontWeight="bold">
+              {member.name}
+            </Heading>
+            <Text fontSize="xl" fontWeight="medium" color="gray.600" fontFamily="mono">
+              {member.role}
+            </Text>
+          </VStack>
 
-          {/* Bio Section */}
-          <Text fontSize="md" color="gray.700" lineHeight="tall">
-            {member.bio}
-          </Text>
+          {/* Background Section */}
+          <VStack align="start" spacing={3} w="full">
+            <Heading as="h2" size="lg">Background</Heading>
+            {member.background.map((paragraph, index) => (
+              <Text key={index} fontSize="md" color="gray.700" lineHeight="tall">
+                {paragraph}
+              </Text>
+            ))}
+          </VStack>
 
-          <Divider my={4} />
+          <Divider />
+
+          {/* Why I Joined Section */}
+          <VStack align="start" spacing={3} w="full">
+            <Heading as="h2" size="lg">Why I Joined</Heading>
+            <Text fontSize="md" color="gray.700" lineHeight="tall" fontStyle="italic">
+              "{member.joining_story.map((paragraph, index) => (
+                <React.Fragment key={index}>
+                  {paragraph}
+                  {index < member.joining_story.length - 1 && (
+                    <>
+                      <br />
+                      <br />
+                    </>
+                  )}
+                </React.Fragment>
+              ))}"
+            </Text>
+          </VStack>
+
+          <Divider />
+
+          {/* Role Description Section */}
+          <VStack align="start" spacing={3} w="full">
+            <Heading as="h2" size="lg">Role in the Organization</Heading>
+            {member.role_description.map((paragraph, index) => (
+              <Text key={index} fontSize="md" color="gray.700" lineHeight="tall">
+                {paragraph}
+              </Text>
+            ))}
+          </VStack>
         </VStack>
       </HStack>
     </Container>

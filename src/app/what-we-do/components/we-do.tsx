@@ -20,14 +20,11 @@ function WeDo() {
     >
       <Container
         px={{ base: "4", lg: "0" }}
-        pt={{ base: "20", lg: "28" }}
+        pt={{ base: "10", lg: "12" }}
         pb="2"
         w={{ base: "full", lg: "1140px" }}
         maxW="1140px"
       >
-        <Heading color="black" fontSize={{ base: "3xl", lg: "4xl" }}>
-          What We Do
-        </Heading>
       </Container>
 
       <Box bg="pale-aqua" w="full">
