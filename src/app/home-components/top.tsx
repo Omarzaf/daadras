@@ -7,11 +7,18 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 
 function Top() {
   const images = [
-    "/assets/home_slide_show/1.jpg",
-    "/assets/home_slide_show/2.jpg", 
-    "/assets/home_slide_show/3.jpg",
+    // "/assets/home_slide_show/1.jpg",
+    // "/assets/home_slide_show/2.jpg", 
+    "/assets/home_slide_show/3.png",
     "/assets/home_slide_show/4.jpg",
     "/assets/home_slide_show/5.jpg",
+    "/assets/home_slide_show/6.jpg",
+    "/assets/home_slide_show/7.jpg",
+    "/assets/home_slide_show/8.jpg",
+    "/assets/home_slide_show/9.jpg",
+    // "/assets/home_slide_show/10.png",
+    // "/assets/home_slide_show/11.jpg",
+    
     // Add all your slideshow images here
   ];
 
@@ -57,7 +64,7 @@ function Top() {
           width: '100%',
           height: '100%',
           objectPosition: 'center',
-          backgroundColor: 'white' // Added black background to handle letterboxing
+          backgroundColor: '#E0FFFF' // Added black background to handle letterboxing
         }}
         alt={`Slideshow image ${currentImageIndex + 1}`}
       />

@@ -1,52 +1,80 @@
-import { Box, Container, Flex, Heading, Text, VStack } from "@chakra-ui/react";
+import { Box, Container, Flex, Heading, Text, VStack, Stack, Divider } from "@chakra-ui/react";
 import Image from "next/image";
 
 function WhoWeAre() {
   return (
-    <Box bg="navy-blue">
-      <Container
-        px={{ base: "4", lg: "0" }}
-        py={{ base: "12", lg: "24" }}
-        w={{ base: "full", lg: "1140px" }}
-        maxW="1140px"
-      >
-        <Flex
-          w="full"
-          gap={{ base: "12", lg: "44" }}
-          flexDir={{ base: "column", lg: "row" }}
-        >
-          <VStack
-            alignItems="flex-start"
-            w={{ base: "full", lg: "60%" }}
-            spacing="8"
+    <Box bg="navy-blue" py={{ base: "16", lg: "24" }}>
+      <Container maxW="1140px" px={{ base: "4", lg: "0" }}>
+        <VStack spacing="12" align="center" textAlign="center">
+          <Heading
+            color="sky-blue"
+            fontSize={{ base: "3xl", lg: "4xl" }}
+            textDecor="underline"
           >
-            <Heading
-              color="sky-blue"
-              textDecor="underline"
-              fontSize={{ base: "2xl", lg: "3xl" }}
+            Who We Are
+          </Heading>
+          <Text color="white" fontSize={{ base: "md", lg: "lg" }} maxW="3xl">
+            Daadras is a non-profit empowering marginalized communities across Pakistan through education, humanitarian aid, and economic opportunity.
+          </Text>
+          <Flex
+            direction={{ base: "column", lg: "row" }}
+            align="center"
+            gap="12"
+            w="full"
+          >
+            {/* Timeline Section */}
+            <VStack spacing="8" align="start" w={{ base: "full", lg: "60%" }}>
+              <TimelineStep
+                year="2020"
+                title="Our Journey Begins"
+                description="Founded to tackle poverty and inequality, starting with grassroots initiatives."
+              />
+              <Divider borderColor="sky-blue" />
+              <TimelineStep
+                year="2021"
+                title="Early Impact"
+                description="Reached over 10,000 lives with education programs and humanitarian aid."
+              />
+              <Divider borderColor="sky-blue" />
+              <TimelineStep
+                year="Today"
+                title="Expanding Hope"
+                description="Partnering with 95 million people to build a future where every voice is heard."
+              />
+            </VStack>
+
+            {/* Image Section */}
+            <Box
+              pos="relative"
+              w={{ base: "full", lg: "40%" }}
+              h={{ base: "96", lg: "500px" }}
             >
-              Who We Are
-            </Heading>
-            <Text color="white" fontWeight="medium" fontSize="lg">
-            Daadras is a non-profit fighting poverty and inequality across Pakistan.
-            We work with marginalized communities to create lasting change — through education, humanitarian aid, and economic empowerment.
-            Together, we're building a future where every voice is heard.
-            </Text>
-          </VStack>
-          <Box
-            pos="relative"
-            w={{ base: "full", lg: "40%" }}
-            h={{ base: "96", lg: "530px" }}
-          >
-            <Image
-              objectFit="cover"
-              src="/assets/who-we-are.png"
-              fill
-              alt="Picture of the author"
-            />
-          </Box>
-        </Flex>
+              <Image
+                src="/assets/who-we-are.png"
+                alt="Community Work"
+                fill
+                style={{ objectFit: "cover", borderRadius: "12px" }}
+              />
+            </Box>
+          </Flex>
+        </VStack>
       </Container>
+    </Box>
+  );
+}
+
+function TimelineStep({ year, title, description }) {
+  return (
+    <Box>
+      <Text color="sky-blue" fontWeight="bold" fontSize="xl">
+        {year}
+      </Text>
+      <Heading color="white" fontSize="2xl" mt="2">
+        {title}
+      </Heading>
+      <Text color="white" fontSize="md" mt="2">
+        {description}
+      </Text>
     </Box>
   );
 }

@@ -38,7 +38,7 @@ function Contact() {
                 <FaSquarePhone size={44} />
               </Box>
               <Text fontSize={{ base: "lg", lg: "xl" }} fontWeight="semibold">
-                +92-332-0044001
+                +92-3390322301
               </Text>
             </HStack>
             <HStack alignItems="center" spacing="6">

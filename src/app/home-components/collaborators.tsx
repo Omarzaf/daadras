@@ -40,7 +40,7 @@ function Collaborators() {
   ];
 
   return (
-    <Box bg="pale-aqua">
+    <Box bg="#E0FFFF">
       <Container
         px={{ base: "4", lg: "0" }}
         py={{ base: "6", lg: "12" }}

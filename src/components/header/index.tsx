@@ -98,7 +98,7 @@ function Header() {
                     href="/donate"
                     _hover={{ textDecor: "none" }}
                   >
-                    Donate
+                    Ways to Give
                   </Button>
                 </HStack>
               </HStack>

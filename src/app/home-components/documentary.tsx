@@ -12,7 +12,7 @@ import {
 
 function Documentary() {
   return (
-    <Box bg="pale-aqua" py={{ base: "12", lg: "24" }}>
+    <Box bg="#E0FFFF" py={{ base: "12", lg: "24" }}>
       <Container w={{ base: "full", lg: "1140px" }} maxW="1140px" px={{ base: "4", lg: "0" }}>
         <VStack spacing="12" alignItems="flex-start">
           <VStack spacing="6" alignItems="flex-start">
@@ -28,7 +28,7 @@ function Documentary() {
 
           <AspectRatio ratio={16 / 9} w="full">
             <iframe
-              src="https://www.youtube.com/embed/MwsHgn_jdIY"
+              src="https://www.youtube.com/embed/ZiBF_U_iroA"
               title="Documentary"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
