@@ -27,10 +27,11 @@ function Documentary() {
           </VStack>
 
           <AspectRatio ratio={16 / 9} w="full">
-            <video
-              src="/assets/documentary/Daadras first draft.mp4"
+            <iframe
+              src="https://www.youtube.com/embed/MwsHgn_jdIY"
               title="Documentary"
-              controls
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
               style={{ borderRadius: "8px", width: "100%", height: "100%" }}
             />
           </AspectRatio>

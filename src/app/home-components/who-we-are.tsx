@@ -28,15 +28,9 @@ function WhoWeAre() {
               Who We Are
             </Heading>
             <Text color="white" fontWeight="medium" fontSize="lg">
-              Daadras Is A Non-Profit Organization Started In Pakistan In 2020.
-              We Partner With 95 Million People Facing Poverty And Inequality To
-              Help Them Reach Their Due Rights And Full Potential. Composed Of
-              Volunteers From Diverse Walks Of Life, We Share A Comprehensive
-              Approach To Lasting Change. In Pakistan, Daadras Works In
-              Marginalized And Hard-To-Reach Areas, Especially Focusing On
-              Poverty Alleviation. Our Mission Is To Create Lasting Change By
-              Addressing Key Issues Such As Education, Humanitarian Crisis, And
-              Economic Empowerment.
+            Daadras is a non-profit fighting poverty and inequality across Pakistan.
+            We work with marginalized communities to create lasting change — through education, humanitarian aid, and economic empowerment.
+            Together, we're building a future where every voice is heard.
             </Text>
           </VStack>
           <Box

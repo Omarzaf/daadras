@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: "Daadras is a non-profit in Pakistan empowering 95 million people facing poverty and inequality through education, crisis relief, and economic support.",
   icons: {
     icon: [
-      { url: '/favicon.ico', type: 'image/x-icon' },
+      { url: '/favicon.ico?v=2', type: 'image/x-icon' },
     ],
   },
   keywords: [

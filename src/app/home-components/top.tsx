@@ -5,12 +5,13 @@ import { Box, Container, Heading, Text, VStack, IconButton, HStack } from "@chak
 import Image from "next/image";
 import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 
-// ... existing code ...
-
 function Top() {
   const images = [
-    "/assets/home_slide_show/humanitarian-aid.png",
-    "/assets/home_slide_show/hero.png",
+    "/assets/home_slide_show/1.jpg",
+    "/assets/home_slide_show/2.jpg", 
+    "/assets/home_slide_show/3.jpg",
+    "/assets/home_slide_show/4.jpg",
+    "/assets/home_slide_show/5.jpg",
     // Add all your slideshow images here
   ];
 
@@ -39,22 +40,29 @@ function Top() {
   };
 
   return (
-    <Box pos="relative" w="100vw" h="77vh" overflow="hidden" mt="70px"> {/* Increased height from 70vh to 77vh (10% increase) */}
+    <Box 
+      pos="relative" 
+      w="100%" 
+      h="calc(100vh - 70px)" 
+      overflow="hidden" 
+      mt="70px"
+    >
       <Image
-        objectFit="fit"
+        objectFit="contain" // Changed from cover to contain
         src={images[currentImageIndex]}
         fill
         sizes="100vw"
         priority
         style={{ 
-          width: '100%', 
+          width: '100%',
           height: '100%',
-          objectPosition: 'relative'
+          objectPosition: 'center',
+          backgroundColor: 'white' // Added black background to handle letterboxing
         }}
         alt={`Slideshow image ${currentImageIndex + 1}`}
       />
       <HStack 
-        position="relative" 
+        position="absolute" 
         width="100%" 
         justify="space-between" 
         top="50%" 
