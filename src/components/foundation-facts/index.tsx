@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Heading, Text, VStack } from "@chakra-ui/react";
+import { Box, Container, Flex, Text, VStack } from "@chakra-ui/react";
 import Image from "next/image";
 
 function FoundationFacts() {
@@ -25,6 +25,7 @@ function FoundationFacts() {
                     src="/assets/fact1.png"
                     fill
                     alt="Picture of the author"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </Box>
                 <VStack w="full" alignItems="flex-start" p="6">
@@ -70,6 +71,7 @@ function FoundationFacts() {
                     src="/assets/fact2.png"
                     fill
                     alt="Picture of the author"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </Box>
                 <VStack w="full" alignItems="flex-start" p="6">

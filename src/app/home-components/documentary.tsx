@@ -21,7 +21,7 @@ function Documentary() {
             </Heading>
             <Text fontSize="lg" color="gray.600" maxW="800px">
               Experience the transformative impact of our work through this short documentary. 
-              Witness how we're making a difference in communities and changing lives, 
+              Witness how we&apos;re making a difference in communities and changing lives, 
               one story at a time.
             </Text>
           </VStack>

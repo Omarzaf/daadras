@@ -1,24 +1,21 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Box, Container, Heading, Text, VStack, IconButton, HStack } from "@chakra-ui/react";
+import { Box, IconButton, HStack } from "@chakra-ui/react";
 import Image from "next/image";
 import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 
 function Top() {
   const images = [
-    // "/assets/home_slide_show/1.jpg",
-    // "/assets/home_slide_show/2.jpg", 
-    "/assets/home_slide_show/3.png",
+    "/assets/home_slide_show/1.png",
+    "/assets/home_slide_show/2.jpg", 
+    "/assets/home_slide_show/3.jpg",
     "/assets/home_slide_show/4.jpg",
     "/assets/home_slide_show/5.jpg",
     "/assets/home_slide_show/6.jpg",
     "/assets/home_slide_show/7.jpg",
     "/assets/home_slide_show/8.jpg",
-    "/assets/home_slide_show/9.jpg",
-    // "/assets/home_slide_show/10.png",
-    // "/assets/home_slide_show/11.jpg",
-    
+    "/assets/home_slide_show/9.jpg"
     // Add all your slideshow images here
   ];
 
@@ -32,6 +29,7 @@ function Top() {
     }, 5000); // Change image every 5 seconds
 
     return () => clearInterval(timer);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const nextImage = () => {

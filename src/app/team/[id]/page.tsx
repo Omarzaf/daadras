@@ -10,9 +10,9 @@ type TeamMember = {
   id: string
   name: string
   role: string
-  background: string
-  joining_story: string
-  role_description: string
+  background: string[]  // Changed to array of strings
+  joining_story: string[]  // Also should be an array based on your usage
+  role_description: string[]  // Also should be an array based on your usage
   image: string
   socialLinks: { linkedin?: string }
 }
@@ -80,7 +80,7 @@ export default async function TeamMemberPage({ params }: { params: { id: string 
           <VStack align="start" spacing={3} w="full">
             <Heading as="h2" size="lg">Background</Heading>
             {member.background.map((paragraph, index) => (
-              <Text key={index} fontSize="md" color="gray.700" lineHeight="tall">
+              <Text key={index} fontSize="md" color="gray.700" lineHeight="tall" textAlign="justify">
                 {paragraph}
               </Text>
             ))}
@@ -91,8 +91,8 @@ export default async function TeamMemberPage({ params }: { params: { id: string 
           {/* Why I Joined Section */}
           <VStack align="start" spacing={3} w="full">
             <Heading as="h2" size="lg">Why I Joined</Heading>
-            <Text fontSize="md" color="gray.700" lineHeight="tall" fontStyle="italic">
-              "{member.joining_story.map((paragraph, index) => (
+            <Text fontSize="md" color="gray.700" lineHeight="tall" fontStyle="italic" textAlign="justify">
+              &ldquo;{member.joining_story.map((paragraph, index) => (
                 <React.Fragment key={index}>
                   {paragraph}
                   {index < member.joining_story.length - 1 && (
@@ -102,7 +102,7 @@ export default async function TeamMemberPage({ params }: { params: { id: string 
                     </>
                   )}
                 </React.Fragment>
-              ))}"
+              ))}&rdquo;
             </Text>
           </VStack>
 
@@ -112,7 +112,7 @@ export default async function TeamMemberPage({ params }: { params: { id: string 
           <VStack align="start" spacing={3} w="full">
             <Heading as="h2" size="lg">Role in the Organization</Heading>
             {member.role_description.map((paragraph, index) => (
-              <Text key={index} fontSize="md" color="gray.700" lineHeight="tall">
+              <Text key={index} fontSize="md" color="gray.700" lineHeight="tall" textAlign="justify">
                 {paragraph}
               </Text>
             ))}

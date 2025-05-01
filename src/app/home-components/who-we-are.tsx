@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Heading, Text, VStack, Stack, Divider } from "@chakra-ui/react";
+import { Box, Container, Flex, Heading, Text, VStack, Divider } from "@chakra-ui/react";
 import Image from "next/image";
 
 function WhoWeAre() {
