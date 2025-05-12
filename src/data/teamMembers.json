@@ -1,7 +1,7 @@
 [
   {
-      "id": "omer-zafar",
-      "name": "Omer Zafar",
+      "id": "umer-zafar",
+      "name": "Umer Zafar",
       "role": "CEO / Founder",
       "background": [
         "Sawaiz Naseem is a Machine Learning Engineer and AI Researcher with a deep commitment to applying technology for real-world impact. His work spans across fields like Computer Vision, Natural Language Processing, Reinforcement Learning, and Data Analytics, with hands-on experience in both academic research and industry projects.",
@@ -18,7 +18,7 @@
         "In addition to overseeing teaching operations, Sawaiz spearheads key technology projects to support the organization's growth and impact. He has led the development of several in-house systems, including the Daadras Application Tracking System for streamlining volunteer recruitment, the Daadras Student Database for tracking and evaluating the progress of the children enrolled in the program, and the Daadras Website to strengthen the organization's online presence.",
         "His work ensures that Project Salam can operate efficiently, scale sustainably, and better serve the community."
     ],  
-      "image": "/assets/team_photos/ceo_omer.png",
+      "image": "/assets/team_photos/ceo_umer.png",
       "socialLinks": {
           "linkedin": "https://www.linkedin.com/in/umarzafar1/"
       }
