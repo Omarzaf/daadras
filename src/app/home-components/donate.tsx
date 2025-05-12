@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import RadioOptions from "@/components/radio-options";
+import RadioOptions from "../../components/radio-options";
 import {
   Box,
   Button,

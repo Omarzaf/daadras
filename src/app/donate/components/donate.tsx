@@ -12,7 +12,7 @@ import {
 
 function Donation() {
   return (
-    <Box bg="navy-blue">
+    <Box bg="navy-blue" pt={{ base: "8", lg: "16" }} pb="12">
       <Container
         px={{ base: "4", lg: "0" }}
         py={{ base: "12", lg: "24" }}

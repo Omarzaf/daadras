@@ -43,8 +43,8 @@ function Footer() {
                   <Text fontSize="lg" fontWeight="medium">
                     Home
                   </Text>
-                  <Link href="/about" fontSize="sm" opacity="0.78">
-                    About Us
+                  <Link href="/our-team" fontSize="sm" opacity="0.78">
+                    Our Team
                   </Link>
                   <Link href="/what-we-do" fontSize="sm" opacity="0.78">
                     What We Do
@@ -53,7 +53,7 @@ function Footer() {
                     Contact
                   </Link>
                 </VStack>
-                <VStack
+                {/* <VStack
                   w="full"
                   alignItems="flex-start"
                   spacing={{ base: "2", lg: "4" }}
@@ -73,7 +73,7 @@ function Footer() {
                   <Link href="/" fontSize="sm" opacity="0.78">
                     Blog
                   </Link>
-                </VStack>
+                </VStack> */}
                 <VStack
                   w="full"
                   alignItems="flex-start"
@@ -82,16 +82,13 @@ function Footer() {
                   <Text fontSize="lg" fontWeight="medium">
                     Connect
                   </Text>
-                  <Link href="/" fontSize="sm" opacity="0.78">
+                  <Link href="https://www.facebook.com/p/daadrasfoundation-100068474474073/" fontSize="sm" opacity="0.78" isExternal>
                     Facebook
                   </Link>
-                  <Link href="/" fontSize="sm" opacity="0.78">
+                  <Link href="https://www.instagram.com/daadrasfoundation/" fontSize="sm" opacity="0.78" isExternal>
                     Instagram
                   </Link>
-                  <Link href="/" fontSize="sm" opacity="0.78">
-                    Twitter
-                  </Link>
-                  <Link href="/" fontSize="sm" opacity="0.78">
+                  <Link href="https://pk.linkedin.com/company/daadras-foundation-ngo" fontSize="sm" opacity="0.78" isExternal>
                     Linkedin
                   </Link>
                 </VStack>

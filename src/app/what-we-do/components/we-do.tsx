@@ -20,15 +20,87 @@ function WeDo() {
     >
       <Container
         px={{ base: "4", lg: "0" }}
-        pt={{ base: "20", lg: "28" }}
+        pt={{ base: "10", lg: "12" }}
         pb="2"
         w={{ base: "full", lg: "1140px" }}
         maxW="1140px"
       >
-        <Heading color="black" fontSize={{ base: "3xl", lg: "4xl" }}>
-          What We Do
-        </Heading>
       </Container>
+
+      <Box bg="pale-aqua" w="full">
+        <Container
+          px={{ base: "4", lg: "0" }}
+          py={{ base: "12", lg: "20" }}
+          w={{ base: "full", lg: "1140px" }}
+          maxW="1140px"
+        >
+          <HStack
+            spacing={{ base: "6", lg: "32" }}
+            flexDir={{ base: "column", lg: "row" }}
+          >
+            <Box
+              pos="relative"
+              w={{ base: "full", lg: "33%" }}
+              h="450px"
+              overflow="hidden"
+              rounded="1.5rem"
+            >
+              <Image
+                objectFit="cover"
+                src="/assets/ed-initiative.png"
+                fill
+                alt="Picture of the author"
+              />
+            </Box>
+            <VStack
+              w={{ base: "full", lg: "67%" }}
+              alignItems="flex-start"
+              spacing="6"
+            >
+              <Heading
+                color="black"
+                fontSize={{ base: "2xl", lg: "3xl" }}
+                fontWeight="semibold"
+                textDecor="underline"
+              >
+                Project Salam
+              </Heading>
+
+              <Text
+                color="black"
+                fontSize={{ base: "xl", lg: "2xl" }}
+                textAlign="justify"
+              >
+                We Believe In
+                <Text
+                  color="steel-blue"
+                  fontSize={{ base: "xl", lg: "2xl" }}
+                  textAlign="justify"
+                  fontWeight="semibold"
+                  as="span"
+                >
+                  {" "}
+                  Poverty Alleviation Through Education.
+                </Text>{" "}
+                Daadras Has Been Raising Funds For People Facing Financial
+                Problems In Paying Their Educational Dues. So Far, We Have
+                <Text
+                  color="steel-blue"
+                  fontSize={{ base: "xl", lg: "2xl" }}
+                  textAlign="justify"
+                  fontWeight="semibold"
+                  as="span"
+                >
+                  {" "}
+                  Financially Assisted 20+ Students
+                </Text>{" "}
+                In Their Semesters And Young Children To Pursue Their
+                Educational Dreams.
+              </Text>
+            </VStack>
+          </HStack>
+        </Container>
+      </Box>
 
       <Box bg="pale-aqua" w="full">
         <Container
@@ -67,7 +139,7 @@ function WeDo() {
                 fontWeight="semibold"
                 textDecor="underline"
               >
-                Humanitarian Aid
+                Dastarkhwan
               </Heading>
 
               <Text
@@ -75,7 +147,7 @@ function WeDo() {
                 fontSize={{ base: "xl", lg: "2xl" }}
                 textAlign="justify"
               >
-                Daadras Humanitarian Aid Is A Response To{" "}
+                Daadras Dastarkhwan is a response to{" "}
                 <Text
                   color="steel-blue"
                   fontSize={{ base: "xl", lg: "2xl" }}
@@ -142,16 +214,6 @@ function WeDo() {
 
               <Text
                 color="black"
-                textAlign="justify"
-                textTransform="capitalize"
-                fontSize={{ base: "xl", lg: "2xl" }}
-                fontWeight="semibold"
-              >
-                Sustainable Approach To Resource Allocation:
-              </Text>
-
-              <Text
-                color="black"
                 fontSize={{ base: "xl", lg: "2xl" }}
                 textAlign="justify"
               >
@@ -186,81 +248,6 @@ function WeDo() {
                 alt="Picture of the author"
               />
             </Box>
-          </HStack>
-        </Container>
-      </Box>
-
-      <Box bg="pale-aqua" w="full">
-        <Container
-          px={{ base: "4", lg: "0" }}
-          py={{ base: "12", lg: "20" }}
-          w={{ base: "full", lg: "1140px" }}
-          maxW="1140px"
-        >
-          <HStack
-            spacing={{ base: "6", lg: "32" }}
-            flexDir={{ base: "column", lg: "row" }}
-          >
-            <Box
-              pos="relative"
-              w={{ base: "full", lg: "33%" }}
-              h="450px"
-              overflow="hidden"
-              rounded="1.5rem"
-            >
-              <Image
-                objectFit="cover"
-                src="/assets/ed-initiative.png"
-                fill
-                alt="Picture of the author"
-              />
-            </Box>
-            <VStack
-              w={{ base: "full", lg: "67%" }}
-              alignItems="flex-start"
-              spacing="6"
-            >
-              <Heading
-                color="black"
-                fontSize={{ base: "2xl", lg: "3xl" }}
-                fontWeight="semibold"
-                textDecor="underline"
-              >
-                Educational Initiatives
-              </Heading>
-
-              <Text
-                color="black"
-                fontSize={{ base: "xl", lg: "2xl" }}
-                textAlign="justify"
-              >
-                We Believe In
-                <Text
-                  color="steel-blue"
-                  fontSize={{ base: "xl", lg: "2xl" }}
-                  textAlign="justify"
-                  fontWeight="semibold"
-                  as="span"
-                >
-                  {" "}
-                  Poverty Alleviation Through Education.
-                </Text>{" "}
-                Daadras Has Been Raising Funds For People Facing Financial
-                Problems In Paying Their Educational Dues. So Far, We Have
-                <Text
-                  color="steel-blue"
-                  fontSize={{ base: "xl", lg: "2xl" }}
-                  textAlign="justify"
-                  fontWeight="semibold"
-                  as="span"
-                >
-                  {" "}
-                  Financially Assisted 20+ Students
-                </Text>{" "}
-                In Their Semesters And Young Children To Pursue Their
-                Educational Dreams.
-              </Text>
-            </VStack>
           </HStack>
         </Container>
       </Box>

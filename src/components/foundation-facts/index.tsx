@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Heading, Text, VStack } from "@chakra-ui/react";
+import { Box, Container, Flex, Text, VStack } from "@chakra-ui/react";
 import Image from "next/image";
 
 function FoundationFacts() {
@@ -11,19 +11,6 @@ function FoundationFacts() {
         maxW="1140px"
       >
         <VStack w="full" alignItems="flex-start" spacing="16">
-          <VStack w="full" alignItems="flex-start" spacing="5">
-            <Heading
-              color="sky-blue"
-              textDecor="underline"
-              fontSize={{ base: "2xl", lg: "3xl" }}
-            >
-              Foundation Facts
-            </Heading>
-            <Text color="white" fontWeight="semibold">
-              1500s, when an unknown printer took a galley of type and scrambled
-              it to make a type specimen book. It has survived not only five
-            </Text>
-          </VStack>
           <VStack w="full">
             <Flex gap="6" w="100%" flexDir={{ base: "column", lg: "row" }}>
               <VStack
@@ -38,6 +25,7 @@ function FoundationFacts() {
                     src="/assets/fact1.png"
                     fill
                     alt="Picture of the author"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </Box>
                 <VStack w="full" alignItems="flex-start" p="6">
@@ -83,6 +71,7 @@ function FoundationFacts() {
                     src="/assets/fact2.png"
                     fill
                     alt="Picture of the author"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </Box>
                 <VStack w="full" alignItems="flex-start" p="6">

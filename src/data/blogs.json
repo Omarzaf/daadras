@@ -1,0 +1,44 @@
+[
+    {
+      "id": 1,
+      "title": "Launching Our New Education Initiative",
+      "excerpt": "Daadras is proud to announce a new program aimed at increasing literacy rates in remote communities.",
+      "date": "April 25, 2025",
+      "link": "/news/education-initiative"
+    },
+    {   
+      "id": 2,
+      "title": "Responding to the Winter Humanitarian Crisis",
+      "excerpt": "Providing emergency shelter and aid to families affected by severe winters in northern regions.",
+      "date": "March 10, 2025",
+      "link": "/news/winter-crisis-response"
+    },
+    {
+      "id": 3,
+      "title": "Economic Empowerment Project: 500 Women Trained",
+      "excerpt": "Celebrating the success of our skills training workshops across three provinces.",
+      "date": "February 5, 2025",
+      "link": "/news/women-empowerment"
+    },
+    {
+      "id": 4,
+      "title": "Launching Our New Education Initiative",
+      "excerpt": "Daadras is proud to announce a new program aimed at increasing literacy rates in remote communities.",
+      "date": "April 25, 2025",
+      "link": "/news/education-initiative"
+    },
+    {
+      "id": 5,
+      "title": "Responding to the Winter Humanitarian Crisis",
+      "excerpt": "Providing emergency shelter and aid to families affected by severe winters in northern regions.",
+      "date": "March 10, 2025",
+      "link": "/news/winter-crisis-response"
+    },
+    {
+      "id": 6,
+      "title": "Economic Empowerment Project: 500 Women Trained",
+      "excerpt": "Celebrating the success of our skills training workshops across three provinces.",
+      "date": "February 5, 2025",
+      "link": "/news/women-empowerment"
+    }
+]

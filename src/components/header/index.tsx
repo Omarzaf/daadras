@@ -17,6 +17,7 @@ import {
   Box,
 } from "@chakra-ui/react";
 import { IoMdMenu } from "react-icons/io";
+import { FaLinkedin, FaInstagram } from "react-icons/fa";
 
 function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -37,7 +38,7 @@ function Header() {
                 as="nav"
                 w="full"
                 justifyContent="space-between"
-                py={{ base: "2", lg: "4" }}
+                py={{ base: "3", lg: "6" }}
                 px={{ base: "4", lg: "0" }}
               >
                 <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
@@ -57,7 +58,7 @@ function Header() {
                 <HStack>
                   <IconButton
                     aria-label="menu"
-                    icon={<IoMdMenu size={28} />}
+                    icon={<IoMdMenu size={32} />}
                     onClick={onOpen}
                     variant="primary-flat"
                     display={{ base: "flex", lg: "none" }}
@@ -69,15 +70,37 @@ function Header() {
                 <Box display={{ base: "none", lg: "block" }}>
                   <NavLinks />
                 </Box>
-                <Button
-                  variant="primary-blue"
-                  px="8"
-                  as={Link}
-                  href="/donate"
-                  _hover={{ textDecor: "none" }}
-                >
-                  Donate
-                </Button>
+                <HStack spacing={4}>
+                  <Link href="https://pk.linkedin.com/company/daadras-foundation-ngo" isExternal>
+                    <IconButton
+                      aria-label="LinkedIn"
+                      icon={<FaLinkedin size={28} />}
+                      variant="ghost"
+                      color="steel-blue"
+                      _hover={{ bg: "gray.100" }}
+                    />
+                  </Link>
+                  <Link href="https://www.instagram.com/daadrasfoundation/" isExternal>
+                    <IconButton
+                      aria-label="Instagram"
+                      icon={<FaInstagram size={28} />}
+                      variant="ghost"
+                      color="steel-blue"
+                      _hover={{ bg: "gray.100" }}
+                    />
+                  </Link>
+                  <Button
+                    variant="primary-blue"
+                    px="8"
+                    py="6"
+                    fontSize="lg"
+                    as={Link}
+                    href="/donate"
+                    _hover={{ textDecor: "none" }}
+                  >
+                    Ways to Give
+                  </Button>
+                </HStack>
               </HStack>
             </Container>
           </Box>
@@ -94,18 +117,19 @@ function NavLinks() {
       spacing="8"
       flexDir={{ base: "column", lg: "row" }}
       alignItems={{ base: "flex-start", lg: "center" }}
+      fontSize="lg"
     >
       <Link href="/" _hover={{ textDecor: "none" }}>
         Home
       </Link>
-      <Link href="/about" _hover={{ textDecor: "none" }}>
-        About Us
-      </Link>
       <Link href="/what-we-do" _hover={{ textDecor: "none" }}>
         What We Do
       </Link>
+      <Link href="/our-team" _hover={{ textDecor: "none" }}>
+        Our Team
+      </Link>
       <Link href="/contact" _hover={{ textDecor: "none" }}>
-        Contact
+        Contact Us
       </Link>
     </HStack>
   );

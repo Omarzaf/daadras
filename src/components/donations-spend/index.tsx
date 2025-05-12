@@ -7,12 +7,20 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import DistributionPieChart from "../PieChart/PieChart";
-// import DaugnutChart from "../DaugnutChart";
+import dynamic from "next/dynamic";
+
+// Force disable SSR for PieChart component
+const DistributionPieChart = dynamic(
+  () => import("../PieChart/PieChart"),
+  { 
+    ssr: false,
+    loading: () => <></>
+  }
+);
 
 const DONATION_DISTRIBUTION = [
   {
-    color: "#c05050",
+    color: "#c05050", 
     percentage: 40,
     title: "Project Salam",
   },
@@ -84,7 +92,6 @@ function DonationsSpend() {
               </Text>
             </Box>
           </VStack>
-          {/* <DaugnutChart /> */}
           <Box w={{ base: "full", lg: "40%" }}>
             <DistributionPieChart />
             <SimpleGrid
