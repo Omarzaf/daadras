@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Top />
-      <Documentary />
+      {/* <Documentary /> */}
       <WhoWeAre />
       <Collaborators />
       {/* <Donate /> */}
