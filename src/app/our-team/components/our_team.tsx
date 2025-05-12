@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from 'next/link';
-import teamMembers from "../../data/teamMembers.json";
+import teamMembers from "../../../data/teamMembers.json";
 
 function OurTeam() {
   return (

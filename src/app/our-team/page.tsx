@@ -1,7 +1,7 @@
 import React from "react";
-import OurTeam from "../../components/our-team";
+import OurTeam from "./components/our_team";
 
-function About() {
+function OurTeamPage() {
   return (
     <>
       <OurTeam />
@@ -9,4 +9,4 @@ function About() {
   );
 }
 
-export default About;
+export default OurTeamPage;

@@ -1,10 +1,11 @@
 import React from "react";
-import NewsAndUpdates from "./components/component";
+import InsightStories from "./components/news";
 
 function NewsPage() {
   return (
     <>
-      <NewsAndUpdates />
+      <InsightStories />
+      {/* <BlogAndUpdates /> */}
     </>
   );
 }

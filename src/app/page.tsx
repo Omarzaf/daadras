@@ -13,7 +13,7 @@ export default function Home() {
       <WhoWeAre />
       <Collaborators />
       {/* <Donate /> */}
-      <FoundationFacts />
+      <FoundationFacts />w
     </>
   );
 }

@@ -11,11 +11,8 @@ function WhoWeAre() {
             fontSize={{ base: "3xl", lg: "4xl" }}
             textDecor="underline"
           >
-            Who We Are
+            Timeline
           </Heading>
-          <Text color="white" fontSize={{ base: "md", lg: "lg" }} maxW="3xl">
-            Daadras is a non-profit empowering marginalized communities across Pakistan through education, humanitarian aid, and economic opportunity.
-          </Text>
           <Flex
             direction={{ base: "column", lg: "row" }}
             align="center"
@@ -27,19 +24,25 @@ function WhoWeAre() {
               <TimelineStep
                 year="2020"
                 title="Our Journey Begins"
-                description="Founded to tackle poverty and inequality, starting with grassroots initiatives."
+                description="Daadras Foundation was established, with its first mission being a book drive for a library in Balochistan."
               />
               <Divider borderColor="sky-blue" />
               <TimelineStep
-                year="2021"
-                title="Early Impact"
-                description="Reached over 10,000 lives with education programs and humanitarian aid."
+                year="2021-2022"
+                title="Core Activities and Support"
+                description="Continued core activities including monthly ration deliveries and supporting urgent special cases for people in need. Mobilized donations and collected clothes for communities affected by devastating floods."
               />
               <Divider borderColor="sky-blue" />
               <TimelineStep
-                year="Today"
-                title="Expanding Hope"
-                description="Partnering with 95 million people to build a future where every voice is heard."
+                year="2023"
+                title="Project Salam Launch"
+                description="Launched Project Salam at Waduha, introducing underserved children to holistic education through IT, SEL, and strategic thinking."
+              />
+              <Divider borderColor="sky-blue" />
+              <TimelineStep
+                year="2025"
+                title="Project Salam Expansion"
+                description="By February, the third cycle of Project Salam was completed, with the Big Brother Program in development to extend mentorship and support."
               />
             </VStack>
 
