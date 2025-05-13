@@ -35,13 +35,23 @@ export default async function TeamMemberPage({ params }: { params: { id: string 
   if (!member) return notFound()
 
   return (
-    <Container maxW="container.lg" py={200} px={4}>
-      <HStack spacing={12} align="flex-start">
+    <Container 
+      maxW="container.lg" 
+      py={{ base: 100, md: 200 }} 
+      px={4}
+      overflowX="hidden" // Prevent horizontal scrolling
+    >
+      <HStack 
+        spacing={{ base: 4, md: 12 }} 
+        align="flex-start"
+        flexDir={{ base: "column", md: "row" }} // Stack vertically on mobile
+        w="full"
+      >
         {/* Image and LinkedIn Section */}
-        <VStack spacing={4}>
+        <VStack spacing={4} w={{ base: "full", md: "auto" }}>
           <Box
-            w={300}
-            h={300}
+            w={{ base: "full", md: 300 }}
+            h={{ base: 300, md: 300 }}
             position="relative"
             borderRadius="lg"
             overflow="hidden"
@@ -56,7 +66,7 @@ export default async function TeamMemberPage({ params }: { params: { id: string 
             />
           </Box>
           {member.socialLinks.linkedin && (
-            <Link href={member.socialLinks.linkedin} isExternal w="300px">
+            <Link href={member.socialLinks.linkedin} isExternal w={{ base: "full", md: "300px" }}>
               <Button colorScheme="linkedin" variant="outline" leftIcon={<FaLinkedin />} w="100%">
                 Connect on LinkedIn
               </Button>
@@ -65,7 +75,7 @@ export default async function TeamMemberPage({ params }: { params: { id: string 
         </VStack>
 
         {/* Content Section */}
-        <VStack align="start" spacing={6} maxW="2xl">
+        <VStack align="start" spacing={6} w="full" maxW={{ base: "full", md: "2xl" }}>
           {/* Name & Role */}
           <VStack align="start" spacing={1}>
             <Heading as="h1" size="2xl" fontWeight="bold">
