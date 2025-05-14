@@ -11,7 +11,7 @@ import dynamic from "next/dynamic";
 
 // Force disable SSR for PieChart component
 const DistributionPieChart = dynamic(
-  () => import("../PieChart/PieChart"),
+  () => import("../../PieChart/PieChart"),
   { 
     ssr: false,
     loading: () => <></>
