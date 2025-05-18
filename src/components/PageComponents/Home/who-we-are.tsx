@@ -20,7 +20,7 @@ function WhoWeAre() {
             w="full"
           >
             {/* Timeline Section */}
-            <VStack spacing="8" align="start" w={{ base: "full", lg: "60%" }}>
+            <VStack spacing="8" w={{ base: "full", lg: "60%" }}>
               <TimelineStep
                 year="2020"
                 title="Our Journey Begins"
