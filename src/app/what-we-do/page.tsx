@@ -1,6 +1,6 @@
 import React from "react";
-import FoundationFacts from "../../components/foundation-facts";
-import WeDo from "./components/we-do";
+import FoundationFacts from "../../components/PageComponents/Home/foundationFacts";
+import WeDo from "../../components/PageComponents/WhatWeDo/we-do";
 
 function WhatWeDo() {
   return (

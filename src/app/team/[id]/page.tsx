@@ -1,48 +1,65 @@
 // app/team/[id]/page.tsx
-import { notFound } from 'next/navigation'
-import fs from 'fs'
-import Image from 'next/image'
-import { Box, Container, Heading, Text, VStack, HStack, Link, Button, Divider } from '@chakra-ui/react'
-import { FaLinkedin } from 'react-icons/fa'
+import { notFound } from "next/navigation";
+import fs from "fs";
+import Image from "next/image";
+import {
+  Box,
+  Container,
+  Heading,
+  Text,
+  VStack,
+  HStack,
+  Link,
+  Button,
+  Divider,
+} from "@chakra-ui/react";
+import { FaLinkedin } from "react-icons/fa";
 import React from "react";
+import { teamMembers } from "@/lib/constants/data";
 
 type TeamMember = {
-  id: string
-  name: string
-  role: string
-  background: string[]  // Changed to array of strings
-  joining_story: string[]  // Also should be an array based on your usage
-  role_description: string[]  // Also should be an array based on your usage
-  image: string
-  socialLinks: { linkedin?: string }
-}
+  id: string;
+  name: string;
+  role: string;
+  background: string[]; // Changed to array of strings
+  joining_story: string[]; // Also should be an array based on your usage
+  role_description: string[]; // Also should be an array based on your usage
+  image: string;
+  socialLinks: { linkedin?: string };
+};
 
-async function getTeamData(): Promise<TeamMember[]> {
-  const filePath = 'src/data/teamMembers.json'
-  const jsonData = fs.readFileSync(filePath, 'utf-8')
-  return JSON.parse(jsonData)
-}
+//instead of saving it in files we just need to store everything in constants.
+//Since its all static data and a smaller data at that. We can save it in a data.ts folder. 
+// async function getTeamData(): Promise<TeamMember[]> {
+//   const filePath = "src/data/teamMembers.json";
+//   const jsonData = fs.readFileSync(filePath, "utf-8");
+//   return JSON.parse(jsonData);
+// }
 
 export async function generateStaticParams() {
-  const team = await getTeamData()
-  return team.map((member) => ({ id: member.id }))
+  const team = teamMembers;
+  return team.map((member) => ({ id: member.id }));
 }
 
-export default async function TeamMemberPage({ params }: { params: { id: string } }) {
-  const team = await getTeamData()
-  const member = team.find((m) => m.id === params.id)
+export default async function TeamMemberPage({
+  params,
+}: {
+  params: { id: string };
+}) {
+  const team = teamMembers;
+  const member = team.find((m) => m.id === params.id);
 
-  if (!member) return notFound()
+  if (!member) return notFound();
 
   return (
-    <Container 
-      maxW="container.lg" 
-      py={{ base: 100, md: 200 }} 
+    <Container
+      maxW="container.lg"
+      py={{ base: 100, md: 200 }}
       px={4}
       overflowX="hidden" // Prevent horizontal scrolling
     >
-      <HStack 
-        spacing={{ base: 4, md: 12 }} 
+      <HStack
+        spacing={{ base: 4, md: 12 }}
         align="flex-start"
         flexDir={{ base: "column", md: "row" }} // Stack vertically on mobile
         w="full"
@@ -62,12 +79,21 @@ export default async function TeamMemberPage({ params }: { params: { id: string 
               src={member.image}
               alt={member.name}
               fill
-              style={{ objectFit: 'cover', objectPosition: 'top' }}
+              style={{ objectFit: "cover", objectPosition: "top" }}
             />
           </Box>
           {member.socialLinks.linkedin && (
-            <Link href={member.socialLinks.linkedin} isExternal w={{ base: "full", md: "300px" }}>
-              <Button colorScheme="linkedin" variant="outline" leftIcon={<FaLinkedin />} w="100%">
+            <Link
+              href={member.socialLinks.linkedin}
+              isExternal
+              w={{ base: "full", md: "300px" }}
+            >
+              <Button
+                colorScheme="linkedin"
+                variant="outline"
+                leftIcon={<FaLinkedin />}
+                w="100%"
+              >
                 Connect on LinkedIn
               </Button>
             </Link>
@@ -75,22 +101,40 @@ export default async function TeamMemberPage({ params }: { params: { id: string 
         </VStack>
 
         {/* Content Section */}
-        <VStack align="start" spacing={6} w="full" maxW={{ base: "full", md: "2xl" }}>
+        <VStack
+          align="start"
+          spacing={6}
+          w="full"
+          maxW={{ base: "full", md: "2xl" }}
+        >
           {/* Name & Role */}
           <VStack align="start" spacing={1}>
             <Heading as="h1" size="2xl" fontWeight="bold">
               {member.name}
             </Heading>
-            <Text fontSize="xl" fontWeight="medium" color="gray.600" fontFamily="mono">
+            <Text
+              fontSize="xl"
+              fontWeight="medium"
+              color="gray.600"
+              fontFamily="mono"
+            >
               {member.role}
             </Text>
           </VStack>
 
           {/* Background Section */}
           <VStack align="start" spacing={3} w="full">
-            <Heading as="h2" size="lg">Background</Heading>
+            <Heading as="h2" size="lg">
+              Background
+            </Heading>
             {member.background.map((paragraph, index) => (
-              <Text key={index} fontSize="md" color="gray.700" lineHeight="tall" textAlign="justify">
+              <Text
+                key={index}
+                fontSize="md"
+                color="gray.700"
+                lineHeight="tall"
+                textAlign="justify"
+              >
                 {paragraph}
               </Text>
             ))}
@@ -100,9 +144,18 @@ export default async function TeamMemberPage({ params }: { params: { id: string 
 
           {/* Why I Joined Section */}
           <VStack align="start" spacing={3} w="full">
-            <Heading as="h2" size="lg">Why I Joined</Heading>
-            <Text fontSize="md" color="gray.700" lineHeight="tall" fontStyle="italic" textAlign="justify">
-              &ldquo;{member.joining_story.map((paragraph, index) => (
+            <Heading as="h2" size="lg">
+              Why I Joined
+            </Heading>
+            <Text
+              fontSize="md"
+              color="gray.700"
+              lineHeight="tall"
+              fontStyle="italic"
+              textAlign="justify"
+            >
+              &ldquo;
+              {member.joining_story.map((paragraph, index) => (
                 <React.Fragment key={index}>
                   {paragraph}
                   {index < member.joining_story.length - 1 && (
@@ -112,7 +165,8 @@ export default async function TeamMemberPage({ params }: { params: { id: string 
                     </>
                   )}
                 </React.Fragment>
-              ))}&rdquo;
+              ))}
+              &rdquo;
             </Text>
           </VStack>
 
@@ -120,9 +174,17 @@ export default async function TeamMemberPage({ params }: { params: { id: string 
 
           {/* Role Description Section */}
           <VStack align="start" spacing={3} w="full">
-            <Heading as="h2" size="lg">Role in the Organization</Heading>
+            <Heading as="h2" size="lg">
+              Role in the Organization
+            </Heading>
             {member.role_description.map((paragraph, index) => (
-              <Text key={index} fontSize="md" color="gray.700" lineHeight="tall" textAlign="justify">
+              <Text
+                key={index}
+                fontSize="md"
+                color="gray.700"
+                lineHeight="tall"
+                textAlign="justify"
+              >
                 {paragraph}
               </Text>
             ))}
@@ -130,5 +192,5 @@ export default async function TeamMemberPage({ params }: { params: { id: string 
         </VStack>
       </HStack>
     </Container>
-  )
+  );
 }

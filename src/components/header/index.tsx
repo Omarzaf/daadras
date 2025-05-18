@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import HeaderLogo from "../header-logo";
+import HeaderLogo from "./HeaderLogo";
 import {
   Button,
   Container,
@@ -71,7 +71,10 @@ function Header() {
                   <NavLinks />
                 </Box>
                 <HStack spacing={4}>
-                  <Link href="https://pk.linkedin.com/company/daadras-foundation-ngo" isExternal>
+                  <Link
+                    href="https://pk.linkedin.com/company/daadras-foundation-ngo"
+                    isExternal
+                  >
                     <IconButton
                       aria-label="LinkedIn"
                       icon={<FaLinkedin size={28} />}
@@ -80,7 +83,10 @@ function Header() {
                       _hover={{ bg: "gray.100" }}
                     />
                   </Link>
-                  <Link href="https://www.instagram.com/daadrasfoundation/" isExternal>
+                  <Link
+                    href="https://www.instagram.com/daadrasfoundation/"
+                    isExternal
+                  >
                     <IconButton
                       aria-label="Instagram"
                       icon={<FaInstagram size={28} />}

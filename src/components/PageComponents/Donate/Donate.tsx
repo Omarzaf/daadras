@@ -7,7 +7,7 @@ import {
   Heading,
   SimpleGrid,
   Text,
-  VStack
+  VStack,
 } from "@chakra-ui/react";
 
 function Donation() {

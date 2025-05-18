@@ -1,6 +1,6 @@
 import React from "react";
-import DonationsSpend from "../../components/donations-spend";
-import Donation from "./components/donate";
+import DonationsSpend from "../../components/PageComponents/Donate/DonationSpend";
+import Donation from "@/components/PageComponents/Donate/Donate";
 
 function Donate() {
   return (

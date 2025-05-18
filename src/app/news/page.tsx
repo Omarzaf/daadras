@@ -1,12 +1,12 @@
 import React from "react";
-import InsightStories from "./components/news";
+import InsightStories from "../../components/PageComponents/News/news";
 
 function NewsPage() {
   return (
-    <>
+    <main>
       <InsightStories />
       {/* <BlogAndUpdates /> */}
-    </>
+    </main>
   );
 }
 
