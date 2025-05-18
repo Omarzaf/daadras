@@ -70,7 +70,7 @@ function Header() {
                 <Box display={{ base: "none", lg: "block" }}>
                   <NavLinks />
                 </Box>
-                <HStack spacing={4}>
+                <HStack spacing={2}>
                   <Link
                     href="https://pk.linkedin.com/company/daadras-foundation-ngo"
                     isExternal
