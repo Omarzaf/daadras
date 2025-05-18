@@ -1,6 +1,5 @@
 // app/team/[id]/page.tsx
 import { notFound } from "next/navigation";
-import fs from "fs";
 import Image from "next/image";
 import {
   Box,
@@ -17,16 +16,16 @@ import { FaLinkedin } from "react-icons/fa";
 import React from "react";
 import { teamMembers } from "@/lib/constants/data";
 
-type TeamMember = {
-  id: string;
-  name: string;
-  role: string;
-  background: string[]; // Changed to array of strings
-  joining_story: string[]; // Also should be an array based on your usage
-  role_description: string[]; // Also should be an array based on your usage
-  image: string;
-  socialLinks: { linkedin?: string };
-};
+// type TeamMember = {
+//   id: string;
+//   name: string;
+//   role: string;
+//   background: string[]; // Changed to array of strings
+//   joining_story: string[]; // Also should be an array based on your usage
+//   role_description: string[]; // Also should be an array based on your usage
+//   image: string;
+//   socialLinks: { linkedin?: string };
+// };
 
 //instead of saving it in files we just need to store everything in constants.
 //Since its all static data and a smaller data at that. We can save it in a data.ts folder. 
