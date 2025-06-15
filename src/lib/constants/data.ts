@@ -8,7 +8,7 @@ export const teamMembers = [
       "I founded the Daadras Foundation out of a deep conviction that human development must begin where state systems often fall short—at the grassroots. Growing up in a marginalized and fragmented society, I witnessed firsthand how structural neglect and generational poverty deprive children of both agency and aspiration.",
       "Daadras was created to intervene early, equipping underprivileged youth not only with traditional education but also with research-driven, skills-based training and critical thinking. The goal was not charity, but empowerment—enabling children to become income earners, thinkers, and leaders capable of transforming their own lives and communities. Daadras reflects a belief that development is not a top-down endeavor but a participatory process rooted in dignity, opportunity, and self-determination.",
     ],
-    role_description: [""],
+    role_description: ["As CEO, Daadras oversees strategic operations, fosters relationships with key stakeholders and donors, and guides collaborations with national and international partners, including Al-Sharq Forum and Khalq Clinic, to advance the organization’s mission and global engagement."],
     image: "/assets/team_photos/ceo_umer.png",
     socialLinks: {
       linkedin: "https://www.linkedin.com/in/umarzafar1/",
