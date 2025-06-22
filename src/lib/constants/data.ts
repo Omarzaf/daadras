@@ -3,7 +3,9 @@ export const teamMembers = [
     id: "umer-zafar",
     name: "Umer Zafar",
     role: "CEO / Founder",
-    background: [""],
+    background: ["Muhammad Umar Zafar is a graduate student at the Johns Hopkins School of Advanced International Studies (SAIS), concentrating on Development, Sustainability, and Climate in the Global South, with a specific focus on post-conflict regions. In 2020, he founded the Daadras Foundation, a youth-led grassroots initiative in Lahore, Pakistan, focusing on human development through holistic education, skill development, and microfinance support. His professional experience includes research and policy work with the Middle East Institute and the Foreign Policy Institute’s North Africa Initiative, as well as several civil society projects in South Asia.", 
+      "Umar's political theory and sociological background demonstrate a nuanced understanding of intersectionality in the context of peacebuilding, particularly in war-torn regions. He has organized policy dialogues and collaborated on youth initiatives with Al-Sharq Youth, all centered around the commitment to sustainable, inclusive development in conflict areas."
+    ],
     joining_story: [
       "I founded the Daadras Foundation out of a deep conviction that human development must begin where state systems often fall short—at the grassroots. Growing up in a marginalized and fragmented society, I witnessed firsthand how structural neglect and generational poverty deprive children of both agency and aspiration.",
       "Daadras was created to intervene early, equipping underprivileged youth not only with traditional education but also with research-driven, skills-based training and critical thinking. The goal was not charity, but empowerment—enabling children to become income earners, thinkers, and leaders capable of transforming their own lives and communities. Daadras reflects a belief that development is not a top-down endeavor but a participatory process rooted in dignity, opportunity, and self-determination.",
