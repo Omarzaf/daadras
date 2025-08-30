@@ -10,7 +10,6 @@ import {
   SimpleGrid,
   Button,
   Badge,
-  Flex,
 } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import Link from "next/link";
