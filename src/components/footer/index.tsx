@@ -49,6 +49,9 @@ function Footer() {
                   <Link href="/what-we-do" fontSize="sm" opacity="0.78">
                     What We Do
                   </Link>
+                  <Link href="/news" fontSize="sm" opacity="0.78">
+                    News
+                  </Link>
                   <Link href="/contact" fontSize="sm" opacity="0.78">
                     Contact
                   </Link>
