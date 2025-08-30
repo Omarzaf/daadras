@@ -16,6 +16,5 @@ export default function Home() {
     </main>
   );
 }
-
-      // {/* <FeaturedNews /> */}
-      // {/* <Donate /> */}
+// {/* <FeaturedNews /> */}
+// {/* <Donate /> */}
