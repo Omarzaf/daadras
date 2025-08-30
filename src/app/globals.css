@@ -41,26 +41,6 @@ a {
   }
 }
 
-.collab-scroll-wrapper {
-  overflow: hidden;
-  width: 100%;
-}
-
-.collab-scroll-content {
-  display: flex;
-  width: max-content;
-  animation: scroll-left 30s linear infinite;
-}
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
 /* src/components/styles.css */
 .team-member {
   display: flex;

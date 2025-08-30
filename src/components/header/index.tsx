@@ -131,6 +131,9 @@ function NavLinks() {
       <Link href="/what-we-do" _hover={{ textDecor: "none" }}>
         What We Do
       </Link>
+      {/* <Link href="/news" _hover={{ textDecor: "none" }}>
+        News
+      </Link> */}
       <Link href="/our-team" _hover={{ textDecor: "none" }}>
         Our Team
       </Link>
