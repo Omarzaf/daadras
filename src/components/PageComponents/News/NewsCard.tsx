@@ -202,7 +202,7 @@ function FeaturedNewsCard({ article }) {
             />
           </Box>
           
-          <Box p="5" pb="4" display="flex" flexDirection="column" justify="center">
+          <Box p="5" pb="4" display="flex" flexDirection="column" justifyContent="center">
             <VStack align="start" spacing="3">
               <HStack spacing="4" color="gray.600" fontSize="sm">
                 <HStack>
