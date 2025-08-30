@@ -188,7 +188,7 @@ function Top() {
       </Container>
 
       {/* Scroll Indicator */}
-      <Box
+      {/* <Box
         position="absolute"
         bottom="8"
         left="50%"
@@ -201,7 +201,7 @@ function Top() {
           transform="rotate(90deg)"
           opacity="0.7"
         />
-      </Box>
+      </Box> */}
     </Box>
   );
 }

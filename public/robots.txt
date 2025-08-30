@@ -1,6 +1,8 @@
 # *
 User-agent: *
 Allow: /
+Disallow: /news
+Disallow: /news/*
 
 # Host
 Host: https://daadras.org
@@ -11,9 +13,13 @@ Sitemap: https://daadras.org/sitemap.xml
 
 User-agent: Googlebot
 Allow: /
+Disallow: /news
+Disallow: /news/*
 
 User-agent: Bingbot
 Allow: /
+Disallow: /news
+Disallow: /news/*
 
 User-agent: Twitterbot
 Allow: /
@@ -23,3 +29,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+Disallow: /news
+Disallow: /news/*
