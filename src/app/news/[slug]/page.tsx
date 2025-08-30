@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { notFound } from "next/navigation";
-import type { Metadata } from "next";
 import {
   Box,
   Container,
@@ -27,15 +26,6 @@ import { ChevronRightIcon, CalendarIcon, TimeIcon, ArrowBackIcon } from "@chakra
 // import { FaUser, FaShare, FaPrint, FaBookmark } from "react-icons/fa";
 import Link from "next/link";
 import newsData from "../../../data/blogs.json";
-
-// Generate metadata for the page
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  return {
-    title: `News Article - Daadras`,
-    description: "News article from Daadras",
-    robots: "noindex, nofollow",
-  };
-}
 
 interface PageProps {
   params: {
