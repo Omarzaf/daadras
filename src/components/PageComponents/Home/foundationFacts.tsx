@@ -182,7 +182,7 @@ function FoundationFacts() {
 
           {/* Call to Action Section */}
           <Box
-            bg="linear-gradient(90deg, #10192f 0%, #1a2747 60%, #3b5b7e 100%)"
+            bg="pale-aqua"
             w="full"
             p="8"
             borderRadius="xl"
@@ -191,7 +191,7 @@ function FoundationFacts() {
           >
             <VStack spacing="6">
               <Heading
-                color="white"
+                color="steel-blue"
                 fontSize={{ base: "2xl", lg: "3xl" }}
                 fontWeight="bold"
               >
@@ -199,7 +199,7 @@ function FoundationFacts() {
               </Heading>
 
               <Text
-                color="white"
+                color="charcoal"
                 fontSize="lg"
                 opacity="0.9"
                 maxW="2xl"
