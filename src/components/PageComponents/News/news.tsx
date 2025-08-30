@@ -35,7 +35,8 @@ function InsightStories() {
     featured: 6,
   });
 
-  const categories = ["All", ...new Set(newsData.map(item => item.category))];
+  // Fix: Avoid spreading Set directly, use Array.from to get array of unique categories
+  const categories = ["All", ...Array.from(new Set(newsData.map(item => item.category)))];
 
   // Filter by search and category
   const filteredNews = newsData.filter(news => {
