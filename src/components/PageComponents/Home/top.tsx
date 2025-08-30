@@ -10,12 +10,10 @@ import {
   HStack,
   Button,
   Flex,
-  SimpleGrid,
-  Icon,
   Badge,
 } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
-import { FaHeart, FaGraduationCap, FaUsers, FaLightbulb } from "react-icons/fa";
+// import { FaHeart, FaGraduationCap, FaUsers, FaLightbulb } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 

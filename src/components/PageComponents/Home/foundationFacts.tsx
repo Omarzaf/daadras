@@ -1,7 +1,7 @@
-import { Box, Container, Flex, Text, VStack, Heading, SimpleGrid, Badge, Button, HStack } from "@chakra-ui/react";
-import { FaLaptop, FaChess, FaHeart, FaUsers, FaGraduationCap, FaLightbulb } from "react-icons/fa";
+import { Box, Container, Text, VStack, Heading, SimpleGrid, Badge, HStack } from "@chakra-ui/react";
+import { FaLaptop, FaChess, FaHeart} from "react-icons/fa";
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
 
 function FoundationFacts() {
   const programs = [

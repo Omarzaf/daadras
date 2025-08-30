@@ -1,34 +1,34 @@
-import { Box, Container, Flex, Heading, Text, VStack, HStack, SimpleGrid, Badge } from "@chakra-ui/react";
-import { FaGraduationCap, FaHeart, FaLightbulb, FaUsers } from "react-icons/fa";
+import { Box, Container, Flex, Heading, Text, VStack, HStack, Badge } from "@chakra-ui/react";
+// import { FaGraduationCap, FaHeart, FaLightbulb, FaUsers } from "react-icons/fa";
 import Image from "next/image";
 
 function WhoWeAre() {
-  const missionPillars = [
-    {
-      icon: FaGraduationCap,
-      title: "Holistic Education",
-      description: "Providing comprehensive education that combines IT skills, social-emotional learning, and critical thinking to create well-rounded individuals.",
-      color: "sky-blue",
-    },
-    {
-      icon: FaHeart,
-      title: "Community Support",
-      description: "Supporting families through sustainable aid programs that promote self-reliance and long-term independence.",
-      color: "steel-blue",
-    },
-    {
-      icon: FaLightbulb,
-      title: "Innovation",
-      description: "Developing cutting-edge educational approaches that bridge the gap between traditional learning and modern skills.",
-      color: "pale-aqua",
-    },
-    {
-      icon: FaUsers,
-      title: "Youth Leadership",
-      description: "Empowering young leaders to drive change and create lasting impact in their communities.",
-      color: "charcoal",
-    },
-  ];
+  // const missionPillars = [
+  //   {
+  //     icon: FaGraduationCap,
+  //     title: "Holistic Education",
+  //     description: "Providing comprehensive education that combines IT skills, social-emotional learning, and critical thinking to create well-rounded individuals.",
+  //     color: "sky-blue",
+  //   },
+  //   {
+  //     icon: FaHeart,
+  //     title: "Community Support",
+  //     description: "Supporting families through sustainable aid programs that promote self-reliance and long-term independence.",
+  //     color: "steel-blue",
+  //   },
+  //   {
+  //     icon: FaLightbulb,
+  //     title: "Innovation",
+  //     description: "Developing cutting-edge educational approaches that bridge the gap between traditional learning and modern skills.",
+  //     color: "pale-aqua",
+  //   },
+  //   {
+  //     icon: FaUsers,
+  //     title: "Youth Leadership",
+  //     description: "Empowering young leaders to drive change and create lasting impact in their communities.",
+  //     color: "charcoal",
+  //   },
+  // ];
 
   return (
     <Box bg="ghost-white" py={{ base: "16", lg: "24" }}>

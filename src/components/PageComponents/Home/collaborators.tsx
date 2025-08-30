@@ -7,7 +7,6 @@ import {
   Heading,
   Text,
   Link,
-  HStack,
   IconButton,
   Flex,
   useInterval,
