@@ -16,7 +16,8 @@ import Image from "next/image";
 import { logos } from "@/lib/constants/common";
 
 function Collaborators() {
-  const [isPlaying, setIsPlaying] = useState(true);
+  // Remove setIsPlaying since it's never used
+  const [isPlaying] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);

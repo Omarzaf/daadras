@@ -24,7 +24,7 @@ export default function ProjectSalamPage() {
             About Project Salam
           </Heading>
           <Text color="charcoal" fontSize="lg">
-            Project Salam is Daadras Foundation's flagship education initiative, designed to break the cycle of poverty through accessible, quality learning. Our approach is holistic—addressing academic, emotional, and social needs—while remaining adaptive to each child's context. We believe in inclusivity, ensuring every student, regardless of background, can thrive.
+            Project Salam is Daadras Foundation&apos;s flagship education initiative, designed to break the cycle of poverty through accessible, quality learning. Our approach is holistic—addressing academic, emotional, and social needs—while remaining adaptive to each child&apos;s context. We believe in inclusivity, ensuring every student, regardless of background, can thrive.
           </Text>
         </VStack>
       </Container>

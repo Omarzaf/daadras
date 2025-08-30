@@ -56,7 +56,7 @@ function WhoWeAre() {
               fontWeight="bold"
               lineHeight="1.2"
             >
-              Empowering Pakistan's Future Through
+              Empowering Pakistan&#39;s Future Through
               <Text
                 as="span"
                 bg="linear-gradient(135deg, sky-blue 0%, steel-blue 100%)"
@@ -161,7 +161,7 @@ function WhoWeAre() {
                 opacity="0.8"
                 lineHeight="1.6"
               >
-                Through Project Salam and our community initiatives, we've created lasting change in the lives of hundreds of children and families across Pakistan. Our holistic approach ensures that every intervention creates sustainable, long-term impact.
+                Through Project Salam and our community initiatives, we&#39;ve created lasting change in the lives of hundreds of children and families across Pakistan. Our holistic approach ensures that every intervention creates sustainable, long-term impact.
               </Text>
 
               <HStack spacing="6" flexWrap="wrap" justify={{ base: "center", lg: "start" }}>

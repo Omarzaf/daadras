@@ -91,7 +91,7 @@ function Top() {
               textTransform="uppercase"
               letterSpacing="wider"
             >
-              Empowering Pakistan's Future
+              Empowering Pakistan&apos;s Future
             </Badge>
 
             {/* Main Heading */}

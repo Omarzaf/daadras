@@ -21,10 +21,9 @@ import {
   LinkBox,
   LinkOverlay,
   Avatar,
-  SimpleGrid,
 } from "@chakra-ui/react";
 import { ChevronRightIcon, CalendarIcon, TimeIcon, ArrowBackIcon } from "@chakra-ui/icons";
-import { FaUser, FaShare, FaPrint, FaBookmark } from "react-icons/fa";
+// import { FaUser, FaShare, FaPrint, FaBookmark } from "react-icons/fa";
 import Link from "next/link";
 import newsData from "../../../data/blogs.json";
 

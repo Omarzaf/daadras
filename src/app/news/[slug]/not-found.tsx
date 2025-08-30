@@ -24,7 +24,7 @@ export default function NotFound() {
           </Heading>
           
           <Text color="charcoal" fontSize={{ base: "lg", lg: "xl" }} maxW="2xl" opacity="0.8">
-            The article you're looking for doesn't exist or may have been moved. 
+            The article you&apos;re looking for doesn&apos;t exist or may have been moved. 
             Please check the URL or browse our latest articles below.
           </Text>
           
