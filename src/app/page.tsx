@@ -12,8 +12,10 @@ export default function Home() {
       <WhoWeAre />
       <Collaborators />
       <FoundationFacts />
-      {/* <FeaturedNews /> */}
-      {/* <Donate /> */}
+
     </main>
   );
 }
+
+      // {/* <FeaturedNews /> */}
+      // {/* <Donate /> */}
