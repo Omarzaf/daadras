@@ -305,7 +305,7 @@ function CompactNewsCard({ article }) {
         }}
       >
         <VStack align="start" spacing="2">
-          <HStack justify="space-between" w="full">
+          <HStack justifyContent="space-between" w="full">
             <Text color="charcoal" fontSize="sm" fontWeight="bold" noOfLines={1} flex="1">
               {article.title}
             </Text>
