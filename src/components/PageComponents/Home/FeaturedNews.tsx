@@ -58,7 +58,7 @@ function FeaturedNews() {
               opacity="0.8"
               lineHeight="1.6"
             >
-              Discover our latest initiatives, success stories, and the transformative impact we're creating in communities across Pakistan.
+              Discover our latest initiatives, success stories, and the transformative impact we&apos;re creating in communities across Pakistan.
             </Text>
           </VStack>
 
@@ -69,7 +69,7 @@ function FeaturedNews() {
             w="full"
             mb="12"
           >
-            {featuredArticles.map((article, index) => (
+            {featuredArticles.map((article) => (
               <Box
                 key={article.id}
                 transition="all 0.3s"
