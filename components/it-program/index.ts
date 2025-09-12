@@ -1,0 +1,5 @@
+export { default as HeroSection } from "./HeroSection"
+export { default as MissionSection } from "./MissionSection"
+export { default as StrategySection } from "./StrategySection"
+export { default as ChallengesSection } from "./ChallengesSection"
+export { default as VolunteerExperienceSection } from "./VolunteerExperienceSection"
