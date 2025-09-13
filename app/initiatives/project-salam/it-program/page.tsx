@@ -1,3 +1,5 @@
+"use client"
+
 import HeroSection from "@/components/it-program/HeroSection"
 import MissionSection from "@/components/it-program/MissionSection"
 import StrategySection from "@/components/it-program/StrategySection"

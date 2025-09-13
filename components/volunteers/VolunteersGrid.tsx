@@ -6,8 +6,8 @@ import { MapPin, Globe, Clock, ExternalLink, ChevronDown } from "lucide-react"
 import { getVolunteerOpportunities } from "@/lib/volunteerOpportunities"
 import { BookOpen, Trophy, Laptop, Brain, Users, Camera, Megaphone, Heart } from "lucide-react"
 import { NoOpportunitiesAvailable } from "@/components/ui/no-opportunities"
-import { motion, AnimatePresence } from "framer-motion"
-import { useState } from "react"
+import { motion, AnimatePresence, useInView } from "framer-motion"
+import { useState, useRef } from "react"
 
 const iconMap: Record<string, any> = {
   BookOpen,
@@ -25,6 +25,8 @@ const iconMap: Record<string, any> = {
 export function VolunteersGrid() {
   const [openItem, setOpenItem] = useState<string | null>(null)
   const opportunities = getVolunteerOpportunities()
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, amount: 0.1 })
 
   // Check if there are any volunteer opportunities available
   if (!opportunities || opportunities.length === 0) {
@@ -39,8 +41,9 @@ export function VolunteersGrid() {
   return (
     <motion.div 
       className="mb-10"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      ref={ref}
+      initial={{ opacity: 0, y: 30 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
       transition={{ duration: 0.6 }}
     >
       <div className="space-y-4">
@@ -51,10 +54,15 @@ export function VolunteersGrid() {
           return (
             <motion.div
               key={opportunity.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="border border-border/50 rounded-xl overflow-hidden bg-card/50 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:border-primary/20"
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              whileHover={{ 
+                scale: 1.02,
+                y: -5,
+                transition: { duration: 0.2 }
+              }}
+              className="border border-border/50 rounded-xl overflow-hidden bg-card/50 backdrop-blur-sm hover:shadow-xl transition-all duration-300 hover:border-primary/20 group"
             >
               <motion.button
                 onClick={() => setOpenItem(isOpen ? null : String(opportunity.id))}
@@ -65,11 +73,15 @@ export function VolunteersGrid() {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
                     <motion.div 
-                      className="bg-gradient-to-br from-primary/10 to-primary/5 p-3 rounded-xl border border-primary/10"
-                      whileHover={{ scale: 1.05 }}
+                      className="bg-gradient-to-br from-primary/10 to-primary/5 p-3 rounded-xl border border-primary/10 group-hover:from-primary/20 group-hover:to-primary/10 transition-all duration-300"
+                      whileHover={{ 
+                        scale: 1.1,
+                        rotate: 5,
+                        transition: { type: "spring", stiffness: 400, damping: 17 }
+                      }}
                       transition={{ type: "spring", stiffness: 400, damping: 17 }}
                     >
-                      <IconComponent className="h-6 w-6 text-primary" />
+                      <IconComponent className="h-6 w-6 text-primary group-hover:text-primary/90 transition-colors duration-300" />
                     </motion.div>
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-1">
@@ -121,14 +133,14 @@ export function VolunteersGrid() {
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    transition={{ duration: 0.4, ease: "easeInOut" }}
                     className="overflow-hidden"
                   >
                     <div className="px-6 pb-6 pt-2 border-t border-border/30 bg-gradient-to-b from-background/50 to-background/80">
                       <motion.div
-                        initial={{ y: -10, opacity: 0 }}
+                        initial={{ y: -20, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
-                        transition={{ duration: 0.3, delay: 0.1 }}
+                        transition={{ duration: 0.4, delay: 0.1 }}
                         className="space-y-4"
                       >
                         <p className="text-foreground leading-relaxed">
@@ -188,20 +200,26 @@ export function VolunteersGrid() {
                         </div>
 
                         <motion.div
-                          initial={{ y: 10, opacity: 0 }}
+                          initial={{ y: 20, opacity: 0 }}
                           animate={{ y: 0, opacity: 1 }}
-                          transition={{ duration: 0.3, delay: 0.3 }}
+                          transition={{ duration: 0.4, delay: 0.3 }}
                           className="pt-4"
                         >
-                          <Button 
-                            className="w-full bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary/80 h-12 text-sm px-6 shadow-lg hover:shadow-xl transition-all duration-300 font-medium" 
-                            asChild
+                          <motion.div
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
+                            transition={{ type: "spring", stiffness: 400, damping: 17 }}
                           >
-                            <a href={opportunity.formLink} target="_blank" rel="noopener noreferrer">
-                              <ExternalLink className="mr-2 h-4 w-4" />
-                              Apply for this Position
-                            </a>
-                          </Button>
+                            <Button 
+                              className="w-full bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary/80 h-12 text-sm px-6 shadow-lg hover:shadow-xl transition-all duration-300 font-medium" 
+                              asChild
+                            >
+                              <a href={opportunity.formLink} target="_blank" rel="noopener noreferrer">
+                                <ExternalLink className="mr-2 h-4 w-4" />
+                                Apply for this Position
+                              </a>
+                            </Button>
+                          </motion.div>
                         </motion.div>
                       </motion.div>
                     </div>
