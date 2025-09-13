@@ -8,6 +8,14 @@ export function getFeaturedArticles() {
   return Object.values(articles).filter((article: any) => article.featured === true) as any[]
 }
 
+/**
+ * Retrieves all articles from the articles object
+ * @returns Array of all articles
+ */
+export function getLatestArticles() {
+  return Object.values(articles) as any[]
+}
+
 // export const articles = {
 //     "project-salam-reaches-500-students": {
 //       "id": 1,

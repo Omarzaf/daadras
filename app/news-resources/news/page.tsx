@@ -4,8 +4,7 @@ import { useState, useMemo } from "react"
 import { UpdatesHeader } from "@/components/news-updates/UpdatesHeader"
 import { UpdatesFilters } from "@/components/news-updates/UpdatesFilters"
 import { UpdatesGrid } from "@/components/news-updates/UpdatesGrid"
-import { articles } from "@/lib/articles"
-import { demoArticles, getLatestArticles } from "@/lib/demoArticles"
+import { getLatestArticles } from "@/lib/articles"
 
 export default function NewsUpdatesPage() {
   const [searchTerm, setSearchTerm] = useState("")
@@ -46,7 +45,7 @@ export default function NewsUpdatesPage() {
         filteredCount={filteredArticles.length}
         totalCount={latestArticles.length}
       />
-      <UpdatesGrid articles={filteredArticles} />
+      <UpdatesGrid articles={filteredArticles} hasFilters={searchTerm !== "" || selectedCategory !== "all"} />
     </div>
   )
 }
