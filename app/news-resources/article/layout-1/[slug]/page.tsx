@@ -180,7 +180,7 @@ export async function generateMetadata({ params }: ArticlePageProps) {
   }
   
   return {
-    title: `${article.title} | Daadras NGO`,
+    title: `${article.title} | Daadras`,
     description: article.excerpt,
     openGraph: {
       title: article.title,
