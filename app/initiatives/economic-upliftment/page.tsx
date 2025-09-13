@@ -17,12 +17,14 @@ export default function EconomicUpliftmentPage() {
       <EconomicUpliftmentStrategy />
       <LastingChangeSection />
       <EconomicImpactStats />
-      <TestimonialsSection
-        testimonials={economicUpliftmentTestimonials}
-        title="Stories of Impact"
-        subtitle="Real stories from the families and individuals whose lives have been transformed through our programs."
-        leftAligned={true}
-      />
+      {economicUpliftmentTestimonials && economicUpliftmentTestimonials.length > 0 && (
+        <TestimonialsSection
+          testimonials={economicUpliftmentTestimonials}
+          title="Stories of Impact"
+          subtitle="Real stories from the families and individuals whose lives have been transformed through our programs."
+          leftAligned={true}
+        />
+      )}
       <EconomicUpliftmentCTA />
     </div>
   )
