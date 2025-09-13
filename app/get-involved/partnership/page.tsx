@@ -22,8 +22,8 @@ export default function PartnershipsPage() {
       ],
     },
     {
-      title: "Project SALAM Collaborators",
-      description: "Partner with us to deliver our comprehensive 3-4 month Project SALAM program in educational institutions.",
+      title: "Project Salam Collaborators",
+      description: "Partner with us to deliver our comprehensive 3-4 month Project Salam program in educational institutions.",
       icon: BookOpen,
       benefits: [
         "Direct program implementation in your community",
@@ -41,30 +41,6 @@ export default function PartnershipsPage() {
         "Employee volunteer opportunities",
         "Skills-based volunteering programs",
         "Sustainable funding partnerships",
-      ],
-    },
-    {
-      title: "NGO Collaborations",
-      description:
-        "Work with fellow NGOs and civil society organizations to amplify our collective impact and share best practices.",
-      icon: Handshake,
-      benefits: [
-        "Resource sharing and cost efficiency",
-        "Knowledge exchange and capacity building",
-        "Joint advocacy and policy influence",
-        "Expanded geographic reach",
-      ],
-    },
-    {
-      title: "Government Partnerships",
-      description:
-        "Collaborate with government agencies to align our programs with national development goals and policy frameworks.",
-      icon: Award,
-      benefits: [
-        "Policy alignment and compliance",
-        "Access to public resources",
-        "Scalability through government networks",
-        "Sustainable program integration",
       ],
     },
   ]

@@ -102,9 +102,6 @@ export const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="mt-8 pt-8 text-left text-muted-foreground">
-          <p>&copy; 2025 Daadras NGO. All Rights Reserved.</p>
-        </div>
       </div>
     </footer>
   )

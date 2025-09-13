@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { BookOpen, Trophy, Brain, Users, ArrowRight, Globe, Heart, Award } from "lucide-react"
+import { BookOpen, Trophy, Brain, Users, Globe, Heart, Award } from "lucide-react"
 import { motion, useMotionValue, useTransform, animate, useInView, AnimatePresence } from "framer-motion"
 import { useEffect, useRef, useState, useMemo } from "react"
 import Link from "next/link"
@@ -35,7 +35,6 @@ const MetricCard = ({ metric, onHover, onLeave, isHovered }: {
   onLeave: () => void
   isHovered: boolean
 }) => {
-  const Icon = metric.icon
   const isFamiliesMetric = metric.value === "100+" && metric.label.includes("Families supported with self-sustainability programs")
   const [hasBeenHovered, setHasBeenHovered] = useState(false)
   

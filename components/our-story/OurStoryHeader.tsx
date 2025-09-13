@@ -13,7 +13,7 @@ export function OurStoryHeader() {
           </div>
           <p className="text-muted-foreground leading-relaxed" style={{ fontSize: 'var(--text-xl)' }}>
             Founded in May 2020 as a grassroots response to community needs, Daadras has evolved into a future-focused,
-            education-driven NGO committed to empowering underserved communities through transformative learning and
+            education-driven institution committed to empowering underserved communities through transformative learning and
             technology.
           </p>
         </div>

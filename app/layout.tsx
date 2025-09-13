@@ -21,9 +21,9 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "Daadras NGO - Empowering Communities",
+  title: "Daadras - Empowering Communities",
   description:
-    "Daadras NGO is dedicated to empowering communities through education, technology, and social-emotional learning programs.",
+    "Daadras is dedicated to empowering communities through education, technology, and social-emotional learning programs.",
   generator: "v0.app",
 }
 
