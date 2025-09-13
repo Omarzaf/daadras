@@ -23,7 +23,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          Strategic gaming is one of the most exciting and impactful components of Project SALAM, beginning with the introduction of chess. 
+          Strategic gaming is one of the most exciting and impactful components of Project Salam, beginning with the introduction of chess. 
           For children from underserved communities, chess is more than a game—it is a gateway to developing critical thinking, patience, and foresight.
         </motion.p>
         <motion.div 

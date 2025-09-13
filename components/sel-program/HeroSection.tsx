@@ -21,7 +21,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          Our Social-Emotional Learning (SEL) program is the foundation of Project SALAM. Designed for children and adolescents from underserved communities, 
+          Our Social-Emotional Learning (SEL) program is the foundation of Project Salam. Designed for children and adolescents from underserved communities, 
           it equips them with emotional resilience, empathy, and the ability to navigate challenges with confidence.
         </motion.p>
         <motion.div 

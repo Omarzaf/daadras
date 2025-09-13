@@ -57,7 +57,7 @@ export default function ImpactSection() {
               <Star className="h-8 w-8" />
             </div>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Chess has proven to be one of Project SALAM's strongest tools for building critical life skills. It teaches children that every move matters, that resilience comes from learning from mistakes, and that strategy and patience can turn challenges into victories—both on the board and beyond.
+              Chess has proven to be one of Project Salam's strongest tools for building critical life skills. It teaches children that every move matters, that resilience comes from learning from mistakes, and that strategy and patience can turn challenges into victories—both on the board and beyond.
             </p>
           </div>
         </div>
