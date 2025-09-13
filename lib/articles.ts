@@ -16,6 +16,18 @@ export function getLatestArticles() {
   return Object.values(articles) as any[]
 }
 
+/**
+ * Retrieves articles tagged with "salam" from the articles object
+ * @returns Array of salam-tagged articles
+ */
+export function getSalamArticles() {
+  return Object.values(articles).filter((article: any) => 
+    article.tags && article.tags.some((tag: string) => 
+      tag.toLowerCase().includes('salam')
+    )
+  ) as any[]
+}
+
 // export const articles = {
 //     "project-salam-reaches-500-students": {
 //       "id": 1,
