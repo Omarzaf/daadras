@@ -5,19 +5,17 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { ViewAllButton } from "@/components/ui/view-all-button"
 import { ReportCard } from "@/components/ui/report-card"
-import { Calendar, ArrowRight, Heart } from "lucide-react"
 import { motion } from "framer-motion"
-import { Article } from "@/types"
-import { articles } from "@/lib/articles"
-import { demoArticles, getLatestArticles } from "@/lib/demoArticles"
+import { getFeaturedArticles } from "@/lib/articles"
 import Link from "next/link"
-import reportsData from "@/data/reports.json"
+import { getReports } from "@/lib/reports"
 
 export const NewsSection = () => {
-  // Use the same articles as the News & Resources page
-  const featuredArticles = getLatestArticles()
+  // Get featured articles from lib/articles
+  const featuredArticles = getFeaturedArticles()
   
   // Get the latest report
+  const reportsData = getReports()
   const latestReport = reportsData
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())[0]
   return (

@@ -1,5 +1,13 @@
 export const articles = {}
 
+/**
+ * Retrieves featured articles from the articles object
+ * @returns Array of featured articles
+ */
+export function getFeaturedArticles() {
+  return Object.values(articles).filter((article: any) => article.featured === true) as any[]
+}
+
 // export const articles = {
 //     "project-salam-reaches-500-students": {
 //       "id": 1,
