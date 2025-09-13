@@ -1,3 +1,5 @@
+"use client"
+
 import HeroSection from "@/components/strategic-gaming/HeroSection"
 import MissionSection from "@/components/strategic-gaming/MissionSection"
 import StrategySection from "@/components/strategic-gaming/StrategySection"

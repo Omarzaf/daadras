@@ -1,11 +1,20 @@
+"use client"
+
 import { Users, Heart, Award, Target } from "lucide-react"
 import Image from "next/image"
+import { motion } from "framer-motion"
 
 export function VolunteerUpliftment() {
   return (
     <div className="prose prose-lg max-w-none">
       {/* Header */}
-      <div className="mb-12">
+      <motion.div 
+        className="mb-12"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
         <div className="mb-6">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-0 text-left">
             Volunteer Upliftment
@@ -15,10 +24,21 @@ export function VolunteerUpliftment() {
         <p className="text-lg text-muted-foreground leading-relaxed max-w-4xl text-left">
           Our volunteers are the heart of our mission. We believe in nurturing their growth through meaningful experiences that develop both personal and professional skills while creating lasting impact in communities.
         </p>
-      </div>
+      </motion.div>
       
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 not-prose">
-        <div className="bg-card rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+        <motion.div 
+          className="bg-card rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          whileHover={{ 
+            scale: 1.05,
+            y: -10,
+            transition: { duration: 0.2 }
+          }}
+          viewport={{ once: true }}
+        >
           <div className="relative h-48 w-full">
             <Image
               src="/drive/community_build.jpg"
@@ -29,9 +49,13 @@ export function VolunteerUpliftment() {
           </div>
           <div className="p-6">
             <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+              <motion.div 
+                className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center"
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                transition={{ duration: 0.2 }}
+              >
                 <Heart className="w-6 h-6 text-primary" />
-              </div>
+              </motion.div>
               <h3 className="text-xl md:text-2xl font-semibold text-foreground">
                 Community Building
               </h3>
@@ -40,9 +64,20 @@ export function VolunteerUpliftment() {
               Creating strong networks and fostering collaboration among volunteers to amplify collective impact and shared learning.
             </p>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="bg-card rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+        <motion.div 
+          className="bg-card rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          whileHover={{ 
+            scale: 1.05,
+            y: -10,
+            transition: { duration: 0.2 }
+          }}
+          viewport={{ once: true }}
+        >
           <div className="relative h-48 w-full">
             <Image
               src="/drive/skills_develop.webp"
@@ -53,9 +88,13 @@ export function VolunteerUpliftment() {
           </div>
           <div className="p-6">
             <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+              <motion.div 
+                className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center"
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                transition={{ duration: 0.2 }}
+              >
                 <Award className="w-6 h-6 text-primary" />
-              </div>
+              </motion.div>
               <h3 className="text-xl md:text-2xl font-semibold text-foreground">
                 Skills Development
               </h3>
@@ -64,9 +103,20 @@ export function VolunteerUpliftment() {
               Providing training opportunities and mentorship programs that enhance volunteers' capabilities and career prospects.
             </p>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="bg-card rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+        <motion.div 
+          className="bg-card rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          whileHover={{ 
+            scale: 1.05,
+            y: -10,
+            transition: { duration: 0.2 }
+          }}
+          viewport={{ once: true }}
+        >
           <div className="relative h-48 w-full">
             <Image
               src="/drive/volunteer_wahab.webp"
@@ -77,9 +127,13 @@ export function VolunteerUpliftment() {
           </div>
           <div className="p-6">
             <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+              <motion.div 
+                className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center"
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                transition={{ duration: 0.2 }}
+              >
                 <Target className="w-6 h-6 text-primary" />
-              </div>
+              </motion.div>
               <h3 className="text-xl md:text-2xl font-semibold text-foreground">
                 Leadership Opportunities
               </h3>
@@ -88,7 +142,7 @@ export function VolunteerUpliftment() {
               Empowering volunteers to take initiative, lead projects, and develop management skills through hands-on experience.
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   )

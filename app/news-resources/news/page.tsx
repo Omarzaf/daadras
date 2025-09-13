@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useMemo } from "react"
+import { motion } from "framer-motion"
 import { UpdatesHeader } from "@/components/news-updates/UpdatesHeader"
 import { UpdatesFilters } from "@/components/news-updates/UpdatesFilters"
 import { UpdatesGrid } from "@/components/news-updates/UpdatesGrid"
@@ -34,18 +35,31 @@ export default function NewsUpdatesPage() {
   ]
 
   return (
-    <div className="max-w-[1380px] w-full mx-auto px-6 md:px-10 lg:px-14 py-16">
-      <UpdatesHeader />
-      <UpdatesFilters
-        searchTerm={searchTerm}
-        setSearchTerm={setSearchTerm}
-        selectedCategory={selectedCategory}
-        setSelectedCategory={setSelectedCategory}
-        categories={categories}
-        filteredCount={filteredArticles.length}
-        totalCount={latestArticles.length}
-      />
-      <UpdatesGrid articles={filteredArticles} hasFilters={searchTerm !== "" || selectedCategory !== "all"} />
+    <div className="min-h-screen bg-background">
+      <motion.div 
+        className="max-w-[1380px] w-full mx-auto px-6 md:px-10 lg:px-14 py-16"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.2 }} 
+      >
+        <UpdatesHeader />
+        <UpdatesFilters
+          searchTerm={searchTerm}
+          setSearchTerm={setSearchTerm}
+          selectedCategory={selectedCategory}
+          setSelectedCategory={setSelectedCategory}
+          categories={categories}
+          filteredCount={filteredArticles.length}
+          totalCount={latestArticles.length}
+        />
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: 0.2 }}
+        >
+          <UpdatesGrid articles={filteredArticles} hasFilters={searchTerm !== "" || selectedCategory !== "all"} />
+        </motion.div>
+      </motion.div>
     </div>
   )
 }

@@ -21,26 +21,6 @@ export function NoArticlesAvailable({ hasFilters = false }: NoArticlesAvailableP
           <p className="text-muted-foreground">{description}</p>
         </div>
 
-        {!hasFilters && (
-          <div className="space-y-4 pt-4">
-            <p className="text-sm text-muted-foreground">
-              Stay connected with us for the latest updates:
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>
-                <a href={`mailto:${DAADRAS_CONTACT.email}`} rel="noopener noreferrer">
-                  <Newspaper className="mr-2 h-4 w-4" />
-                  Contact Us
-                </a>
-              </Button>
-              <Button variant="outline" size="lg" asChild>
-                <a href="/about/our-story" rel="noopener noreferrer">
-                  Learn About Us
-                </a>
-              </Button>
-            </div>
-          </div>
-        )}
       </div>
     </div>
   )

@@ -9,11 +9,11 @@ export function DocumentaryVideo() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <div className="text-center mb-12">
+      <div className="text-center mb-6">
         <h2 className="text-3xl md:text-5xl font-bold mb-6" style={{color: '#0F443F'}}>
           Salam by Daadras: Empowering Children through Education & Support
         </h2>
-        <p className="text-xl text-muted-foreground max-w-5xl mx-auto mb-4">
+        <p className="text-xl text-muted-foreground max-w-5xl mx-auto mb-6">
           Watch our inspiring documentary showcasing how we're transforming lives through comprehensive education, combining IT skills, strategic thinking, emotional intelligence, and communication excellence.
         </p>
       </div>
@@ -35,8 +35,8 @@ export function DocumentaryVideo() {
         </motion.div>
       </div>
       
-      <div className="text-center mt-8">
-        <p className="text-base text-muted-foreground mb-6">
+      <div className="text-center mt-4">
+        <p className="text-base text-muted-foreground mb-4">
           Experience the journey of transformation and hope. Share this documentary to spread awareness about our mission.
         </p>
         

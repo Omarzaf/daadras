@@ -1,19 +1,37 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Users, Briefcase, Mail } from "lucide-react"
 import Link from "next/link"
+import { motion } from "framer-motion"
 
 export default function HeroSection() {
   return (
     <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/5 to-accent/5">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 font-space-grotesk">
+        <motion.h1 
+          className="text-4xl md:text-6xl font-bold text-foreground mb-6 font-space-grotesk"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
           Building <span className="text-primary">Strategic Thinkers</span>
-        </h1>
-        <p className="text-xl text-muted-foreground max-w-3xl mb-8 leading-relaxed">
+        </motion.h1>
+        <motion.p 
+          className="text-xl text-muted-foreground max-w-3xl mb-8 leading-relaxed"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
           Strategic gaming is one of the most exciting and impactful components of Project SALAM, beginning with the introduction of chess. 
           For children from underserved communities, chess is more than a game—it is a gateway to developing critical thinking, patience, and foresight.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4">
+        </motion.p>
+        <motion.div 
+          className="flex flex-col sm:flex-row gap-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+        >
           <Link href="/get-involved/volunteer">
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
               <Users className="mr-2 h-5 w-5" />
@@ -32,7 +50,7 @@ export default function HeroSection() {
               Contact Us
             </Button>
           </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
   )
