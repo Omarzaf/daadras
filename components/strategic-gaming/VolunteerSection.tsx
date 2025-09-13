@@ -54,12 +54,15 @@ export default function VolunteerSection() {
           <h3 className="text-2xl font-bold text-foreground mb-6 font-space-grotesk">A Transformative Experience</h3>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-4">
-              <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden">
+              <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden bg-white">
                 <Image
                   src="/drive/volunteer_wahab.webp"
                   alt="Volunteer mentoring children"
                   fill
-                  className="object-cover"
+                  className="object-contain"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  style={{ objectFit: "contain" }}
+                  priority
                 />
               </div>
               <h4 className="text-xl font-semibold text-foreground">For Volunteers</h4>
@@ -69,12 +72,15 @@ export default function VolunteerSection() {
               </p>
             </div>
             <div className="space-y-4">
-              <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden">
+              <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden bg-white">
                 <Image
                   src="/drive/kids_studying.jpg"
                   alt="Children learning and studying"
                   fill
-                  className="object-cover"
+                  className="object-contain"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  style={{ objectFit: "contain" }}
+                  priority
                 />
               </div>
               <h4 className="text-xl font-semibold text-foreground">For Children</h4>
