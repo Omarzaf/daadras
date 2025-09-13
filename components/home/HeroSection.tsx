@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import { Play } from "lucide-react"
 import { TypewriterText } from "./TypewriterText"
 import { useState } from "react"
+import Link from "next/link"
 
 export const HeroSection = () => {
   const [showContent, setShowContent] = useState(false)
@@ -90,19 +91,28 @@ export const HeroSection = () => {
                 className="flex flex-col sm:flex-row gap-4"
               >
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-white text-white bg-black/70 hover:bg-white hover:text-black backdrop-blur-sm"
+                  <a
+                    href="https://www.youtube.com/watch?v=uu0VXYj_y_A"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    tabIndex={showContent ? 0 : -1}
                   >
-                    <Play className="mr-2 h-5 w-5" />
-                    Watch Our Story
-                  </Button>
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="border-white text-white bg-black/70 hover:bg-white hover:text-black backdrop-blur-sm"
+                    >
+                      <Play className="mr-2 h-5 w-5" />
+                      Watch Our Story
+                    </Button>
+                  </a>
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                    Get Involved
-                  </Button>
+                  <Link href="/our-story" tabIndex={showContent ? 0 : -1}>
+                    <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                      Learn More
+                    </Button>
+                  </Link>
                 </motion.div>
               </motion.div>
             </div>
