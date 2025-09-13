@@ -1,0 +1,116 @@
+[
+    {
+      "id": 1,
+      "title": "Program Manager - Education",
+      "department": "Education",
+      "type": "Full-time",
+      "engagement": "On-site",
+      "location": "Lahore, Pakistan",
+      "mapLink": "https://maps.google.com/?q=Lahore,Pakistan",
+      "description": "Lead and oversee Project Salam and other educational initiatives. Manage program implementation, monitor outcomes, and coordinate with partner organizations.",
+      "requirements": [
+        "Master's degree in Education or related field",
+        "5+ years program management experience",
+        "Experience with educational NGOs",
+        "Strong leadership and communication skills"
+      ],
+      "icon": "BookOpen",
+      "formLink": "https://forms.google.com/program-manager-education",
+      "urgent": true
+    },
+    {
+      "id": 2,
+      "title": "Technology Coordinator",
+      "department": "Technology",
+      "type": "Full-time",
+      "engagement": "Hybrid",
+      "location": "Lahore, Pakistan",
+      "mapLink": "https://maps.google.com/?q=Lahore,Pakistan",
+      "description": "Oversee IT training programs, manage technology infrastructure, and develop digital literacy curricula for our educational initiatives.",
+      "requirements": [
+        "Bachelor's in Computer Science or IT",
+        "3+ years in educational technology",
+        "Experience with curriculum development",
+        "Proficiency in multiple programming languages"
+      ],
+      "icon": "Laptop",
+      "formLink": "https://forms.google.com/technology-coordinator",
+      "urgent": false
+    },
+    {
+      "id": 3,
+      "title": "Community Relations Officer",
+      "department": "Outreach",
+      "type": "Full-time",
+      "engagement": "On-site",
+      "location": "Multiple Cities, Pakistan",
+      "mapLink": "https://maps.google.com/?q=Pakistan",
+      "description": "Build and maintain relationships with local communities, coordinate relief programs, and identify families in need for our various initiatives.",
+      "requirements": [
+        "Bachelor's degree in Social Work or related field",
+        "2+ years community outreach experience",
+        "Excellent interpersonal skills",
+        "Fluency in Urdu and English"
+      ],
+      "icon": "Users",
+      "formLink": "https://forms.google.com/community-relations-officer",
+      "urgent": true
+    },
+    {
+      "id": 4,
+      "title": "Finance & Operations Manager",
+      "department": "Operations",
+      "type": "Full-time",
+      "engagement": "Hybrid",
+      "location": "Lahore, Pakistan",
+      "mapLink": "https://maps.google.com/?q=Lahore,Pakistan",
+      "description": "Manage financial operations, oversee budgets, ensure compliance, and streamline organizational processes for maximum efficiency.",
+      "requirements": [
+        "MBA in Finance or CA qualification",
+        "4+ years in nonprofit finance",
+        "Experience with donor reporting",
+        "Strong analytical and organizational skills"
+      ],
+      "icon": "DollarSign",
+      "formLink": "https://forms.google.com/finance-operations-manager",
+      "urgent": false
+    },
+    {
+      "id": 5,
+      "title": "Communications & Marketing Specialist",
+      "department": "Marketing",
+      "type": "Full-time",
+      "engagement": "Remote",
+      "location": "Remote",
+      "mapLink": null,
+      "description": "Develop marketing strategies, manage social media presence, create compelling content, and coordinate public relations efforts.",
+      "requirements": [
+        "Bachelor's in Marketing or Communications",
+        "3+ years digital marketing experience",
+        "Strong content creation skills",
+        "Experience with nonprofit sector preferred"
+      ],
+      "icon": "Megaphone",
+      "formLink": "https://forms.google.com/communications-specialist",
+      "urgent": false
+    },
+    {
+      "id": 6,
+      "title": "Research & Evaluation Analyst",
+      "department": "Research",
+      "type": "Full-time",
+      "engagement": "Hybrid",
+      "location": "Lahore, Pakistan",
+      "mapLink": "https://maps.google.com/?q=Lahore,Pakistan",
+      "description": "Design and conduct program evaluations, analyze impact data, prepare research reports, and support evidence-based decision making.",
+      "requirements": [
+        "Master's in Research, Statistics, or related field",
+        "2+ years research experience",
+        "Proficiency in statistical software",
+        "Strong analytical and writing skills"
+      ],
+      "icon": "Brain",
+      "formLink": "https://forms.google.com/research-analyst",
+      "urgent": true
+    }
+  ]
