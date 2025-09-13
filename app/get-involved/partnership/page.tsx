@@ -43,30 +43,6 @@ export default function PartnershipsPage() {
         "Sustainable funding partnerships",
       ],
     },
-    {
-      title: "NGO Collaborations",
-      description:
-        "Work with fellow NGOs and civil society organizations to amplify our collective impact and share best practices.",
-      icon: Handshake,
-      benefits: [
-        "Resource sharing and cost efficiency",
-        "Knowledge exchange and capacity building",
-        "Joint advocacy and policy influence",
-        "Expanded geographic reach",
-      ],
-    },
-    {
-      title: "Government Partnerships",
-      description:
-        "Collaborate with government agencies to align our programs with national development goals and policy frameworks.",
-      icon: Award,
-      benefits: [
-        "Policy alignment and compliance",
-        "Access to public resources",
-        "Scalability through government networks",
-        "Sustainable program integration",
-      ],
-    },
   ]
 
   const processSteps = [
