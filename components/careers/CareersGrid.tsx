@@ -3,7 +3,7 @@
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { MapPin, Briefcase, ExternalLink, ChevronDown } from "lucide-react"
-import careerOpportunities from "@/data/careerOpportunities.json"
+import { getCareerOpportunities } from "@/lib/careerOpportunities"
 import { BookOpen, Laptop, Users, Heart } from "lucide-react"
 import { NoOpportunitiesAvailable } from "@/components/ui/no-opportunities"
 import { motion, AnimatePresence } from "framer-motion"
@@ -18,6 +18,7 @@ const iconMap: Record<string, any> = {
 
 export function CareersGrid() {
   const [openItem, setOpenItem] = useState<string | null>(null)
+  const careerOpportunities = getCareerOpportunities()
 
   // Check if there are any career opportunities available
   if (!careerOpportunities || careerOpportunities.length === 0) {

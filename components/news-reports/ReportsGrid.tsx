@@ -3,6 +3,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { NoReportsAvailable } from "@/components/ui/no-reports"
 import { Download, Eye, Calendar, FileText, Users } from "lucide-react"
 
 interface Report {
@@ -21,9 +22,15 @@ interface Report {
 
 interface ReportsGridProps {
   reports: Report[]
+  hasFilters?: boolean
 }
 
-export function ReportsGrid({ reports }: ReportsGridProps) {
+export function ReportsGrid({ reports, hasFilters = false }: ReportsGridProps) {
+  // If no reports are available, show the empty state
+  if (reports.length === 0) {
+    return <NoReportsAvailable hasFilters={hasFilters} />
+  }
+
   const getCategoryColor = (category: string) => {
     switch (category) {
       case "Annual Report":

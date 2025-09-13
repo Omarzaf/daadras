@@ -1,25 +1,21 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ViewAllButton } from "@/components/ui/view-all-button"
-import { ReportCard } from "@/components/ui/report-card"
-import { Calendar, ArrowRight, Heart } from "lucide-react"
 import { motion } from "framer-motion"
-import { Article } from "@/types"
-import { articles } from "@/lib/articles"
-import { demoArticles, getLatestArticles } from "@/lib/demoArticles"
+import { getFeaturedArticles } from "@/lib/articles"
 import Link from "next/link"
-import reportsData from "@/data/reports.json"
 
 export const NewsSection = () => {
-  // Use the same articles as the News & Resources page
-  const featuredArticles = getLatestArticles()
-  
-  // Get the latest report
-  const latestReport = reportsData
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())[0]
+  // Get featured articles from lib/articles
+  const featuredArticles = getFeaturedArticles()
+
+  // If there are no articles, don't render the component
+  if (!featuredArticles || featuredArticles.length === 0) {
+    return null
+  }
   return (
     <section id="news" className="py-8 md:py-16 lg:py-24 bg-muted/30">
       <div className="max-w-[1380px] w-full mx-auto px-6 md:px-10 lg:px-14">
@@ -83,32 +79,6 @@ export const NewsSection = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* Latest Report Card - A3 Size Format */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          whileHover={{ 
-            scale: 1.02,
-            y: -4,
-            transition: { duration: 0.3 }
-          }}
-          className="mt-12"
-        >
-          <ReportCard
-            id={latestReport.id}
-            title={latestReport.title}
-            description={`${latestReport.description} This detailed analysis showcases our commitment to transparency and accountability in all our humanitarian efforts. The report highlights key metrics, beneficiary testimonials, and strategic insights that demonstrate our organization's measurable impact on communities.`}
-            category={latestReport.category}
-            date={latestReport.date}
-            pages={latestReport.pages}
-            downloads={latestReport.downloads}
-            fileSize={latestReport.fileSize}
-            thumbnail={latestReport.thumbnail}
-            filePath={latestReport.filePath}
-          />
-        </motion.div>
 
         <ViewAllButton href="/news-resources/news" />
       </div>

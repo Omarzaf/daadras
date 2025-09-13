@@ -2,9 +2,8 @@
 
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { MapPin, Globe, Clock, ExternalLink, ChevronDown } from "lucide-react"
-import opportunities from "@/data/volunteerOpportunities.json"
+import { getVolunteerOpportunities } from "@/lib/volunteerOpportunities"
 import { BookOpen, Trophy, Laptop, Brain, Users, Camera, Megaphone, Heart } from "lucide-react"
 import { NoOpportunitiesAvailable } from "@/components/ui/no-opportunities"
 import { motion, AnimatePresence } from "framer-motion"
@@ -23,6 +22,7 @@ const iconMap: Record<string, any> = {
 
 export function VolunteersGrid() {
   const [openItem, setOpenItem] = useState<string | null>(null)
+  const opportunities = getVolunteerOpportunities()
 
   // Check if there are any volunteer opportunities available
   if (!opportunities || opportunities.length === 0) {
