@@ -72,11 +72,11 @@ export default function PhotoGalleryCarousel() {
 
   return (
     <>
-      <div className="mb-16">
+      <div className="mb-4">
         {/* Carousel Header */}
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h3 className="text-2xl font-bold text-foreground mb-2 font-space-grotesk">
+            <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-2 font-space-grotesk">
               Our Initiatives in Action
             </h3>
             <p className="text-muted-foreground">

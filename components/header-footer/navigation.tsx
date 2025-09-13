@@ -10,7 +10,6 @@ export default function Navigation() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [keyboardFocus, setKeyboardFocus] = useState(false)
-  const [projectSalamOpen, setProjectSalamOpen] = useState(false)
   const timeoutRef = useRef<NodeJS.Timeout | null>(null)
   const pathname = usePathname()
 
@@ -73,7 +72,6 @@ export default function Navigation() {
     }
     setActiveDropdown(null)
     setMobileMenuOpen(false)
-    setProjectSalamOpen(false)
   }
 
   useEffect(() => {
@@ -81,7 +79,6 @@ export default function Navigation() {
       if (e.key === "Escape") {
         setActiveDropdown(null)
         setMobileMenuOpen(false)
-        setProjectSalamOpen(false)
       }
     }
 
@@ -322,38 +319,36 @@ export default function Navigation() {
                         </p>
                       </div>
                       <div className="flex flex-col space-y-2">
-                        <div className="group/project-salam">
+                        <Link
+                          href="/initiatives/project-salam"
+                          className="py-3 px-6 text-[14px] hover:bg-primary/10 hover:text-primary flex items-center border-l-0 hover:border-l-[3px] hover:border-primary transition-all duration-200 ease-out font-medium"
+                          style={{ color: "#374151 !important" }}
+                          onClick={handleLinkClick}
+                        >
+                          Project Salam
+                        </Link>
+                        <div className="ml-6 space-y-1 border-l-2 border-primary/20 pl-4">
                           <Link
-                            href="/initiatives/project-salam"
-                            className="py-3 px-6 text-[14px] hover:bg-primary/10 hover:text-primary flex items-center justify-between border-l-0 hover:border-l-[3px] hover:border-primary transition-all duration-200 ease-out group-hover/project-salam:bg-primary/10 group-hover/project-salam:text-primary group-hover/project-salam:border-l-[3px] group-hover/project-salam:border-primary"
-                            style={{ color: "#374151 !important" }}
+                            href="/initiatives/project-salam/strategic-gaming"
+                            className="py-2 px-4 text-[13px] text-gray-600 hover:bg-primary/5 hover:text-primary flex items-center transition-all duration-200 ease-out rounded-md"
                             onClick={handleLinkClick}
                           >
-                            <span>Education - Project Salam</span>
+                            Strategic Gaming
                           </Link>
-                          <div className="max-h-0 overflow-hidden group-hover/project-salam:max-h-96 transition-all duration-300 ease-out">
-                            <Link
-                              href="/initiatives/project-salam/strategic-gaming"
-                              className="py-2 px-12 text-[13px] text-gray-600 hover:bg-primary/5 hover:text-primary flex items-center transition-all duration-200 ease-out"
-                              onClick={handleLinkClick}
-                            >
-                              Strategic Chess Program
-                            </Link>
-                            <Link
-                              href="/initiatives/project-salam/sel-program"
-                              className="py-2 px-12 text-[13px] text-gray-600 hover:bg-primary/5 hover:text-primary flex items-center transition-all duration-200 ease-out"
-                              onClick={handleLinkClick}
-                            >
-                              S.E.L Emotional Resilience
-                            </Link>
-                            <Link
-                              href="/initiatives/project-salam/it-program"
-                              className="py-2 px-12 text-[13px] text-gray-600 hover:bg-primary/5 hover:text-primary flex items-center transition-all duration-200 ease-out"
-                              onClick={handleLinkClick}
-                            >
-                              I.T Future Innovators
-                            </Link>
-                          </div>
+                          <Link
+                            href="/initiatives/project-salam/sel-program"
+                            className="py-2 px-4 text-[13px] text-gray-600 hover:bg-primary/5 hover:text-primary flex items-center transition-all duration-200 ease-out rounded-md"
+                            onClick={handleLinkClick}
+                          >
+                            Socio-Emotional Learning
+                          </Link>
+                          <Link
+                            href="/initiatives/project-salam/it-program"
+                            className="py-2 px-4 text-[13px] text-gray-600 hover:bg-primary/5 hover:text-primary flex items-center transition-all duration-200 ease-out rounded-md"
+                            onClick={handleLinkClick}
+                          >
+                            Technology
+                          </Link>
                         </div>
                         <Link
                           href="/initiatives/economic-upliftment"
@@ -610,59 +605,48 @@ export default function Navigation() {
                       Explore our key initiatives focused on education, economic development, and humanitarian aid to
                       create sustainable change.
                     </p>
-                    <div className="space-y-1">
-                      <div className="flex items-center justify-between">
-                        <Link
-                          href="/initiatives/project-salam"
-                          onClick={handleLinkClick}
-                          className="block text-sm text-slate-700 hover:text-primary transition-colors duration-200 ease-out py-1 flex-1"
-                        >
-                          Education - Project Salam
-                        </Link>
-                        <button
-                          onClick={() => setProjectSalamOpen(!projectSalamOpen)}
-                          className="p-1 text-slate-700 hover:text-primary transition-colors"
-                        >
-                          +
-                        </button>
-                      </div>
-                      {projectSalamOpen && (
-                        <div className="ml-4 space-y-1">
-                          <Link
-                            href="/initiatives/project-salam/strategic-gaming"
-                            onClick={handleLinkClick}
-                            className="block text-xs text-slate-600 hover:text-primary transition-colors duration-200 ease-out py-1"
-                          >
-                            Strategic Chess Program
-                          </Link>
-                          <Link
-                            href="/initiatives/project-salam/sel-program"
-                            onClick={handleLinkClick}
-                            className="block text-xs text-slate-600 hover:text-primary transition-colors duration-200 ease-out py-1"
-                          >
-                            S.E.L Emotional Resilience
-                          </Link>
-                          <Link
-                            href="/initiatives/project-salam/it-program"
-                            onClick={handleLinkClick}
-                            className="block text-xs text-slate-600 hover:text-primary transition-colors duration-200 ease-out py-1"
-                          >
-                            I.T Future Innovators
-                          </Link>
-                        </div>
-                      )}
+                    
+                    <Link
+                      href="/initiatives/project-salam"
+                      onClick={handleLinkClick}
+                      className="block text-sm text-slate-700 hover:text-primary transition-colors duration-200 ease-out py-2 font-medium"
+                    >
+                      Education - Project Salam
+                    </Link>
+                    <div className="ml-4 space-y-1 border-l-2 border-primary/20 pl-4">
+                      <Link
+                        href="/initiatives/project-salam/strategic-gaming"
+                        onClick={handleLinkClick}
+                        className="block text-xs text-slate-600 hover:text-primary transition-colors duration-200 ease-out py-1"
+                      >
+                        Strategic Chess Program
+                      </Link>
+                      <Link
+                        href="/initiatives/project-salam/sel-program"
+                        onClick={handleLinkClick}
+                        className="block text-xs text-slate-600 hover:text-primary transition-colors duration-200 ease-out py-1"
+                      >
+                        S.E.L Emotional Resilience
+                      </Link>
+                      <Link
+                        href="/initiatives/project-salam/it-program"
+                        onClick={handleLinkClick}
+                        className="block text-xs text-slate-600 hover:text-primary transition-colors duration-200 ease-out py-1"
+                      >
+                        I.T Future Innovators
+                      </Link>
                     </div>
                     <Link
                       href="/initiatives/economic-upliftment"
                       onClick={handleLinkClick}
-                      className="block text-sm text-slate-700 hover:text-primary transition-colors duration-200 ease-out py-1"
+                      className="block text-sm text-slate-700 hover:text-primary transition-colors duration-200 ease-out py-2"
                     >
                       Economic Upliftment
                     </Link>
                     <Link
                       href="/initiatives/emergency-relief"
                       onClick={handleLinkClick}
-                      className="block text-sm text-slate-700 hover:text-primary transition-colors duration-200 ease-out py-1"
+                      className="block text-sm text-slate-700 hover:text-primary transition-colors duration-200 ease-out py-2"
                     >
                       Emergency Relief
                     </Link>
