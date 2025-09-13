@@ -22,8 +22,8 @@ export default function PartnershipsPage() {
       ],
     },
     {
-      title: "Project SALAM Collaborators",
-      description: "Partner with us to deliver our comprehensive 3-4 month Project SALAM program in educational institutions.",
+      title: "Project Salam Collaborators",
+      description: "Partner with us to deliver our comprehensive 3-4 month Project Salam program in educational institutions.",
       icon: BookOpen,
       benefits: [
         "Direct program implementation in your community",
