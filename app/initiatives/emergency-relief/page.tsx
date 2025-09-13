@@ -4,35 +4,11 @@ import { Badge } from "@/components/ui/badge"
 import { Package, Heart, Users, Shirt, Calendar, ArrowRight, CheckCircle } from "lucide-react"
 import TestimonialsSection from "@/components/shared/TestimonialsSection"
 import Image from "next/image"
-
-const emergencyReliefTestimonials = [
-  {
-    id: "1",
-    name: "Noor Fatima",
-    location: "Nasirabad, Balochistan",
-    story:
-      "When the floods destroyed our home, we had nothing left. Daadras Foundation provided us with food packages and clothing that helped us survive the most difficult time of our lives.",
-    impact: "Family of 7 received emergency food supplies for 2 months and clothing during 2022 flood crisis.",
-  },
-  {
-    id: "2",
-    name: "Abdul Rahman",
-    location: "Kot Palyani, Balochistan",
-    story:
-      "During Ramadan, when we couldn't afford proper Iftar meals, the foundation's Iftar drive ensured our children could break their fast with dignity and proper nutrition.",
-    impact: "30 families in the community received daily Iftar meals throughout Ramadan 2023.",
-  },
-  {
-    id: "3",
-    name: "Khadija Begum",
-    location: "Sharakpur, Punjab",
-    story:
-      "As a widow with seven children, I struggled to provide basic clothing. The foundation's clothing drive gave my children warm clothes for winter and restored their confidence.",
-    impact: "Complete winter clothing provided for 8 family members, ensuring warmth and dignity during harsh weather.",
-  },
-]
+import { getTestimonialsByInitiative } from "@/lib/testimonials"
 
 export default function RationDrivesPage() {
+  const emergencyReliefTestimonials = getTestimonialsByInitiative('emergency-relief');
+  
   return (
     <div className="max-w-[1380px] w-full mx-auto px-6 md:px-10 lg:px-14 py-16">
       {/* Hero Section */}
