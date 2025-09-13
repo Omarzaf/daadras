@@ -20,8 +20,6 @@ export default function PartnershipsPage() {
         "Tax benefits and donation receipts",
         "Opportunity to visit programs and see impact firsthand",
       ],
-      color: "from-green-500/10 to-green-600/5",
-      borderColor: "border-green-500/20"
     },
     {
       title: "Project SALAM Collaborators",
@@ -33,24 +31,43 @@ export default function PartnershipsPage() {
         "Capacity building workshops and training",
         "Joint event planning and execution",
       ],
-      color: "from-blue-500/10 to-blue-600/5",
-      borderColor: "border-blue-500/20"
     },
     {
       title: "Institutional Partners",
       description: "Work with us in administration, evaluation, knowledge-sharing, and advocacy initiatives.",
       icon: Network,
       benefits: [
-        "Mutual capacity building and institutional strengthening",
-        "Knowledge exchange and best practice sharing",
-        "Joint advocacy and policy influence",
-        "Collaborative forums and networking opportunities",
+        "CSR program development",
+        "Employee volunteer opportunities",
+        "Skills-based volunteering programs",
+        "Sustainable funding partnerships",
       ],
-      color: "from-purple-500/10 to-purple-600/5",
-      borderColor: "border-purple-500/20"
+    },
+    {
+      title: "NGO Collaborations",
+      description:
+        "Work with fellow NGOs and civil society organizations to amplify our collective impact and share best practices.",
+      icon: Handshake,
+      benefits: [
+        "Resource sharing and cost efficiency",
+        "Knowledge exchange and capacity building",
+        "Joint advocacy and policy influence",
+        "Expanded geographic reach",
+      ],
+    },
+    {
+      title: "Government Partnerships",
+      description:
+        "Collaborate with government agencies to align our programs with national development goals and policy frameworks.",
+      icon: Award,
+      benefits: [
+        "Policy alignment and compliance",
+        "Access to public resources",
+        "Scalability through government networks",
+        "Sustainable program integration",
+      ],
     },
   ]
-
 
   const processSteps = [
     {
@@ -77,13 +94,7 @@ export default function PartnershipsPage() {
         <div className="max-w-[1380px] w-full mx-auto px-6 md:px-10 lg:px-14">
           <div className="mb-12">
             <div className="mb-6">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                <Badge className="mb-4 bg-accent/10 text-accent border-accent/20">Collaborate With Us</Badge>
-              </motion.div>
+
               <motion.h1 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}

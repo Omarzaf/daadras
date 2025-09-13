@@ -5,14 +5,14 @@ export default function CurriculumSection() {
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
+        <div className="mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-space-grotesk">Curriculum and Learning Approach</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl">
             Our SEL curriculum is rooted in the fundamentals of emotional psychology, helping children build a strong foundation for lifelong well-being.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
+        <div className="grid lg:grid-cols-2 gap-8 mb-16 items-start">
           <div className="space-y-6">
             <div className="flex items-start gap-4">
               <CheckCircle className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
@@ -78,47 +78,7 @@ export default function CurriculumSection() {
           </div>
         </div>
 
-        {/* Learning Outcomes */}
-        <div className="bg-gradient-to-r from-primary/5 to-accent/5 rounded-2xl p-8">
-          <h3 className="text-2xl font-bold text-foreground mb-6 text-center font-space-grotesk">Learning Outcomes</h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <Heart className="h-12 w-12 text-primary mx-auto mb-4" />
-                <CardTitle className="font-space-grotesk">Emotional Skills</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  Children develop the ability to recognize, process, and manage their emotions in healthy ways.
-                </CardDescription>
-              </CardContent>
-            </Card>
 
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <Shield className="h-12 w-12 text-accent mx-auto mb-4" />
-                <CardTitle className="font-space-grotesk">Healthy Coping</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  Equipped with coping mechanisms far healthier than destructive patterns they may have learned during hardship.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <Star className="h-12 w-12 text-primary mx-auto mb-4" />
-                <CardTitle className="font-space-grotesk">Lifelong Foundation</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  Building a strong foundation for lifelong emotional well-being and resilience.
-                </CardDescription>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
       </div>
     </section>
   )

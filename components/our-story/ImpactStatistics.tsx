@@ -72,7 +72,7 @@ export function ImpactStatistics() {
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 not-prose">
         <div className="relative rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden h-80">
           <Image
-            src="/community-volunteers.png"
+            src="/drive/school_poverty2.webp"
             alt="Lives impacted through community programs"
             fill
             className="object-cover"
@@ -96,7 +96,7 @@ export function ImpactStatistics() {
 
         <div className="relative rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden h-80">
           <Image
-            src="/students-learning-with-computers-in-classroom.png"
+            src="/drive/kids_watermelon.jpg"
             alt="Students educated in technology and skills"
             fill
             className="object-cover"
@@ -120,7 +120,7 @@ export function ImpactStatistics() {
 
         <div className="relative rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden h-80">
           <Image
-            src="/diverse-group-of-students-engaged-in-it-chess-and-.png"
+            src="/drive/amin-alavi-RiXCpGTgY-8-unsplash.jpg"
             alt="Families supported through relief programs"
             fill
             className="object-cover"
@@ -144,7 +144,7 @@ export function ImpactStatistics() {
 
         <div className="relative rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden h-80">
           <Image
-            src="/chess-champion.jpg"
+            src="/drive/20240721_102656.jpg"
             alt="Active volunteers making a difference"
             fill
             className="object-cover"

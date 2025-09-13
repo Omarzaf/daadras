@@ -17,34 +17,24 @@ const photos = [
     caption: "Strategic thinking development through chess"
   },
   {
-    src: "/images/project-salam/salam-3.jpg",
+    src: "/drive/boys_school.jpg",
     alt: "Social-emotional learning activities",
     caption: "Building emotional intelligence and self-awareness"
   },
   {
-    src: "/images/project-salam/salam-4.jpg",
+    src: "/drive/boy_school.jpg",
     alt: "Public speaking practice session",
     caption: "Confidence building through communication skills"
   },
   {
-    src: "/images/project-salam/salam-5.jpg",
+    src: "/drive/women_classroom.webp",
     alt: "Group learning and collaboration",
     caption: "Collaborative learning environment"
   },
   {
-    src: "/images/project-salam/salam-6.jpg",
+    src: "/drive/girl_studying_park.jpg",
     alt: "Individual mentoring session",
     caption: "Personalized guidance and support"
-  },
-  {
-    src: "/images/project-salam/salam-7.jpg",
-    alt: "Technology workshop in action",
-    caption: "Hands-on technology learning experience"
-  },
-  {
-    src: "/images/project-salam/salam-8.jpg",
-    alt: "Achievement celebration moment",
-    caption: "Celebrating student achievements and milestones"
   }
 ];
 
@@ -87,7 +77,7 @@ export default function PhotoGalleryCarousel() {
         <div className="flex items-center justify-between mb-8">
           <div>
             <h3 className="text-2xl font-bold text-foreground mb-2 font-space-grotesk">
-              Project Salam in Action
+              Our Initiatives in Action
             </h3>
             <p className="text-muted-foreground">
               Capturing moments of learning, growth, and transformation

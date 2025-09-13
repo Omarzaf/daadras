@@ -12,8 +12,6 @@ export function GivingMethodsSection() {
       title: "Financial Donations",
       description: "Support our programs through direct financial contributions that fund education, technology, and community initiatives.",
       icon: Heart,
-      color: "from-red-500/10 to-red-600/5",
-      borderColor: "border-red-500/20",
       action: "Donate Now",
       href: "#bank-transfers"
     },
@@ -21,8 +19,6 @@ export function GivingMethodsSection() {
       title: "Volunteer Your Time",
       description: "Join our dedicated team of volunteers and contribute your time and skills to make a direct impact in our community.",
       icon: Users,
-      color: "from-blue-500/10 to-blue-600/5",
-      borderColor: "border-blue-500/20",
       action: "Volunteer With Us",
       href: "/get-involved/volunteer"
     },
@@ -30,8 +26,6 @@ export function GivingMethodsSection() {
       title: "In-Kind Contributions",
       description: "Contribute materials, equipment, or professional services that directly support our programs and operations.",
       icon: Package,
-      color: "from-green-500/10 to-green-600/5",
-      borderColor: "border-green-500/20",
       action: "Contact Us",
       href: "/about/contact"
     }
@@ -65,8 +59,8 @@ export function GivingMethodsSection() {
                 <Card className="h-full hover:shadow-lg transition-all duration-300">
                   <CardHeader className="pb-4">
                     <div className="flex items-center gap-3 mb-3">
-                      <div className={`bg-gradient-to-br ${method.color} p-2 rounded-lg border ${method.borderColor}`}>
-                        <IconComponent className="h-5 w-5 text-primary" />
+                      <div className="bg-gradient-to-br from-primary/10 to-primary/5 p-3 rounded-xl border border-primary/10">
+                        <IconComponent className="h-6 w-6 text-primary" />
                       </div>
                       <CardTitle className="text-lg font-[family-name:var(--font-space-grotesk)]">
                         {method.title}

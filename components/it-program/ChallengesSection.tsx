@@ -5,11 +5,11 @@ export default function ChallengesSection() {
   return (
     <section className="py-16 bg-muted/30">
       <div className="max-w-[1380px] w-full mx-auto px-6 md:px-10 lg:px-14">
-        <div className="text-center mb-12">
+        <div className="mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-space-grotesk">
             Challenges We Address
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl">
             We've identified key challenges and developed innovative solutions to ensure effective learning.
           </p>
         </div>

@@ -5,9 +5,9 @@ export default function CurriculumSection() {
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
+        <div className="mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-space-grotesk">Curriculum and Learning Approach</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl">
             The chess curriculum follows a carefully designed sequence that gradually builds both technical skill and strategic thinking.
           </p>
         </div>
@@ -88,47 +88,6 @@ export default function CurriculumSection() {
           </div>
         </div>
 
-        {/* Life Skills Development */}
-        <div className="bg-gradient-to-r from-primary/5 to-accent/5 rounded-2xl p-8">
-          <h3 className="text-2xl font-bold text-foreground mb-6 text-center font-space-grotesk">Beyond Technique: Life Skills Development</h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <BookOpen className="h-12 w-12 text-primary mx-auto mb-4" />
-                <CardTitle className="font-space-grotesk">Patience and Focus</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  Developed through sustained gameplay and strategic thinking exercises.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <Target className="h-12 w-12 text-accent mx-auto mb-4" />
-                <CardTitle className="font-space-grotesk">Resilience</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  Built by embracing mistakes and learning from losses in a supportive environment.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <Users className="h-12 w-12 text-primary mx-auto mb-4" />
-                <CardTitle className="font-space-grotesk">Sportsmanship</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  Fostered through peer-to-peer matches and team-based collaborative play.
-                </CardDescription>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
       </div>
     </section>
   )

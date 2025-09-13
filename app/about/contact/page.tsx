@@ -1,9 +1,12 @@
 import { ContactForm } from "@/components/contact/ContactForm"
 import { ContactInfo } from "@/components/contact/ContactInfo"
+import { ContactHeroImage } from "@/components/contact/ContactHeroImage"
 
 export default function ContactPage() {
   return (
-    <div className="max-w-[1380px] w-full mx-auto px-6 md:px-10 lg:px-14 py-16">
+    <>
+      <ContactHeroImage />
+      <div className="max-w-[1380px] w-full mx-auto px-6 md:px-10 lg:px-14 py-16">
         <div className="mb-12">
           <h1 className="font-bold text-foreground mb-6 font-[family-name:var(--font-space-grotesk)]" style={{fontSize: 'var(--text-5xl)'}}>
             Contact Us
@@ -18,6 +21,7 @@ export default function ContactPage() {
           <ContactForm />
           <ContactInfo />
         </div>
-    </div>
+      </div>
+    </>
   )
 }

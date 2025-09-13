@@ -14,26 +14,28 @@ interface TestimonialsSectionProps {
   testimonials: Testimonial[]
   title?: string
   subtitle?: string
+  leftAligned?: boolean
 }
 
 export default function TestimonialsSection({
   testimonials,
   title = "Stories of Impact",
   subtitle = "Real stories from the families and individuals whose lives have been transformed through our programs.",
+  leftAligned = false,
 }: TestimonialsSectionProps) {
   return (
     <div className="mb-16">
-      <div className="text-center mb-12">
+      <div className={`mb-12 ${leftAligned ? 'text-left' : 'text-center'}`}>
         <h2 className="text-3xl font-bold text-foreground mb-4 font-[family-name:var(--font-space-grotesk)]">
           {title}
         </h2>
-        <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">{subtitle}</p>
+        <p className={`text-lg text-muted-foreground leading-relaxed ${leftAligned ? 'max-w-4xl' : 'max-w-3xl mx-auto'}`}>{subtitle}</p>
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {testimonials.map((testimonial) => (
           <Card key={testimonial.id} className="hover:shadow-lg transition-shadow">
-            <CardContent className="p-6">
+            <CardContent className="px-6 pb-6">
               {/* Quote Icon */}
               <div className="mb-4">
                 <Quote className="h-8 w-8 text-accent" />

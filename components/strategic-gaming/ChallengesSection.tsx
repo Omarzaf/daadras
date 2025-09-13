@@ -5,11 +5,11 @@ export default function ChallengesSection() {
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
+        <div className="mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-space-grotesk">
             Challenges in Implementation
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl">
             We've identified key challenges and developed innovative solutions to ensure effective learning and engagement.
           </p>
         </div>
@@ -54,7 +54,7 @@ export default function ChallengesSection() {
 
         {/* Solutions */}
         <div className="bg-gradient-to-r from-primary/5 to-accent/5 rounded-2xl p-8">
-          <h3 className="text-2xl font-bold text-foreground mb-6 text-center font-space-grotesk">Our Solutions</h3>
+          <h3 className="text-2xl font-bold text-foreground mb-6 font-space-grotesk">Our Solutions</h3>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="flex items-start gap-4">

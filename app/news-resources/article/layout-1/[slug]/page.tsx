@@ -121,7 +121,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
               <img
                 src={article.image}
                 alt={article.title}
-                className="w-full rounded-lg shadow-lg"
+                className="w-full h-64 object-cover rounded-lg shadow-lg"
               />
             </div>
           )}

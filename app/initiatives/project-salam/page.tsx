@@ -4,8 +4,130 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { BookOpen, Brain, Trophy, Users, ArrowRight, Target, CheckCircle, AlertCircle } from "lucide-react"
-import { motion } from "framer-motion"
+import { motion, useInView } from "framer-motion"
+import { useRef, useEffect, useState } from "react"
 import PhotoGalleryCarousel from "@/components/PhotoGalleryCarousel"
+
+// Counter animation hook
+function useCountUp(end: number, duration: number = 2000, suffix: string = "") {
+  const [count, setCount] = useState(0)
+  const [hasStarted, setHasStarted] = useState(false)
+  
+  const startAnimation = () => {
+    if (hasStarted) return
+    setHasStarted(true)
+    
+    const startTime = Date.now()
+    const animate = () => {
+      const now = Date.now()
+      const progress = Math.min((now - startTime) / duration, 1)
+      const easeOutQuart = 1 - Math.pow(1 - progress, 4)
+      
+      setCount(Math.floor(easeOutQuart * end))
+      
+      if (progress < 1) {
+        requestAnimationFrame(animate)
+      } else {
+        setCount(end)
+      }
+    }
+    
+    requestAnimationFrame(animate)
+  }
+  
+  return { count: count + suffix, startAnimation }
+}
+
+// Impact Statistics Component
+function ImpactStatisticsSection() {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, threshold: 0.3 })
+  
+  const studentsCount = useCountUp(111, 2000, "+")
+  const partnersCount = useCountUp(3, 1500)
+  const pillarsCount = useCountUp(4, 1800)
+  const engagementCount = useCountUp(100, 2200, "%")
+  
+  useEffect(() => {
+    if (isInView) {
+      studentsCount.startAnimation()
+      partnersCount.startAnimation()
+      pillarsCount.startAnimation()
+      engagementCount.startAnimation()
+    }
+  }, [isInView])
+  
+  return (
+    <div className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mb-16 mt-16">
+      <motion.div 
+        className="bg-gradient-to-br from-primary/5 via-accent/10 to-primary/5 py-16 px-4 relative overflow-hidden"
+        style={{
+          backgroundAttachment: "fixed",
+          backgroundSize: "cover"
+        }}
+      >
+
+        
+        <div className="max-w-7xl mx-auto relative z-10" ref={ref}>
+          <motion.h2 
+            className="text-3xl md:text-4xl font-bold text-center text-foreground mb-12 font-space-grotesk"
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            Cumulative Impact Across All Phases
+          </motion.h2>
+          
+          <div className="grid md:grid-cols-4 gap-8 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-3 font-space-grotesk">
+                {studentsCount.count}
+              </div>
+              <p className="text-muted-foreground font-medium">Total Students Impacted</p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-3 font-space-grotesk">
+                {partnersCount.count}
+              </div>
+              <p className="text-muted-foreground font-medium">Partner Organizations</p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+            >
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-3 font-space-grotesk">
+                {pillarsCount.count}
+              </div>
+              <p className="text-muted-foreground font-medium">Core Learning Pillars</p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              transition={{ duration: 0.8, delay: 1.0 }}
+            >
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-3 font-space-grotesk">
+                {engagementCount.count}
+              </div>
+              <p className="text-muted-foreground font-medium">Student Engagement Rate</p>
+            </motion.div>
+          </div>
+        </div>
+      </motion.div>
+    </div>
+  )
+}
 
 export default function ProjectSalamPage() {
   return (
@@ -251,7 +373,19 @@ export default function ProjectSalamPage() {
           </div>
 
           {/* Salam 1.0 */}
-          <Card className="mb-8 border-l-4 border-l-accent">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            whileHover={{ 
+              scale: 1.02,
+              y: -5,
+              transition: { duration: 0.2 }
+            }}
+            viewport={{ once: true }}
+            className="group"
+          >
+            <Card className="mb-8 border-l-4 border-l-accent hover:shadow-xl transition-all duration-300 border-0 shadow-md group-hover:shadow-2xl">
             <CardHeader>
               <div className="flex items-center justify-between flex-wrap gap-4">
                 <div>
@@ -310,9 +444,22 @@ export default function ProjectSalamPage() {
               </div>
             </CardContent>
           </Card>
+          </motion.div>
 
           {/* Salam 2.0 */}
-          <Card className="mb-8 border-l-4 border-l-primary">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            whileHover={{ 
+              scale: 1.02,
+              y: -5,
+              transition: { duration: 0.2 }
+            }}
+            viewport={{ once: true }}
+            className="group"
+          >
+            <Card className="mb-8 border-l-4 border-l-primary hover:shadow-xl transition-all duration-300 border-0 shadow-md group-hover:shadow-2xl">
             <CardHeader>
               <div className="flex items-center justify-between flex-wrap gap-4">
                 <div>
@@ -371,9 +518,22 @@ export default function ProjectSalamPage() {
               </div>
             </CardContent>
           </Card>
+          </motion.div>
 
           {/* Salam 3.0 */}
-          <Card className="mb-8 border-l-4 border-l-primary">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            whileHover={{ 
+              scale: 1.02,
+              y: -5,
+              transition: { duration: 0.2 }
+            }}
+            viewport={{ once: true }}
+            className="group"
+          >
+            <Card className="mb-8 border-l-4 border-l-primary hover:shadow-xl transition-all duration-300 border-0 shadow-md group-hover:shadow-2xl">
             <CardHeader>
               <div className="flex items-center justify-between flex-wrap gap-4">
                 <div>
@@ -432,46 +592,41 @@ export default function ProjectSalamPage() {
               </div>
             </CardContent>
           </Card>
+          </motion.div>
 
           {/* Impact Statistics */}
-          <div className="bg-muted/30 rounded-2xl p-8 mb-16 mt-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-left text-foreground mb-8 font-space-grotesk">
-              Cumulative Impact Across All Phases
-            </h2>
-            <div className="grid md:grid-cols-4 gap-6 text-center">
-              <div>
-                <div className="text-3xl font-bold text-primary mb-2 font-space-grotesk">
-                  111+
-                </div>
-                <p className="text-muted-foreground">Total Students Impacted</p>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-primary mb-2 font-space-grotesk">3</div>
-                <p className="text-muted-foreground">Partner Organizations</p>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-primary mb-2 font-space-grotesk">4</div>
-                <p className="text-muted-foreground">Core Learning Pillars</p>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-primary mb-2 font-space-grotesk">100%</div>
-                <p className="text-muted-foreground">Student Engagement Rate</p>
-              </div>
-            </div>
-          </div>
+          <ImpactStatisticsSection />
 
           {/* Future Vision */}
-          <div className="bg-gradient-to-br from-accent/5 to-primary/5 rounded-2xl p-8 mt-16">
-            <div className="mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 font-space-grotesk text-left">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-br from-accent/5 to-primary/5 rounded-2xl p-8 mt-16"
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="mb-8"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 font-space-grotesk text-left">
                 Looking Ahead: The Future of Project Salam
               </h2>
-              <p className="text-lg md:text-xl text-muted-foreground max-w-4xl leading-relaxed text-left mb-6">
+              <p className="text-lg md:text-xl text-muted-foreground max-w-4xl leading-relaxed text-left mb-8">
                 Building on our momentum, we plan to scale Project Salam further, continuing to refine our model of
                 holistic, context-sensitive, and skills-based education for children across Pakistan.
               </p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="flex flex-col sm:flex-row gap-4 justify-start"
+            >
               <Button className="bg-accent hover:bg-accent/90">
                 <Users className="mr-2 h-4 w-4" />
                 Join as Volunteer
@@ -479,8 +634,8 @@ export default function ProjectSalamPage() {
               <Button variant="outline">
                 Support Project Salam <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
     </div>

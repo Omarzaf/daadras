@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Package, Heart, Users, Shirt, Calendar, ArrowRight, CheckCircle } from "lucide-react"
 import TestimonialsSection from "@/components/shared/TestimonialsSection"
+import Image from "next/image"
 
 const emergencyReliefTestimonials = [
   {
@@ -35,38 +36,41 @@ export default function RationDrivesPage() {
   return (
     <div className="max-w-[1380px] w-full mx-auto px-6 md:px-10 lg:px-14 py-16">
       {/* Hero Section */}
-      <div className="text-center mb-16">
-        <Badge className="mb-4 bg-accent/10 text-accent border-accent/20">Our Initiatives</Badge>
+      <div className="mb-16">
         <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 font-[family-name:var(--font-space-grotesk)]">
           Emergency Relief
         </h1>
-        <p className="text-xl text-muted-foreground max-w-4xl mx-auto text-pretty leading-relaxed">
+        <p className="text-xl text-muted-foreground max-w-4xl text-pretty leading-relaxed mb-4">
           Ensuring access to basic nutrition and essential supplies for families in critical need, especially during
           times of crisis and economic hardship.
+        </p>
+        <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed">
+          Our emergency relief programs provide immediate assistance to vulnerable communities facing natural disasters, economic hardship, and food insecurity across Pakistan.
         </p>
       </div>
 
       {/* Mission Context */}
-      <div className="bg-gradient-to-r from-primary/5 to-accent/5 rounded-2xl p-8 mb-16">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-foreground mb-4 font-[family-name:var(--font-space-grotesk)]">
+      <div className="relative bg-gradient-to-r from-primary/5 to-accent/5 rounded-2xl p-8 mb-16 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10 opacity-50"></div>
+        <div className="relative z-10">
+          <h2 className="text-3xl font-bold text-foreground mb-4 font-[family-name:var(--font-space-grotesk)] bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             A Moral and Social Imperative
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-6">
+          <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed mb-6">
             In a country where nearly 30% of the population lives below the poverty line, ensuring access to basic
             nutrition became a moral and social imperative for Daadras Foundation.
           </p>
           <div className="grid md:grid-cols-3 gap-6 mt-8">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">30%</div>
+            <div className="group hover:scale-105 transition-transform duration-300">
+              <div className="text-3xl font-bold text-primary mb-2 group-hover:text-accent transition-colors duration-300">30%</div>
               <p className="text-sm text-muted-foreground">Population Below Poverty Line</p>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">184K+</div>
+            <div className="group hover:scale-105 transition-transform duration-300">
+              <div className="text-3xl font-bold text-primary mb-2 group-hover:text-accent transition-colors duration-300">184K+</div>
               <p className="text-sm text-muted-foreground">Flood Displaced (2022)</p>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">95K+</div>
+            <div className="group hover:scale-105 transition-transform duration-300">
+              <div className="text-3xl font-bold text-primary mb-2 group-hover:text-accent transition-colors duration-300">95K+</div>
               <p className="text-sm text-muted-foreground">Homes Destroyed</p>
             </div>
           </div>
@@ -75,9 +79,12 @@ export default function RationDrivesPage() {
 
       {/* Emergency Relief */}
       <div className="mb-16">
-        <h2 className="text-3xl font-bold text-center text-foreground mb-12 font-[family-name:var(--font-space-grotesk)]">
+        <h2 className="text-3xl font-bold text-foreground mb-4 font-[family-name:var(--font-space-grotesk)]">
           Our Emergency Relief Programs
         </h2>
+        <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed mb-8">
+          We provide comprehensive emergency assistance through targeted food distribution and seasonal support programs designed to address immediate needs during crises.
+        </p>
         <div className="grid md:grid-cols-2 gap-8">
           {/* Emergency Relief */}
           <Card className="border-l-4 border-l-primary">
@@ -98,27 +105,27 @@ export default function RationDrivesPage() {
                 <p className="text-sm font-medium text-foreground mb-2">Each Package Includes:</p>
                 <div className="grid grid-cols-2 gap-2 text-sm text-muted-foreground">
                   <div className="flex items-center gap-2">
-                    <CheckCircle className="h-3 w-3 text-green-500" />
+                    <CheckCircle className="h-3 w-3 text-primary" />
                     <span>Flour</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle className="h-3 w-3 text-green-500" />
+                    <CheckCircle className="h-3 w-3 text-primary" />
                     <span>Rice</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle className="h-3 w-3 text-green-500" />
+                    <CheckCircle className="h-3 w-3 text-primary" />
                     <span>Lentils</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle className="h-3 w-3 text-green-500" />
+                    <CheckCircle className="h-3 w-3 text-primary" />
                     <span>Cooking Oil</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle className="h-3 w-3 text-green-500" />
+                    <CheckCircle className="h-3 w-3 text-primary" />
                     <span>Tea & Sugar</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle className="h-3 w-3 text-green-500" />
+                    <CheckCircle className="h-3 w-3 text-primary" />
                     <span>Hygiene Items</span>
                   </div>
                 </div>
@@ -145,19 +152,19 @@ export default function RationDrivesPage() {
                 <p className="text-sm font-medium text-foreground mb-2">Iftar Meal Boxes Include:</p>
                 <div className="grid grid-cols-2 gap-2 text-sm text-muted-foreground">
                   <div className="flex items-center gap-2">
-                    <CheckCircle className="h-3 w-3 text-green-500" />
+                    <CheckCircle className="h-3 w-3 text-accent" />
                     <span>Dates</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle className="h-3 w-3 text-green-500" />
+                    <CheckCircle className="h-3 w-3 text-accent" />
                     <span>Fresh Fruits</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle className="h-3 w-3 text-green-500" />
+                    <CheckCircle className="h-3 w-3 text-accent" />
                     <span>Bread</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle className="h-3 w-3 text-green-500" />
+                    <CheckCircle className="h-3 w-3 text-accent" />
                     <span>Cooked Meals</span>
                   </div>
                 </div>
@@ -172,15 +179,26 @@ export default function RationDrivesPage() {
 
       {/* Clothing Relief */}
       <div className="mb-16">
-        <h2 className="text-3xl font-bold text-center text-foreground mb-12 font-[family-name:var(--font-space-grotesk)]">
+        <h2 className="text-3xl font-bold text-foreground mb-4 font-[family-name:var(--font-space-grotesk)]">
           Clothing Relief Efforts
         </h2>
+        <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed mb-8">
+          Our clothing drives provide essential apparel and dignity to vulnerable families, orphans, and communities facing hardship across Pakistan.
+        </p>
 
         <div className="grid md:grid-cols-3 gap-6">
-          <Card className="text-center">
+          <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+            <div className="relative h-48 w-full">
+              <Image
+                src="/drive/kids_poverty.jpg"
+                alt="Children receiving clothing support"
+                fill
+                className="object-cover"
+              />
+            </div>
             <CardHeader>
-              <div className="bg-primary/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Shirt className="h-8 w-8 text-primary" />
+              <div className="bg-primary/10 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-3">
+                <Shirt className="h-6 w-6 text-primary" />
               </div>
               <CardTitle className="font-[family-name:var(--font-space-grotesk)]">Orphanage Support</CardTitle>
             </CardHeader>
@@ -192,10 +210,18 @@ export default function RationDrivesPage() {
             </CardContent>
           </Card>
 
-          <Card className="text-center">
+          <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+            <div className="relative h-48 w-full">
+              <Image
+                src="/drive/women_classroom.webp"
+                alt="Family receiving clothing assistance"
+                fill
+                className="object-cover"
+              />
+            </div>
             <CardHeader>
-              <div className="bg-primary/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Users className="h-8 w-8 text-primary" />
+              <div className="bg-primary/10 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-3">
+                <Users className="h-6 w-6 text-primary" />
               </div>
               <CardTitle className="font-[family-name:var(--font-space-grotesk)]">Family Support</CardTitle>
             </CardHeader>
@@ -207,10 +233,18 @@ export default function RationDrivesPage() {
             </CardContent>
           </Card>
 
-          <Card className="text-center">
+          <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+            <div className="relative h-48 w-full">
+              <Image
+                src="/drive/community_build.jpg"
+                alt="Winter clothing distribution"
+                fill
+                className="object-cover"
+              />
+            </div>
             <CardHeader>
-              <div className="bg-primary/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Heart className="h-8 w-8 text-primary" />
+              <div className="bg-primary/10 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-3">
+                <Heart className="h-6 w-6 text-primary" />
               </div>
               <CardTitle className="font-[family-name:var(--font-space-grotesk)]">Winter Preparedness</CardTitle>
             </CardHeader>
@@ -240,34 +274,34 @@ export default function RationDrivesPage() {
                 <h4 className="font-semibold mb-3 text-foreground">Crisis Scale</h4>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                    <span>Over 184,000 individuals displaced</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-4 w-4 text-blue-500 mt-0.5 flex-shrink-0" />
-                    <span>95,350 homes destroyed</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-4 w-4 text-blue-500 mt-0.5 flex-shrink-0" />
-                    <span>Multiple districts severely affected</span>
-                  </li>
+              <CheckCircle className="h-4 w-4 mt-0.5 flex-shrink-0" style={{color: '#0F443F'}} />
+              <span>Over 184,000 individuals displaced</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <CheckCircle className="h-4 w-4 mt-0.5 flex-shrink-0" style={{color: '#0F443F'}} />
+              <span>95,350 homes destroyed</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <CheckCircle className="h-4 w-4 mt-0.5 flex-shrink-0" style={{color: '#0F443F'}} />
+              <span>Multiple districts severely affected</span>
+            </li>
                 </ul>
               </div>
               <div>
                 <h4 className="font-semibold mb-3 text-foreground">Our Response (August 31, 2022)</h4>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" />
-                    <span>Large-scale clothing drive launched</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
-                    <span>Nasirabad, Kot Palyani, Jhal Magsi covered</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
-                    <span>Immediate humanitarian support provided</span>
-                  </li>
+              <CheckCircle className="h-4 w-4 mt-0.5 flex-shrink-0" style={{color: '#0F443F'}} />
+              <span>Large-scale clothing drive launched</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <CheckCircle className="h-4 w-4 mt-0.5 flex-shrink-0" style={{color: '#0F443F'}} />
+              <span>Nasirabad, Kot Palyani, Jhal Magsi covered</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <CheckCircle className="h-4 w-4 mt-0.5 flex-shrink-0" style={{color: '#0F443F'}} />
+              <span>Immediate humanitarian support provided</span>
+            </li>
                 </ul>
               </div>
             </div>
@@ -277,42 +311,55 @@ export default function RationDrivesPage() {
 
       {/* Relief Strategy */}
       <div className="mb-16">
-        <h2 className="text-3xl font-bold text-center text-foreground mb-8 font-[family-name:var(--font-space-grotesk)]">
+        <h2 className="text-3xl font-bold text-foreground mb-4 font-[family-name:var(--font-space-grotesk)]">
           Our Food Relief Strategy
         </h2>
-        <div className="grid md:grid-cols-3 gap-6">
-          <Card className="text-center">
-            <CardHeader>
-              <CardTitle className="font-[family-name:var(--font-space-grotesk)]">Direct Distribution</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground text-sm">
-                On-ground distribution of food packages and essential supplies directly to families in need.
+        <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed mb-8">
+          We employ a multi-faceted approach to food relief, combining direct assistance, financial support, and strategic partnerships to maximize our impact.
+        </p>
+        
+        <div className="bg-gradient-to-r from-primary/5 to-accent/5 rounded-2xl p-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="text-center group">
+              <div className="bg-primary/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors duration-300">
+                <Package className="h-8 w-8 text-primary" />
+              </div>
+              <h3 className="font-semibold text-foreground mb-2 font-[family-name:var(--font-space-grotesk)]">Direct Distribution</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                On-ground distribution of comprehensive food packages to families in crisis situations.
               </p>
-            </CardContent>
-          </Card>
+            </div>
 
-          <Card className="text-center">
-            <CardHeader>
-              <CardTitle className="font-[family-name:var(--font-space-grotesk)]">Cash Support</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground text-sm">
-                Financial assistance to enable families to purchase necessities according to their specific needs.
+            <div className="text-center group">
+              <div className="bg-accent/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors duration-300">
+                <Heart className="h-8 w-8 text-accent" />
+              </div>
+              <h3 className="font-semibold text-foreground mb-2 font-[family-name:var(--font-space-grotesk)]">Emergency Response</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Rapid deployment of relief supplies during natural disasters and humanitarian crises.
               </p>
-            </CardContent>
-          </Card>
+            </div>
 
-          <Card className="text-center">
-            <CardHeader>
-              <CardTitle className="font-[family-name:var(--font-space-grotesk)]">Collaborations</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground text-sm">
-                Partnerships with other foundations and organizations to amplify impact and reach more families.
+            <div className="text-center group">
+              <div className="bg-primary/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors duration-300">
+                <Users className="h-8 w-8 text-primary" />
+              </div>
+              <h3 className="font-semibold text-foreground mb-2 font-[family-name:var(--font-space-grotesk)]">Community Partnerships</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Collaborating with local organizations to identify and support the most vulnerable families.
               </p>
-            </CardContent>
-          </Card>
+            </div>
+
+            <div className="text-center group">
+              <div className="bg-accent/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors duration-300">
+                <Calendar className="h-8 w-8 text-accent" />
+              </div>
+              <h3 className="font-semibold text-foreground mb-2 font-[family-name:var(--font-space-grotesk)]">Seasonal Programs</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Targeted relief during Ramadan, winter months, and other critical periods of need.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -321,18 +368,19 @@ export default function RationDrivesPage() {
         testimonials={emergencyReliefTestimonials}
         title="Voices of Hope During Crisis"
         subtitle="Hear from families who received life-saving support during their most challenging moments."
+        leftAligned={true}
       />
 
       {/* Call to Action */}
-      <div className="text-center bg-gradient-to-r from-primary/5 to-accent/5 rounded-2xl p-8">
+      <div className="bg-gradient-to-r from-primary/5 to-accent/5 rounded-2xl p-8">
         <h2 className="text-3xl font-bold text-foreground mb-4 font-[family-name:var(--font-space-grotesk)]">
           Help Us Feed Families in Need
         </h2>
-        <p className="text-lg text-muted-foreground mb-6 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-lg text-muted-foreground mb-6 max-w-3xl leading-relaxed">
           Your support helps us provide essential nutrition and supplies to families facing crisis. Every contribution
           makes a difference in ensuring dignity and basic needs are met.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4">
           <Button className="bg-accent hover:bg-accent/90">
             <Package className="mr-2 h-4 w-4" />
             Support Emergency Relief Drives
