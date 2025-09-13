@@ -36,7 +36,7 @@ export default function ReportsPage() {
         onCategoryChange={setSelectedCategory}
         categories={categories}
       />
-      <ReportsGrid reports={filteredReports} />
+      <ReportsGrid reports={filteredReports} hasFilters={searchTerm !== "" || selectedCategory !== "All"} />
       <ReportsCTA />
     </div>
   )
