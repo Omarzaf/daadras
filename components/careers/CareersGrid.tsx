@@ -8,6 +8,7 @@ import { BookOpen, Laptop, Users, Heart } from "lucide-react"
 import { NoOpportunitiesAvailable } from "@/components/ui/no-opportunities"
 import { motion, AnimatePresence } from "framer-motion"
 import { useState } from "react"
+import { generalApplicationFormLink } from "@/lib/general_application_form_link"
 
 const iconMap: Record<string, any> = {
   BookOpen,
@@ -15,6 +16,7 @@ const iconMap: Record<string, any> = {
   Users,
   Heart,
 }
+
 
 export function CareersGrid() {
   const [openItem, setOpenItem] = useState<string | null>(null)
@@ -25,7 +27,7 @@ export function CareersGrid() {
     return (
       <NoOpportunitiesAvailable
         type="career"
-        generalInterestFormLink="https://forms.google.com/general-career-interest"
+        generalInterestFormLink={generalApplicationFormLink}
       />
     )
   }

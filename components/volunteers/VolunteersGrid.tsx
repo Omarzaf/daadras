@@ -20,6 +20,8 @@ const iconMap: Record<string, any> = {
   Heart,
 }
 
+  import { generalApplicationFormLink } from "@/lib/general_application_form_link"
+
 export function VolunteersGrid() {
   const [openItem, setOpenItem] = useState<string | null>(null)
   const opportunities = getVolunteerOpportunities()
@@ -29,7 +31,7 @@ export function VolunteersGrid() {
     return (
       <NoOpportunitiesAvailable
         type="volunteer"
-        generalInterestFormLink="https://forms.google.com/general-volunteer-interest"
+        generalInterestFormLink={generalApplicationFormLink}
       />
     )
   }

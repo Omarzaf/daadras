@@ -1,0 +1,1 @@
+export const generalApplicationFormLink = "https://forms.gle/r6p1ku2nR8vTHs3R8"

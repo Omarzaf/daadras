@@ -108,7 +108,7 @@ export const HeroSection = () => {
                   </a>
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Link href="/our-story" tabIndex={showContent ? 0 : -1}>
+                  <Link href="/about/our-story" tabIndex={showContent ? 0 : -1}>
                     <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
                       Learn More
                     </Button>
