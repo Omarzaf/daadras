@@ -1,95 +1,95 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { Menu, X } from "lucide-react"
-import Link from "next/link"
-import { useState, useEffect, useRef } from "react"
-import { usePathname } from "next/navigation"
+import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
+import Link from "next/link";
+import { useState, useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Navigation() {
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [keyboardFocus, setKeyboardFocus] = useState(false)
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null)
-  const pathname = usePathname()
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [keyboardFocus, setKeyboardFocus] = useState(false);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const pathname = usePathname();
 
   // Helper function to determine if a navigation item is active
   const isActiveSection = (section: string) => {
     switch (section) {
-      case 'about':
-        return pathname.startsWith('/about')
-      case 'news':
-        return pathname.startsWith('/news-resources')
-      case 'initiatives':
-        return pathname.startsWith('/initiatives')
-      case 'involved':
-        return pathname.startsWith('/get-involved')
-      case 'ways-to-give':
-        return pathname === '/ways-to-give'
+      case "about":
+        return pathname.startsWith("/about");
+      case "news":
+        return pathname.startsWith("/news-resources");
+      case "initiatives":
+        return pathname.startsWith("/initiatives");
+      case "involved":
+        return pathname.startsWith("/get-involved");
+      case "ways-to-give":
+        return pathname === "/ways-to-give";
       default:
-        return false
+        return false;
     }
-  }
+  };
 
   const handleMouseEnter = (dropdown: string) => {
     if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current)
-      timeoutRef.current = null
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
     }
     if (!keyboardFocus) {
-      setActiveDropdown(dropdown)
+      setActiveDropdown(dropdown);
     }
-  }
+  };
 
   const handleMouseLeave = () => {
     if (!keyboardFocus) {
       timeoutRef.current = setTimeout(() => {
-        setActiveDropdown(null)
-      }, 150)
+        setActiveDropdown(null);
+      }, 150);
     }
-  }
+  };
 
   const handleFocus = (dropdown: string) => {
-    setKeyboardFocus(true)
-    setActiveDropdown(dropdown)
-  }
+    setKeyboardFocus(true);
+    setActiveDropdown(dropdown);
+  };
 
   const handleBlur = () => {
     setTimeout(() => {
-      setKeyboardFocus(false)
-      setActiveDropdown(null)
-    }, 150)
-  }
+      setKeyboardFocus(false);
+      setActiveDropdown(null);
+    }, 150);
+  };
 
   const handleDropdownClick = (dropdown: string) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
-  }
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+  };
 
   const handleLinkClick = () => {
     if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current)
-      timeoutRef.current = null
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
     }
-    setActiveDropdown(null)
-    setMobileMenuOpen(false)
-  }
+    setActiveDropdown(null);
+    setMobileMenuOpen(false);
+  };
 
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
-        setActiveDropdown(null)
-        setMobileMenuOpen(false)
+        setActiveDropdown(null);
+        setMobileMenuOpen(false);
       }
-    }
+    };
 
-    document.addEventListener("keydown", handleEscape)
+    document.addEventListener("keydown", handleEscape);
     return () => {
-      document.removeEventListener("keydown", handleEscape)
+      document.removeEventListener("keydown", handleEscape);
       if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current)
+        clearTimeout(timeoutRef.current);
       }
-    }
-  }, [])
+    };
+  }, []);
 
   return (
     <nav className="shadow-[0_3px_3px_-1px_rgba(17,30,71,0.15)] bg-[#FFFFFF] sticky top-0 z-50">
@@ -98,8 +98,14 @@ export default function Navigation() {
           <div className="flex items-center">
             <Link href="/">
               <div className="w-[205px] h-[49px] flex items-center gap-3">
-                <img src="/green_logo.svg" alt="Daadras Logo" className="h-6 w-6" />
-                <h1 className="text-2xl font-bold text-primary font-space-grotesk">Daadras</h1>
+                <img
+                  src="/green_logo.svg"
+                  alt="Daadras Logo"
+                  className="h-6 w-6"
+                />
+                <h1 className="text-2xl font-bold text-primary font-space-grotesk">
+                  Daadras
+                </h1>
               </div>
             </Link>
           </div>
@@ -111,7 +117,9 @@ export default function Navigation() {
               onMouseLeave={handleMouseLeave}
             >
               <button
-                className={`flex items-center text-foreground hover:text-accent hover:bg-primary/10 px-4 md:px-6 h-[100px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all duration-200 ease-out cursor-pointer ${activeDropdown === "about" ? "bg-primary/10" : ""} ${isActiveSection('about') ? 'font-bold' : ''}`}
+                className={`flex items-center text-foreground hover:text-accent hover:bg-primary/10 px-4 md:px-6 h-[100px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all duration-200 ease-out cursor-pointer ${
+                  activeDropdown === "about" ? "bg-primary/10" : ""
+                } ${isActiveSection("about") ? "font-bold" : ""}`}
                 onFocus={() => handleFocus("about")}
                 onBlur={handleBlur}
                 aria-expanded={activeDropdown === "about"}
@@ -119,7 +127,11 @@ export default function Navigation() {
                 ABOUT US
               </button>
               <div
-                className={`fixed left-0 top-[100px] w-full transform transition-all duration-150 ease-out z-50 ${activeDropdown === "about" ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-1 pointer-events-none"}`}
+                className={`fixed left-0 top-[100px] w-full transform transition-all duration-150 ease-out z-50 ${
+                  activeDropdown === "about"
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 -translate-y-1 pointer-events-none"
+                }`}
                 onMouseEnter={() => handleMouseEnter("about")}
                 onMouseLeave={handleMouseLeave}
               >
@@ -131,9 +143,13 @@ export default function Navigation() {
                   <div className="max-w-[1380px] mx-auto px-6 md:px-10 lg:px-14">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                       <div className="flex flex-col">
-                        <p className="text-sm mb-4" style={{ color: "#374151 !important" }}>
-                          Learn about our mission, vision, and the dedicated team working to create positive change in
-                          communities worldwide.
+                        <p
+                          className="text-sm mb-4"
+                          style={{ color: "#374151 !important" }}
+                        >
+                          Learn about our mission, vision, and the dedicated
+                          team working to create positive change in communities
+                          worldwide.
                         </p>
                       </div>
                       <div className="flex flex-col space-y-2">
@@ -170,7 +186,10 @@ export default function Navigation() {
                             className="w-full h-full object-cover"
                           />
                         </div>
-                        <p className="text-xs" style={{ color: "#6b7280 !important" }}>
+                        <p
+                          className="text-xs"
+                          style={{ color: "#6b7280 !important" }}
+                        >
                           Our team working together for change
                         </p>
                       </div>
@@ -206,7 +225,9 @@ export default function Navigation() {
               onMouseLeave={handleMouseLeave}
             >
               <button
-                className={`flex items-center text-foreground hover:text-accent hover:bg-primary/10 px-4 md:px-6 h-[100px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all duration-200 ease-out cursor-pointer ${activeDropdown === "news" ? "bg-primary/10" : ""} ${isActiveSection('news') ? 'font-bold' : ''}`}
+                className={`flex items-center text-foreground hover:text-accent hover:bg-primary/10 px-4 md:px-6 h-[100px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all duration-200 ease-out cursor-pointer ${
+                  activeDropdown === "news" ? "bg-primary/10" : ""
+                } ${isActiveSection("news") ? "font-bold" : ""}`}
                 onFocus={() => handleFocus("news")}
                 onBlur={handleBlur}
                 aria-expanded={activeDropdown === "news"}
@@ -214,7 +235,11 @@ export default function Navigation() {
                 NEWS & RESOURCES
               </button>
               <div
-                className={`fixed left-0 top-[100px] w-full transform transition-all duration-150 ease-out z-50 ${activeDropdown === "news" ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-1 pointer-events-none"}`}
+                className={`fixed left-0 top-[100px] w-full transform transition-all duration-150 ease-out z-50 ${
+                  activeDropdown === "news"
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 -translate-y-1 pointer-events-none"
+                }`}
                 onMouseEnter={() => handleMouseEnter("news")}
                 onMouseLeave={handleMouseLeave}
               >
@@ -226,9 +251,13 @@ export default function Navigation() {
                   <div className="max-w-[1380px] mx-auto px-6 md:px-10 lg:px-14">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                       <div className="flex flex-col">
-                        <p className="text-sm mb-4" style={{ color: "#374151 !important" }}>
-                          Stay updated with our latest news, events, and publications. Discover how we're making an
-                          impact in communities.
+                        <p
+                          className="text-sm mb-4"
+                          style={{ color: "#374151 !important" }}
+                        >
+                          Stay updated with our latest news, events, and
+                          publications. Discover how we're making an impact in
+                          communities.
                         </p>
                       </div>
                       <div className="flex flex-col space-y-2">
@@ -257,7 +286,10 @@ export default function Navigation() {
                             className="w-full h-full object-cover"
                           />
                         </div>
-                        <p className="text-xs" style={{ color: "#6b7280 !important" }}>
+                        <p
+                          className="text-xs"
+                          style={{ color: "#6b7280 !important" }}
+                        >
                           Latest updates from our initiatives
                         </p>
                       </div>
@@ -293,7 +325,9 @@ export default function Navigation() {
               onMouseLeave={handleMouseLeave}
             >
               <button
-                className={`flex items-center text-foreground hover:text-accent hover:bg-primary/10 px-4 md:px-6 h-[100px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all duration-200 ease-out cursor-pointer ${activeDropdown === "initiatives" ? "bg-primary/10" : ""} ${isActiveSection('initiatives') ? 'font-bold' : ''}`}
+                className={`flex items-center text-foreground hover:text-accent hover:bg-primary/10 px-4 md:px-6 h-[100px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all duration-200 ease-out cursor-pointer ${
+                  activeDropdown === "initiatives" ? "bg-primary/10" : ""
+                } ${isActiveSection("initiatives") ? "font-bold" : ""}`}
                 onFocus={() => handleFocus("initiatives")}
                 onBlur={handleBlur}
                 aria-expanded={activeDropdown === "initiatives"}
@@ -301,7 +335,11 @@ export default function Navigation() {
                 OUR INITIATIVES
               </button>
               <div
-                className={`fixed left-0 top-[100px] w-full transform transition-all duration-150 ease-out z-50 ${activeDropdown === "initiatives" ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-1 pointer-events-none"}`}
+                className={`fixed left-0 top-[100px] w-full transform transition-all duration-150 ease-out z-50 ${
+                  activeDropdown === "initiatives"
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 -translate-y-1 pointer-events-none"
+                }`}
                 onMouseEnter={() => handleMouseEnter("initiatives")}
                 onMouseLeave={handleMouseLeave}
               >
@@ -313,9 +351,13 @@ export default function Navigation() {
                   <div className="max-w-[1380px] mx-auto px-6 md:px-10 lg:px-14">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                       <div className="flex flex-col">
-                        <p className="text-sm mb-4" style={{ color: "#374151 !important" }}>
-                          Explore our key initiatives focused on education, economic development, and humanitarian aid
-                          to create sustainable change.
+                        <p
+                          className="text-sm mb-4"
+                          style={{ color: "#374151 !important" }}
+                        >
+                          Explore our key initiatives focused on education,
+                          economic development, and humanitarian aid to create
+                          sustainable change.
                         </p>
                       </div>
                       <div className="flex flex-col space-y-2">
@@ -375,7 +417,10 @@ export default function Navigation() {
                             className="w-full h-full object-cover"
                           />
                         </div>
-                        <p className="text-xs" style={{ color: "#6b7280 !important" }}>
+                        <p
+                          className="text-xs"
+                          style={{ color: "#6b7280 !important" }}
+                        >
                           Supporting communities through our initiatives
                         </p>
                       </div>
@@ -411,7 +456,9 @@ export default function Navigation() {
               onMouseLeave={handleMouseLeave}
             >
               <button
-                className={`flex items-center text-foreground hover:text-accent hover:bg-primary/10 px-4 md:px-6 h-[100px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all duration-200 ease-out cursor-pointer ${activeDropdown === "involved" ? "bg-primary/10" : ""} ${isActiveSection('involved') ? 'font-bold' : ''}`}
+                className={`flex items-center text-foreground hover:text-accent hover:bg-primary/10 px-4 md:px-6 h-[100px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all duration-200 ease-out cursor-pointer ${
+                  activeDropdown === "involved" ? "bg-primary/10" : ""
+                } ${isActiveSection("involved") ? "font-bold" : ""}`}
                 onFocus={() => handleFocus("involved")}
                 onBlur={handleBlur}
                 aria-expanded={activeDropdown === "involved"}
@@ -419,7 +466,11 @@ export default function Navigation() {
                 GET INVOLVED
               </button>
               <div
-                className={`fixed left-0 top-[100px] w-full transform transition-all duration-150 ease-out z-50 ${activeDropdown === "involved" ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-1 pointer-events-none"}`}
+                className={`fixed left-0 top-[100px] w-full transform transition-all duration-150 ease-out z-50 ${
+                  activeDropdown === "involved"
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 -translate-y-1 pointer-events-none"
+                }`}
                 onMouseEnter={() => handleMouseEnter("involved")}
                 onMouseLeave={handleMouseLeave}
               >
@@ -431,9 +482,13 @@ export default function Navigation() {
                   <div className="max-w-[1380px] mx-auto px-6 md:px-10 lg:px-14">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                       <div className="flex flex-col">
-                        <p className="text-sm mb-4" style={{ color: "#374151 !important" }}>
-                          Join our mission to create positive change. Discover how you can contribute your time, skills,
-                          or resources to make a difference.
+                        <p
+                          className="text-sm mb-4"
+                          style={{ color: "#374151 !important" }}
+                        >
+                          Join our mission to create positive change. Discover
+                          how you can contribute your time, skills, or resources
+                          to make a difference.
                         </p>
                       </div>
                       <div className="flex flex-col space-y-2">
@@ -470,7 +525,10 @@ export default function Navigation() {
                             className="w-full h-full object-cover"
                           />
                         </div>
-                        <p className="text-xs" style={{ color: "#6b7280 !important" }}>
+                        <p
+                          className="text-xs"
+                          style={{ color: "#6b7280 !important" }}
+                        >
                           Volunteers making an impact in our community
                         </p>
                       </div>
@@ -503,7 +561,11 @@ export default function Navigation() {
 
           <div className="hidden md:flex items-center">
             <Link href="/ways-to-give" className="h-full flex items-center">
-              <Button className={`bg-[#0F443F] hover:opacity-90 text-white uppercase tracking-wide px-8 md:px-12 rounded-none h-[100px] transition-opacity duration-200 ease-out text-base ${isActiveSection('ways-to-give') ? 'font-bold' : ''}`}>
+              <Button
+                className={`bg-[#0F443F] hover:opacity-90 text-white uppercase tracking-wide px-8 md:px-12 rounded-none h-[100px] transition-opacity duration-200 ease-out text-base ${
+                  isActiveSection("ways-to-give") ? "font-bold" : ""
+                }`}
+              >
                 Ways to Give
               </Button>
             </Link>
@@ -515,7 +577,11 @@ export default function Navigation() {
               className="p-2 text-primary hover:bg-muted rounded-md transition-colors duration-200 ease-out cursor-pointer"
               aria-label="Toggle mobile menu"
             >
-              {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {mobileMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
@@ -526,15 +592,21 @@ export default function Navigation() {
               <div className="space-y-2">
                 <button
                   onClick={() => handleDropdownClick("about")}
-                  className={`flex items-center justify-between w-full text-primary hover:text-accent transition-colors duration-200 ease-out py-2 cursor-pointer ${isActiveSection('about') ? 'font-bold' : ''}`}
+                  className={`flex items-center justify-between w-full text-primary hover:text-accent transition-colors duration-200 ease-out py-2 cursor-pointer ${
+                    isActiveSection("about") ? "font-bold" : ""
+                  }`}
                 >
                   ABOUT US
                 </button>
                 {activeDropdown === "about" && (
                   <div className="ml-4 space-y-2">
-                    <p className="text-sm mb-4" style={{ color: "#374151 !important" }}>
-                      Learn about our mission, vision, and the dedicated team working to create positive change in
-                      communities worldwide.
+                    <p
+                      className="text-sm mb-4"
+                      style={{ color: "#374151 !important" }}
+                    >
+                      Learn about our mission, vision, and the dedicated team
+                      working to create positive change in communities
+                      worldwide.
                     </p>
                     <Link
                       href="/about/our-story"
@@ -564,15 +636,21 @@ export default function Navigation() {
               <div className="space-y-2">
                 <button
                   onClick={() => handleDropdownClick("news")}
-                  className={`flex items-center justify-between w-full text-primary hover:text-accent transition-colors duration-200 ease-out py-2 cursor-pointer ${isActiveSection('news') ? 'font-bold' : ''}`}
+                  className={`flex items-center justify-between w-full text-primary hover:text-accent transition-colors duration-200 ease-out py-2 cursor-pointer ${
+                    isActiveSection("news") ? "font-bold" : ""
+                  }`}
                 >
                   NEWS & RESOURCES
                 </button>
                 {activeDropdown === "news" && (
                   <div className="ml-4 space-y-2">
-                    <p className="text-sm mb-4" style={{ color: "#374151 !important" }}>
-                      Stay updated with our latest news, events, and publications. Discover how we're making an impact
-                      in communities.
+                    <p
+                      className="text-sm mb-4"
+                      style={{ color: "#374151 !important" }}
+                    >
+                      Stay updated with our latest news, events, and
+                      publications. Discover how we're making an impact in
+                      communities.
                     </p>
                     <Link
                       href="/news-resources/news"
@@ -595,17 +673,23 @@ export default function Navigation() {
               <div className="space-y-2">
                 <button
                   onClick={() => handleDropdownClick("initiatives")}
-                  className={`flex items-center justify-between w-full text-primary hover:text-accent transition-colors duration-200 ease-out py-2 cursor-pointer ${isActiveSection('initiatives') ? 'font-bold' : ''}`}
+                  className={`flex items-center justify-between w-full text-primary hover:text-accent transition-colors duration-200 ease-out py-2 cursor-pointer ${
+                    isActiveSection("initiatives") ? "font-bold" : ""
+                  }`}
                 >
                   OUR INITIATIVES
                 </button>
                 {activeDropdown === "initiatives" && (
                   <div className="ml-4 space-y-2">
-                    <p className="text-sm mb-4" style={{ color: "#374151 !important" }}>
-                      Explore our key initiatives focused on education, economic development, and humanitarian aid to
-                      create sustainable change.
+                    <p
+                      className="text-sm mb-4"
+                      style={{ color: "#374151 !important" }}
+                    >
+                      Explore our key initiatives focused on education, economic
+                      development, and humanitarian aid to create sustainable
+                      change.
                     </p>
-                    
+
                     <Link
                       href="/initiatives/project-salam"
                       onClick={handleLinkClick}
@@ -657,15 +741,21 @@ export default function Navigation() {
               <div className="space-y-2">
                 <button
                   onClick={() => handleDropdownClick("involved")}
-                  className={`flex items-center justify-between w-full text-primary hover:text-accent transition-colors duration-200 ease-out py-2 cursor-pointer ${isActiveSection('involved') ? 'font-bold' : ''}`}
+                  className={`flex items-center justify-between w-full text-primary hover:text-accent transition-colors duration-200 ease-out py-2 cursor-pointer ${
+                    isActiveSection("involved") ? "font-bold" : ""
+                  }`}
                 >
                   GET INVOLVED
                 </button>
                 {activeDropdown === "involved" && (
                   <div className="ml-4 space-y-2">
-                    <p className="text-sm mb-4" style={{ color: "#374151 !important" }}>
-                      Join our mission to create positive change. Discover how you can contribute your time, skills, or
-                      resources to make a difference.
+                    <p
+                      className="text-sm mb-4"
+                      style={{ color: "#374151 !important" }}
+                    >
+                      Join our mission to create positive change. Discover how
+                      you can contribute your time, skills, or resources to make
+                      a difference.
                     </p>
                     <Link
                       href="/get-involved/volunteer"
@@ -712,8 +802,16 @@ export default function Navigation() {
                   </Link>
                 </div>
                 <div className="ml-4">
-                  <Link href="/ways-to-give" onClick={handleLinkClick} className="w-full block">
-                    <Button className={`bg-[#0F443F] hover:opacity-90 text-white uppercase tracking-wide px-8 md:px-12 rounded-none w-full py-3 transition-opacity duration-200 ease-out text-sm ${isActiveSection('ways-to-give') ? 'font-bold' : ''}`}>
+                  <Link
+                    href="/ways-to-give"
+                    onClick={handleLinkClick}
+                    className="w-full block"
+                  >
+                    <Button
+                      className={`bg-[#0F443F] hover:opacity-90 text-white uppercase tracking-wide px-8 md:px-12 rounded-none w-full py-3 transition-opacity duration-200 ease-out text-sm ${
+                        isActiveSection("ways-to-give") ? "font-bold" : ""
+                      }`}
+                    >
                       Ways to Give
                     </Button>
                   </Link>
@@ -724,5 +822,5 @@ export default function Navigation() {
         )}
       </div>
     </nav>
-  )
+  );
 }
