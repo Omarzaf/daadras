@@ -4,14 +4,14 @@ export const teamMembers = [
     name: "Umer Zafar",
     role: "CEO / Founder",
     department: "Leadership",
-    bio: "I founded the Daadras Foundation out of a deep conviction that human development must begin where state systems often fall short—at the grassroots. Growing up in a marginalized and fragmented society, I witnessed firsthand how structural neglect and generational poverty deprive children of both agency and aspiration. Daadras was created to intervene early, equipping underprivileged youth not only with traditional education but also with research-driven, skills-based training and critical thinking. The goal was not charity, but empowerment—enabling children to become income earners, thinkers, and leaders capable of transforming their own lives and communities. Daadras reflects a belief that development is not a top-down endeavor but a participatory process rooted in dignity, opportunity, and self-determination.",
+    education: "Candidate of Masters at Johns Hopkins SAIS ",
+    bio: ["I founded the Daadras Foundation from a belief that real development starts where states fall short—at the grassroots. Growing up amid neglect and poverty, I saw how children are denied both agency and aspiration. Daadras equips underprivileged youth with education, skills training, and critical thinking. Our goal is empowerment, not charity—helping children become earners, thinkers, and leaders who can transform their lives and communities through dignity, opportunity, and self-determination."],
     image: "/team_photos/ceo_umer.webp",
     linkedin: "https://www.linkedin.com/in/umarzafar1/",
     email: "umer@daadras.org",
     location: "Lahore, Pakistan",
     joining_story: [
-      "I founded the Daadras Foundation out of a deep conviction that human development must begin where state systems often fall short—at the grassroots. Growing up in a marginalized and fragmented society, I witnessed firsthand how structural neglect and generational poverty deprive children of both agency and aspiration.", 
-      "Daadras was created to intervene early, equipping underprivileged youth not only with traditional education but also with research-driven, skills-based training and critical thinking. The goal was not charity, but empowerment—enabling children to become income earners, thinkers, and leaders capable of transforming their own lives and communities. Daadras reflects a belief that development is not a top-down endeavor but a participatory process rooted in dignity, opportunity, and self-determination."
+      "I founded the Daadras Foundation from a belief that real development starts where states fall short—at the grassroots. Growing up amid neglect and poverty, I saw how children are denied both agency and aspiration. Daadras equips underprivileged youth with education, skills training, and critical thinking. Our goal is empowerment, not charity—helping children become earners, thinkers, and leaders who can transform their lives and communities through dignity, opportunity, and self-determination.",
     ],
     role_description: [
       "As CEO, Umer oversees strategic operations, fosters relationships with key stakeholders and donors, and guides collaborations with national and international partners, including Al-Sharq Forum and Khalq Clinic, to advance the organization's mission and global engagement."
@@ -22,7 +22,8 @@ export const teamMembers = [
     name: "Fateh Muhammad",
     role: "COO",
     department: "Operations",
-    bio: "With a background in Statistics, Fateh Muhammad currently works as a Data Analyst at Teach The World Foundation, which uses gamification to combat illiteracy among out-of-school children. He is also pursuing an MPhil in Education Leadership and Management from LUMS, and serves as the Chief Operating Officer of Daadras Foundation.",
+    education: "Master's in Education from Lahore University of Management Sciences, Lahore",
+    bio: ["With a background in Statistics, Fateh Muhammad currently works as a Data Analyst at Teach The World Foundation, which uses gamification to combat illiteracy among out-of-school children. He is also pursuing an MPhil in Education Leadership and Management from LUMS, and serves as the Chief Operating Officer of Daadras Foundation."],
     image: "/team_photos/coo_fateh.webp",
     linkedin: "https://www.linkedin.com/in/fateh-ghauri-035870150/",
     email: "fateh@daadras.org",
@@ -39,19 +40,17 @@ export const teamMembers = [
     name: "Arooj Hameed Khan",
     role: "Director Project Salam",
     department: "Education",
-    bio: "Arooj Hameed holds a Bachelor's degree in Clinical Psychology from the University of Management and Technology, Lahore. Her academic focus includes Child Psychology, Psychotraumatology, and Cultural Psychology, with a strong belief that psychological care in Pakistan must be culturally relevant and contextually grounded for it to be truly effective. She has worked in a range of clinical and educational environments—supporting children with Down syndrome and cerebral palsy at Rising Sun, engaging with adult psychological cases at Services Hospital, and working with long-term institutionalized patients at PIMH. Her research in cultural psychology reflects her dedication to adapting mental health practices to local needs. Within Daadras, she first joined the Social Emotional Learning (SEL) team as an instructor and now serves as the Director of Project Salam, where she oversees the initiative's development and impact.",
+    education: "Bachelor's degree in Clinical Psychology from the University of Management and Technology, Lahore",
+    bio: ["Arooj Hameed, with a BA in Clinical Psychology from UMT Lahore, specializes in Child, Trauma, and Cultural Psychology, stressing the need for culturally grounded care in Pakistan. She has worked with children with Down syndrome and cerebral palsy at Rising Sun, adult cases at Services Hospital, and long-term patients at PIMH. At Daadras, she began as an SEL instructor and now leads as Director of Project Salam, guiding its growth and impact with research-driven cultural insight."],
     image: "/team_photos/project_director_salam_arooj.webp",
     linkedin: "https://www.linkedin.com/in/aroojhkhan/",
     email: "arooj@daadras.org",
     location: "Lahore, Pakistan",
     joining_story: [
-      "I got involved with Daadras through Omar Zafar, the founder and a close friend. At first, I'll admit, I assumed it was like every other institution these days; feeding people, raising funds, distributing aid. But as I spent more time understanding Omar's vision, I realized it was something different. Daadras didn't aim to create dependency. It aimed to empower—to put people back on their own two feet. That shift in approach changed everything for me.",
-      "Initially, I helped wherever I could. But when Omar shared his idea for Project Salam, something clicked. The core of Salam was to give these children an entry point into the digital world. If they understood basic technology, they could unlock so many doors for themselves. It wasn't about just teaching them how to use technology, but about giving them the tools to discover their own interests and, ultimately, their potential. With the right foundation, these kids could pursue any skill or career they wanted to, because the world of knowledge would be at their fingertips. But when we began working with the children, we quickly realized: it wasn't just about skills. There was emotional damage. Mental chaos. The kind that gets ignored. That's when we knew we needed more than just IT training; we needed to reach the kids where they actually were. Social Emotional Learning became that bridge.",
-      "Through a lot of trial, error, and the wisdom of the right mentors, SEL became a cornerstone of Project Salam. And the triangulation—technology, emotional support, and strategic learning via games—gave birth to a model that we knew could actually change lives."
+      "I joined Daadras through my friend Omar Zafar, the founder. At first, I assumed it was like any aid group, but his vision was different—empowerment, not dependency. Project Salam embodied that: giving kids a gateway to the digital world so they could explore knowledge and their own potential. Yet we saw emotional wounds ran deep. Adding Social Emotional Learning, alongside tech and game-based learning, created a model that could truly transform lives."
     ],
     role_description: [
-      "As the Director of Project Salam, Arooj handles everything related to the project, making sure things run smoothly from an administrative standpoint. She works closely with the course heads, supporting them and ensuring the courses stay on track. While the course heads take care of the volunteers day-to-day, Arooj oversees their appointments and address any issues that come up.",
-      "Arooj also helps set the direction for Project Salam, making sure our goals align with the bigger picture of what Daadras is trying to achieve. She is involved in communication with other organizations, helping to build partnerships and expand our reach. On top of that, she keeps an eye on the kids' progress, ensuring we're really making a difference in their lives."
+      "As Director of Project Salam, Arooj ensures smooth administration, supports course heads, and oversees volunteer appointments and issues. She helps shape the project’s vision, aligning it with Daadras’s mission, and leads communication with partner organizations to expand impact. Beyond management, she tracks children’s progress, making sure the initiative not only runs efficiently but also truly transforms lives."
     ]
   },
   {
@@ -59,7 +58,7 @@ export const teamMembers = [
     name: "Abdul Muqadim",
     role: "Director Marketing",
     department: "Marketing",
-    bio: "Abdul Muqadim is a marketing strategist and communications specialist, deeply passionate about creating meaningful connections through impactful storytelling and outreach. With professional experience spanning paid media, strategic communication, and digital amplification, Abdul has worked with leading agencies such as Pentasia, Adsells, and Publicis Groupe. His work has contributed to elevating brands across industries like esports, fintech, and consumer goods. Beyond his technical expertise, Abdul believes in the power of communication to drive social change. His journey combines strategic excellence, a flair for creativity, and a commitment to using marketing as a tool for empowerment and community development.",
+    bio: ["Abdul Muqadim is a marketing strategist and communications specialist, deeply passionate about creating meaningful connections through impactful storytelling and outreach. With professional experience spanning paid media, strategic communication, and digital amplification, Abdul has worked with leading agencies such as Pentasia, Adsells, and Publicis Groupe. His work has contributed to elevating brands across industries like esports, fintech, and consumer goods. Beyond his technical expertise, Abdul believes in the power of communication to drive social change. His journey combines strategic excellence, a flair for creativity, and a commitment to using marketing as a tool for empowerment and community development."],
     image: "/team_photos/head_of_marketing_muqadim.webp",
     linkedin: "https://www.linkedin.com/in/abdul-muqadim-b16bb8224/",
     email: "muqadim@daadras.org",
@@ -78,7 +77,7 @@ export const teamMembers = [
     name: "Shanzay Khan",
     role: "Director SEL",
     department: "Education",
-    bio: "Shanzey Khan is a passionate mental health educator and trainee clinical psychologist who believes that \"if kids are taken care of, the future is already a bit better.\" She holds a BSc in Psychology and is currently pursuing her Master's in Clinical Psychology. With over seven years of teaching experience, she specializes in subjects like mental health, emotional awareness, and social-emotional learning alongside core academics. Shanzey has worked in hospitals, clinics, research centers, and with various NGOs and NPOs as a trainee clinical psychologist. For the past five years, she has focused on children's mental health, especially in underserved communities. Her work is rooted in compassion, evidence-based practice, and a deep commitment to helping children feel seen, understood, and supported.",
+    bio: ["Shanzey Khan is a passionate mental health educator and trainee clinical psychologist who believes that \"if kids are taken care of, the future is already a bit better.\" She holds a BSc in Psychology and is currently pursuing her Master's in Clinical Psychology. With over seven years of teaching experience, she specializes in subjects like mental health, emotional awareness, and social-emotional learning alongside core academics. Shanzey has worked in hospitals, clinics, research centers, and with various NGOs and NPOs as a trainee clinical psychologist. For the past five years, she has focused on children's mental health, especially in underserved communities. Her work is rooted in compassion, evidence-based practice, and a deep commitment to helping children feel seen, understood, and supported."],
     image: "/team_photos/head_of_sel_shanzay.webp",
     linkedin: "https://www.linkedin.com/in/shanzey-khan-78462229b/",
     email: "shanzay@daadras.org",
@@ -95,7 +94,7 @@ export const teamMembers = [
     name: "Sarmad Sabir",
     role: "Director Strategic Gaming",
     department: "Education",
-    bio: "Sarmad holds a degree in Computer Science, having completed his final year project on Wireless Human Heart Rate Monitoring. Since graduating, he has gained almost two years of professional experience in the tech industry, working on software development and technology solutions. In parallel, he has been an online Computer Science instructor for international students for the past year, helping young learners build strong technical and analytical skills.",
+    bio: ["Sarmad holds a degree in Computer Science, having completed his final year project on Wireless Human Heart Rate Monitoring. Since graduating, he has gained almost two years of professional experience in the tech industry, working on software development and technology solutions. In parallel, he has been an online Computer Science instructor for international students for the past year, helping young learners build strong technical and analytical skills."],
     image: "/team_photos/head_of_strategic_gaming_sarmad_sabir.webp",
     linkedin: "https://www.linkedin.com/in/sarmadsabir7/",
     email: "sarmad@daadras.org",
@@ -112,7 +111,9 @@ export const teamMembers = [
     name: "Sawaiz Naseem",
     role: "Director IT",
     department: "Technology",
-    bio: "Sawaiz Naseem is a Machine Learning Engineer and AI Researcher with a deep commitment to applying technology for real-world impact. His work spans across fields like Computer Vision, Natural Language Processing, Reinforcement Learning, and Data Analytics, with hands-on experience in both academic research and industry projects. Beyond his technical achievements, Sawaiz is passionate about education. Over the years, he has taught Computer Science to students at all levels — from primary school children to university graduates — helping them build strong foundations in technology, critical thinking, and problem-solving.",
+    bio: ["Sawaiz Naseem is a Sr. AI Research Engineer with a deep commitment to applying technology for real-world impact with experience in both academic research and industry projects. Sawaiz is passionate about education.",
+       "Over the years, he has taught Computer Science to students at all levels — from primary school children to university graduates — helping them build strong foundations in technology, critical thinking, and problem-solving. ",
+    ],
     image: "/team_photos/head_of_it_sawaiz.webp",
     linkedin: "https://www.linkedin.com/in/sawaiz-naseem-2053491a1/",
     email: "sawaiz@daadras.org",
@@ -122,8 +123,7 @@ export const teamMembers = [
       "After graduation, when Omer, the CEO of Daadras, asked if I'd teach a few kids on weekends, I jumped at it — and what started as a small effort quickly turned into something bigger as I saw the real impact, not just on their academics but on their confidence and dreams. That experience pulled me deeper into Project Salam, where I eventually joined full-time."
     ],
     role_description: [
-      "At Project Salam, Sawaiz Naseem leads the IT education and development initiatives. He manages the IT teaching program, training a team of volunteers to deliver the curriculum and adopt Project Salam's unique approach to education.",
-      "In addition to overseeing teaching operations, Sawaiz spearheads key technology projects to support the organization's growth and impact. He has led the development of several in-house systems, including the Daadras Application Tracking System for streamlining volunteer recruitment, the Daadras Student Database for tracking and evaluating the progress of the children enrolled in the program, and the Daadras Website to strengthen the organization's online presence."
+      "At Project Salam, Sawaiz Naseem leads IT education, training volunteers to deliver the curriculum with Salam’s unique approach. Beyond teaching, he drives tech initiatives that boost impact, including building the Daadras Application Tracking System for volunteer recruitment, the Student Database to monitor children’s progress, and the Daadras Website to enhance the organization’s digital presence and outreach."
     ]
   },
   {
@@ -131,7 +131,7 @@ export const teamMembers = [
     name: "Abdullah Farrukh",
     role: "Director Public Speaking",
     department: "Education",
-    bio: "Abdullah Farrukh is an entrepreneur driven by resilience and a vision to uplift others through opportunity. From a young age, he knew his path lay in business — a journey marked by launching over a dozen ventures, weathering failures, and celebrating hard-won successes. These experiences taught him that true empowerment isn't about temporary aid but equipping people with skills that last a lifetime. \"Give a man a fish, and you feed him for a day; teach him to fish, and you feed him for a lifetime\" — this philosophy became his compass.",
+    bio: ["Abdullah Farrukh is an entrepreneur driven by resilience and a vision to uplift others through opportunity. From a young age, he knew his path lay in business — a journey marked by launching over a dozen ventures, weathering failures, and celebrating hard-won successes. These experiences taught him that true empowerment isn't about temporary aid but equipping people with skills that last a lifetime. \"Give a man a fish, and you feed him for a day; teach him to fish, and you feed him for a lifetime\" — this philosophy became his compass."],
     image: "/team_photos/head_of_public_speaking_abdullah_farrukh.webp",
     linkedin: "https://www.linkedin.com/in/abdullah-farrukh-6a8394225/",
     email: "abdullah@daadras.org",

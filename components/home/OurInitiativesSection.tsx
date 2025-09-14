@@ -190,7 +190,7 @@ export const OurInitiativesSection = () => {
       description: 'Providing essential food supplies, emergency aid, and rapid response support to families during challenging times and crises.',
       badge: 'Emergency Response',
       href: '/initiatives/emergency-relief',
-      buttonText: 'Get Involved',
+      buttonText: 'Learn more',
       image: hoveredEmergencyMetric ? emergencyImages[hoveredEmergencyMetric as keyof typeof emergencyImages] : '/drive/kids_poverty.jpg',
       metrics: [
         { value: '500+', label: 'Ration Packages', sublabel: 'Distributed' },
@@ -216,17 +216,6 @@ export const OurInitiativesSection = () => {
     <section className="py-8 md:py-16 lg:py-24 bg-white" ref={ref}>
       <div className="max-w-[1380px] w-full mx-auto px-6 md:px-10 lg:px-14">
         {/* Section Header */}
-        <div className="mb-20">
-          <div className="mb-6">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary font-[family-name:var(--font-space-grotesk)] text-left">
-              Our Initiatives
-            </h2>
-          </div>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-4xl leading-relaxed text-left">
-            Comprehensive community development through education, economic empowerment, and emergency relief efforts that create lasting positive change.
-          </p>
-        </div>
-
         {/* Project Salam - Flagship Program */}
         <div className="mb-20">
           <div className="grid lg:grid-cols-2 gap-12 items-start">

@@ -15,7 +15,7 @@ export default function StrategySection() {
         >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-space-grotesk">Our Strategy</h2>
           <p className="text-lg text-muted-foreground max-w-2xl">
-            Our approach combines developmentally appropriate grouping with interactive activities and holistic integration across all Project SALAM programs.
+            Our approach combines developmentally appropriate grouping with interactive activities and holistic integration across all Project Salam programs.
           </p>
         </motion.div>
 
@@ -70,7 +70,7 @@ export default function StrategySection() {
               <div>
                 <h3 className="font-semibold text-foreground mb-2">Holistic Integration</h3>
                 <p className="text-muted-foreground">
-                  SEL isn't confined to a classroom—it's woven into games, therapy workshops, and other Project SALAM activities, reinforcing that emotional health is a daily practice.
+                  SEL isn't confined to a classroom—it's woven into games, therapy workshops, and other Project Salam activities, reinforcing that emotional health is a daily practice.
                 </p>
               </div>
             </motion.div>

@@ -55,19 +55,19 @@ export const OurTeamSection = () => {
                   <span>{member.location}</span>
                 </div>
 
-                <p className="text-sm text-muted-foreground mb-6 line-clamp-3">{member.bio}</p>
+                <p className="text-sm text-muted-foreground mb-6 line-clamp-3">{member.bio.join(' ')}</p>
 
                 <div className="flex gap-2">
+                  <Button size="sm" variant="outline" className="flex-1 bg-transparent" asChild>
+                    <a href={`/team/${member.id}`}>
+                      <i className="fa-solid fa-user h-4 w-4 mr-2"></i>
+                      View Profile
+                    </a>
+                  </Button>
                   <Button size="sm" variant="outline" className="flex-1 bg-transparent" asChild>
                     <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
                       <i className="fa-brands fa-linkedin-in h-4 w-4 mr-2"></i>
                       LinkedIn
-                    </a>
-                  </Button>
-                  <Button size="sm" variant="outline" className="flex-1 bg-transparent" asChild>
-                    <a href={`mailto:${member.email}`}>
-                      <i className="fa-solid fa-envelope h-4 w-4 mr-2"></i>
-                      Email
                     </a>
                   </Button>
                 </div>
