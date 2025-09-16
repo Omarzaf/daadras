@@ -5,16 +5,19 @@ import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
+import { SocialLinks } from "./SocialMediaLinks";
+
+type TSection = "about" | "news" | "initiatives" | "involved" | "ways-to-give";
 
 export default function Navigation() {
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [activeDropdown, setActiveDropdown] = useState<TSection | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [keyboardFocus, setKeyboardFocus] = useState(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const pathname = usePathname();
 
   // Helper function to determine if a navigation item is active
-  const isActiveSection = (section: string) => {
+  const isActiveSection = (section: TSection) => {
     switch (section) {
       case "about":
         return pathname.startsWith("/about");
@@ -31,7 +34,7 @@ export default function Navigation() {
     }
   };
 
-  const handleMouseEnter = (dropdown: string) => {
+  const handleMouseEnter = (dropdown: TSection) => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
       timeoutRef.current = null;
@@ -49,7 +52,7 @@ export default function Navigation() {
     }
   };
 
-  const handleFocus = (dropdown: string) => {
+  const handleFocus = (dropdown: TSection) => {
     setKeyboardFocus(true);
     setActiveDropdown(dropdown);
   };
@@ -61,7 +64,7 @@ export default function Navigation() {
     }, 150);
   };
 
-  const handleDropdownClick = (dropdown: string) => {
+  const handleDropdownClick = (dropdown: TSection) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
 
@@ -97,7 +100,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-[100px]">
           <div className="flex items-center">
             <Link href="/">
-              <div className="w-[205px] h-[49px] flex items-center gap-3">
+              <div className="w-fit h-[49px] flex items-center gap-3 mr-5">
                 <img
                   src="/green_logo.svg"
                   alt="Daadras Logo"
@@ -110,14 +113,14 @@ export default function Navigation() {
             </Link>
           </div>
 
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center">
             <div
               className="group relative"
               onMouseEnter={() => handleMouseEnter("about")}
               onMouseLeave={handleMouseLeave}
             >
               <button
-                className={`flex items-center text-foreground hover:text-accent hover:bg-primary/10 px-4 md:px-6 h-[100px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all duration-200 ease-out cursor-pointer ${
+                className={`flex items-center text-foreground hover:text-accent hover:bg-primary/10 px-4 md:px-8 h-[100px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all duration-200 ease-out cursor-pointer ${
                   activeDropdown === "about" ? "bg-primary/10" : ""
                 } ${isActiveSection("about") ? "font-bold" : ""}`}
                 onFocus={() => handleFocus("about")}
@@ -195,24 +198,7 @@ export default function Navigation() {
                       </div>
                     </div>
                     <div className="flex justify-start mt-6">
-                      <div className="flex space-x-4">
-                        <Link
-                          href="https://www.linkedin.com/in/daadras-ngo-25962826b/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-2 text-primary hover:text-accent transition-colors duration-200 ease-out"
-                        >
-                          <i className="fa-brands fa-linkedin-in h-5 w-5"></i>
-                        </Link>
-                        <Link
-                          href="https://www.instagram.com/daadrasfoundation/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-2 text-primary hover:text-accent transition-colors"
-                        >
-                          <i className="fa-brands fa-instagram h-5 w-5"></i>
-                        </Link>
-                      </div>
+                      <SocialLinks />
                     </div>
                   </div>
                 </div>
@@ -225,7 +211,7 @@ export default function Navigation() {
               onMouseLeave={handleMouseLeave}
             >
               <button
-                className={`flex items-center text-foreground hover:text-accent hover:bg-primary/10 px-4 md:px-6 h-[100px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all duration-200 ease-out cursor-pointer ${
+                className={`flex items-center text-foreground hover:text-accent hover:bg-primary/10 px-4 md:px-8 h-[100px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all duration-200 ease-out cursor-pointer ${
                   activeDropdown === "news" ? "bg-primary/10" : ""
                 } ${isActiveSection("news") ? "font-bold" : ""}`}
                 onFocus={() => handleFocus("news")}
@@ -295,24 +281,7 @@ export default function Navigation() {
                       </div>
                     </div>
                     <div className="flex justify-start mt-6">
-                      <div className="flex space-x-4">
-                        <Link
-                          href="https://www.linkedin.com/in/daadras-ngo-25962826b/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-2 text-primary hover:text-accent transition-colors duration-200 ease-out"
-                        >
-                          <i className="fa-brands fa-linkedin-in h-5 w-5"></i>
-                        </Link>
-                        <Link
-                          href="https://www.instagram.com/daadrasfoundation/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-2 text-primary hover:text-accent transition-colors"
-                        >
-                          <i className="fa-brands fa-instagram h-5 w-5"></i>
-                        </Link>
-                      </div>
+                      <SocialLinks />
                     </div>
                   </div>
                 </div>
@@ -325,7 +294,7 @@ export default function Navigation() {
               onMouseLeave={handleMouseLeave}
             >
               <button
-                className={`flex items-center text-foreground hover:text-accent hover:bg-primary/10 px-4 md:px-6 h-[100px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all duration-200 ease-out cursor-pointer ${
+                className={`flex items-center text-foreground hover:text-accent hover:bg-primary/10 px-4 md:px-8 h-[100px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all duration-200 ease-out cursor-pointer ${
                   activeDropdown === "initiatives" ? "bg-primary/10" : ""
                 } ${isActiveSection("initiatives") ? "font-bold" : ""}`}
                 onFocus={() => handleFocus("initiatives")}
@@ -426,24 +395,7 @@ export default function Navigation() {
                       </div>
                     </div>
                     <div className="flex justify-start mt-6">
-                      <div className="flex space-x-4">
-                        <Link
-                          href="https://www.linkedin.com/in/daadras-ngo-25962826b/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-2 text-primary hover:text-accent transition-colors duration-200 ease-out"
-                        >
-                          <i className="fa-brands fa-linkedin-in h-5 w-5"></i>
-                        </Link>
-                        <Link
-                          href="https://www.instagram.com/daadrasfoundation/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-2 text-primary hover:text-accent transition-colors"
-                        >
-                          <i className="fa-brands fa-instagram h-5 w-5"></i>
-                        </Link>
-                      </div>
+                      <SocialLinks />
                     </div>
                   </div>
                 </div>
@@ -456,7 +408,7 @@ export default function Navigation() {
               onMouseLeave={handleMouseLeave}
             >
               <button
-                className={`flex items-center text-foreground hover:text-accent hover:bg-primary/10 px-4 md:px-6 h-[100px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all duration-200 ease-out cursor-pointer ${
+                className={`flex items-center text-foreground hover:text-accent hover:bg-primary/10 px-4 md:px-8 h-[100px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all duration-200 ease-out cursor-pointer ${
                   activeDropdown === "involved" ? "bg-primary/10" : ""
                 } ${isActiveSection("involved") ? "font-bold" : ""}`}
                 onFocus={() => handleFocus("involved")}
@@ -534,24 +486,7 @@ export default function Navigation() {
                       </div>
                     </div>
                     <div className="flex justify-start mt-6">
-                      <div className="flex space-x-4">
-                        <Link
-                          href="https://www.linkedin.com/in/daadras-ngo-25962826b/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-2 text-primary hover:text-accent transition-colors duration-200 ease-out"
-                        >
-                          <i className="fa-brands fa-linkedin-in h-5 w-5"></i>
-                        </Link>
-                        <Link
-                          href="https://www.instagram.com/daadrasfoundation/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-2 text-primary hover:text-accent transition-colors"
-                        >
-                          <i className="fa-brands fa-instagram h-5 w-5"></i>
-                        </Link>
-                      </div>
+                      <SocialLinks />
                     </div>
                   </div>
                 </div>
@@ -783,24 +718,7 @@ export default function Navigation() {
               </div>
 
               <div className="pt-4 border-t border-border">
-                <div className="flex space-x-4 mb-4 ml-4">
-                  <Link
-                    href="https://www.linkedin.com/in/daadras-ngo-25962826b/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 text-primary hover:text-accent transition-colors"
-                  >
-                    <i className="fa-brands fa-linkedin-in h-5 w-5"></i>
-                  </Link>
-                  <Link
-                    href="https://www.instagram.com/daadrasfoundation/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 text-primary hover:text-accent transition-colors"
-                  >
-                    <i className="fa-brands fa-instagram h-5 w-5"></i>
-                  </Link>
-                </div>
+                <SocialLinks waysToGive={true} />
                 <div className="ml-4">
                   <Link
                     href="/ways-to-give"
