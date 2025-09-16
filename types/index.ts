@@ -33,7 +33,7 @@ export interface TeamMember {
   name: string;
   role: string;
   department: string;
-  bio: string;
+  bio: string[];
   image: string;
   linkedin: string;
   email: string;
