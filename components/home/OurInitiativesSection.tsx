@@ -332,7 +332,8 @@ export const OurInitiativesSection = () => {
                 <h4 className="text-2xl font-bold text-foreground mb-3 font-[family-name:var(--font-space-grotesk)]">
                   Project Salam
                 </h4>
-                <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                {/* Fixed: Removed md:text-nowrap and ensured proper wrapping */}
+                <p className="md:text-lg text-muted-foreground mb-8 leading-relaxed">
                   Our comprehensive educational initiative combining Information
                   Technology, Chess, and Social-Emotional Learning (SEL) to
                   develop well-rounded individuals equipped for the modern
@@ -341,13 +342,14 @@ export const OurInitiativesSection = () => {
 
                 <div className="space-y-6 mb-8">
                   <div className="flex items-start gap-4">
-                    <div className="bg-primary/10 p-3 rounded-lg">
+                    <div className="bg-primary/10 p-3 rounded-lg flex-shrink-0">
                       <BookOpen className="h-6 w-6 text-primary" />
                     </div>
-                    <div>
+                    <div className="min-w-0 flex-1">
                       <h4 className="font-semibold text-foreground mb-2">
                         Information Technology
                       </h4>
+                      {/* Fixed: Removed text-wrap class (redundant) and ensured proper wrapping */}
                       <p className="text-muted-foreground">
                         Digital literacy, coding fundamentals, and technology
                         skills for the digital age.
@@ -356,13 +358,14 @@ export const OurInitiativesSection = () => {
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="bg-primary/10 p-3 rounded-lg">
+                    <div className="bg-primary/10 p-3 rounded-lg flex-shrink-0">
                       <Trophy className="h-6 w-6 text-primary" />
                     </div>
-                    <div>
+                    <div className="min-w-0 flex-1">
                       <h4 className="font-semibold text-foreground mb-2">
                         Chess Training
                       </h4>
+                      {/* Fixed: Removed text-wrap class and ensured proper wrapping */}
                       <p className="text-muted-foreground">
                         Strategic thinking, problem-solving, and cognitive
                         development through chess.
@@ -371,10 +374,10 @@ export const OurInitiativesSection = () => {
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="bg-primary/10 p-3 rounded-lg">
+                    <div className="bg-primary/10 p-3 rounded-lg flex-shrink-0">
                       <Brain className="h-6 w-6 text-primary" />
                     </div>
-                    <div>
+                    <div className="min-w-0 flex-1">
                       <h4 className="font-semibold text-foreground mb-2">
                         Social-Emotional Learning
                       </h4>
@@ -387,19 +390,19 @@ export const OurInitiativesSection = () => {
                 </div>
               </div>
 
-              <div className="flex justify-start gap-3 mt-auto">
+              <div className="flex flex-col sm:flex-row justify-start gap-3 mt-auto">
                 <Button
-                  className="bg-accent hover:bg-accent/90 px-6 py-2"
+                  className="bg-accent hover:bg-accent/90 px-4 sm:px-6 py-2"
                   asChild
                 >
                   <Link href="/initiatives/project-salam">
-                    Learn More About Project Salam
+                    <span>Learn More About Project Salam</span>
                   </Link>
                 </Button>
-                <Button variant="outline" className="px-6 py-2" asChild>
+                <Button variant="outline" className="px-4 sm:px-6 py-2" asChild>
                   <Link href="/get-involved/volunteer">
                     <Users className="mr-2 h-4 w-4" />
-                    Join as Volunteer
+                    <span>Join as Volunteer</span>
                   </Link>
                 </Button>
               </div>
@@ -421,18 +424,18 @@ export const OurInitiativesSection = () => {
                   scale: 1.1,
                   transition: { duration: 0.3 },
                 }}
-                className="absolute -bottom-6 -right-6 bg-card border border-border rounded-xl p-6 shadow-lg"
+                className="absolute -bottom-6 -right-6 bg-card border border-border rounded-xl p-4 sm:p-6 shadow-lg"
               >
                 <div className="text-center">
                   <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.5, delay: 1.5 }}
-                    className="text-3xl font-bold text-primary"
+                    className="text-2xl sm:text-3xl font-bold text-primary"
                   >
                     <motion.span>{rounded}</motion.span>+
                   </motion.div>
-                  <div className="text-sm text-muted-foreground">
+                  <div className="text-xs sm:text-sm text-muted-foreground">
                     Students Impacted
                   </div>
                 </div>
