@@ -28,7 +28,7 @@ export function TeamMemberHero({ teamMember }: TeamMemberHeroProps) {
       <div className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-start">
           {/* Image Section - Left with Contact Buttons Below */}
-          <div className="order-2 lg:order-1 space-y-4 md:space-y-6 lg:space-y-8">
+          <div className="order-1 lg:order-1 space-y-4 md:space-y-6 lg:space-y-8">
             <div className="w-full h-64 sm:h-72 md:h-80 lg:h-96 bg-gray-100 rounded-xl md:rounded-2xl overflow-hidden shadow-lg md:shadow-xl hover:shadow-xl md:hover:shadow-2xl transition-all duration-500 group">
               <img
                 src={teamMember.image || "/placeholder-user.jpg"}
@@ -79,7 +79,7 @@ export function TeamMemberHero({ teamMember }: TeamMemberHeroProps) {
           </div>
 
           {/* Content Section - Right */}
-          <div className="order-1 lg:order-2 space-y-4 md:space-y-6 animate-in slide-in-from-right-4 duration-700">
+          <div className="order-2 lg:order-2 space-y-4 md:space-y-6 animate-in slide-in-from-right-4 duration-700">
             {/* Clear Hierarchy: Name > Role > Bio */}
             <div className="space-y-2 md:space-y-3">
               <div className="flex flex-wrap gap-2 animate-in fade-in-50 slide-in-from-top-4 duration-500">
