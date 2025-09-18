@@ -124,7 +124,7 @@ export const teamMembers = [
     tenure_start: "September 2025",
     tenure_end: "Present",
     bio: ["Syeda Mariam Naqvi is an undergraduate student at Forman Christian College, majoring in Economics with a minor in Political Science. She has a strong inclination toward development economics and policy. Growing up in a village, she witnessed how easily a child's potential could be dimmed by the absence of opportunity. Every summer, she teaches neighborhood girls the basics—writing their names, counting numbers, and reading their first words. She joined Daadras believing in the power of a single spark to change a life."],
-    image: "",
+    image: "/team_photos/research_assistant_mariam_naqvi.webp",
     linkedin: "https://www.linkedin.com/in/syedamariam/",
     email: "mariamnaqvi338@gmail.com",
     location: "Lahore, Pakistan",
