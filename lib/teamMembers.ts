@@ -167,7 +167,7 @@ export const teamMembers = [
     tenure_end: "Present",
     bio: ["Unsa Noor holds a Bachelor's degree in Comparative Religions and is pursuing a Post Graduate Diploma in Muslim Law and Jurisprudence, along with a degree in Mechanical Engineering. She has experience teaching university-level nursing students, teaching Islamic Studies, supervising research projects, and coordinating final-year activities. She is earning certifications in AI-assisted research, meta-analysis, and modern research tools from Research Minds, with a passion for interdisciplinary learning across diverse fields."],
     image: "/team_photos/research_assistant_unsa_noor.webp",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/unsa-noor-0033a0378/",
     email: "",
     location: "Lahore, Pakistan",
     joining_story: [
@@ -231,7 +231,7 @@ export const teamMembers = [
     tenure_end: "Present",
     bio: ["Zafir Ahmed is a dedicated Computer Science student with a strong interest in leveraging technology for social good. He has experience in software development, IT support, and digital literacy training. He is passionate about using his technical skills to bridge the digital divide and empower underserved communities through innovative solutions."],
     image: "/team_photos/deputy_it_zafir_ahmed.webp",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/zafir-ahmed-145478277/",
     email: "",
     location: "Lahore, Pakistan",
     joining_story: [
