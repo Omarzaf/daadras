@@ -137,9 +137,9 @@ export const teamMembers = [
   },
 
 {
-    id: "deputy-strategic-gaming",
-    name: "Deputy Strategic Gaming",
-    role: "Deputy Head of Chess",
+    id: "zaryab-mustafa",
+    name: "Zaryab Mustafa",
+    role: "Deputy Director Strategic Gaming",
     department: ["Strategic Gaming", "Salam"],
     education: "Bachelor’s in Computer Science",
     tenure_start: "September 2025",
