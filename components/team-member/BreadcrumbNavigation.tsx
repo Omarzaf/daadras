@@ -26,7 +26,7 @@ export function BreadcrumbNavigation({ teamMember }: BreadcrumbNavigationProps) 
         
         <li>
           <Link 
-            href="/team" 
+            href="/our-team" 
             className="hover:text-primary transition-colors"
           >
             <span className="hidden sm:inline">Our Team</span>

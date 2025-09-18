@@ -82,7 +82,7 @@ export const OurTeamSection = () => {
 
         {/* View All Team Button */}
         <div className="text-right mt-10">
-          <Link href="/team">
+          <Link href="/our-team">
             <button className="group inline-flex items-center text-sm font-medium text-foreground transition-colors relative">
               <span className="relative">View All
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full"></span>

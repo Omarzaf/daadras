@@ -165,7 +165,7 @@ export default function Navigation() {
                           Our Story
                         </Link>
                         <Link
-                          href="/team"
+                          href="/our-team"
                           className="py-3 px-6 text-[14px] hover:bg-primary/10 hover:text-primary flex items-center border-l-0 hover:border-l-[3px] hover:border-primary transition-all duration-200 ease-out"
                           style={{ color: "#374151 !important" }}
                           onClick={handleLinkClick}
@@ -551,7 +551,7 @@ export default function Navigation() {
                       Our Story
                     </Link>
                     <Link
-                      href="/team"
+                      href="/our-team"
                       onClick={handleLinkClick}
                       className="block text-sm text-slate-700 hover:text-primary transition-colors duration-200 ease-out py-1"
                     >
