@@ -35,3 +35,41 @@ export const GetInvolved: { text: string; link: string }[] = [
     link: "/get-involved/partnership",
   },
 ];
+
+// Department definitions
+export const DEPARTMENTS = {
+  ADMINISTRATION: "Administration",
+  RESEARCH: "Research", 
+  STRATEGIC_GAMING: "Strategic Gaming",
+  INFORMATION_TECHNOLOGY: "Information Technology",
+  MARKETING: "Marketing",
+  PREVIOUS_MEMBERS: "Previous Members",
+  PUBLIC_SPEAKING: "Public Speaking",
+  SOCIAL_EMOTIONAL_LEARNING: "Social Emotional Learning"
+} as const;
+
+// Helper function to get all unique departments from team members data
+export const getAllDepartments = (teamMembers: any[]): string[] => {
+  const departments = new Set<string>();
+  teamMembers.forEach(member => {
+    if (Array.isArray(member.department)) {
+      member.department.forEach(dept => departments.add(dept));
+    } else {
+      departments.add(member.department);
+    }
+  });
+  
+  const departmentArray = Array.from(departments);
+  const sortedDepartments = departmentArray.filter(dept => dept !== "Previous Members").sort();
+  const previousMembersExists = departmentArray.includes("Previous Members");
+  
+  return previousMembersExists ? [...sortedDepartments, "Previous Members"] : sortedDepartments;
+};
+
+// Helper function to get department tags for filtering
+export const getDepartmentTags = (teamMembers: any[]): { text: string; value: string }[] => {
+  return getAllDepartments(teamMembers).map(dept => ({
+    text: dept,
+    value: dept.toLowerCase().replace(/\s+/g, '-')
+  }));
+};

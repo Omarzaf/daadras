@@ -18,7 +18,7 @@ export default function TeamMemberNotFound() {
         
         <div className="space-y-4">
           <Button size="lg" className="w-full bg-primary hover:bg-primary/90" asChild>
-            <Link href="/about/our-team">
+            <Link href="/about/team">
               <ArrowLeft className="h-5 w-5 mr-2" />
               View All Team Members
             </Link>

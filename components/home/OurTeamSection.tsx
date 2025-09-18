@@ -33,7 +33,7 @@ export const OurTeamSection = () => {
               <div className="relative">
                 <div className="w-full h-80 bg-gray-100 flex items-center justify-center overflow-hidden">
                   <img
-                    src={member.image || "/placeholder.svg"}
+                    src={member.image || "/placeholder-user.jpg"}
                     alt={member.name}
                     className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
                     style={{ objectPosition: "top center" }}
@@ -42,9 +42,13 @@ export const OurTeamSection = () => {
               </div>
 
               <CardContent className="p-6">
-                <Badge className="mb-2 bg-primary/10 text-primary w-fit">
-                  {member.department}
-                </Badge>
+                <div className="flex flex-wrap gap-1 mb-2">
+                  {member.department.map((dept, index) => (
+                    <Badge key={index} className="bg-primary/10 text-primary w-fit text-xs">
+                      {dept}
+                    </Badge>
+                  ))}
+                </div>
                 <h3 className="text-xl font-bold text-foreground mb-1 font-[family-name:var(--font-space-grotesk)]">
                   {member.name}
                 </h3>
@@ -78,7 +82,7 @@ export const OurTeamSection = () => {
 
         {/* View All Team Button */}
         <div className="text-right mt-10">
-          <Link href="/about/our-team">
+          <Link href="/team">
             <button className="group inline-flex items-center text-sm font-medium text-foreground transition-colors relative">
               <span className="relative">View All
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full"></span>
