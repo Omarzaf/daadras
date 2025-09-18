@@ -63,7 +63,7 @@ export const OurTeamSection = () => {
 
                 <div className="flex gap-2">
                   <Button size="sm" variant="outline" className="flex-1 bg-transparent" asChild>
-                    <a href={`/team/${member.id}`}>
+                    <a href={`/our-team/${member.id}`}>
                       <i className="fa-solid fa-user h-4 w-4 mr-2"></i>
                       View Profile
                     </a>

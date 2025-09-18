@@ -31,7 +31,7 @@ export function TeamGrid({ selectedDepartment }: Props) {
   }
 
   const handleCardClick = (memberId: string) => {
-    router.push(`/team/${memberId}`)
+    router.push(`/our-team/${memberId}`)
   }
 
   const filtered = selectedDepartment === "All"
