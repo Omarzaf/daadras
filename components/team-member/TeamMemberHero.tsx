@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { MapPin, Mail, Check } from "lucide-react"
+import { MapPin, Mail, Check, Calendar } from "lucide-react"
 import { TeamMember } from "@/types"
 
 interface TeamMemberHeroProps {
@@ -24,14 +24,14 @@ export function TeamMemberHero({ teamMember }: TeamMemberHeroProps) {
   }
 
   return (
-    <section className="py-12 md:py-16">
+    <section className="pt-2">
       <div className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Image Section - Left with Contact Buttons Below */}
           <div className="order-2 lg:order-1 space-y-8">
             <div className="w-full h-80 lg:h-96 bg-gray-100 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 group">
               <img
-                src={teamMember.image || "/placeholder.svg"}
+                src={teamMember.image || "/placeholder-user.jpg"}
                 alt={`Professional headshot of ${teamMember.name}, ${teamMember.role} at Daadras Foundation`}
                 className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                 style={{ objectPosition: "top center" }}
@@ -79,24 +79,35 @@ export function TeamMemberHero({ teamMember }: TeamMemberHeroProps) {
           </div>
 
           {/* Content Section - Right */}
-          <div className="order-1 lg:order-2 space-y-8 animate-in slide-in-from-right-4 duration-700">
+          <div className="order-1 lg:order-2 space-y-6 animate-in slide-in-from-right-4 duration-700">
             {/* Clear Hierarchy: Name > Role > Bio */}
-            <div className="space-y-6">
-              <Badge className="bg-primary/10 text-primary text-sm px-4 py-2 w-fit animate-in fade-in-50 slide-in-from-top-4 duration-500">
-                {teamMember.department}
-              </Badge>
+            <div className="space-y-2">
+              <div className="flex flex-wrap gap-2 animate-in fade-in-50 slide-in-from-top-4 duration-500">
+                {teamMember.department.map((dept, index) => (
+                  <Badge key={index} className="bg-primary/10 text-primary text-sm px-4 py-2 w-fit">
+                    {dept}
+                  </Badge>
+                ))}
+              </div>
               
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground font-[family-name:var(--font-space-grotesk)] animate-in fade-in-50 slide-in-from-top-4 duration-500" style={{ animationDelay: '100ms' }}>
+              <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground font-[family-name:var(--font-space-grotesk)] animate-in fade-in-50 slide-in-from-top-4 duration-500" style={{ animationDelay: '100ms' }}>
                 {teamMember.name}
               </h1>
               
-              <p className="text-xl md:text-2xl text-primary font-medium animate-in fade-in-50 slide-in-from-top-4 duration-500" style={{ animationDelay: '200ms' }}>
+              <p className="text-lg md:text-xl text-primary font-medium animate-in fade-in-50 slide-in-from-top-4 duration-500" style={{ animationDelay: '200ms' }}>
                 {teamMember.role}
               </p>
               
               <div className="flex items-center gap-2 text-muted-foreground animate-in fade-in-50 slide-in-from-top-4 duration-500" style={{ animationDelay: '300ms' }}>
                 <MapPin className="h-4 w-4" aria-hidden="true" />
-                <span className="text-lg">{teamMember.location}</span>
+                <span className="text-base">{teamMember.location}</span>
+              </div>
+              
+              <div className="flex items-center gap-2 text-muted-foreground animate-in fade-in-50 slide-in-from-top-4 duration-500" style={{ animationDelay: '350ms' }}>
+                <Calendar className="h-4 w-4" aria-hidden="true" />
+                <span className="text-base">
+                  {teamMember.tenure_start} - {teamMember.tenure_end}
+                </span>
               </div>
             </div>
 

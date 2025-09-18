@@ -32,7 +32,7 @@ export interface TeamMember {
   id: string;
   name: string;
   role: string;
-  department: string;
+  department: string[];
   bio: string[];
   image: string;
   linkedin: string;
@@ -40,4 +40,6 @@ export interface TeamMember {
   location: string;
   joining_story: string[];
   role_description: string[];
+  tenure_start: string;
+  tenure_end: string;
 }

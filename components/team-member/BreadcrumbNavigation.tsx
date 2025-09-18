@@ -8,7 +8,7 @@ interface BreadcrumbNavigationProps {
 
 export function BreadcrumbNavigation({ teamMember }: BreadcrumbNavigationProps) {
   return (
-    <nav className="py-6" aria-label="Breadcrumb">
+    <nav className="pt-3 pb-2" aria-label="Breadcrumb">
       <ol className="flex items-center space-x-2 text-sm text-muted-foreground">
         <li>
           <Link 
@@ -26,7 +26,7 @@ export function BreadcrumbNavigation({ teamMember }: BreadcrumbNavigationProps) 
         
         <li>
           <Link 
-            href="/about/our-team" 
+            href="/team" 
             className="hover:text-primary transition-colors"
           >
             Our Team
