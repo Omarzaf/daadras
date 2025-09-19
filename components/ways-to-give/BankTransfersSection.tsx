@@ -38,7 +38,7 @@ export function BankTransfersSection() {
             viewport={{ once: true }}
             className="text-lg md:text-xl text-muted-foreground max-w-4xl leading-relaxed text-left"
           >
-            Choose your preferred method for secure bank transfers. All donations are tax-deductible.
+            Choose your preferred method for secure bank transfers.
           </motion.p>
         </div>
 
