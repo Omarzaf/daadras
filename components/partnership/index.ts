@@ -1,0 +1,5 @@
+export { PartnershipHero } from "./PartnershipHero"
+export { PartnershipTypesSection } from "./PartnershipTypesSection"
+export { CurrentPartnersSection } from "./CurrentPartnersSection"
+export { PartnershipProcessSection } from "./PartnershipProcessSection"
+export { PartnershipContactSection } from "./PartnershipContactSection"

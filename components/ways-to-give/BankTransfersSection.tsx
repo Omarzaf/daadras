@@ -25,6 +25,7 @@ export function BankTransfersSection() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
               className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary font-[family-name:var(--font-space-grotesk)] text-left"
             >
               Direct Transfer Methods
@@ -34,6 +35,7 @@ export function BankTransfersSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true }}
             className="text-lg md:text-xl text-muted-foreground max-w-4xl leading-relaxed text-left"
           >
             Choose your preferred method for secure bank transfers. All donations are tax-deductible.
@@ -44,6 +46,7 @@ export function BankTransfersSection() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
           className="bg-card rounded-2xl p-8 border"
         >
           <Accordion type="single" collapsible className="w-full">

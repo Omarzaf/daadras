@@ -16,6 +16,7 @@ export const SupportMissionSection = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
               className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary font-[family-name:var(--font-space-grotesk)] text-left"
             >
               Support Our Mission
@@ -25,6 +26,7 @@ export const SupportMissionSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true }}
             className="text-lg md:text-xl text-muted-foreground max-w-4xl leading-relaxed text-left"
           >
             Your support helps us continue empowering communities through education, technology, and social-emotional learning programs. Every contribution makes a meaningful difference in the lives of those we serve.
@@ -36,6 +38,7 @@ export const SupportMissionSection = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
           >
             <Card className="h-full hover:shadow-lg transition-shadow duration-300 text-center">
               <CardContent className="p-6">
@@ -54,6 +57,7 @@ export const SupportMissionSection = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
           >
             <Card className="h-full hover:shadow-lg transition-shadow duration-300 text-center">
               <CardContent className="p-6">
@@ -72,6 +76,7 @@ export const SupportMissionSection = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
           >
             <Card className="h-full hover:shadow-lg transition-shadow duration-300 text-center">
               <CardContent className="p-6">
@@ -91,6 +96,7 @@ export const SupportMissionSection = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
+          viewport={{ once: true }}
         >
           <div className="flex flex-col sm:flex-row gap-4 justify-start mb-6">
             <Button asChild size="lg" className="group">
