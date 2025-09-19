@@ -11,10 +11,10 @@ export const ContactHeroImage = () => {
         <Image
           src="/drive/team_photo.jpg"
           alt="Contact Daadras - Get in touch with our team"
-          width={1910}
-          height={600}
-          className="w-full h-full object-cover transition-all duration-700 ease-out"
+          fill
+          className="object-cover transition-all duration-700 ease-out"
           priority
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
         />
         
         {/* Optional overlay for better text readability if needed */}

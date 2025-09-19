@@ -23,19 +23,12 @@ export default function EconomicUpliftmentPage() {
           <LastingChangeSection />
           <EconomicImpactStats />
           {economicUpliftmentTestimonials && economicUpliftmentTestimonials.length > 0 && (
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <TestimonialsSection
-                testimonials={economicUpliftmentTestimonials}
-                title="Stories of Impact"
-                subtitle="Real stories from the families and individuals whose lives have been transformed through our programs."
-                leftAligned={true}
-              />
-            </motion.div>
+            <TestimonialsSection
+              testimonials={economicUpliftmentTestimonials}
+              title="Stories of Impact"
+              subtitle="Real stories from the families and individuals whose lives have been transformed through our programs."
+              leftAligned={true}
+            />
           )}
           <EconomicUpliftmentCTA />
         </div>

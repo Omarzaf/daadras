@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { DAADRAS_CONTACT } from "@/lib/contact_info";
 import { SocialLinks } from "./SocialMediaLinks";
 import { GetInvolved, Programs } from "@/lib/constants";
@@ -10,10 +11,11 @@ export const Footer = () => {
         <div className="grid gap-4 md:grid-cols-2 md:gap-10">
           <div>
             <div className="flex items-center gap-4 mb-4">
-              <img
+              <Image
                 src="/green_logo.svg"
                 alt="Daadras Logo"
-                className="h-8 w-8"
+                width={32}
+                height={32}
               />
               <h3 className="text-4xl font-bold text-primary">Daadras</h3>
             </div>

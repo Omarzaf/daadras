@@ -22,75 +22,23 @@ export default function EmergencyReliefPage() {
         <div className="max-w-[1380px] w-full mx-auto px-6 md:px-10 lg:px-14">
           <EmergencyReliefHero />
           
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <MissionContextSection />
-          </motion.div>
+          <MissionContextSection />
+          <ReliefProgramsSection />
+          <ClothingReliefSection />
+          <FloodResponseSection />
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            viewport={{ once: true }}
-          >
-            <ReliefProgramsSection />
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            <ClothingReliefSection />
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
-          >
-            <FloodResponseSection />
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-          >
-            <ReliefStrategySection />
-          </motion.div>
+          <ReliefStrategySection />
 
           {emergencyReliefTestimonials && emergencyReliefTestimonials.length > 0 && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              viewport={{ once: true }}
-            >
-              <TestimonialsSection
-                testimonials={emergencyReliefTestimonials}
-                title="Voices of Hope During Crisis"
-                subtitle="Hear from families who received life-saving support during their most challenging moments."
-                leftAligned={true}
-              />
-            </motion.div>
+            <TestimonialsSection
+              testimonials={emergencyReliefTestimonials}
+              title="Voices of Hope During Crisis"
+              subtitle="Hear from families who received life-saving support during their most challenging moments."
+              leftAligned={true}
+            />
           )}
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <EmergencyReliefCTA />
-          </motion.div>
+          <EmergencyReliefCTA />
         </div>
       </section>
     </div>

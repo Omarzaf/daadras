@@ -2,7 +2,10 @@ import { useState } from "react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { MapPin, Mail, Check, Calendar } from "lucide-react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons"
 import { TeamMember } from "@/types"
+import Image from "next/image"
 
 interface TeamMemberHeroProps {
   teamMember: TeamMember
@@ -29,12 +32,14 @@ export function TeamMemberHero({ teamMember }: TeamMemberHeroProps) {
         <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-start">
           {/* Image Section - Left with Contact Buttons Below */}
           <div className="order-1 lg:order-1 space-y-4 md:space-y-6 lg:space-y-8">
-            <div className="w-full h-64 sm:h-72 md:h-80 lg:h-96 bg-gray-100 rounded-xl md:rounded-2xl overflow-hidden shadow-lg md:shadow-xl">
-              <img
+            <div className="w-full h-64 sm:h-72 md:h-80 lg:h-96 bg-gray-100 rounded-xl md:rounded-2xl overflow-hidden shadow-lg md:shadow-xl relative">
+              <Image
                 src={teamMember.image || "/placeholder-user.jpg"}
                 alt={`Professional headshot of ${teamMember.name}, ${teamMember.role} at Daadras Foundation`}
-                className="w-full h-full object-cover object-top"
+                fill
+                className="object-cover object-top"
                 style={{ objectPosition: "top center" }}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
               />
             </div>
             
@@ -71,7 +76,7 @@ export function TeamMemberHero({ teamMember }: TeamMemberHeroProps) {
                   aria-label={`View ${teamMember.name}'s LinkedIn profile`}
                   className="flex items-center justify-center w-full"
                 >
-                  <i className="fa-brands fa-linkedin-in h-4 w-4 md:h-5 md:w-5" aria-hidden="true"></i>
+                  <FontAwesomeIcon icon={faLinkedinIn} className="h-4 w-4 md:h-5 md:w-5" aria-hidden="true" />
                 </a>
               </Button>
             </div>

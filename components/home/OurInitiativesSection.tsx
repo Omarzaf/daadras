@@ -11,15 +11,9 @@ import {
   Heart,
   Award,
 } from "lucide-react";
-import {
-  motion,
-  useMotionValue,
-  useTransform,
-  animate,
-  useInView,
-  AnimatePresence,
-} from "framer-motion";
-import { useEffect, useRef, useState, useMemo } from "react";
+import Image from "next/image";
+import { motion, useInView } from "framer-motion";
+import { useRef, useState, useMemo, useEffect } from "react";
 import Link from "next/link";
 
 // Types
@@ -46,41 +40,29 @@ interface InitiativeData {
 // Reusable MetricCard Component
 const MetricCard = ({
   metric,
-  onHover,
-  onLeave,
-  isHovered,
+  chartTriggered,
 }: {
   metric: MetricData;
-  onHover: () => void;
-  onLeave: () => void;
-  isHovered: boolean;
+  chartTriggered: boolean;
 }) => {
   const isFamiliesMetric =
     metric.value === "100+" &&
     metric.label.includes(
       "Families supported with self-sustainability programs"
     );
-  const [hasBeenHovered, setHasBeenHovered] = useState(false);
-
-  const handleMouseEnter = () => {
-    if (isFamiliesMetric) {
-      setHasBeenHovered(true);
-    }
-    onHover();
-  };
 
   return (
     <motion.div
       whileHover={{ scale: 1.02, y: -2 }}
       animate={
-        isFamiliesMetric && !hasBeenHovered
+        isFamiliesMetric && !chartTriggered
           ? {
               y: [0, -7, 0],
             }
           : undefined
       }
       transition={
-        isFamiliesMetric && !hasBeenHovered
+        isFamiliesMetric && !chartTriggered
           ? {
               duration: 2,
               repeat: Infinity,
@@ -88,9 +70,7 @@ const MetricCard = ({
             }
           : undefined
       }
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={onLeave}
-      className="relative overflow-hidden bg-gradient-to-br from-[#0F443F]/10 to-[#0F443F]/5 rounded-lg p-4 border border-[#0F443F]/20 group cursor-pointer"
+      className="relative overflow-hidden bg-gradient-to-br from-[#0F443F]/10 to-[#0F443F]/5 rounded-lg p-4 border border-[#0F443F]/20 group"
     >
       <div className="relative z-10">
         <div className="text-xl font-bold text-[#0F443F] mb-1">
@@ -108,9 +88,11 @@ const MetricCard = ({
 const AnimatedChart = ({
   hoveredMetric,
   metrics,
+  chartTriggered,
 }: {
   hoveredMetric: string | null;
   metrics: MetricData[];
+  chartTriggered: boolean;
 }) => {
   const [hoveredMetrics, setHoveredMetrics] = useState<Set<string>>(new Set());
 
@@ -129,6 +111,14 @@ const AnimatedChart = ({
       setHoveredMetrics((prev) => new Set([...prev, hoveredMetric]));
     }
   }, [hoveredMetric]);
+
+  // Auto-trigger all metrics when chart is triggered
+  useEffect(() => {
+    if (chartTriggered) {
+      const allMetricIds = metrics.map(metric => metric.id);
+      setHoveredMetrics(new Set(allMetricIds));
+    }
+  }, [chartTriggered, metrics]);
 
   return (
     <div
@@ -151,7 +141,7 @@ const AnimatedChart = ({
                   className="mb-2 text-sm font-semibold text-primary text-center"
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                  transition={{ duration: 0.8, delay: 0.6 + index * 0.2 }}
                 >
                   {metric.value}
                 </motion.div>
@@ -165,9 +155,9 @@ const AnimatedChart = ({
                   opacity: shouldShow ? 1 : 0,
                 }}
                 transition={{
-                  duration: 0.8,
+                  duration: 1.2,
                   ease: [0.25, 0.1, 0.25, 1],
-                  delay: index * 0.1,
+                  delay: index * 0.2,
                 }}
               />
             </motion.div>
@@ -203,13 +193,12 @@ const InitiativeCard = ({
 
 export const OurInitiativesSection = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, threshold: 0.3 });
-  const count = useMotionValue(0);
-  const rounded = useTransform(count, (latest) => Math.round(latest));
+  const isInView = useInView(ref, { once: true });
   const [hoveredMetric, setHoveredMetric] = useState<string | null>(null);
   const [hoveredEmergencyMetric, setHoveredEmergencyMetric] = useState<
     string | null
   >(null);
+  const [chartTriggered, setChartTriggered] = useState(false);
 
   // Memoized data with logarithmic scaling for proportional chart representation
   const metrics = useMemo<MetricData[]>(
@@ -306,16 +295,21 @@ export const OurInitiativesSection = () => {
     [hoveredEmergencyMetric, emergencyImages]
   );
 
+  // Trigger chart animation when component comes into view
   useEffect(() => {
-    if (isInView) {
-      const controls = animate(count, 111, {
-        duration: 2,
-        delay: 0.5,
-        ease: "easeOut",
-      });
-      return controls.stop;
+    if (isInView && !chartTriggered) {
+      // Add a delay before starting the animation to ensure user can see it
+      setTimeout(() => {
+        setChartTriggered(true);
+        // Trigger all metrics to show in chart with slower stagger
+        metrics.forEach((metric, index) => {
+          setTimeout(() => {
+            setHoveredMetric(metric.id);
+          }, 500 + (index * 400)); // Start after 500ms, then stagger every 400ms
+        });
+      }, 800); // Wait 800ms after component is in view
     }
-  }, [isInView, count]);
+  }, [isInView, chartTriggered, metrics]);
 
   return (
     <section className="py-8 md:py-16 lg:py-24 bg-white" ref={ref}>
@@ -409,11 +403,13 @@ export const OurInitiativesSection = () => {
             </div>
 
             <div className="relative">
-              <div className="aspect-square bg-muted rounded-2xl overflow-hidden">
-                <img
+              <div className="aspect-square bg-muted rounded-2xl overflow-hidden relative">
+                <Image
                   src="/drive/project_salam1.webp"
                   alt="Project Salam activities"
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
                 />
               </div>
               <motion.div
@@ -433,7 +429,7 @@ export const OurInitiativesSection = () => {
                     transition={{ duration: 0.5, delay: 1.5 }}
                     className="text-2xl sm:text-3xl font-bold text-primary"
                   >
-                    <motion.span>{rounded}</motion.span>+
+                    <motion.span>111</motion.span>+
                   </motion.div>
                   <div className="text-xs sm:text-sm text-muted-foreground">
                     Students Impacted
@@ -501,13 +497,12 @@ export const OurInitiativesSection = () => {
                               }}
                             ></div>
 
-                            {/* Animated Chart */}
-                            <AnimatePresence>
-                              <AnimatedChart
-                                hoveredMetric={hoveredMetric}
-                                metrics={metrics}
-                              />
-                            </AnimatePresence>
+                            {/* Simplified Chart */}
+                            <AnimatedChart
+                              hoveredMetric={hoveredMetric}
+                              metrics={metrics}
+                              chartTriggered={chartTriggered}
+                            />
 
                             {/* Hover display */}
                             {/* Removed hovered metric overlay from top-right as requested */}
@@ -540,9 +535,7 @@ export const OurInitiativesSection = () => {
                           <MetricCard
                             key={metric.id}
                             metric={metric}
-                            onHover={() => setHoveredMetric(metric.id)}
-                            onLeave={() => setHoveredMetric(null)}
-                            isHovered={hoveredMetric === metric.id}
+                            chartTriggered={chartTriggered}
                           />
                         ))}
                       </div>
@@ -633,25 +626,15 @@ export const OurInitiativesSection = () => {
                 {/* Image Section */}
                 <div className="lg:col-span-2 relative h-80 lg:h-96 bg-gradient-to-br from-accent/10 to-accent/5 overflow-hidden order-1 lg:order-2 rounded-l-lg">
                   <div className="relative w-full h-full">
-                    <AnimatePresence>
-                      {initiatives[1].image && (
-                        <motion.img
-                          key={initiatives[1].image}
-                          src={initiatives[1].image}
-                          alt={initiatives[1].title}
-                          className="absolute inset-0 w-full h-full object-cover object-center"
-                          initial={{ opacity: 0 }}
-                          animate={{
-                            opacity: 0.9,
-                          }}
-                          exit={{ opacity: 0 }}
-                          transition={{
-                            duration: 0.3,
-                            ease: "easeInOut",
-                          }}
-                        />
-                      )}
-                    </AnimatePresence>
+                    {initiatives[1].image && (
+                      <Image
+                        src={initiatives[1].image}
+                        alt={initiatives[1].title}
+                        fill
+                        className="object-cover object-center opacity-90"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
+                      />
+                    )}
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-transparent pointer-events-none"></div>
                 </div>

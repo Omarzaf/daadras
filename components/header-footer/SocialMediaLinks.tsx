@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedinIn, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { SOCIAL_MEDIA_LINKS } from "@/lib/socialMedia";
 
 //Made a reusable component here for social media links
@@ -14,7 +16,7 @@ export function SocialLinks({ waysToGive = false }: { waysToGive?: boolean }) {
         rel="noopener noreferrer"
         className="p-2 text-primary hover:text-accent transition-colors duration-200 ease-out"
       >
-        <i className="fa-brands fa-linkedin-in h-5 w-5"></i>
+        <FontAwesomeIcon icon={faLinkedinIn} className="h-5 w-5" />
       </Link>
       <Link
         href={SOCIAL_MEDIA_LINKS.instagram}
@@ -22,7 +24,7 @@ export function SocialLinks({ waysToGive = false }: { waysToGive?: boolean }) {
         rel="noopener noreferrer"
         className="p-2 text-primary hover:text-accent transition-colors"
       >
-        <i className="fa-brands fa-instagram h-5 w-5"></i>
+        <FontAwesomeIcon icon={faInstagram} className="h-5 w-5" />
       </Link>
     </div>
   );

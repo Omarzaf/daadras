@@ -1,0 +1,13 @@
+// Barrel exports for UI components to optimize bundle size
+export { Button, buttonVariants } from "./button"
+export { Badge, badgeVariants } from "./badge"
+export { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "./card"
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "./accordion"
+export { ReportCard } from "./report-card"
+export { ViewAllButton } from "./view-all-button"
+export { Marquee, PartnerLogo } from "./marquee"
+export { NoArticles } from "./no-articles"
+export { NoReports } from "./no-reports"
+export { NoOpportunities } from "./no-opportunities"
+export { ShareDropdown } from "./share-dropdown"
+export { SuggestedRead } from "./suggested-read"

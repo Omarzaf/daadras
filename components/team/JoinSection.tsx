@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { MapPin, Users } from "lucide-react"
+import { MapPin, Users, Briefcase, Heart } from "lucide-react"
 import { motion } from "framer-motion"
 
 export function JoinSection() {
@@ -48,11 +48,11 @@ export function JoinSection() {
 
             <div className="flex gap-2">
               <Button size="sm" variant="outline" className="flex-1 bg-transparent">
-                <i className="fa-solid fa-briefcase h-4 w-4 mr-2"></i>
+                <Briefcase className="h-4 w-4 mr-2" />
                 View Positions
               </Button>
               <Button size="sm" variant="outline" className="flex-1 bg-transparent">
-                <i className="fa-solid fa-heart h-4 w-4 mr-2"></i>
+                <Heart className="h-4 w-4 mr-2" />
                 Volunteer
               </Button>
             </div>

@@ -130,6 +130,7 @@ export default function PhotoGalleryCarousel() {
                       width={400}
                       height={320}
                       className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
@@ -175,13 +176,15 @@ export default function PhotoGalleryCarousel() {
               exit={{ scale: 0.8, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
             >
-              <Image
-                src={photos[modalIndex].src}
-                alt={photos[modalIndex].alt}
-                width={800}
-                height={600}
-                className="w-full h-full object-contain rounded-lg"
-              />
+              <div className="relative w-full h-[90vh]">
+                <Image
+                  src={photos[modalIndex].src}
+                  alt={photos[modalIndex].alt}
+                  fill
+                  className="object-contain rounded-lg"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"
+                />
+              </div>
               
               {/* Modal Controls */}
               <Button
