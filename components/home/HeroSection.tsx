@@ -129,7 +129,6 @@ export const HeroSection = () => {
                     href="https://www.youtube.com/watch?v=uu0VXYj_y_A"
                     target="_blank"
                     rel="noopener noreferrer"
-                    tabIndex={showContent ? 0 : -1}
                   >
                     <Button
                       size="lg"
@@ -146,7 +145,7 @@ export const HeroSection = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <Link href="/about/our-story" tabIndex={showContent ? 0 : -1}>
+                  <Link href="/about/our-story">
                     <Button
                       size="lg"
                       className="bg-primary hover:bg-primary/90 text-primary-foreground"
