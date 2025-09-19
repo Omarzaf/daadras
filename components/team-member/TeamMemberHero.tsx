@@ -29,11 +29,11 @@ export function TeamMemberHero({ teamMember }: TeamMemberHeroProps) {
         <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-start">
           {/* Image Section - Left with Contact Buttons Below */}
           <div className="order-1 lg:order-1 space-y-4 md:space-y-6 lg:space-y-8">
-            <div className="w-full h-64 sm:h-72 md:h-80 lg:h-96 bg-gray-100 rounded-xl md:rounded-2xl overflow-hidden shadow-lg md:shadow-xl hover:shadow-xl md:hover:shadow-2xl transition-all duration-500 group">
+            <div className="w-full h-64 sm:h-72 md:h-80 lg:h-96 bg-gray-100 rounded-xl md:rounded-2xl overflow-hidden shadow-lg md:shadow-xl">
               <img
                 src={teamMember.image || "/placeholder-user.jpg"}
                 alt={`Professional headshot of ${teamMember.name}, ${teamMember.role} at Daadras Foundation`}
-                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover object-top"
                 style={{ objectPosition: "top center" }}
               />
             </div>
@@ -42,7 +42,7 @@ export function TeamMemberHero({ teamMember }: TeamMemberHeroProps) {
             <div className="flex gap-3 md:gap-4">
               <Button 
                 size="lg" 
-                className="bg-primary hover:bg-primary/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 flex-1 flex items-center justify-center hover:-translate-y-1 text-sm md:text-base" 
+                className="bg-primary hover:bg-primary/90 text-white shadow-lg text-sm md:text-base flex-1 flex items-center justify-center" 
                 onClick={copyEmailToClipboard}
                 aria-label={`Copy ${teamMember.name}'s email to clipboard`}
               >
@@ -61,7 +61,7 @@ export function TeamMemberHero({ teamMember }: TeamMemberHeroProps) {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-primary text-primary hover:bg-primary hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 flex-1 flex items-center justify-center hover:-translate-y-1" 
+                className="border-primary text-primary hover:bg-primary hover:text-white shadow-lg flex-1 flex items-center justify-center" 
                 asChild
               >
                 <a 
@@ -79,10 +79,10 @@ export function TeamMemberHero({ teamMember }: TeamMemberHeroProps) {
           </div>
 
           {/* Content Section - Right */}
-          <div className="order-2 lg:order-2 space-y-4 md:space-y-6 animate-in slide-in-from-right-4 duration-700">
+          <div className="order-2 lg:order-2 space-y-4 md:space-y-6">
             {/* Clear Hierarchy: Name > Role > Bio */}
             <div className="space-y-2 md:space-y-3">
-              <div className="flex flex-wrap gap-2 animate-in fade-in-50 slide-in-from-top-4 duration-500">
+              <div className="flex flex-wrap gap-2">
                 {teamMember.department.map((dept, index) => (
                   <Badge key={index} className="bg-primary/10 text-primary text-xs md:text-sm px-3 md:px-4 py-1 md:py-2 w-fit">
                     {dept}
@@ -90,20 +90,20 @@ export function TeamMemberHero({ teamMember }: TeamMemberHeroProps) {
                 ))}
               </div>
               
-              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-foreground font-[family-name:var(--font-space-grotesk)] animate-in fade-in-50 slide-in-from-top-4 duration-500" style={{ animationDelay: '100ms' }}>
+              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-foreground font-[family-name:var(--font-space-grotesk)]">
                 {teamMember.name}
               </h1>
               
-              <p className="text-base md:text-lg lg:text-xl text-primary font-medium animate-in fade-in-50 slide-in-from-top-4 duration-500" style={{ animationDelay: '200ms' }}>
+              <p className="text-base md:text-lg lg:text-xl text-primary font-medium">
                 {teamMember.role}
               </p>
               
-              <div className="flex items-center gap-2 text-muted-foreground animate-in fade-in-50 slide-in-from-top-4 duration-500" style={{ animationDelay: '300ms' }}>
+              <div className="flex items-center gap-2 text-muted-foreground">
                 <MapPin className="h-3 w-3 md:h-4 md:w-4 flex-shrink-0" aria-hidden="true" />
                 <span className="text-sm md:text-base">{teamMember.location}</span>
               </div>
               
-              <div className="flex items-center gap-2 text-muted-foreground animate-in fade-in-50 slide-in-from-top-4 duration-500" style={{ animationDelay: '350ms' }}>
+              <div className="flex items-center gap-2 text-muted-foreground">
                 <Calendar className="h-3 w-3 md:h-4 md:w-4 flex-shrink-0" aria-hidden="true" />
                 <span className="text-sm md:text-base">
                   {teamMember.tenure_start} - {teamMember.tenure_end}
@@ -112,7 +112,7 @@ export function TeamMemberHero({ teamMember }: TeamMemberHeroProps) {
             </div>
 
             {/* Complete Bio */}
-            <div className="space-y-3 md:space-y-4 animate-in fade-in-50 slide-in-from-top-4 duration-500" style={{ animationDelay: '400ms' }}>
+            <div className="space-y-3 md:space-y-4">
               <p className="text-muted-foreground leading-relaxed text-sm md:text-base lg:text-lg">
                 {fullBio}
               </p>

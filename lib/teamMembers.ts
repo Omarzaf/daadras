@@ -72,8 +72,8 @@ export const teamMembers = [
     email: "sawaizn8@gmail.com",
     location: "Lahore, Pakistan",
     joining_story: [
-      "Coming from a less privileged background, I know firsthand how tough it can be for kids in underserved communities, and for a long time, financial and health struggles kept me from helping the way I wanted to. ",
-      "After graduation, when Umar, the CEO of Daadras, asked if I'd teach a few kids on weekends, I jumped at it — and what started as a small effort quickly turned into something bigger as I saw the real impact, not just on their academics but on their confidence and dreams. That experience pulled me deeper into Project Salam, where I eventually joined full-time."
+      "Coming from a less privileged background, I know firsthand how tough it can be for kids in underserved communities.", 
+      "For a long time, financial and health struggles kept me from helping the way I wanted to, so after graduation, when Umar, the CEO of Daadras, asked if I'd teach a few kids on weekends, I jumped at it — and what started as a small effort quickly turned into something bigger as I saw the real impact, not just on their academics but on their confidence and dreams. That experience pulled me deeper into Project Salam, where I eventually joined full-time."
     ],
     role_description: [
       "At Project Salam, Sawaiz leads IT education, training volunteers to deliver the curriculum with Salam's unique approach. Beyond teaching, he drives tech initiatives including building the Daadras Application Tracking System for volunteer recruitment, the Student Database to monitor children's progress, and the Daadras Website to enhance the organization's digital presence and outreach."
@@ -129,7 +129,7 @@ export const teamMembers = [
     email: "mariamnaqvi338@gmail.com",
     location: "Lahore, Pakistan",
     joining_story: [
-      "Growing up in a village, I saw how easily a child’s potential could be dimmed by the absence of opportunity. That’s why every summer I gather girls from my neighbourhood and teach them the basics—how to write their names, count numbers, and read their first words. For them, holding a pencil is a quiet revolution, and for me, their smiles are a reminder of why I chose this path. I know what it feels like to be on their side of the story, waiting for someone to notice your potential, because I was once that kid. Now I want to be that someone for others. That’s why I joined Daadras: because I’ve seen how one spark can change a life, and Daadras is creating sparks that can light up entire communities."
+      "Growing up in a village, I saw how easily a child's potential could be dimmed by the absence of opportunity. That’s why every summer I gather girls from my neighbourhood and teach them the basics—how to write their names, count numbers, and read their first words. For them, holding a pencil is a quiet revolution, and for me, their smiles are a reminder of why I chose this path. I know what it feels like to be on their side of the story, waiting for someone to notice your potential, because I was once that kid. Now I want to be that someone for others. That’s why I joined Daadras: because I’ve seen how one spark can change a life, and Daadras is creating sparks that can light up entire communities."
     ],
     role_description: [
       "As a Research Assistant at Daadras, Mariam supports research initiatives focused on development economics and policy. She contributes to data collection, analysis, and the development of strategies that help Daadras better serve underprivileged communities."

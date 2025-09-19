@@ -13,7 +13,7 @@ export function BreadcrumbNavigation({ teamMember }: BreadcrumbNavigationProps) 
         <li>
           <Link 
             href="/" 
-            className="flex items-center hover:text-primary transition-colors"
+            className="flex items-center hover:text-primary"
           >
             <Home className="h-3 w-3 md:h-4 md:w-4 mr-1 flex-shrink-0" />
             <span className="hidden sm:inline">Home</span>
@@ -27,7 +27,7 @@ export function BreadcrumbNavigation({ teamMember }: BreadcrumbNavigationProps) 
         <li>
           <Link 
             href="/our-team" 
-            className="hover:text-primary transition-colors"
+            className="hover:text-primary"
           >
             <span className="hidden sm:inline">Our Team</span>
             <span className="sm:hidden">Team</span>
