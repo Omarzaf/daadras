@@ -7,7 +7,7 @@ export const teamMembers = [
     education: "Candidate of Masters at Johns Hopkins SAIS ",
     tenure_start: "January 2020",
     tenure_end: "Present",
-    bio: [""],
+    bio: ["Muhammad Umar Zafar founded Daadras Foundation in 2020 to break cycles of poverty through education and empowerment. He holds a BA in Political Science and Sociology and is pursuing an MA in International Relations at Johns Hopkins SAIS, focusing on governance and emerging technologies. Recognized through the SAIS Public Service Fellowship, Foreign Policy Institute Research Assistantship, Mercatus Center Frederic Bastiat Fellowship, Umar bridges global policy with grassroots impact, steering Daadras toward innovation, dignity, and long-term sustainability."],
     image: "/team_photos/ceo_umer.webp",
     linkedin: "https://www.linkedin.com/in/umarzafar1/",
     email: "umar@daadras.org",
@@ -118,6 +118,29 @@ export const teamMembers = [
       "As Director of Marketing and Media, Duaa leads the development and execution of marketing strategies, manages media outreach, and forges partnerships to enhance the visibility and impact of Daadras Foundation. She leverages her expertise in stakeholder engagement and relationship building to drive the organization's growth and foster meaningful collaborations."
     ]
   },
+  {
+    id: "nabeeha-irfan",
+    name: "Nabeeha Irfan",
+    role: "Head of Human Resources",
+    department: ["Administration"],
+    education: "BS in Applied Psychology with a minor in Education from Forman Christian College, Lahore",
+    tenure_start: "September 2025",
+    tenure_end: "Present",
+    bio: [
+      "Nabeeha Irfan is pursuing a BS in Applied Psychology with a minor in Education from Forman Christian College. She has clinical training from Ittefaq Hospital, where she assisted in patient assessments, history-taking, and crisis interventions under senior psychologists."
+    ],
+    image: "/team_photos/head_hr_nabeeha_irfan.webp",
+    linkedin: "https://www.linkedin.com/in/nabeeha-irfan-91a357316?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    email: "daadrashr@gmail.com",
+    location: "Lahore, Pakistan",
+    joining_story: [
+      "Driven by a desire to apply my knowledge beyond the classroom, I joined Daadras because I wanted to use the skills and education I was gaining to make a tangible difference for underprivileged communities. I saw Daadras as the best stepping stone toward this goal, providing me with the opportunity to merge psychology with social impact. Starting as an SEL Observer, I went on to serve as Assistant Director of Project Salam, and now lead as Head of Human Resources, where I combine my expertise in psychology with organizational leadership to foster meaningful community change."
+    ],
+    role_description: [
+      "As Head of Human Resources at Daadras, Nabeeha leverages her background in psychology and education to lead recruitment, training, and well-being initiatives for staff and volunteers. She ensures a supportive and growth-oriented environment, integrating psychological insights into HR practices to maximize team effectiveness and community impact."
+    ]
+  },
+
   {
     id: "syeda-mariam-naqvi",
     name: "Syeda Mariam Naqvi",
@@ -232,21 +255,23 @@ export const teamMembers = [
     education: "Bachelor's in Computer Science from FAST NUCES, Lahore",
     tenure_start: "September 2025",
     tenure_end: "Present",
-    bio: ["Zafir Ahmed is a dedicated Computer Science student with a strong interest in leveraging technology for social good. He has experience in software development, IT support, and digital literacy training. He is passionate about using his technical skills to bridge the digital divide and empower underserved communities through innovative solutions."],
+    bio: [
+      "Zafir Ahmed is a dedicated Computer Science student with a strong interest in leveraging technology for social good. He has experience in software development, IT support, and digital literacy training. He is passionate about using his technical skills to bridge the digital divide and empower underserved communities through innovative solutions."
+    ],
     image: "/team_photos/deputy_it_zafir_ahmed.webp",
     linkedin: "https://www.linkedin.com/in/zafir-ahmed-145478277/",
     email: "",
     location: "Lahore, Pakistan",
-    joining_story: [
-    ],
+    joining_story: [    ],
     role_description: [
+      "As Deputy Director IT at Daadras, Zafir supports the planning, implementation, and maintenance of the organization's technology infrastructure. He assists in developing and managing digital learning platforms, provides IT support for staff and volunteers, and helps design and deliver digital literacy workshops as part of Project Salam. Zafir also collaborates on software projects that streamline operations and improve access to educational resources, ensuring that technology is used effectively to empower students and the broader community."
     ]
   },
   {
     id: "abdul-muqadim",
     name: "Abdul Muqadim",
-    role: "Ex Director Marketing",
-    department: ["Previous Members"],
+    role: "Foundational Marketing Director",
+    department: ["Legacy contributors"],
     education: "Bachelor's in Marketing from Forman Christian College, Lahore",
     tenure_start: "August 2023",
     tenure_end: "June 2025",
@@ -266,9 +291,9 @@ export const teamMembers = [
   {
     id: "shanzay-khan",
     name: "Shanzay Khan",
-    role: "Ex Director SEL",
-    department: ["Previous Members"],
-    education: "Bachelor's in Psychology from Kinnaird College, Lahore",
+    role: "Foundational SEL Director",
+    department: ["Legacy contributors"],
+    education: "Bachelor's in Psychology from Kinnaird College For Women University, Lahore",
     tenure_start: "August 2023",
     tenure_end: "August 2025",
     bio: ["Shanzey Khan is a passionate mental health educator and trainee clinical psychologist who believes \"if kids are taken care of, the future is already a bit better.\" She holds a BSc in Psychology and is pursuing her Master's in Clinical Psychology. With over seven years of teaching experience, she specializes in mental health, emotional awareness, and social-emotional learning. She has worked in hospitals, clinics, and NGOs, focusing on children's mental health in underserved communities."],
@@ -283,29 +308,29 @@ export const teamMembers = [
       "As the Director of Social-Emotional Learning (SEL) at Daadras, Shanzey oversaw the development and implementation of SEL initiatives, including within the Salam project, which teaches SEL, IT, public speaking, and strategic gaming to children. She led a team of volunteers, guided the delivery of lessons and activities, and was responsible for designing the curriculum and setting the program's goals and objectives. She also directed the Big Brother program, providing long-term professional and mental mentorship to children from Salam."
     ]
   },
-  {
-    id: "abdullah-farrukh",
-    name: "Abdullah Farrukh",
-    role: "Ex Director Public Speaking",
-    department: ["Previous Members"],
-    education: "Bachelor's in Business Administration from Forman Christian College, Lahore",
-    tenure_start: "August 2023",
-    tenure_end: "August 2025",
-    bio: ["Abdullah Farrukh is an entrepreneur driven by resilience and a vision to uplift others through opportunity. From a young age, he knew his path lay in business—a journey marked by launching over a dozen ventures, weathering failures, and celebrating hard-won successes. These experiences taught him that true empowerment isn't about temporary aid but equipping people with skills that last a lifetime."],
-    image: "/team_photos/ex_director_public_speaking_abdullah_farrukh.webp",
-    linkedin: "https://www.linkedin.com/in/abdullah-farrukh-6a8394225/",
-    email: "abdullah@daadras.org",
-    location: "Lahore, Pakistan",
-    joining_story: [
-      "Growing up, my education felt like a series of missed chances. My school and college offered little more than the basics — no spark, no inspiration. But one opportunity changed everything: the 'Access to English Language Program' by the Care Foundation.  Through that program, I discovered public speaking, theater, and Model UNs. Suddenly, I wasn't just memorizing textbooks — I was learning to think, lead, and believe in my own voice. That program, and the mentors I got in my life rewrote my future. Today, I'm who I am because someone invested in my potential.",
-      "When I joined Project Salam, it wasn't just about paying that debt forward. It was about scaling that same transformative power. Here, we don't stop at public speaking. We blend IT, chess, and social-emotional learning to unlock every child's hidden strengths.",
-      "I've seen firsthand how a single skill can break cycles of limitation. Salam's holistic approach means these kids aren't just surviving — they're learning to thrive, innovate, and dream bigger than their circumstances. That's the ripple effect I want to create: not just one success story, but generations of them."
-    ],
-    role_description: [
-      "When Daadras began, Abdullah advocated to bridge the gaps through education and small-business initiatives. He believed skills, not handouts, are the foundation of lasting change. Whether teaching public speaking, guiding new entrepreneurs, or creating learning programs, his focus was always on helping people build their own futures."
-    ]
-  }
-
   
-
 ];
+
+
+// {
+//   id: "abdullah-farrukh",
+//   name: "Abdullah Farrukh",
+//   role: "Ex Director Public Speaking",
+//   department: ["Previous Members"],
+//   education: "Bachelor's in Business Administration from Forman Christian College, Lahore",
+//   tenure_start: "August 2023",
+//   tenure_end: "August 2025",
+//   bio: ["Abdullah Farrukh is an entrepreneur driven by resilience and a vision to uplift others through opportunity. From a young age, he knew his path lay in business—a journey marked by launching over a dozen ventures, weathering failures, and celebrating hard-won successes. These experiences taught him that true empowerment isn't about temporary aid but equipping people with skills that last a lifetime."],
+//   image: "/team_photos/ex_director_public_speaking_abdullah_farrukh.webp",
+//   linkedin: "https://www.linkedin.com/in/abdullah-farrukh-6a8394225/",
+//   email: "abdullah@daadras.org",
+//   location: "Lahore, Pakistan",
+//   joining_story: [
+//     "Growing up, my education felt like a series of missed chances. My school and college offered little more than the basics — no spark, no inspiration. But one opportunity changed everything: the 'Access to English Language Program' by the Care Foundation.  Through that program, I discovered public speaking, theater, and Model UNs. Suddenly, I wasn't just memorizing textbooks — I was learning to think, lead, and believe in my own voice. That program, and the mentors I got in my life rewrote my future. Today, I'm who I am because someone invested in my potential.",
+//     "When I joined Project Salam, it wasn't just about paying that debt forward. It was about scaling that same transformative power. Here, we don't stop at public speaking. We blend IT, chess, and social-emotional learning to unlock every child's hidden strengths.",
+//     "I've seen firsthand how a single skill can break cycles of limitation. Salam's holistic approach means these kids aren't just surviving — they're learning to thrive, innovate, and dream bigger than their circumstances. That's the ripple effect I want to create: not just one success story, but generations of them."
+//   ],
+//   role_description: [
+//     "When Daadras began, Abdullah advocated to bridge the gaps through education and small-business initiatives. He believed skills, not handouts, are the foundation of lasting change. Whether teaching public speaking, guiding new entrepreneurs, or creating learning programs, his focus was always on helping people build their own futures."
+//   ]
+// }
