@@ -7,11 +7,12 @@ import { MapPin, Calendar, GraduationCap } from "lucide-react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons"
 import { motion } from "framer-motion"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { teamMembers } from "@/lib/teamMembers"
 import { TeamMember } from "@/types"
 import { useRouter } from "next/navigation"
-import Image from "next/image"
+import { OptimizedTeamImage } from "./OptimizedTeamImage"
+import { preloadTeamImages } from "@/lib/imageCache"
 
 type Props = {
   selectedDepartment: string
@@ -33,6 +34,26 @@ export function TeamGrid({ selectedDepartment }: Props) {
     ? teamMembers
     : teamMembers.filter((m) => m.department.includes(selectedDepartment))
 
+  // Preload images for better performance
+  useEffect(() => {
+    // Preload critical images immediately using link preload
+    const criticalImages = filtered.slice(0, 6).map(member => member.image || "/placeholder-user.jpg")
+    
+    criticalImages.forEach((src, index) => {
+      const link = document.createElement('link')
+      link.rel = 'preload'
+      link.as = 'image'
+      link.href = src
+      link.fetchPriority = index < 3 ? 'high' : 'low'
+      document.head.appendChild(link)
+    })
+
+    // Background preload of additional images with delay
+    setTimeout(() => {
+      preloadTeamImages(filtered)
+    }, 100)
+  }, [filtered])
+
 
   return (
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -53,34 +74,14 @@ export function TeamGrid({ selectedDepartment }: Props) {
             className="h-full hover:shadow-xl transition-all duration-300 border-0 shadow-md group-hover:shadow-2xl overflow-hidden cursor-pointer"
             onClick={() => handleCardClick(member.id)}
           >
-            <div className="relative">
-              <div className="w-full h-56 md:h-80 bg-gray-100 flex items-center justify-center overflow-hidden relative">
-                {/* Loading skeleton */}
-                {!imagesLoaded[member.id] && (
-                  <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
-                    <div className="w-16 h-16 bg-gray-300 rounded-full"></div>
-                  </div>
-                )}
-                <Image
-                  src={member.image || "/placeholder-user.jpg"}
-                  alt={member.name}
-                  fill
-                  className={`object-cover object-top group-hover:scale-105 transition-transform duration-300 ${
-                    imagesLoaded[member.id] ? 'opacity-100' : 'opacity-0'
-                  }`}
-                  style={{ objectPosition: "top center" }}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  loading={index < 6 ? "eager" : "lazy"}
-                  priority={index < 3}
-                  placeholder="blur"
-                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
-                  onLoad={() => handleImageLoad(member.id)}
-                />
-                {/* Hover overlay */}
-                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <span className="text-white font-medium text-lg">View Profile</span>
-                </div>
-              </div>
+            <div className="relative group">
+              <OptimizedTeamImage
+                src={member.image || "/placeholder-user.jpg"}
+                alt={member.name}
+                memberId={member.id}
+                index={index}
+                onLoad={handleImageLoad}
+              />
             </div>
 
             <CardContent className="p-4 flex flex-col h-full">
