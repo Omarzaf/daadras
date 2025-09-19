@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { SocialLinks } from "./SocialMediaLinks";
@@ -48,7 +49,7 @@ export default function Navigation() {
     if (!keyboardFocus) {
       timeoutRef.current = setTimeout(() => {
         setActiveDropdown(null);
-      }, 150);
+      }, 100); // Reduced timeout for faster response
     }
   };
 
@@ -61,14 +62,17 @@ export default function Navigation() {
     setTimeout(() => {
       setKeyboardFocus(false);
       setActiveDropdown(null);
-    }, 150);
+    }, 100); // Reduced timeout for faster response
   };
 
   const handleDropdownClick = (dropdown: TSection) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
 
-  const handleLinkClick = () => {
+  const handleLinkClick = (e: React.MouseEvent) => {
+    // Prevent event bubbling to avoid conflicts
+    e.stopPropagation();
+    
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
       timeoutRef.current = null;
@@ -101,10 +105,12 @@ export default function Navigation() {
           <div className="flex items-center">
             <Link href="/">
               <div className="w-fit h-[49px] flex items-center gap-3 mr-5">
-                <img
+                <Image
                   src="/green_logo.svg"
                   alt="Daadras Logo"
-                  className="h-6 w-6"
+                  width={24}
+                  height={24}
+                  priority
                 />
                 <h1 className="text-2xl font-bold text-primary font-space-grotesk">
                   Daadras
@@ -182,11 +188,13 @@ export default function Navigation() {
                         </Link>
                       </div>
                       <div className="flex flex-col">
-                        <div className="aspect-[16/9] bg-gray-100 mb-2 overflow-hidden rounded-md">
-                          <img
+                        <div className="aspect-[16/9] bg-gray-100 mb-2 overflow-hidden rounded-md relative">
+                          <Image
                             src="/drive/community_build.jpg"
                             alt="Our team working together for change"
-                            className="w-full h-full object-cover"
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                           />
                         </div>
                         <p
@@ -265,11 +273,13 @@ export default function Navigation() {
                         </Link>
                       </div>
                       <div className="flex flex-col">
-                        <div className="aspect-[16/9] bg-gray-100 mb-2 overflow-hidden rounded-md">
-                          <img
+                        <div className="aspect-[16/9] bg-gray-100 mb-2 overflow-hidden rounded-md relative">
+                          <Image
                             src="/drive/kids_studying.jpg"
                             alt="Latest updates from our initiatives"
-                            className="w-full h-full object-cover"
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                           />
                         </div>
                         <p
@@ -379,11 +389,13 @@ export default function Navigation() {
                         </Link>
                       </div>
                       <div className="flex flex-col">
-                        <div className="aspect-[16/9] bg-gray-100 mb-2 overflow-hidden rounded-md">
-                          <img
+                        <div className="aspect-[16/9] bg-gray-100 mb-2 overflow-hidden rounded-md relative">
+                          <Image
                             src="/drive/help_charity_kids.webp"
                             alt="Supporting communities through our initiatives"
-                            className="w-full h-full object-cover"
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                           />
                         </div>
                         <p
@@ -470,11 +482,13 @@ export default function Navigation() {
                         </Link>
                       </div>
                       <div className="flex flex-col">
-                        <div className="aspect-[16/9] bg-gray-100 mb-2 overflow-hidden rounded-md">
-                          <img
+                        <div className="aspect-[16/9] bg-gray-100 mb-2 overflow-hidden rounded-md relative">
+                          <Image
                             src="/drive/volunteer_wahab.webp"
                             alt="Volunteers making an impact in our community"
-                            className="w-full h-full object-cover"
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                           />
                         </div>
                         <p

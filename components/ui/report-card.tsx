@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Calendar, ArrowRight, Download } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 interface ReportCardProps {
   id: number
@@ -61,14 +62,12 @@ export function ReportCard({
       {/* Thumbnail Card - Left Side */}
       <Card className="group hover:shadow-lg transition-all duration-300 overflow-hidden w-full md:w-80 flex-shrink-0 p-0">
         <div className="relative h-64 md:h-full overflow-hidden">
-          <img 
+          <Image 
             src={thumbnail || "/placeholder.jpg"} 
             alt={title}
-            className="w-full h-full object-cover"
-            onError={(e) => {
-              const target = e.target as HTMLImageElement;
-              target.src = "/placeholder.jpg";
-            }}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
           />
         </div>
       </Card>

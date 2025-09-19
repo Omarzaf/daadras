@@ -8,13 +8,6 @@ export interface BankAccount {
 
 export const bankAccounts: BankAccount[] = [
   {
-    name: "Silk Bank Limited",
-    accountNumber: "00732009302525",
-    iban: "PK26SAUD0000732009302525",
-    title: "Muhammad Asad Zaheer",
-    type: "bank"
-  },
-  {
     name: "JazzCash",
     accountNumber: "03320044001",
     iban: "PK31JCMA0603923320044001",

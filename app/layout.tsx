@@ -35,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${dmSans.variable} antialiased`}>
       <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        {/* FontAwesome now loaded via npm packages only */}
       </head>
       <body className="font-sans overflow-x-hidden">
         <ScrollToTop />

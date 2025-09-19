@@ -3,9 +3,12 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Users, MapPin } from "lucide-react"
+import { Users, MapPin, User } from "lucide-react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons"
 import { teamMembers } from "@/lib/teamMembers"
 import Link from "next/link"
+import Image from "next/image"
 
 export const OurTeamSection = () => {
   // Show only the first 3 team members
@@ -31,12 +34,14 @@ export const OurTeamSection = () => {
           {displayedMembers.map((member) => (
             <Card key={member.id} className="group hover:shadow-lg transition-all duration-300 overflow-hidden h-full">
               <div className="relative">
-                <div className="w-full h-80 bg-gray-100 flex items-center justify-center overflow-hidden">
-                  <img
+                <div className="w-full h-80 bg-gray-100 flex items-center justify-center overflow-hidden relative">
+                  <Image
                     src={member.image || "/placeholder-user.jpg"}
                     alt={member.name}
-                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                    fill
+                    className="object-cover object-top group-hover:scale-105 transition-transform duration-300"
                     style={{ objectPosition: "top center" }}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 </div>
               </div>
@@ -64,13 +69,13 @@ export const OurTeamSection = () => {
                 <div className="flex gap-2">
                   <Button size="sm" variant="outline" className="flex-1 bg-transparent" asChild>
                     <a href={`/our-team/${member.id}`}>
-                      <i className="fa-solid fa-user h-4 w-4 mr-2"></i>
+                      <User className="h-4 w-4 mr-2" />
                       View Profile
                     </a>
                   </Button>
                   <Button size="sm" variant="outline" className="flex-1 bg-transparent" asChild>
                     <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
-                      <i className="fa-brands fa-linkedin-in h-4 w-4 mr-2"></i>
+                      <FontAwesomeIcon icon={faLinkedinIn} className="h-4 w-4 mr-2" />
                       LinkedIn
                     </a>
                   </Button>

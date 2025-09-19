@@ -4,15 +4,48 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
 import { TypewriterText } from "./TypewriterText";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 export const HeroSection = () => {
   const [showContent, setShowContent] = useState(false);
+  const [videoError, setVideoError] = useState(false);
+  const [retryCount, setRetryCount] = useState(0);
+  const [shouldLoadVideo, setShouldLoadVideo] = useState(true);
 
   const handleTypewriterComplete = () => {
     setShowContent(true);
   };
+
+  const handleVideoError = (e: React.SyntheticEvent<HTMLVideoElement, Event>) => {
+    if (retryCount < 1) {
+      setRetryCount(prev => prev + 1);
+      // Retry loading the video
+      const video = e.currentTarget;
+      video.load();
+    } else {
+      setVideoError(true);
+      e.currentTarget.style.display = "none";
+    }
+  };
+
+  const handleVideoCanPlay = (e: React.SyntheticEvent<HTMLVideoElement, Event>) => {
+    e.currentTarget.play().catch(() => {
+      // If autoplay fails, just hide the video and show background
+      setVideoError(true);
+      e.currentTarget.style.display = "none";
+    });
+  };
+
+  useEffect(() => {
+    // Check if device is mobile or has slow connection
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const isSlowConnection = navigator.connection && (navigator.connection.effectiveType === 'slow-2g' || navigator.connection.effectiveType === '2g');
+    
+    if (isMobile || isSlowConnection) {
+      setShouldLoadVideo(false);
+    }
+  }, []);
 
   return (
     <section className="bg-background">
@@ -21,37 +54,35 @@ export const HeroSection = () => {
         style={{ aspectRatio: "1910/600" }}
       >
         <div className="absolute inset-0 bg-primary" />
-        <video
-          key="docu-video"
-          className="w-full h-full object-cover transition-all duration-700 ease-out relative z-10"
-          autoPlay
-          muted
-          loop
-          playsInline
-          controls={false}
-          preload="auto"
-          onLoadedData={(e) => {
-            console.log("Video loaded successfully");
-            e.currentTarget.play().catch(console.error);
-          }}
-          onEnded={(e) => {
-            console.log("Video ended, restarting...");
-            e.currentTarget.currentTime = 0;
-            e.currentTarget.play().catch(console.error);
-          }}
-          onError={(e) => {
-            console.log("Video failed to load:", e);
-            e.currentTarget.style.display = "none";
-          }}
-          onCanPlay={(e) => {
-            e.currentTarget.play().catch(console.error);
-          }}
-        >
-          <source src="/videos/docu.webm" type="video/webm" />
-          <p className="text-white text-center p-8">
-            Your browser does not support the video format.
-          </p>
-        </video>
+        {shouldLoadVideo && (
+          <video
+            key="docu-video"
+            className="w-full h-full object-cover transition-all duration-700 ease-out relative z-10"
+            autoPlay
+            muted
+            loop
+            playsInline
+            controls={false}
+            preload="metadata"
+            width="1910"
+            height="600"
+            onEnded={(e) => {
+              e.currentTarget.currentTime = 0;
+              e.currentTarget.play().catch(() => {
+                setVideoError(true);
+                e.currentTarget.style.display = "none";
+              });
+            }}
+            onError={handleVideoError}
+            onCanPlay={handleVideoCanPlay}
+          >
+            <source src="/videos/docu.webm" type="video/webm" />
+            <source src="/videos/docu.mp4" type="video/mp4" />
+            <p className="text-white text-center p-8">
+              Your browser does not support the video format.
+            </p>
+          </video>
+        )}
 
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80 pointer-events-none z-20" />
 
