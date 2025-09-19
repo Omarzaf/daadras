@@ -79,9 +79,9 @@ export function TeamMemberHero({ teamMember }: TeamMemberHeroProps) {
           </div>
 
           {/* Content Section - Right */}
-          <div className="order-2 lg:order-2 space-y-4 md:space-y-6">
+          <div className="order-2 lg:order-2 space-y-3 md:space-y-4">
             {/* Clear Hierarchy: Name > Role > Bio */}
-            <div className="space-y-2 md:space-y-3">
+            <div className="space-y-1.5 md:space-y-2">
               <div className="flex flex-wrap gap-2">
                 {teamMember.department.map((dept, index) => (
                   <Badge key={index} className="bg-primary/10 text-primary text-xs md:text-sm px-3 md:px-4 py-1 md:py-2 w-fit">
@@ -90,30 +90,30 @@ export function TeamMemberHero({ teamMember }: TeamMemberHeroProps) {
                 ))}
               </div>
               
-              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-foreground font-[family-name:var(--font-space-grotesk)]">
+              <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground font-[family-name:var(--font-space-grotesk)]">
                 {teamMember.name}
               </h1>
               
-              <p className="text-base md:text-lg lg:text-xl text-primary font-medium">
+              <p className="text-sm md:text-base lg:text-lg text-primary font-medium">
                 {teamMember.role}
               </p>
               
-              <div className="flex items-center gap-2 text-muted-foreground">
+              <div className="flex items-center gap-1.5 text-muted-foreground">
                 <MapPin className="h-3 w-3 md:h-4 md:w-4 flex-shrink-0" aria-hidden="true" />
-                <span className="text-sm md:text-base">{teamMember.location}</span>
+                <span className="text-xs md:text-sm">{teamMember.location}</span>
               </div>
               
-              <div className="flex items-center gap-2 text-muted-foreground">
+              <div className="flex items-center gap-1.5 text-muted-foreground">
                 <Calendar className="h-3 w-3 md:h-4 md:w-4 flex-shrink-0" aria-hidden="true" />
-                <span className="text-sm md:text-base">
+                <span className="text-xs md:text-sm">
                   {teamMember.tenure_start} - {teamMember.tenure_end}
                 </span>
               </div>
             </div>
 
             {/* Complete Bio */}
-            <div className="space-y-3 md:space-y-4">
-              <p className="text-muted-foreground leading-relaxed text-sm md:text-base lg:text-lg">
+            <div className="space-y-2 md:space-y-2.5">
+              <p className="text-muted-foreground leading-relaxed text-xs md:text-sm lg:text-base">
                 {fullBio}
               </p>
             </div>
