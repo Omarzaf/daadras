@@ -3,7 +3,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { MapPin, Mail, Check, Calendar } from "lucide-react"
+import { MapPin, Calendar, GraduationCap } from "lucide-react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons"
 import { motion } from "framer-motion"
@@ -19,20 +19,7 @@ type Props = {
 
 export function TeamGrid({ selectedDepartment }: Props) {
   const router = useRouter()
-  const [copiedEmails, setCopiedEmails] = useState<Record<string, boolean>>({})
   const [imagesLoaded, setImagesLoaded] = useState<Record<string, boolean>>({})
-  
-  const copyEmailToClipboard = async (email: string, memberId: string) => {
-    try {
-      await navigator.clipboard.writeText(email)
-      setCopiedEmails(prev => ({ ...prev, [memberId]: true }))
-      setTimeout(() => {
-        setCopiedEmails(prev => ({ ...prev, [memberId]: false }))
-      }, 2000)
-    } catch (err) {
-      console.error('Failed to copy email:', err)
-    }
-  }
 
   const handleCardClick = (memberId: string) => {
     router.push(`/our-team/${memberId}`)
@@ -67,7 +54,7 @@ export function TeamGrid({ selectedDepartment }: Props) {
             onClick={() => handleCardClick(member.id)}
           >
             <div className="relative">
-              <div className="w-full h-80 bg-gray-100 flex items-center justify-center overflow-hidden relative">
+              <div className="w-full h-56 md:h-80 bg-gray-100 flex items-center justify-center overflow-hidden relative">
                 {/* Loading skeleton */}
                 {!imagesLoaded[member.id] && (
                   <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
@@ -96,7 +83,7 @@ export function TeamGrid({ selectedDepartment }: Props) {
               </div>
             </div>
 
-            <CardContent className="p-6">
+            <CardContent className="p-4 flex flex-col h-full">
               <div className="flex flex-wrap gap-1 mb-2">
                 {member.department.map((dept, index) => (
                   <Badge key={index} className="bg-primary/10 text-primary w-fit text-xs">
@@ -109,49 +96,41 @@ export function TeamGrid({ selectedDepartment }: Props) {
               </h3>
               <p className="text-primary font-medium mb-2">{member.role}</p>
 
-              <div className="flex items-center gap-1 text-sm text-muted-foreground mb-2">
+              <div className="flex items-center gap-1 text-xs text-muted-foreground mb-2">
                 <MapPin className="h-3 w-3" />
                 <span>{member.location}</span>
               </div>
 
-              <div className="flex items-center gap-1 text-sm text-muted-foreground mb-4">
+              <div className="flex items-center gap-1 text-xs text-muted-foreground mb-2">
                 <Calendar className="h-3 w-3" />
                 <span>{member.tenure_start} - {member.tenure_end}</span>
               </div>
 
-              <p className="text-sm text-muted-foreground mb-6 line-clamp-3">{member.bio.join(' ')}</p>
+              <div className="flex items-start gap-1 text-xs text-muted-foreground mb-4 min-h-[2.5rem]">
+                <GraduationCap className="h-3 w-3 mt-0.5 flex-shrink-0" />
+                <span className="line-clamp-2">{member.education}</span>
+              </div>
 
-              <div className="flex gap-2">
+              <div className="mt-auto flex gap-2">
                 <Button 
                   size="sm" 
-                  className="flex-1 bg-primary hover:bg-primary/90 text-white" 
+                  className="flex-1 bg-primary hover:bg-accent text-white" 
                   onClick={(e) => {
                     e.stopPropagation()
-                    copyEmailToClipboard(member.email, member.id)
+                    handleCardClick(member.id)
                   }}
                 >
-                  {copiedEmails[member.id] ? (
-                    <>
-                      <Check className="h-4 w-4 mr-2" />
-                      Copied!
-                    </>
-                  ) : (
-                    <>
-                      <Mail className="h-4 w-4 mr-2" />
-                      Email
-                    </>
-                  )}
+                  View Profile
                 </Button>
                 <Button 
                   size="sm" 
                   variant="outline" 
-                  className="flex-1 bg-transparent" 
+                  className="!bg-transparent !border-gray-300 hover:!bg-gray-100 hover:!border-gray-400 hover:!text-foreground transition-colors duration-200" 
                   asChild
                   onClick={(e) => e.stopPropagation()}
                 >
                   <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faLinkedinIn} className="h-4 w-4 mr-2" />
-                    LinkedIn
+                    <FontAwesomeIcon icon={faLinkedinIn} className="h-4 w-4" />
                   </a>
                 </Button>
               </div>
