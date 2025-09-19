@@ -43,7 +43,7 @@ export const DEPARTMENTS = {
   STRATEGIC_GAMING: "Strategic Gaming",
   INFORMATION_TECHNOLOGY: "Information Technology",
   MARKETING: "Marketing",
-  PREVIOUS_MEMBERS: "Previous Members",
+  LEGACY_CONTRIBUTORS: "Legacy contributors",
   PUBLIC_SPEAKING: "Public Speaking",
   SOCIAL_EMOTIONAL_LEARNING: "Social Emotional Learning"
 } as const;
@@ -60,10 +60,10 @@ export const getAllDepartments = (teamMembers: any[]): string[] => {
   });
   
   const departmentArray = Array.from(departments);
-  const sortedDepartments = departmentArray.filter(dept => dept !== "Previous Members").sort();
-  const previousMembersExists = departmentArray.includes("Previous Members");
+  const sortedDepartments = departmentArray.filter(dept => dept !== "Legacy contributors").sort();
+  const previousMembersExists = departmentArray.includes("Legacy contributors");
   
-  return previousMembersExists ? [...sortedDepartments, "Previous Members"] : sortedDepartments;
+  return previousMembersExists ? [...sortedDepartments, "Legacy contributors"] : sortedDepartments;
 };
 
 // Helper function to get department tags for filtering

@@ -100,24 +100,7 @@ export const teamMembers = [
       "At Daadras, Sarmad serves as the Head of Strategic Gaming. He designs and leads programs that use chess and other strategic games to strengthen critical thinking, decision-making, emotional regulation, and resilience among orphans enrolled in the Salam Project. His work ensures that strategic play becomes a tool for real-world empowerment, providing children with essential life skills that extend far beyond the game itself."
     ]
   },
-  {
-    id: "duaa-tahir",
-    name: "Duaa Tahir",
-    role: "Director Marketing and Media",
-    department: ["Administration", "Marketing and Media"],
-    education: "Bachelor's in Sociology and English Literature from Forman Christian College, Lahore",
-    tenure_start: "September 2025",
-    tenure_end: "Present",
-    bio: ["As a Sociology and Literature major with a deep passion for community impact, Duaa is committed to giving back to society in meaningful ways. With three years of experience in partnerships and outreach, she brings a strong understanding of stakeholder engagement, relationship building, and strategic collaboration. She believes her background uniquely positions her to contribute to the growth and expansion of the Daadras Foundation."],
-    image: "/team_photos/director_marketing_duaa_tahir.webp",
-    linkedin: "https://www.linkedin.com/in/duaa-tahir",
-    email: "duaath000@gmail.com",
-    location: "Lahore, Pakistan",
-    joining_story: [],  
-    role_description: [
-      "As Director of Marketing and Media, Duaa leads the development and execution of marketing strategies, manages media outreach, and forges partnerships to enhance the visibility and impact of Daadras Foundation. She leverages her expertise in stakeholder engagement and relationship building to drive the organization's growth and foster meaningful collaborations."
-    ]
-  },
+
   {
     id: "nabeeha-irfan",
     name: "Nabeeha Irfan",
@@ -138,6 +121,25 @@ export const teamMembers = [
     ],
     role_description: [
       "As Head of Human Resources at Daadras, Nabeeha leverages her background in psychology and education to lead recruitment, training, and well-being initiatives for staff and volunteers. She ensures a supportive and growth-oriented environment, integrating psychological insights into HR practices to maximize team effectiveness and community impact."
+    ]
+  },
+  
+  {
+    id: "duaa-tahir",
+    name: "Duaa Tahir",
+    role: "Director Marketing and Media",
+    department: ["Administration", "Marketing and Media"],
+    education: "Bachelor's in Sociology and English Literature from Forman Christian College, Lahore",
+    tenure_start: "September 2025",
+    tenure_end: "Present",
+    bio: ["As a Sociology and Literature major with a deep passion for community impact, Duaa is committed to giving back to society in meaningful ways. With three years of experience in partnerships and outreach, she brings a strong understanding of stakeholder engagement, relationship building, and strategic collaboration. She believes her background uniquely positions her to contribute to the growth and expansion of the Daadras Foundation."],
+    image: "/team_photos/director_marketing_duaa_tahir.webp",
+    linkedin: "https://www.linkedin.com/in/duaa-tahir",
+    email: "duaath000@gmail.com",
+    location: "Lahore, Pakistan",
+    joining_story: [],  
+    role_description: [
+      "As Director of Marketing and Media, Duaa leads the development and execution of marketing strategies, manages media outreach, and forges partnerships to enhance the visibility and impact of Daadras Foundation. She leverages her expertise in stakeholder engagement and relationship building to drive the organization's growth and foster meaningful collaborations."
     ]
   },
 
