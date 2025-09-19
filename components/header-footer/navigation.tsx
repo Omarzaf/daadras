@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { SocialLinks } from "./SocialMediaLinks";
@@ -101,10 +102,13 @@ export default function Navigation() {
           <div className="flex items-center">
             <Link href="/">
               <div className="w-fit h-[49px] flex items-center gap-3 mr-5">
-                <img
+                <Image
                   src="/green_logo.svg"
                   alt="Daadras Logo"
+                  width={24}
+                  height={24}
                   className="h-6 w-6"
+                  priority
                 />
                 <h1 className="text-2xl font-bold text-primary font-space-grotesk">
                   Daadras
@@ -183,9 +187,11 @@ export default function Navigation() {
                       </div>
                       <div className="flex flex-col">
                         <div className="aspect-[16/9] bg-gray-100 mb-2 overflow-hidden rounded-md">
-                          <img
+                          <Image
                             src="/drive/community_build.jpg"
                             alt="Our team working together for change"
+                            width={300}
+                            height={169}
                             className="w-full h-full object-cover"
                           />
                         </div>
@@ -266,9 +272,11 @@ export default function Navigation() {
                       </div>
                       <div className="flex flex-col">
                         <div className="aspect-[16/9] bg-gray-100 mb-2 overflow-hidden rounded-md">
-                          <img
+                          <Image
                             src="/drive/kids_studying.jpg"
                             alt="Latest updates from our initiatives"
+                            width={300}
+                            height={169}
                             className="w-full h-full object-cover"
                           />
                         </div>
@@ -380,9 +388,11 @@ export default function Navigation() {
                       </div>
                       <div className="flex flex-col">
                         <div className="aspect-[16/9] bg-gray-100 mb-2 overflow-hidden rounded-md">
-                          <img
+                          <Image
                             src="/drive/help_charity_kids.webp"
                             alt="Supporting communities through our initiatives"
+                            width={300}
+                            height={169}
                             className="w-full h-full object-cover"
                           />
                         </div>
@@ -471,9 +481,11 @@ export default function Navigation() {
                       </div>
                       <div className="flex flex-col">
                         <div className="aspect-[16/9] bg-gray-100 mb-2 overflow-hidden rounded-md">
-                          <img
+                          <Image
                             src="/drive/volunteer_wahab.webp"
                             alt="Volunteers making an impact in our community"
+                            width={300}
+                            height={169}
                             className="w-full h-full object-cover"
                           />
                         </div>

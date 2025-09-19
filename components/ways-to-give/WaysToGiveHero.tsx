@@ -43,10 +43,6 @@ export function WaysToGiveHero() {
             <Heart className="h-4 w-4 text-primary" />
             <span>100% Goes to Programs</span>
           </div>
-          <div className="flex items-center gap-2">
-            <CheckCircle className="h-4 w-4 text-primary" />
-            <span>Tax Deductible</span>
-          </div>
         </motion.div>
       </div>
     </section>

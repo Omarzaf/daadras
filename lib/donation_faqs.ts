@@ -16,11 +16,6 @@ export const donationFAQs: DonationFAQ[] = [
     answer: "We accept computers and technology equipment, educational materials and books, clothing for distribution, professional services (legal, accounting, marketing), and valuable business connections. Please contact us before donating to ensure we can properly utilize your contribution."
   },
   {
-    id: "item-4",
-    question: "Can I donate internationally?",
-    answer: "Currently, our bank accounts are based in Pakistan. International donors can use wire transfers to our Silk Bank account. Please contact us at donations@daadras.org for specific instructions and to discuss the best transfer method for your location."
-  },
-  {
     id: "item-5",
     question: "How can I track the impact of my donation?",
     answer: "We provide regular updates through our newsletter and annual reports showing how donations are used and the impact achieved. You can also follow our progress on our website's news section and social media channels for real-time updates on our programs and beneficiaries."

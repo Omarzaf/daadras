@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const photos = [
   {
@@ -123,9 +124,11 @@ export default function PhotoGalleryCarousel() {
                   onClick={() => openModal(actualIndex)}
                 >
                   <div className="relative overflow-hidden rounded-2xl shadow-lg group-hover:shadow-2xl transition-all duration-300">
-                    <img
+                    <Image
                       src={photo.src}
                       alt={photo.alt}
+                      width={400}
+                      height={320}
                       className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -172,9 +175,11 @@ export default function PhotoGalleryCarousel() {
               exit={{ scale: 0.8, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
             >
-              <img
+              <Image
                 src={photos[modalIndex].src}
                 alt={photos[modalIndex].alt}
+                width={800}
+                height={600}
                 className="w-full h-full object-contain rounded-lg"
               />
               

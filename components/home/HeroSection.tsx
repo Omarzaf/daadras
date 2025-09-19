@@ -29,7 +29,8 @@ export const HeroSection = () => {
           loop
           playsInline
           controls={false}
-          preload="auto"
+          preload="metadata"
+          poster="/drive/hero-poster.jpg"
           onLoadedData={(e) => {
             console.log("Video loaded successfully");
             e.currentTarget.play().catch(console.error);
