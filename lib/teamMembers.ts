@@ -123,7 +123,7 @@ export const teamMembers = [
     department: ["Research"],
     tenure_start: "September 2025",
     tenure_end: "Present",
-    bio: ["Syeda Mariam Naqvi is an undergraduate student at Forman Christian College, majoring in Economics with a minor in Political Science. She has a strong inclination toward development economics and policy. Growing up in a village, she witnessed how easily a child's potential could be dimmed by the absence of opportunity. Every summer, she teaches neighborhood girls the basics—writing their names, counting numbers, and reading their first words. She joined Daadras believing in the power of a single spark to change a life."],
+    bio: ["Syeda Mariam Naqvi is an undergraduate student at Forman Christian College, majoring in Economics with a minor in Political Science. She has a strong inclination towards development economics and policy. She is the co-founder of The Young Economist Initiative (YEI), a student-led think tank that promotes economic literacy, current affairs analysis, and amplifies youth perspectives in public discourse. An avid reader, she also enjoys capturing overlooked moments through photography and reflecting on questions without easy answers. She joined Daadras with the belief that even a single spark can change a life."],
     image: "/team_photos/research_assistant_mariam_naqvi.webp",
     linkedin: "https://www.linkedin.com/in/syedamariam/",
     email: "mariamnaqvi338@gmail.com",
