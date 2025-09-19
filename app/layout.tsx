@@ -6,6 +6,7 @@ import { Suspense } from "react"
 import Navigation from "@/components/header-footer/navigation"
 import { Footer } from "@/components/header-footer/Footer"
 import ScrollToTop from "@/components/ScrollToTop"
+import { ResourceHints } from "@/components/team/ResourceHints"
 import "./globals.css"
 
 const spaceGrotesk = Space_Grotesk({
@@ -38,6 +39,7 @@ export default function RootLayout({
         {/* FontAwesome now loaded via npm packages only */}
       </head>
       <body className="font-sans overflow-x-hidden">
+        <ResourceHints />
         <ScrollToTop />
         <div className="min-h-screen bg-background">
           <Navigation />
