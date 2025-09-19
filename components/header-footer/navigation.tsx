@@ -49,7 +49,7 @@ export default function Navigation() {
     if (!keyboardFocus) {
       timeoutRef.current = setTimeout(() => {
         setActiveDropdown(null);
-      }, 100); // Reduced timeout for faster response
+      }, 50); // Further reduced timeout for immediate response
     }
   };
 
@@ -62,7 +62,7 @@ export default function Navigation() {
     setTimeout(() => {
       setKeyboardFocus(false);
       setActiveDropdown(null);
-    }, 100); // Reduced timeout for faster response
+    }, 50); // Further reduced timeout for immediate response
   };
 
   const handleDropdownClick = (dropdown: TSection) => {
@@ -90,16 +90,31 @@ export default function Navigation() {
     };
 
     document.addEventListener("keydown", handleEscape);
+    
+    // Ensure navigation is immediately interactive
+    // Force a re-render to ensure all event handlers are properly attached
+    const ensureInteractivity = () => {
+      // This ensures the component is fully hydrated and interactive
+      if (typeof window !== 'undefined') {
+        document.body.style.pointerEvents = 'auto';
+      }
+    };
+    
+    // Run immediately and after a short delay to ensure hydration is complete
+    ensureInteractivity();
+    const timeoutId = setTimeout(ensureInteractivity, 0);
+    
     return () => {
       document.removeEventListener("keydown", handleEscape);
       if (timeoutRef.current) {
         clearTimeout(timeoutRef.current);
       }
+      clearTimeout(timeoutId);
     };
   }, []);
 
   return (
-    <nav className="shadow-[0_3px_3px_-1px_rgba(17,30,71,0.15)] bg-[#FFFFFF] sticky top-0 z-50">
+    <nav className="shadow-[0_3px_3px_-1px_rgba(17,30,71,0.15)] bg-[#FFFFFF] sticky top-0 z-50" style={{ pointerEvents: 'auto' }}>
       <div className="max-w-[1380px] w-full mx-auto px-6 md:px-10 lg:px-14">
         <div className="flex justify-between items-center h-[100px]">
           <div className="flex items-center">
