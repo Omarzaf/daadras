@@ -12,12 +12,15 @@ export const HeroSection = () => {
   const [videoError, setVideoError] = useState(false);
   const [retryCount, setRetryCount] = useState(0);
   const [shouldLoadVideo, setShouldLoadVideo] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
+  const [showPlayButton, setShowPlayButton] = useState(false);
 
   const handleTypewriterComplete = () => {
     setShowContent(true);
   };
 
   const handleVideoError = (e: React.SyntheticEvent<HTMLVideoElement, Event>) => {
+    console.log('Video error occurred:', e);
     if (retryCount < 1) {
       setRetryCount(prev => prev + 1);
       // Retry loading the video
@@ -30,21 +33,44 @@ export const HeroSection = () => {
   };
 
   const handleVideoCanPlay = (e: React.SyntheticEvent<HTMLVideoElement, Event>) => {
-    e.currentTarget.play().catch(() => {
-      // If autoplay fails, just hide the video and show background
-      setVideoError(true);
-      e.currentTarget.style.display = "none";
+    const video = e.currentTarget;
+    video.play().catch((error) => {
+      console.log('Autoplay failed:', error);
+      if (isMobile) {
+        // On mobile, show play button instead of hiding video
+        setShowPlayButton(true);
+      } else {
+        // On desktop, hide video and show background
+        setVideoError(true);
+        video.style.display = "none";
+      }
     });
   };
 
-  useEffect(() => {
-    // Check if device is mobile or has slow connection
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    const isSlowConnection = navigator.connection && (navigator.connection.effectiveType === 'slow-2g' || navigator.connection.effectiveType === '2g');
-    
-    if (isMobile || isSlowConnection) {
-      setShouldLoadVideo(false);
+  const handlePlayButtonClick = () => {
+    const video = document.querySelector('video');
+    if (video) {
+      video.play().then(() => {
+        setShowPlayButton(false);
+      }).catch((error) => {
+        console.log('Manual play failed:', error);
+        setVideoError(true);
+        video.style.display = "none";
+      });
     }
+  };
+
+  const handleVideoLoadStart = () => {
+    console.log('Video load started');
+  };
+
+  useEffect(() => {
+    // Detect mobile device
+    const mobileCheck = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    setIsMobile(mobileCheck);
+    
+    // Always allow video loading, but we'll handle mobile-specific behavior in the video element
+    setShouldLoadVideo(true);
   }, []);
 
   return (
@@ -54,18 +80,32 @@ export const HeroSection = () => {
         style={{ aspectRatio: "1910/600" }}
       >
         <div className="absolute inset-0 bg-primary" />
+        
+        {/* Fallback background image for mobile or when video fails */}
+        {(isMobile || videoError) && (
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: "url('/drive/community_build.jpg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center"
+            }}
+          />
+        )}
         {shouldLoadVideo && (
           <video
             key="docu-video"
             className="w-full h-full object-cover transition-all duration-700 ease-out relative z-10"
-            autoPlay
+            autoPlay={!isMobile}
             muted
             loop
             playsInline
             controls={false}
-            preload="metadata"
+            preload={isMobile ? "none" : "metadata"}
             width="1910"
             height="600"
+            poster="/images/video-poster.jpg"
+            onLoadStart={handleVideoLoadStart}
             onEnded={(e) => {
               e.currentTarget.currentTime = 0;
               e.currentTarget.play().catch(() => {
@@ -75,6 +115,18 @@ export const HeroSection = () => {
             }}
             onError={handleVideoError}
             onCanPlay={handleVideoCanPlay}
+            onLoadedData={() => {
+              // On mobile, try to play after data is loaded
+              if (isMobile) {
+                const video = document.querySelector('video');
+                if (video) {
+                  video.play().catch((error) => {
+                    console.log('Mobile autoplay failed:', error);
+                    setShowPlayButton(true);
+                  });
+                }
+              }
+            }}
           >
             <source src="/videos/docu.webm" type="video/webm" />
             <source src="/videos/docu.mp4" type="video/mp4" />
@@ -82,6 +134,23 @@ export const HeroSection = () => {
               Your browser does not support the video format.
             </p>
           </video>
+        )}
+
+        {/* Mobile play button overlay */}
+        {showPlayButton && (
+          <div className="absolute inset-0 flex items-center justify-center z-40">
+            <motion.button
+              onClick={handlePlayButtonClick}
+              className="bg-white/20 backdrop-blur-sm border-2 border-white/30 rounded-full p-6 hover:bg-white/30 transition-all duration-300"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3 }}
+            >
+              <Play className="h-12 w-12 text-white fill-white" />
+            </motion.button>
+          </div>
         )}
 
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80 pointer-events-none z-20" />

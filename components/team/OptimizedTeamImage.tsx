@@ -20,6 +20,13 @@ export function OptimizedTeamImage({
   index, 
   onLoad 
 }: OptimizedTeamImageProps) {
+  // Special positioning for specific images that need different centering
+  const getImagePositioning = () => {
+    if (src.includes('zafir_ahmed')) {
+      return 'object-center'
+    }
+    return 'object-[center_8%]'
+  }
   const [isLoaded, setIsLoaded] = useState(false)
   const [isInView, setIsInView] = useState(false)
   const [hasError, setHasError] = useState(false)
@@ -99,7 +106,7 @@ export function OptimizedTeamImage({
   const blurDataURL = generateBlurDataURL()
 
   return (
-    <div ref={imgRef} className="relative w-full h-56 md:h-80 bg-gray-100 overflow-hidden">
+    <div ref={imgRef} className="relative w-full h-96 md:h-96 bg-gray-100 overflow-hidden rounded-t-lg">
       {/* Enhanced loading skeleton - only show for non-preloaded images */}
       {!isLoaded && !isPreloaded && (
         <motion.div 
@@ -121,11 +128,10 @@ export function OptimizedTeamImage({
           src={hasError ? "/placeholder-user.jpg" : src}
           alt={alt}
           fill
-          className={`object-cover object-top transition-all duration-500 ${
+          className={`object-cover ${getImagePositioning()} transition-all duration-500 ${
             isLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
           }`}
-          style={{ objectPosition: "top center" }}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
           loading={index < 6 ? "eager" : "lazy"}
           priority={index < 3}
           placeholder="blur"
