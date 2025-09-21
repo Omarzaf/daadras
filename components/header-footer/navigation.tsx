@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
@@ -149,6 +149,9 @@ export default function Navigation() {
                 aria-expanded={activeDropdown === "about"}
               >
                 ABOUT US
+                <ChevronDown className={`ml-2 h-4 w-4 transition-transform duration-200 ${
+                  activeDropdown === "about" ? "rotate-180" : ""
+                }`} />
               </button>
               <div
                 className={`fixed left-0 top-[100px] w-full transform transition-all duration-150 ease-out z-50 ${
@@ -242,6 +245,9 @@ export default function Navigation() {
                 aria-expanded={activeDropdown === "news"}
               >
                 NEWS & RESOURCES
+                <ChevronDown className={`ml-2 h-4 w-4 transition-transform duration-200 ${
+                  activeDropdown === "news" ? "rotate-180" : ""
+                }`} />
               </button>
               <div
                 className={`fixed left-0 top-[100px] w-full transform transition-all duration-150 ease-out z-50 ${
@@ -327,6 +333,9 @@ export default function Navigation() {
                 aria-expanded={activeDropdown === "initiatives"}
               >
                 OUR INITIATIVES
+                <ChevronDown className={`ml-2 h-4 w-4 transition-transform duration-200 ${
+                  activeDropdown === "initiatives" ? "rotate-180" : ""
+                }`} />
               </button>
               <div
                 className={`fixed left-0 top-[100px] w-full transform transition-all duration-150 ease-out z-50 ${
@@ -443,6 +452,9 @@ export default function Navigation() {
                 aria-expanded={activeDropdown === "involved"}
               >
                 GET INVOLVED
+                <ChevronDown className={`ml-2 h-4 w-4 transition-transform duration-200 ${
+                  activeDropdown === "involved" ? "rotate-180" : ""
+                }`} />
               </button>
               <div
                 className={`fixed left-0 top-[100px] w-full transform transition-all duration-150 ease-out z-50 ${
@@ -561,6 +573,9 @@ export default function Navigation() {
                   }`}
                 >
                   ABOUT US
+                  <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${
+                    activeDropdown === "about" ? "rotate-180" : ""
+                  }`} />
                 </button>
                 {activeDropdown === "about" && (
                   <div className="ml-4 space-y-2">
@@ -605,6 +620,9 @@ export default function Navigation() {
                   }`}
                 >
                   NEWS & RESOURCES
+                  <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${
+                    activeDropdown === "news" ? "rotate-180" : ""
+                  }`} />
                 </button>
                 {activeDropdown === "news" && (
                   <div className="ml-4 space-y-2">
@@ -642,6 +660,9 @@ export default function Navigation() {
                   }`}
                 >
                   OUR INITIATIVES
+                  <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${
+                    activeDropdown === "initiatives" ? "rotate-180" : ""
+                  }`} />
                 </button>
                 {activeDropdown === "initiatives" && (
                   <div className="ml-4 space-y-2">
@@ -710,6 +731,9 @@ export default function Navigation() {
                   }`}
                 >
                   GET INVOLVED
+                  <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${
+                    activeDropdown === "involved" ? "rotate-180" : ""
+                  }`} />
                 </button>
                 {activeDropdown === "involved" && (
                   <div className="ml-4 space-y-2">

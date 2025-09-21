@@ -22,7 +22,7 @@ export function StoryAndRole({ teamMember }: StoryAndRoleProps) {
             {teamMember.joining_story.map((paragraph, index) => (
               <p 
                 key={index} 
-                className="text-muted-foreground leading-relaxed text-xs md:text-sm lg:text-base italic"
+                className="text-muted-foreground leading-relaxed text-sm md:text-sm lg:text-base italic"
               >
                 "{paragraph}"
               </p>
@@ -45,7 +45,7 @@ export function StoryAndRole({ teamMember }: StoryAndRoleProps) {
             {teamMember.role_description.map((description, index) => (
               <p 
                 key={index} 
-                className="text-muted-foreground leading-relaxed text-xs md:text-sm lg:text-base"
+                className="text-muted-foreground leading-relaxed text-sm md:text-sm lg:text-base"
               >
                 {description}
               </p>
