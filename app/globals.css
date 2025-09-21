@@ -11,18 +11,18 @@
 
   /* Updated color tokens to match Daadras NGO brand colors */
   --background: #ffffff; /* White background */
-  --foreground: #0f443f; /* Deep green text */
+  --foreground: #1f2937; /* Dark gray text for better readability */
   --card: #ffffff; /* White cards */
-  --card-foreground: #0f443f; /* Deep green text on cards */
+  --card-foreground: #1f2937; /* Dark gray text on cards */
   --popover: #ffffff; /* White popovers */
-  --popover-foreground: #0f443f; /* Deep green text on popovers */
+  --popover-foreground: #1f2937; /* Dark gray text on popovers */
   --primary: #0f443f; /* Deep green primary */
   --primary-foreground: #ffffff; /* White text on primary */
   --secondary: #f8f9fa; /* Very light gray for secondary */
-  --secondary-foreground: #0f443f; /* Deep green text on secondary */
+  --secondary-foreground: #1f2937; /* Dark gray text on secondary */
   --muted: #f1f3f4; /* Light gray for muted elements */
   /* Improved muted foreground color for better contrast */
-  --muted-foreground: #374151; /* Darker gray text for better contrast */
+  --muted-foreground: #6b7280; /* Medium gray text for better contrast */
   --accent: #1a5a54; /* Lighter green accent */
   --accent-foreground: #ffffff; /* White text on accent */
   --destructive: #dc2626; /* Red for destructive actions */
@@ -37,7 +37,7 @@
   --chart-5: #a7f3d0; /* Very light green for charts */
   --radius: 0.5rem;
   --sidebar: #ffffff; /* White sidebar */
-  --sidebar-foreground: #0f443f; /* Deep green sidebar text */
+  --sidebar-foreground: #1f2937; /* Dark gray sidebar text */
   --sidebar-primary: #0f443f; /* Deep green sidebar primary */
   --sidebar-primary-foreground: #ffffff; /* White text on sidebar primary */
   --sidebar-accent: #1a5a54; /* Lighter green sidebar accent */
@@ -66,7 +66,7 @@
   --muted: #374151; /* Medium gray for muted elements */
   --muted-foreground: #9ca3af; /* Light gray text for muted */
   --accent: #34d399; /* Bright green accent for dark mode */
-  --accent-foreground: #0f443f; /* Deep green text on accent */
+  --accent-foreground: #ffffff; /* White text on accent for better contrast */
   --destructive: #ef4444; /* Bright red for destructive actions */
   --destructive-foreground: #ffffff; /* White text on destructive */
   --border: #374151; /* Medium gray borders */
@@ -82,7 +82,7 @@
   --sidebar-primary: #1a5a54; /* Lighter green sidebar primary */
   --sidebar-primary-foreground: #ffffff; /* White text on sidebar primary */
   --sidebar-accent: #34d399; /* Bright green sidebar accent */
-  --sidebar-accent-foreground: #0f443f; /* Deep green text on sidebar accent */
+  --sidebar-accent-foreground: #ffffff; /* White text on accent for better contrast */
   --sidebar-border: #374151; /* Medium gray sidebar borders */
   --sidebar-ring: #1a5a54; /* Lighter green sidebar focus rings */
 }
@@ -144,6 +144,28 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  
+  /* Ensure proper text contrast and prevent green text issues */
+  .text-primary {
+    color: var(--primary) !important;
+  }
+  
+  .text-foreground {
+    color: var(--foreground) !important;
+  }
+  
+  .text-muted-foreground {
+    color: var(--muted-foreground) !important;
+  }
+  
+  /* Force proper contrast for better readability */
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--foreground) !important;
+  }
+  
+  p, span, div {
+    color: inherit;
   }
 }
 
