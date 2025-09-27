@@ -208,14 +208,14 @@ export const teamMembers = [
   },
 
 {
-    id: "khair-ullah-nasar",
-    name: "Khairullah Nasar",
+    id: "khair-ullah",
+    name: "Khair ullah",
     role: "Deputy Director Strategic Gaming",
     department: ["Strategic Gaming", "Salam"],
     education: "Bachelor's in Philosophy at Forman Christian College, Lahore (Minors in Theology and Sociology)",
     tenure_start: "September 2025",
     tenure_end: "Present",
-    bio: ["I am pursuing a Bachelor's degree in Philosophy at Forman Christian College, Lahore, with minors in Theology and Sociology. I've always been drawn to questions about how people think, what they believe, and how societies function. I love reading and writing, often writing book reviews and leading book club discussions. Over the past year, I worked as an Assistant Researcher at Express News in Lahore. For three years, I've been designing and teaching reading courses at Nizami School in Duki, and recently taught chess to students through Project Salam 3.0."],
+    bio: ["I am pursuing a Bachelor's degree in Philosophy at Forman Christian College, Lahore, with minors in Theology and Sociology. I've always been drawn to questions about how people think, what they believe, and how societies function. I love reading and writing, often writing book reviews and leading book club discussions. Over the past year, I worked as an Assistant Researcher at Express News in Lahore. For three years, I've been designing and teaching reading courses at Nizami School, Duki, and recently taught chess to students through Project Salam 3.0."],
     image: "/team_photos/deputy_sg_khairullah_nasar.webp",
     linkedin: "https://www.linkedin.com/in/khair-ullah-3800b534a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     email: "khairullahnasar4@gmail.com",
@@ -225,7 +225,7 @@ export const teamMembers = [
       "When Sarmad Sabir encouraged me and believed in my ability to teach chess to children, I realized how powerful this platform could be in shaping young minds. This was the time when everything changed for me and this was the time that I started doing what I truly wanted to do. Since then, I have seen how chess can inspire confidence, resilience, and critical thinking in young people and how it gives them skills that go far beyond the game itself."
     ],
     role_description: [
-      "As a Chess Instructor and Reading Coach at Daadras, Khairullah designs and delivers engaging chess lessons as part of Project Salam 3.0, helping students develop strategic thinking, concentration, and resilience. He also creates and teaches reading courses at Nizami School, fostering a love for literature and improving students' reading skills. His interdisciplinary background in philosophy, theology, and sociology informs his holistic approach to education."
+      "As a Chess Instructor and Reading Coach at Daadras, Khairullah designs and delivers engaging chess lessons as part of Project Salam 3.0, helping students develop strategic thinking, concentration, and resilience. He also creates and teaches reading courses at Nizami School Duki, fostering a love for literature and improving students' reading skills. His interdisciplinary background in philosophy, theology, and sociology informs his holistic approach to education."
     ]
   },
   {
