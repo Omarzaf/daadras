@@ -17,7 +17,7 @@ export default function SELProgramPage() {
       <CurriculumSection />
       <VolunteerSection />
       <ChallengesSection />
-      <ImpactSection />
+      {/* <ImpactSection /> */}
     </div>
   )
 }
