@@ -55,11 +55,11 @@ export default function OurStoryPage() {
       </section>
       
       {/* Impact Statistics Section - Subtle Gradient Background */}
-      <section className="py-8 md:py-16 lg:py-24 bg-gradient-to-br from-primary/5 to-accent/5">
+      {/* <section className="py-8 md:py-16 lg:py-24 bg-gradient-to-br from-primary/5 to-accent/5">
         <div className="max-w-[1380px] w-full mx-auto px-6 md:px-10 lg:px-14">
           <ImpactStatistics />
         </div>
-      </section>
+      </section> */}
       
 
     </>
