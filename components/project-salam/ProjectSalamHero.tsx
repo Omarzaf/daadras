@@ -56,7 +56,7 @@ export function ProjectSalamHero({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <p className="text-xl text-muted-foreground max-w-4xl text-justify leading-relaxed">
+            <p className="text-xl text-muted-foreground max-w-4xl leading-relaxed">
               Salam is a comprehensive <strong>10-hour-per-week</strong> program delivered across <strong>3–4 months</strong> in partnership with orphanages and underprivileged schools. We provide access to essential 21st-century skills through technology literacy, strategic thinking, and emotional intelligence, creating lasting positive change in communities.
             </p>
           </motion.div>
