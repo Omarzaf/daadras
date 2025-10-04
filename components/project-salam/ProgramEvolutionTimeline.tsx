@@ -50,7 +50,7 @@ export function ProgramEvolutionTimeline() {
               </div>
               <div className="text-right">
                 <div className="text-2xl font-bold text-accent">21</div>
-                <div className="text-sm text-muted-foreground">Students (Ages 3-8)</div>
+                <div className="text-sm text-muted-foreground">Students (Ages 3 to 17)</div>
               </div>
             </div>
           </CardHeader>
@@ -131,7 +131,7 @@ export function ProgramEvolutionTimeline() {
               </div>
               <div className="text-right">
                 <div className="text-2xl font-bold text-primary">60+</div>
-                <div className="text-sm text-muted-foreground">Students (Ages 5-12)</div>
+                <div className="text-sm text-muted-foreground">Students (Ages 10-18)</div>
               </div>
             </div>
           </CardHeader>
@@ -212,7 +212,7 @@ export function ProgramEvolutionTimeline() {
               </div>
               <div className="text-right">
                 <div className="text-2xl font-bold text-primary">30+</div>
-                <div className="text-sm text-muted-foreground">Students (Ages 8-15)</div>
+                <div className="text-sm text-muted-foreground">Students (Ages 8-13)</div>
               </div>
             </div>
           </CardHeader>
