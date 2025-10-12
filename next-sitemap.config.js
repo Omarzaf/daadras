@@ -19,9 +19,10 @@ module.exports = {
         disallow: ['/api/', '/admin/', '/private/'],
       },
     ],
-    additionalSitemaps: [
-      'https://daadras.org/sitemap.xml',
-    ],
+    // Remove circular reference - this config generates sitemap.xml
+    // additionalSitemaps: [
+    //   'https://daadras.org/sitemap.xml',
+    // ],
   },
   transform: async (config, path) => {
     // Custom priority and changefreq for different pages
