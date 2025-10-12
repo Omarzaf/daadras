@@ -68,34 +68,8 @@ module.exports = {
   additionalPaths: async (config) => {
     const additionalPaths = []
     
-    // Team member IDs (hardcoded for sitemap generation)
-    const teamMemberIds = [
-      "umar-zafar",
-      "fateh-muhammad", 
-      "arooj-hameed-khan",
-      "sawaiz-naseem",
-      "sarmad-sabir",
-      "nabeeha-irfan",
-      "duaa-tahir",
-      "syeda-mariam-naqvi",
-      "zaryab-mustafa",
-      "unsa-noor",
-      "khair-ullah",
-      "ali-mahmood",
-      "zafir-ahmed",
-      "abdul-muqadim",
-      "shanzay-khan"
-    ]
-    
-    // Add team member pages
-    teamMemberIds.forEach(id => {
-      additionalPaths.push({
-        loc: `/our-team/${id}`,
-        changefreq: 'daily',
-        priority: 0.6,
-        lastmod: new Date().toISOString(),
-      })
-    })
+    // Note: Team member pages are client components and don't support static generation
+    // They will be crawled dynamically by search engines
     
     // Article slugs - add your article slugs here as you create them
     const articleSlugs = [
