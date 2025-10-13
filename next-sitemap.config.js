@@ -65,28 +65,4 @@ module.exports = {
       alternateRefs: config.alternateRefs ?? [],
     }
   },
-  additionalPaths: async (config) => {
-    const additionalPaths = []
-    
-    // Note: Team member pages are client components and don't support static generation
-    // They will be crawled dynamically by search engines
-    
-    // Article slugs - add your article slugs here as you create them
-    const articleSlugs = [
-      // Example: "project-salam-reaches-500-students",
-      // Add more article slugs as they are created
-    ]
-    
-    // Add article pages
-    articleSlugs.forEach(slug => {
-      additionalPaths.push({
-        loc: `/news-resources/article/layout-1/${slug}`,
-        changefreq: 'weekly',
-        priority: 0.7,
-        lastmod: new Date().toISOString(),
-      })
-    })
-    
-    return additionalPaths
-  },
 }
