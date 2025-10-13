@@ -48,26 +48,33 @@ export function CurrentPartnersSection() {
                 viewport={{ once: true }}
                 className="group"
               >
-                <div className="flex flex-col items-center gap-3 p-4 bg-muted/30 rounded-lg hover:bg-muted/50 transition-all duration-300 group-hover:shadow-md">
-                  <div className="relative w-16 h-16 bg-white rounded-lg p-2 shadow-sm group-hover:shadow-md transition-shadow">
-                    <img 
-                      src={partner.src} 
-                      alt={partner.name}
-                      className="w-full h-full object-contain"
-                      onError={(e) => {
-                        const target = e.target as HTMLImageElement;
-                        target.style.display = 'none';
-                        target.nextElementSibling?.classList.remove('hidden');
-                      }}
-                    />
-                    <div className="hidden w-full h-full flex items-center justify-center text-xs text-muted-foreground">
-                      <Handshake className="h-6 w-6" />
+                <a 
+                  href={partner.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <div className="flex flex-col items-center gap-3 p-4 bg-muted/30 rounded-lg hover:bg-muted/50 transition-all duration-300 group-hover:shadow-md cursor-pointer">
+                    <div className="relative w-16 h-16 bg-white rounded-lg p-2 shadow-sm group-hover:shadow-md transition-shadow">
+                      <img 
+                        src={partner.src} 
+                        alt={partner.name}
+                        className="w-full h-full object-contain"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.style.display = 'none';
+                          target.nextElementSibling?.classList.remove('hidden');
+                        }}
+                      />
+                      <div className="hidden w-full h-full flex items-center justify-center text-xs text-muted-foreground">
+                        <Handshake className="h-6 w-6" />
+                      </div>
                     </div>
+                    <span className="text-xs font-medium text-center text-muted-foreground group-hover:text-foreground transition-colors">
+                      {partner.name}
+                    </span>
                   </div>
-                  <span className="text-xs font-medium text-center text-muted-foreground group-hover:text-foreground transition-colors">
-                    {partner.name}
-                  </span>
-                </div>
+                </a>
               </motion.div>
             ))}
           </div>

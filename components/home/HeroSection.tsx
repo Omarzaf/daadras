@@ -104,7 +104,7 @@ export const HeroSection = () => {
             preload={isMobile ? "none" : "metadata"}
             width="1910"
             height="600"
-            poster="/images/video-poster.jpg"
+            // poster="/images/video-poster.jpg"
             onLoadStart={handleVideoLoadStart}
             onEnded={(e) => {
               e.currentTarget.currentTime = 0;

@@ -26,6 +26,11 @@ export const metadata: Metadata = {
   description:
     "Daadras is dedicated to empowering communities through education, technology, and social-emotional learning programs.",
   generator: "v0.app",
+  icons: {
+    icon: '/icon.png',
+    shortcut: '/icon.png',
+    apple: '/icon.png',
+  },
 }
 
 export default function RootLayout({
