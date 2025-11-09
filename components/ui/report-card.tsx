@@ -52,8 +52,8 @@ export function ReportCard({
   return (
     <div className={`flex flex-col md:flex-row gap-6 ${className}`}>
       {/* Thumbnail Card - Left Side */}
-      <Card className="group hover:shadow-lg transition-all duration-300 overflow-hidden w-full md:w-80 flex-shrink-0 p-0">
-        <div className="relative h-64 md:h-full overflow-hidden">
+      <Card className="group hover:shadow-lg transition-all duration-300 overflow-hidden w-full md:w-80 flex-shrink-0 p-0 bg-card">
+        <div className="relative h-64 md:h-[440px] overflow-hidden bg-muted/30">
           <Image 
             src={thumbnail || "/placeholder.jpg"} 
             alt={title}

@@ -10,7 +10,7 @@ export const ReportsSection = () => {
   const reportsData = getReports()
   const latestReport = reportsData
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())[0]
-
+c
   // If there are no reports, don't render the component
   if (!latestReport) {
     return null
