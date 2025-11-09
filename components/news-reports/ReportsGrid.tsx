@@ -4,7 +4,7 @@ import { Card} from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { NoReportsAvailable } from "@/components/ui/no-reports"
-import { Download, Eye, Calendar, FileText, Users } from "lucide-react"
+import { Eye, Calendar } from "lucide-react"
 import { motion } from "framer-motion"
 
 interface Report {
@@ -13,11 +13,7 @@ interface Report {
   description: string
   category: string
   date: string
-  pages: number
-  downloads: number
-  fileSize: string
-  type: string
-  filePath: string
+  googleDriveUrl: string
   thumbnail: string
 }
 
@@ -53,24 +49,6 @@ export function ReportsGrid({ reports, hasFilters = false }: ReportsGridProps) {
     }
   }
 
-  const handleDownload = (filePath: string, title: string) => {
-    // For demo purposes, show alert since actual PDF files don't exist yet
-    alert(`Download would start for: ${title}\nFile: ${filePath}`)
-
-    // Uncomment below when actual PDF files are added to public/reports/ directory
-    /*
-    const link = document.createElement("a")
-    link.href = filePath
-    link.download = `${title.replace(/\s+/g, "-").toLowerCase()}.pdf`
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
-    */
-  }
-
-  const handlePreview = (filePath: string) => {
-    alert(`Preview would open for file: ${filePath}`)
-  }
 
   return (
     <div className="space-y-6">
@@ -127,24 +105,6 @@ export function ReportsGrid({ reports, hasFilters = false }: ReportsGridProps) {
                 {report.description}
               </p>
               
-              {/* Metadata Row */}
-              <div className="flex flex-wrap gap-6 mb-6 p-4 bg-muted/30 rounded-lg -mx-6">
-                <div className="flex items-center gap-2">
-                  <FileText className="h-4 w-4 text-muted-foreground" />
-                  <span className="text-sm font-semibold text-foreground">{report.pages}</span>
-                  <span className="text-sm text-muted-foreground">Pages</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Users className="h-4 w-4 text-muted-foreground" />
-                  <span className="text-sm font-semibold text-foreground">{report.downloads}</span>
-                  <span className="text-sm text-muted-foreground">Downloads</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-sm font-semibold text-foreground">{report.fileSize}</span>
-                  <span className="text-sm text-muted-foreground">{report.type}</span>
-                </div>
-              </div>
-              
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-3">
                 <motion.div
@@ -152,24 +112,17 @@ export function ReportsGrid({ reports, hasFilters = false }: ReportsGridProps) {
                   whileTap={{ scale: 0.95 }}
                 >
                   <Button 
-                    onClick={() => handleDownload(report.filePath, report.title)}
+                    asChild
                     className="bg-primary hover:bg-accent text-white"
                   >
-                    <Download className="mr-2 h-4 w-4" />
-                    Download Report
-                  </Button>
-                </motion.div>
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Button 
-                    variant="outline" 
-                    onClick={() => handlePreview(report.filePath)}
-                    className="border-border text-primary hover:bg-primary/10 bg-transparent"
-                  >
-                    <Eye className="mr-2 h-4 w-4" />
-                    Preview
+                    <a 
+                      href={report.googleDriveUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      <Eye className="mr-2 h-4 w-4" />
+                      View Report
+                    </a>
                   </Button>
                 </motion.div>
               </div>

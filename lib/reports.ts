@@ -4,44 +4,21 @@ export interface Report {
   description: string
   category: string
   date: string
-  pages: number
-  downloads: number
-  fileSize: string
-  type: string
-  filePath: string
+  googleDriveUrl: string
   thumbnail: string
 }
 
-const reportsData: Report[] = []
-
-// [
-//   {
-//     id: 1,
-//     title: "Daadras Annual Impact Report 2023",
-//     description: "Comprehensive overview of Daadras Foundation's achievements across Project Salam, economic upliftment, and ration drives throughout 2023.",
-//     category: "Annual Report",
-//     date: "2024-01-15",
-//     pages: 52,
-//     downloads: 1450,
-//     fileSize: "3.2 MB",
-//     type: "PDF",
-//     filePath: "/reports/daadras-annual-report-2023.pdf",
-//     thumbnail: "/generic-book-cover.svg"
-//   },
-//   {
-//     id: 2,
-//     title: "Project Salam 3.0 Evaluation Report",
-//     description: "Detailed analysis of Project Salam's third phase implementation, including IT education, chess program, and SEL outcomes at Qadam Community School.",
-//     category: "Program Evaluation",
-//     date: "2023-12-20",
-//     pages: 34,
-//     downloads: 920,
-//     fileSize: "2.1 MB",
-//     type: "PDF",
-//     filePath: "/reports/project-salam-3-evaluation.pdf",
-//     thumbnail: "/drive/project_salam1.webp"
-//   },
-// ]
+const reportsData: Report[] = [
+  {
+    id: 1,
+    title: "Daadras Impact Report 2023-2025",
+    description: "Comprehensive overview of Daadras Foundation's achievements across Project Salam, economic upliftment, and ration drives throughout 2023 to 2025.",
+    category: "Annual Report",
+    date: "2025-11-01",
+    googleDriveUrl: "https://drive.google.com/file/d/1jEhj9iN494Uh3duCX32GRXXly-hnj_jL/view?usp=sharing",
+    thumbnail: "/Daadras - Annual Report 2025-1_page-0001.jpg"
+  },
+]
 
 /**
  * Retrieves all reports data
