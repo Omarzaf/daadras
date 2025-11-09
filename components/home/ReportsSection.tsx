@@ -47,11 +47,8 @@ export const ReportsSection = () => {
             description={`${latestReport.description} This detailed analysis showcases our commitment to transparency and accountability in all our humanitarian efforts. The report highlights key metrics, beneficiary testimonials, and strategic insights that demonstrate our organization's measurable impact on communities.`}
             category={latestReport.category}
             date={latestReport.date}
-            pages={latestReport.pages}
-            downloads={latestReport.downloads}
-            fileSize={latestReport.fileSize}
             thumbnail={latestReport.thumbnail}
-            filePath={latestReport.filePath}
+            googleDriveUrl={latestReport.googleDriveUrl}
           />
         </motion.div>
 

@@ -14,8 +14,6 @@ export interface VolunteerOpportunity {
 }
 
 const volunteerOpportunitiesData: VolunteerOpportunity[] = []
-
-
   // {
   //   id: 1,
   //   title: "Education Program Volunteer",
@@ -52,8 +50,7 @@ const volunteerOpportunitiesData: VolunteerOpportunity[] = []
   //   formLink: "https://forms.google.com/chess-instructor",
   //   urgent: true
   // },
-  // {
-  // }
+
 
 /**
  * Retrieves all volunteer opportunities data
